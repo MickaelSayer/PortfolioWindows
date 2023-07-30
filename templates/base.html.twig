@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{% block title %}Portfolio Mickael Sayer{% endblock %}</title>
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('styles/base.css') }}">
+        {% block stylesheets %}{% endblock %}
+
+        <script src="{{ asset('scripts/base.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    {% block header %}
+    {% endblock %}
+
+
+    {% block body %}
+    {% endblock %}
+    
+
+    {% block footer %}
+    {% endblock %}
+    </body>
+</html>
