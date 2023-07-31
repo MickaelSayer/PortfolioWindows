@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Verdana';
+    src: url('/public/assets/fonts/Verdana.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: Verdana;
+    background-color: black;
+}

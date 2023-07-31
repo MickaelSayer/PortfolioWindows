@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>{% block title %}Portfolio Mickael Sayer{% endblock %}</title>
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('styles/base.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/base.css') }}">
         {% block stylesheets %}{% endblock %}
 
-        <script src="{{ asset('scripts/base.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ asset('assets/scripts/base.js') }}"></script>
+        <script src="https://kit.fontawesome.com/ecb3161233.js" crossorigin="anonymous"></script>
         {% block javascripts %}{% endblock %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />

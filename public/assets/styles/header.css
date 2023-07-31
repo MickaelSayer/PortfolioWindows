@@ -1,0 +1,143 @@
+header {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, #0165B5, #004C99);
+}
+
+header .navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px -5px 0px 0px #1f5081;
+}
+
+header .container-left {
+    display: flex;
+    align-items: center;
+}
+
+header .separator {
+    color: #0c457f;
+    pointer-events: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .logo-windows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    background-color: #589132;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 0px 0px 4px 1px #1b3906;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    width: 160px;
+    transition: .1s ease-out;
+}
+
+header .logo-windows:hover {
+    box-shadow: inset 0px 0px 6px 2px #1e3f07;
+}
+
+header .logo-windows img {
+    margin-right: 5px;
+    height: 100%;
+}
+
+header .icon-app {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 50px 0 30px;
+    pointer-events: none;
+}
+
+header .icon-app .separator {
+    margin-right: 10px;
+}
+
+header .icon-app img {
+    transform: scale(0.8);
+}
+
+header .icon-app img:not(:last-child) {
+    margin-right: 10px;
+}
+
+header .menu-open {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    border-radius: 3px;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    background: linear-gradient(to bottom, #277ed5, #004C99);
+    pointer-events: none;
+}
+
+header .menu-open .separator {
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+header .menu-open img{
+    margin-right: 15px;
+}
+
+header .container-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    background: linear-gradient(to bottom, #277ed5, #004C99);
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+header .container-right::before {
+    content: "FR";
+    position: absolute;
+    top: 12px;
+    left: -30px;
+    font-size: 12px;
+    color: white;
+}
+
+header .container-right .icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 5px;
+}
+
+header .container-right img {
+    transform: scale(0.6);
+}
+
+header .container-right .horloge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+    color: white;
+}
+
+header .container-right .separator {
+    position: absolute;
+    top: 0;
+    left: -40px;
+}
