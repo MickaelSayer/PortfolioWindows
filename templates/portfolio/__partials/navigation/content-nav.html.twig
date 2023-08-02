@@ -1,46 +1,3 @@
-<header>
-    <div class="navbar">
-        <div class="container-left">
-            <div class="logo-windows">
-                <img src="{{ asset('assets/pictures/windows-logo.png') }}" alt="Windows logo">
-                Navigation
-            </div>
-    
-            <div class="icon-app">
-                <div class="separator">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-                <img src="{{ asset('assets/pictures/folder-windows.png') }}" alt="dossier logo">
-                <img src="{{ asset('assets/pictures/internet-explorer.png') }}" alt="internet explorer logo">
-                <img src="{{ asset('assets/pictures/chrome.png') }}" alt="chrome internet logo">
-                <img src="{{ asset('assets/pictures/store.png') }}" alt="appStore logo">
-            </div>
-    
-            <div class="menu-open">
-                <div class="separator">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-                <img src="{{ asset('assets/pictures/presentation.png') }}" alt="presentation logo">
-                Présentation
-            </div>
-        </div>
-
-        <div class="container-right">
-            <div class="separator">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-            <div class="icon">
-                <img src="{{ asset('assets/pictures/wifi-signal.png') }}" alt="wifi logo">
-                <img src="{{ asset('assets/pictures/volume.png') }}" alt="volume logo">
-                <img src="{{ asset('assets/pictures/battery.png') }}" alt="batterie logo">
-            </div>
-            <div class="horloge">
-                <div class="heure"></div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <nav class="nav-link">
     <div class="nav-header">
         <div class="logo-pseudo"></div>
@@ -73,23 +30,23 @@
                 </div>
             </div>
             <ul>
-                <li>
+                <li class="active" title="Cliquez ici pour me découvrir" data-link="presentation">
                     <img src="{{ asset('assets/pictures/presentation.png') }}" alt="presentation logo">
                     <a href="#">Présentation</a>
                 </li>
-                <li>
+                <li title="Cliquez ici pour voir mon diplôme" data-link="diplome">
                     <img src="{{ asset('assets/pictures/graduation.png') }}" alt="diplome logo">
                     <a href="#">Diplôme</a>
                 </li>
-                <li>
+                <li title="Cliquez ici pour voir mes éxperiences" data-link="experience">
                     <img src="{{ asset('assets/pictures/scientific.png') }}" alt="experience logo">
                     <a href="#">Expériences</a>
                 </li>
-                <li>
-                    <img src="{{ asset('assets/pictures/programming.png') }}" alt="Informatique language logo">
+                <li title="Cliquez ici pour voir mes langages" data-link="language">
+                    <img src="{{ asset('assets/pictures/programming.png') }}" alt="Informatique langage logo">
                     <a href="#">Langages</a>
                 </li>
-                <li>
+                <li title="Cliquez ici pour voir mes projets" data-link="projet">
                     <img src="{{ asset('assets/pictures/idea.png') }}" alt="projet logo">
                     <a href="#">Projets</a>
                 </li>
@@ -158,7 +115,7 @@
     </div>
 
     <div class="nav-footer">
-        <div class="open-session">
+        <div class="open-session" title="Cliquez ici pour fermer le menu">
             <img src="{{ asset('assets/pictures/key.png') }}" alt="Icone clef">
             <span>F</span>ermer la navigation
         </div>

@@ -1,158 +1,18 @@
-header {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 40px;
-    background: linear-gradient(to bottom, #0165B5, #004C99);
-}
-
-header .navbar {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px -5px 0px 0px #1f5081;
-}
-
-header .container-left {
-    display: flex;
-    align-items: center;
-}
-
-header .separator {
-    color: #0c457f;
-    pointer-events: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-header .logo-windows {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    background-color: #589132;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 15px;
-    box-shadow: inset 0px 0px 4px 1px #1b3906;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 14px;
-    width: 160px;
-    transition: .2s linear;
-}
-
-header .logo-windows:hover {
-    background-color: #55bb12;
-}
-
-header .logo-windows img {
-    margin-right: 5px;
-    height: 100%;
-}
-
-header .icon-app {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0 50px 0 30px;
-    pointer-events: none;
-}
-
-header .icon-app .separator {
-    margin-right: 10px;
-}
-
-header .icon-app img {
-    transform: scale(0.8);
-}
-
-header .icon-app img:not(:last-child) {
-    margin-right: 10px;
-}
-
-header .menu-open {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 30px;
-    border-radius: 3px;
-    font-weight: 500;
-    color: white;
-    font-size: 14px;
-    background: linear-gradient(to bottom, #277ed5, #004C99);
-    pointer-events: none;
-}
-
-header .menu-open .separator {
-    position: absolute;
-    top: 0;
-    left: -10px;
-}
-
-header .menu-open img{
-    margin-right: 15px;
-}
-
-header .container-right {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 15px;
-    background: linear-gradient(to bottom, #277ed5, #004C99);
-    border-radius: 3px;
-    pointer-events: none;
-}
-
-header .container-right::before {
-    content: "FR";
-    position: absolute;
-    top: 12px;
-    left: -30px;
-    font-size: 12px;
-    color: white;
-}
-
-header .container-right .icon {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 5px;
-}
-
-header .container-right img {
-    transform: scale(0.6);
-}
-
-header .container-right .horloge {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 12px;
-    color: white;
-}
-
-header .container-right .separator {
-    position: absolute;
-    top: 0;
-    left: -40px;
-}
-
 nav.nav-link {
-    position: absolute;
-    display: flex;
+    position: fixed;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
-    bottom: calc(0px + 45px);
+    bottom: calc(0px + 40px);
     left: 0;
     height: 75vh;
     width: 500px;
     background: white;
     border-radius: 10px;
+}
+
+nav.nav-link.open-nav {
+    display: flex;
 }
 
 nav .nav-header,
@@ -322,6 +182,10 @@ nav .sidebar-left ul li {
     transition: .1s linearr;
 }
 
+nav .sidebar-left ul li.active {
+    background-color: #F6F6F6;
+}
+
 nav .sidebar-left ul li:hover {
     background-color: #F6F6F6;
 }
@@ -343,6 +207,7 @@ nav .sidebar-left .program {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    pointer-events: none;
 }
 
 nav .sidebar-left .program span {
@@ -356,7 +221,7 @@ nav .sidebar-left .program::before {
     left: 20px;
     height: 1px;
     width: 80%;
-    background-color: #F1F1F1;;
+    background-color: #F1F1F1;
 }
 
 nav .sidebar-left .program img{
@@ -400,4 +265,9 @@ nav .sidebar-right .content-mid div,
 nav .sidebar-right .content-bottom div {
     align-items: center;
     margin-bottom: 10px;
+}
+
+nav .sidebar-right .content-top::after,
+nav .sidebar-right .content-mid::after {
+    background-color: #99a8df;
 }

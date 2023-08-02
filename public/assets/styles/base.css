@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Verdana';
-    src: url('/public/assets/fonts/Verdana.ttf') format('truetype');
+    src: url('/assets/fonts/Verdana.ttf') format('truetype');
 }
 
 * {
@@ -17,4 +17,12 @@ body {
     font-family: Verdana;
     background-color: black;
     overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/assets/pictures/windows-xp-hd.jpg);
+    background-size: cover;
+    background-position: center;
 }
