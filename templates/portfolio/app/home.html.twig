@@ -3,8 +3,14 @@
 {% block stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/nav.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/main.css') }}">
 {% endblock %}
 
 {% block header %}
     {% include "portfolio/__partials/navigation/header.html.twig" %}
 {% endblock header %}
+
+{% block body %}
+    {% include "portfolio/__partials/main/main.html.twig" %}
+{% endblock %}

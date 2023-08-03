@@ -28,10 +28,8 @@ $(document).ready(function() {
     $('nav .sidebar-left ul li').on('click', function() {
         const data_link = $(this).data('link');
 
-        $('nav .sidebar-left ul li, header .menu-open .menu-active, .logo-windows').removeClass('active');
-        $('#' + data_link).addClass('active');
         $('.nav-link').removeClass('open-nav');
-        $(this).addClass('active');
+        $('#' + data_link).addClass('active');
     });
 
     const nav_link = $('.nav-link');

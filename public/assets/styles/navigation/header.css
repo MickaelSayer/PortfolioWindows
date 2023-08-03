@@ -25,6 +25,12 @@ header .separator {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-right: 10px;
+}
+
+header .container-right .separator {
+    position: absolute;
+    left: -40px;
 }
 
 header .logo-windows {
@@ -65,10 +71,6 @@ header .icon-app {
     pointer-events: none;
 }
 
-header .icon-app .separator {
-    margin-right: 10px;
-}
-
 header .icon-app img {
     transform: scale(0.8);
 }
@@ -77,39 +79,44 @@ header .icon-app img:not(:last-child) {
     margin-right: 10px;
 }
 
-header .menu-open {
+header .container-task {
+    display: flex;
+    height: 100%;
+}
+
+header .task {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 200px;
-    padding: 0 30px;
+    width: 0;
     border-radius: 5px;
     font-weight: 500;
     color: white;
     font-size: 14px;
     background: linear-gradient(to bottom, #277ed5, #004C99);
-    pointer-events: none;
+    cursor: pointer;
     box-shadow: 0 0 20px 2px #004C99;
+    overflow: hidden;
+    transition: .2s linear;
 }
 
-header .menu-open .separator {
-    position: absolute;
-    top: 0;
-    left: -10px;
+header .task:not(:last-child) {
+    margin-right: 10px;
 }
 
-header .menu-open .menu-active {
-    display: none;
+header .task.active {
+    padding: 0 30px;
+    width: 200px;
+}
+
+header .task .content-task {
+    display: flex;
     align-items: center;
 }
 
-header .menu-open .menu-active.active {
-    display: flex;
-}
-
-header .menu-open img{
+header .task img{
     margin-right: 15px;
 }
 
@@ -150,10 +157,4 @@ header .container-right .horloge {
     align-items: flex-end;
     font-size: 12px;
     color: white;
-}
-
-header .container-right .separator {
-    position: absolute;
-    top: 0;
-    left: -40px;
 }

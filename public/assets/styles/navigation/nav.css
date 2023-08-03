@@ -182,10 +182,6 @@ nav .sidebar-left ul li {
     transition: .1s linearr;
 }
 
-nav .sidebar-left ul li.active {
-    background-color: #F6F6F6;
-}
-
 nav .sidebar-left ul li:hover {
     background-color: #F6F6F6;
 }
