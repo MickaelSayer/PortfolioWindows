@@ -97,16 +97,20 @@ header .task {
     font-size: 14px;
     background: linear-gradient(to bottom, #277ed5, #004C99);
     cursor: pointer;
-    box-shadow: 0 0 20px 2px #004C99;
     overflow: hidden;
     transition: .2s linear;
 }
 
-header .task:not(:last-child) {
+header .task.active:hover {
+    background: linear-gradient(to bottom, #2d91f5, #275f97);
+}
+
+header .task.active:not(:last-child) {
     margin-right: 10px;
 }
 
 header .task.active {
+    box-shadow: 0 0 20px 2px #004C99;
     padding: 0 30px;
     width: 200px;
 }

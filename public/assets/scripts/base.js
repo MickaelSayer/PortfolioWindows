@@ -32,12 +32,32 @@ $(document).ready(function() {
         $('#' + data_link).addClass('active');
     });
 
-    const nav_link = $('.nav-link');
-    const logo_windows = $('.logo-windows');
+    var nav_link = $('.nav-link');
+    var logo_windows = $('.logo-windows');
     $(document).on('click', function(event) {
         if (nav_link.hasClass('open-nav') && !nav_link.is(event.target) && !logo_windows.is(event.target) && nav_link.has(event.target).length === 0) {
             nav_link.removeClass('open-nav');
             $('.logo-windows').removeClass('active');
         }
     });
+
+    $('#discord').click(function () {
+        var discord = $(this).data('discord') || '';
+  
+        navigator.clipboard.writeText(discord)
+          .then(() => {
+            $('#discord span').text('copié');
+  
+            setTimeout(() => {
+                $('#discord span').text('Discord');
+            }, 200);
+          })
+      });
+
+      $('section.windows .icon-slider-left').on('click', function() {
+        $(this).toggleClass('active');
+        
+        var container = $(this).parents()[1];
+        $(container).children('ul').toggleClass('active')
+      });
 });

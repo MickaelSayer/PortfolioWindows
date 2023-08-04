@@ -1,0 +1,323 @@
+section.windows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    padding: 5px;
+    background: #034587;
+    overflow: hidden;
+    clear: both;
+}
+
+section.windows .windows-top {
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+section.windows .windows-top .windows-action {
+    pointer-events: initial;
+}
+
+section.windows .container-name {
+    display: flex;
+    padding: 0 5px 5px 5px;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #0165B5, #034587);
+}
+
+section.windows .windows-name {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+section.windows .windows-name img {
+    margin-right: 10px;
+}
+
+section.windows .windows-action {
+    display: flex;
+}
+
+section.windows .windows-action div {
+    height: 100%;
+    width: 33px;
+    position: relative;
+}
+
+section.windows .windows-action div:not(:last-child) {
+    margin-right: 5px;
+}
+
+section.windows .minus {
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.windows .minus:hover,
+section.windows .size:hover {
+    background: #ffffff2b;
+}
+
+section.windows .minus::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    background: white;
+    width: 50%;
+    height: 3px;
+}
+
+section.windows .size {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+section.windows .extends {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+    border: 1px solid white;
+    box-shadow: inset 0px 4px 0 white;
+    cursor: pointer;
+}
+
+section.windows .extends.active {
+    display: block;
+}
+
+section.windows .narrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -64%);
+    width: 40%;
+    height: 40%;
+    border: 2px solid white;
+    background: #004C99;
+    cursor: pointer;
+}
+
+section.windows .narrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -20%);
+    width: 100%;
+    height: 100%;
+    background: #004C99;
+    border: 2px solid white;
+}
+
+section.windows .narrow.active {
+    display: block;
+}
+
+section.windows .close {
+    position: relative;
+    background: #B72525;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.windows .close:hover {
+    background: #e30d0d;
+}
+
+section.windows .close span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 60%;
+    height: 3px;
+    background: white;
+}
+
+section.windows .close span:first-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+section.windows .close span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+section.windows .content-menu {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-between;
+    background: #dddddd;
+    padding: 5px;
+    pointer-events: none;
+}
+
+section.windows .content-menu img {
+    height: 40px;
+}
+
+section.windows .windows-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #dddddd;
+}
+
+section.windows .windows-menu li {
+    list-style-type: none;
+    font-size: 14px;
+}
+
+section.windows .windows-menu li:not(:last-child) {
+    margin-right: 20px;
+}
+
+section.windows .tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #dddddd;
+    height: 40px;
+}
+
+section.windows .tools div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+    font-size: 14px;
+}
+
+section.windows .tools .arrrow-after,
+section.windows .tools .arrrow-before {
+    color: #bbb8b8;
+}
+
+section.windows .tools .arrrow-before i {
+    margin-right: 15px;
+    transform: scale(1.8);
+}
+
+section.windows .tools .arrrow-after i {
+    transform: scale(1.8);
+}
+
+section.windows .tools .arrrow-after {
+    border-right: 1px solid #bbb8b8;
+    margin-right: 5px;
+}
+
+section.windows .tools div img {
+    margin-right: 10px;
+}
+
+section.windows .tools .folder {
+    border-right: 1px solid #bbb8b8;
+}
+
+section.windows .sidebar-left {
+    background: linear-gradient(to bottom, #4e82b9, #3f619f);
+    height: calc(100% - 106px);
+    width: 300px;
+    padding: 15px;
+    font-size: 12px;
+    float: left;
+    overflow: hidden;
+}
+
+section.windows .container-sildebar-left {
+    background: #8285a0;
+    margin-bottom: 20px;
+}
+
+section.windows .sidebar-left-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: linear-gradient(to right, white 56%, #9abeff);
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+    color: #1a57b7;
+}
+
+section.windows .sidebar-left-title span {
+    pointer-events: none;
+}
+
+section.windows .icon-slider-left {
+    background: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+section.windows .icon-slider-left.active {
+    transform: rotate(0deg);
+}
+
+section.windows .icon-slider-left {
+    transform: rotate(180deg);
+}
+
+section.windows .icon-slider-left:nth-child(3) {
+    transform: rotate(180deg);
+}
+
+section.windows .container-sildebar-left ul {
+    padding: 15px 15px;
+    list-style-type: none;
+    color: #3064c1;
+    background: #dce1fb;
+    pointer-events: none;
+}
+
+section.windows .container-sildebar-left ul.active {
+    height: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+
+section.windows .container-sildebar-left ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+section.windows .container-sildebar-left ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+section.windows .container-sildebar-left ul li img {
+    margin-right: 10px;
+}
+
+section.windows .content-section {
+    background: white;
+    height: calc(100% - 106px);
+    width: calc(100% - 300px);
+    padding: 15px;
+    font-size: 12px;
+    float: right;
+    overflow: hidden;
+}
