@@ -1,0 +1,19 @@
+section.windows.presentation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: left bottom;
+    transition: transform .3s ease-out, height .1s linear, width .1s linear;
+    z-index: 1;
+}
+
+section.windows.presentation.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+section.windows.presentation.full-size.active {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1);
+}

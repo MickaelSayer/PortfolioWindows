@@ -115,6 +115,10 @@ header .task.active {
     width: 200px;
 }
 
+header .task.selected {
+    box-shadow: inset 0px 0px 8px 5px #1f5081;
+}
+
 header .task .content-task {
     display: flex;
     align-items: center;
