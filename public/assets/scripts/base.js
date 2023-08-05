@@ -47,6 +47,7 @@ $(document).ready(function() {
         $(`.navbar #${data_link}`).addClass('selected');
 
         // Gère la visibilité en premier plan de l'élément windows
+        windowsSections.css('z-index', '1')
         windowsElement.addClass('active').css('z-index', '2');
 
         // Fermeture de la navigation avec le bouton windows navigation
