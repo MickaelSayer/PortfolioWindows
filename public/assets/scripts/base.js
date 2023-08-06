@@ -167,7 +167,7 @@ $(document).ready(function() {
         // Sélectionne l'élément cliqué avec la classe 'icon-slider-left'
         var iconSliderLeft = $(this);
     
-        // Ajoute ou supprime la classe 'active' sur l'élément cliqué et sur son élément parent (qui est probablement un conteneur)
-        iconSliderLeft.toggleClass('active').parent().children('ul').toggleClass('active');
+        // Ajoute ou supprime la classe 'active' sur l'élément cliqué et sur son élément parent
+        iconSliderLeft.toggleClass('active').parents('.container-sildebar-left').children('ul').toggleClass('active');
     });
 });
