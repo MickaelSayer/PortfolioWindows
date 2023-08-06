@@ -58,3 +58,9 @@ main .icon-bureau.corbeille {
 main .icon-bureau img {
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 848px) {
+    main {
+        height: 100vh;
+    }
+}

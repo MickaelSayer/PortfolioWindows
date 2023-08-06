@@ -115,12 +115,20 @@ nav .sidebar-right {
 }
 
 nav .sidebar-left {
+    display: flex;
     border-right: 1px solid lightgrey;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+nav .sidebar-left .content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
 }
 
 nav .sidebar-left .content-top {
     position: relative;
-    height: 26%;
     pointer-events: none;
     padding: 10px 0 0 10px;
 }
@@ -169,7 +177,7 @@ nav .detail-content-top span:nth-child(2) {
 
 nav .sidebar-left ul {
     position: relative;
-    height: calc(100% - 32%);
+    margin-top: 5px;
 }
 
 nav .sidebar-left ul li {
@@ -224,24 +232,25 @@ nav .sidebar-left .program img{
     transform: scale(0.9);
 }
 nav .sidebar-right {
+    display: flex;
     font-size: 12px;
     color: #01457c;
     font-weight: 600;
     background: #bde0fd;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 nav .sidebar-right .content-top {
     position: relative;
-    height: 33%;
     pointer-events: none;
     padding: 10px 0 0 10px;
 }
 
 nav .sidebar-right .content-mid {
     position: relative;
-    height: 20%;
     pointer-events: none;
-    padding: 0 0 0 10px;
+    padding: 10px 0 10px 10px;
 }
 
 nav .sidebar-right .content-mid i {
@@ -250,9 +259,8 @@ nav .sidebar-right .content-mid i {
 
 nav .sidebar-right .content-bottom {
     position: relative;
-    height: calc(100% - 53%);
     pointer-events: none;
-    padding: 10px 0 0 10px;
+    padding: 0 0 0 10px;
 }
 
 nav .sidebar-right .content-top div,

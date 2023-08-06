@@ -170,4 +170,14 @@ $(document).ready(function() {
         // Ajoute ou supprime la classe 'active' sur l'élément cliqué et sur son élément parent
         iconSliderLeft.toggleClass('active').parents('.container-sildebar-left').children('ul').toggleClass('active');
     });
+
+    $('header .container-left .icon-extends').on('click', function() {
+        $('.icon-app').toggleClass('active');
+        $(this).children('i').toggleClass('active');
+    });
+
+    $('header .container-left .icon-extends-right').on('click', function() {
+        $('.container-right').toggleClass('active');
+        $(this).children('i').toggleClass('active');
+    });
 });
