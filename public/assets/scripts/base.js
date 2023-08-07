@@ -4,7 +4,24 @@ function actualiserHorloge() {
     var heure = date.getHours().toString().padStart(2, '0');
     var minutes = date.getMinutes().toString().padStart(2, '0');
     var heureActuelle = heure + ":" + minutes;
-    $("header .horloge .heure").text(heureActuelle);
+
+    if ($(window).width() > 849) {
+        $("header .horloge .heure").text(heureActuelle);
+        $("main .horloge-responsive .heure").text('');
+    } else {
+        $("header .horloge .heure").text('');
+        $("main .horloge-responsive .heure").text(heureActuelle);
+    }
+
+    $(window).on('resize', function() {
+        if ($(window).width() > 849) {
+            $("header .horloge .heure").text(heureActuelle);
+            $("main .horloge-responsive .heure").text('');
+        } else {
+            $("header .horloge .heure").text('');
+            $("main .horloge-responsive .heure").text(heureActuelle);
+        }
+    });
 }
 
 $(document).ready(function() {
@@ -185,5 +202,19 @@ $(document).ready(function() {
         const data_link = $(this).parents('section.windows').data('link');
 
         $('section.windows.' + data_link + ' .container-content').toggleClass('active');
+    });
+
+    if ($(window).width() < 849) {
+        $('header .navbar .horloge.div').removeClass('heure');
+    } else {
+
+    }
+
+    $(window).on('resize', function() {
+        if ($(window).width() < 849) {
+
+        } else {
+
+        }
     });
 });

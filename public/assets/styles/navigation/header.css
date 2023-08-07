@@ -325,11 +325,4 @@ header .container-right .horloge {
     header .navbar .container-right {
         display: none;
     }
-
-    header .horloge {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
 }

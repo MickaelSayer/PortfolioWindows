@@ -1,4 +1,19 @@
 <main>
+    <div class="icon-app-responsive">
+        <div>
+            <img src="/assets/pictures/folder-windows.png" alt="dossier logo">
+            <img src="/assets/pictures/internet-explorer.png" alt="internet explorer logo">
+            <img src="/assets/pictures/chrome.png" alt="chrome internet logo">
+            <img src="/assets/pictures/store.png" alt="appStore logo">
+        </div>
+
+        <div>
+            <img src="/assets/pictures/wifi-signal.png" alt="wifi logo">
+            <img src="/assets/pictures/volume.png" alt="volume logo">
+            <img src="/assets/pictures/battery.png" alt="batterie logo">
+        </div>
+    </div>
+
     <div class="container-bureau">
         <div class="icon-bureau corbeille">
             <img src="{{ asset('assets/pictures/waste.png') }}" alt="poubelle logo">
@@ -24,6 +39,10 @@
             <img src="{{ asset('assets/pictures/gmail.png') }}" alt="Gmail logo">
             Gmail
         </a>
+    </div>
+
+    <div class="horloge-responsive">
+        <div class="heure"></div>
     </div>
 
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'projet'] %}
