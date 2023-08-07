@@ -180,4 +180,10 @@ $(document).ready(function() {
         $('.container-right').toggleClass('active');
         $(this).children('i').toggleClass('active');
     });
+
+    $('section.windows .extends-sidebar ').on('click', function() {
+        const data_link = $(this).parents('section.windows').data('link');
+
+        $('section.windows.' + data_link + ' .container-content').toggleClass('active');
+    });
 });

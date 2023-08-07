@@ -36,7 +36,7 @@ header .container-right .separator {
 header .container-left .icon-extends,
 header .container-left .icon-extends-right {
     display: none;
-    color: white;
+    color: #1f3969;
     padding: 3px 7px;
     margin-left: 17px;
     cursor: pointer;
@@ -220,6 +220,10 @@ header .container-right .horloge {
         width: 100px;
     }
 
+    header .task img {
+        margin-right: 0;
+    }
+
     header .task .content-task {
         display: flex;
         align-items: center;
@@ -295,6 +299,37 @@ header .container-right .horloge {
 
 @media screen and (max-width: 848px) {
     header {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        right: initial;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    header:hover {
+        background: linear-gradient(to bottom, #068bf3, #0962bd);
+    }
+
+    header .navbar {
+        box-shadow: none;
+        background-image: url(/assets/pictures/windows-logo.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    header .navbar .container-left,
+    header .navbar .container-right {
         display: none;
+    }
+
+    header .horloge {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
     }
 }

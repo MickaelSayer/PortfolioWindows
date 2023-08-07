@@ -226,14 +226,66 @@ section.windows .tools .folder {
     border-right: 1px solid #bbb8b8;
 }
 
-section.windows .sidebar-left {
+section.windows .container-content .sidebar-left {
+    display: none;
     background: linear-gradient(to bottom, #4e82b9, #3f619f);
-    height: calc(100% - 106px);
+    height: 100%;
     width: 300px;
+    padding: 15px 25px 15px 15px;
+    font-size: 12px;
+}
+
+section.windows .container-content.active .sidebar-left {
+    display: block;
+}
+
+section.windows .container-content {
+    display: flex;
+    height: calc(100% - 106px);
+    width: 100%;
+}
+
+section.windows .container-content.active .content-section {
+    width: calc(100% - 300px);
+}
+
+section.windows .container-content .content-section {
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 100%;
+    width: 100%;
     padding: 15px;
     font-size: 12px;
-    float: left;
     overflow: hidden;
+}
+
+section.windows .container-content .extends-sidebar {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: rotate(0deg);
+    color:#1f3969;
+}
+
+section.windows .container-content.active .extends-sidebar {
+    left: 300px;
+    transform: rotate(180deg);
+}
+
+section.windows .container-content .extends-sidebar i:hover {
+    transform: rotate(180deg);
+}
+
+section.windows .container-content.active .extends-sidebar i:hover {
+    transform: rotate(180deg);
 }
 
 section.windows .container-sildebar-left {
@@ -308,12 +360,35 @@ section.windows .container-sildebar-left ul li img {
     margin-right: 10px;
 }
 
-section.windows .content-section {
-    background: white;
-    height: calc(100% - 106px);
-    width: calc(100% - 300px);
-    padding: 15px;
-    font-size: 12px;
-    float: right;
-    overflow: hidden;
+@media screen and (max-width: 1139px) {
+    section.windows .container-content.active .sidebar-left {
+        display: none;
+    }
+    
+    section.windows .container-content .sidebar-left {
+        display: block;
+        width: 100%;
+    }
+
+    section.windows .container-content.active .content-section {
+        display: flex;
+        width: 100%;
+    }
+    
+    section.windows .container-content .content-section {
+        display: none;
+        width: calc(100% - 300px);
+    }
+
+    section.windows .container-content .extends-sidebar {
+        display: flex;
+        left: calc(100% - 27px);
+        transform: rotate(180deg);
+    }
+    
+    section.windows .container-content.active .extends-sidebar {
+        left: 0;
+        transform: translateY(-50%);
+        transform: rotate(0deg);
+    }
 }
