@@ -160,6 +160,7 @@ main .container-app::before {
     align-items: center;
     justify-content: center;
     border-radius: 10px 10px 0px 0px;
+    font-weight: 600;
 }
 
 main .container-app:first-child img {
