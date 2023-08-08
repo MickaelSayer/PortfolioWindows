@@ -274,3 +274,9 @@ nav .sidebar-right .content-top::after,
 nav .sidebar-right .content-mid::after {
     background-color: #99a8df;
 }
+
+@media screen and (max-width: 848px) {
+    nav.nav-link.open-nav {
+        display: none;
+    }
+}

@@ -204,17 +204,13 @@ $(document).ready(function() {
         $('section.windows.' + data_link + ' .container-content').toggleClass('active');
     });
 
-    if ($(window).width() < 849) {
-        $('header .navbar .horloge.div').removeClass('heure');
-    } else {
+    $('header .navbar-responsive').on('click', function() {
+        $('header').toggleClass('active');
 
-    }
+        $('main .icon-app-responsive').toggleClass('active');
 
-    $(window).on('resize', function() {
-        if ($(window).width() < 849) {
-
-        } else {
-
-        }
+        setTimeout(function() {
+            $('main .container-bureau').toggleClass('innactive');
+        }, 100);
     });
 });

@@ -1,17 +1,107 @@
 <main>
     <div class="icon-app-responsive">
-        <div>
-            <img src="/assets/pictures/folder-windows.png" alt="dossier logo">
-            <img src="/assets/pictures/internet-explorer.png" alt="internet explorer logo">
-            <img src="/assets/pictures/chrome.png" alt="chrome internet logo">
-            <img src="/assets/pictures/store.png" alt="appStore logo">
+        <div class="content-top">
+            <div>
+                <img src="/assets/pictures/folder-windows.png" alt="dossier logo">
+                <img src="/assets/pictures/internet-explorer.png" alt="internet explorer logo">
+                <img src="/assets/pictures/chrome.png" alt="chrome internet logo">
+                <img src="/assets/pictures/store.png" alt="appStore logo">
+            </div>
+    
+            <div>
+                <img src="/assets/pictures/wifi-signal.png" alt="wifi logo">
+                <img src="/assets/pictures/volume.png" alt="volume logo">
+                <img src="/assets/pictures/battery.png" alt="batterie logo">
+            </div>
         </div>
+        <div class="content-app">
+            <div class="nav-app">
+                <ul>
+                    <li title="Cliquez ici pour me découvrir" data-link="presentation">
+                        <img src="/assets/pictures/presentation.png" alt="presentation logo">
+                        <span>Présentation</span>
+                    </li>
+                    <li title="Cliquez ici pour voir mon diplôme" data-link="diplome">
+                        <img src="/assets/pictures/graduation.png" alt="diplome logo">
+                        <span>Diplôme</span>
+                    </li>
+                    <li title="Cliquez ici pour voir mes éxperiences" data-link="experience">
+                        <img src="/assets/pictures/scientific.png" alt="experience logo">
+                        <span>Expériences</span>
+                    </li>
+                    <li title="Cliquez ici pour voir mes langages" data-link="langage">
+                        <img src="/assets/pictures/programming.png" alt="Informatique langage logo">
+                        <span>Langages</span>
+                    </li>
+                    <li title="Cliquez ici pour voir mes projets" data-link="projet">
+                        <img src="/assets/pictures/idea.png" alt="projet logo">
+                        <span>Projets</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="app">
+                <div class="container-app" style="--title_app:'Applications'">
+                    <div>
+                        <img src="/assets/pictures/store.png" alt="appStore logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/internet-explorer.png" alt="internet explorer logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/chrome32.png" alt="chrome internet logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/gmail.png" alt="gmail logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/vlc.png" alt="vlc logo">
+                    </div>
+                </div>
+                <div class="container-app" style="--title_app:'Dossiers'">
+                        <div>
+                            <img src="/assets/pictures/folder-windows.png" alt="dossier logo">
+                        </div>
+                        <div>
+                            <img src="/assets/pictures/photo.png" alt="dossier photo logo">
+                        </div>
+                        <div>
+                            <img src="/assets/pictures/music-folder.png" alt="dossier musique logo">
+                        </div>
+                        <div>
+                            <img src="/assets/pictures/desktop.png" alt="poste de travail logo">
+                        </div>
+                        <div>
+                            <img src="/assets/pictures/computer.png" alt="reseau logo">
+                        </div>
+                </div>
+                <div class="container-app" style="--title_app:'Paramétres'">
+                    <div>
+                        <img src="/assets/pictures/gear.png" alt="configuration logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/freelance.png" alt="configuratioon logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/web-management.png" alt="connexion logo">
+                    </div>
+                </div>
+                <div class="container-app" style="--title_app:'Gestion'">
+                    <div>
+                        <img src="/assets/pictures/help-desk.png" alt="support logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/search.png" alt="Recherche logo">
+                    </div>
+                    <div>
+                        <img src="/assets/pictures/process.png" alt="Executer logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div>
-            <img src="/assets/pictures/wifi-signal.png" alt="wifi logo">
-            <img src="/assets/pictures/volume.png" alt="volume logo">
-            <img src="/assets/pictures/battery.png" alt="batterie logo">
-        </div>
+    <div class="horloge-responsive">
+        <div class="heure"></div>
     </div>
 
     <div class="container-bureau">
@@ -39,10 +129,6 @@
             <img src="{{ asset('assets/pictures/gmail.png') }}" alt="Gmail logo">
             Gmail
         </a>
-    </div>
-
-    <div class="horloge-responsive">
-        <div class="heure"></div>
     </div>
 
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'projet'] %}

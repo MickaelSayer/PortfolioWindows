@@ -209,6 +209,16 @@ header .container-right .horloge {
     color: white;
 }
 
+header .navbar-responsive {
+    display: none;
+    box-shadow: none;
+    background-image: url(/assets/pictures/windows-logo.png);
+    background-size: cover;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+}
+
 @media screen and (max-width: 1650px) {
     header .task.active {
         width: 150px;
@@ -250,6 +260,7 @@ header .container-right .horloge {
         margin: 0;
         border-radius: 5px;
         background: white;
+        box-shadow: 0 0 3px 1px black;
     }
 
     header .icon-app.active {
@@ -270,6 +281,7 @@ header .container-right .horloge {
         right: 0;
         display: none;
         background: white;
+        box-shadow: 0 0 3px 1px black;
     }
 
     header .container-right.active {
@@ -300,25 +312,36 @@ header .container-right .horloge {
 @media screen and (max-width: 848px) {
     header {
         position: fixed;
-        bottom: 30px;
+        bottom: 10px;
         left: 50%;
         right: initial;
         transform: translateX(-50%);
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         cursor: pointer;
     }
+    
+    header .navbar-responsive {
+        display: flex;
+        box-shadow: none;
+        background-image: url(/assets/pictures/windows-logo.png);
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 50px;
+    }
 
-    header:hover {
+    header.active {
         background: linear-gradient(to bottom, #068bf3, #0962bd);
     }
 
     header .navbar {
         box-shadow: none;
-        background-image: url(/assets/pictures/windows-logo.png);
-        background-size: cover;
-        background-position: center;
+    }
+
+    header:hover {
+        background: linear-gradient(to bottom, #068bf3, #0962bd);
     }
 
     header .navbar .container-left,
