@@ -344,6 +344,10 @@ header .icon-extends-right .separator {
         background: linear-gradient(to bottom, #068bf3, #0962bd);
     }
 
+    header.inactive {
+        display: none;
+    }
+
     header .navbar {
         box-shadow: none;
     }

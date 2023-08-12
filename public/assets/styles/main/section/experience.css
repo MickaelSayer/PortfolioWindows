@@ -1,19 +1,9 @@
 section.windows.experience {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-51%, -47%) scale(0);
-    transform-origin: left bottom;
-    transition: transform .3s ease-out, height .1s linear, width .1s linear;
-    z-index: 1;
+    transform: translate(-51%, -47%);
 }
 
-section.windows.experience.active {
-    transform: translate(-51%, -47%) scale(1);
-}
-
-section.windows.experience.full-size.active {
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%) scale(1);
+@media screen and (max-width: 848px) {
+    section.windows.experience.active {
+        transform: translate(0%, 0%);
+    }
 }

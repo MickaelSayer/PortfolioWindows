@@ -115,10 +115,12 @@ main .content-app {
     align-items: center;
     opacity: 0;
     transition: .1s linear;
+    pointer-events: none;
 }
 
 main .icon-app-responsive.active .content-app {
     opacity: 1;
+    pointer-events: initial;
 }
 
 main .app {
@@ -207,6 +209,106 @@ main .nav-app li img {
     margin-bottom: 5px;
 }
 
+
+main .gestion-app {
+    position: absolute;
+    bottom: 70px;
+    left: 50.3%;
+    transform: translateX(-50%);
+    padding: 3px 15px;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #0165B5, #004C99);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 4;
+}
+
+main .gestion-app:hover {
+    background: linear-gradient(to bottom, #068bf3, #0962bd);
+}
+
+main .gestion-app.active {
+    background: linear-gradient(to bottom, #068bf3, #0962bd);
+}
+
+
+main .gestion-app i {
+    margin-right: 5px;
+}
+
+main .container-gestion-app {
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    backdrop-filter: blur(4px);
+    z-index: 3;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .container-gestion-app span {
+    color: white;
+    font-size: 14px;
+}
+
+main .container-gestion-app .arrow-left,
+main .container-gestion-app .arrow-right {
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+}
+
+main .container-gestion-app .arrow-left.inactive,
+main .container-gestion-app .arrow-right.inactive {
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+}
+
+main .container-gestion-app i:hover {
+    transform: scale(1.1);
+}
+
+main .container-gestion-app.active .windows {
+    display: block;
+    transform: scale(1);
+    transition: .4s linear;
+}
+
+main .container-gestion-app.active .windows.initial {
+    transform: translateX(0%) scale(1);
+}
+
+main .container-gestion-app.active .windows.left {
+    transform: translateX(-100%) scale(0);
+}
+
+main .container-gestion-app.active .windows.right {
+    transform: translateX(100%) scale(0);
+}
+
+main .container-gestion-app.active {
+    opacity: 1;
+}
+
+main .content-gestion-windows {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(0.4);
+    overflow: hidden;
+}
+
 @media screen and (max-width: 848px) {
     main {
         height: 100vh;
@@ -236,6 +338,15 @@ main .nav-app li img {
     }
 
     main .icon-app-responsive {
+        display: flex;
+        z-index: 3;
+    }
+
+    main .gestion-app {
+        display: flex;
+    }
+
+    main .container-gestion-app.active {
         display: flex;
     }
 }

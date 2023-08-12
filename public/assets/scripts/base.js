@@ -213,4 +213,117 @@ $(document).ready(function() {
             $('main .container-bureau').toggleClass('innactive');
         }, 100);
     });
+
+    $('main .nav-app li').on('click', function() {
+        const data_link = $(this).data('link');
+        const windowsElement = $(`section.windows.${data_link}`);
+        const itemCopy = windowsElement.clone();
+        const elt_gestion_content = $('main .content-gestion-windows');
+        const elt_gestion_windows = $(`main .container-gestion-app .windows.${data_link}.active`);
+
+        // Gère la visibilité en premier plan de l'élément windows
+        windowsSections.css('z-index', '1');
+        windowsElement.addClass('active').css('z-index', '2');
+
+        // Fermeture de la navigation avec le bouton windows navigation
+        $('main .icon-app-responsive').removeClass('active');
+
+        // Ajout des fenétres windows à la gestion des applications
+        if (elt_gestion_windows.length == 0) {
+            elt_gestion_content.append(itemCopy);
+        }
+
+        $.each($('main .content-gestion-windows .windows'), function (index, value) {
+             if (index == 0) {
+                $(value).addClass('initial');
+             } else {
+                $(value).addClass('left');
+             }
+        });
+    });
+
+    const text_gestion_app = $('main .gestion-app').html();
+    $('main .gestion-app').on('click', function() {
+        var elt_gestion_app = $('main .container-gestion-app');
+
+        $(this).html(text_gestion_app);
+        if (!$(this).hasClass('active')) {
+            $(this).html('<i class="fa-solid fa-xmark" style="color: #ffffff;"></i> Fermer');
+        }
+
+        $('main .container-gestion-app span').hide();
+        $('main .container-gestion-app .arrow-left').show();
+        $('main .container-gestion-app .arrow-right').show();
+        if ($('main .container-gestion-app .windows').length == 0) {
+            $('main .container-gestion-app span').show();
+            $('main .container-gestion-app .arrow-left').hide();
+            $('main .container-gestion-app .arrow-right').hide();
+        }
+
+        elt_gestion_app.toggleClass('active');
+
+        $(this).toggleClass('active');
+        $('header').toggleClass('inactive');
+
+        $('main .container-gestion-app .arrow-right').removeClass('inactive');
+        if ($('main .content-gestion-windows .windows.initial').next('.windows').length == 0) {
+            $('main .container-gestion-app .arrow-right').addClass('inactive');
+        }
+
+        $('main .container-gestion-app .arrow-left').removeClass('inactive');
+        if ($('main .content-gestion-windows .windows.initial').prev('.windows').length == 0) {
+            $('main .container-gestion-app .arrow-left').addClass('inactive');
+        }
+    });
+
+    $('main .container-gestion-app .arrow-right').on('click', function() {
+        const initial = $('main .content-gestion-windows .windows.initial');
+        var __this = $(this);
+
+        initial.removeClass('initial').addClass('right');
+        initial.next('.windows').removeClass('left').addClass('initial');
+
+        __this.removeClass('inactive');
+        $.each($('main .content-gestion-windows .windows'), function ( key, value ) { 
+            if ($(value).hasClass('initial') && $(value).next('.windows').length == 0) {
+                __this.addClass('inactive');
+
+                return;
+            }
+
+            var arrow_left = $('main .container-gestion-app .arrow-left');
+            arrow_left.removeClass('inactive');
+            if ($(value).hasClass('initial') && $(value).prev('.windows').length == 0) {
+                arrow_left.addClass('inactive');
+
+                return;
+            }
+        });
+    });
+
+    $('main .container-gestion-app .arrow-left').on('click', function() {
+        const initial = $('main .content-gestion-windows .windows.initial');
+        var __this = $(this);
+
+        initial.removeClass('initial').addClass('left');
+        initial.prev('.windows').removeClass('right').addClass('initial');
+
+        __this.removeClass('inactive');
+        $.each($('main .content-gestion-windows .windows'), function ( key, value ) { 
+            if ($(value).hasClass('initial') && $(value).prev('.windows').length == 0) {
+                __this.addClass('inactive');
+
+                return;
+            }
+
+            var arrow_right = $('main .container-gestion-app .arrow-right');
+            arrow_right.removeClass('inactive');
+            if ($(value).hasClass('initial') && $(value).prev('.windows').length == 0) {
+                arrow_right.addClass('inactive');
+
+                return;
+            }
+
+        });
+    });
 });
