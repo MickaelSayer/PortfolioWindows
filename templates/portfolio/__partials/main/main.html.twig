@@ -136,16 +136,31 @@
         App
     </div>
 
-    <div class="container-gestion-app">
-        <span>Aucune application récemment utilisée</span>
-        <div class="arrow-left">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
-        <div class="arrow-right">
-            <i class="fa-solid fa-arrow-right"></i>
+    <div class="container-open-app">
+        <div class="box-app">
+            <span style="--i:0; --color:#d42222;">
+
+            </span>
+            <span style="--i:1; --color:#ede90a;">
+    
+            </span>
+            {# <span style="--i:2; --color:#24e812;">
+    
+            </span>
+            <span style="--i:3; --color:#13c1f1;">
+    
+            </span>
+            <span style="--i:4; --color:#e71275;">
+    
+            </span> #}
         </div>
 
-        <div class="content-gestion-windows"></div>
+        <div class="btn-rotate-left">
+            <i class="fa-solid fa-chevron-left fa-xl" style="color: #ffffff;"></i>
+        </div>
+        <div class="btn-rotate-right">
+            <i class="fa-solid fa-chevron-right fa-xl" style="color: #ffffff;"></i>
+        </div>
     </div>
 
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'projet'] %}

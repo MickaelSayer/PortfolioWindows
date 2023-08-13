@@ -72,8 +72,6 @@ $(document).ready(function() {
         const data_link = $(this).data('link');
         const windowsElement = $(`section.windows.${data_link}`);
         const itemCopy = windowsElement.clone();
-        const elt_gestion_content = $('main .content-gestion-windows');
-        const elt_gestion_windows = $(`main .container-gestion-app .windows.${data_link}.active`);
 
         // Gère la visibilité en premier plan de l'élément windows
         windowsSections.css('z-index', '1');
@@ -86,14 +84,6 @@ $(document).ready(function() {
         if (elt_gestion_windows.length == 0) {
             elt_gestion_content.append(itemCopy);
         }
-
-        $.each($('main .content-gestion-windows .windows'), function (index, value) {
-             if (index == 0) {
-                $(value).addClass('initial');
-             } else {
-                $(value).addClass('left');
-             }
-        });
     });
 
     taskItems.on('click', function() {

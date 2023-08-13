@@ -1,14 +1,6 @@
 $(document).ready(function() {
-    const gestionApp = $('main .gestion-app');
-    const containerGestionApp = $('main .container-gestion-app');
-    const contentGestionWindows = $('main .content-gestion-windows');
     const discordButton = $('#discord');
     const discordButtonSpan = discordButton.find('span');
-    const arrowRight = containerGestionApp.find('.arrow-right');
-    const arrowLeft = containerGestionApp.find('.arrow-left');
-    const windows = contentGestionWindows.find('.windows');
-
-    const textGestionApp = gestionApp.html();
 
     discordButton.click(function () {
         const discord = $(this).data('discord') || '';
@@ -23,46 +15,31 @@ $(document).ready(function() {
             });
     });
 
-    gestionApp.on('click', function() {
-        const initialWindows = contentGestionWindows.find('.windows.initial');
+    const html_content_app = $('.gestion-app').html();
+    $('.gestion-app').click(function() {
+        $(this).toggleClass('active');
 
-        gestionApp.html(textGestionApp);
-        gestionApp.toggleClass('active');
-        containerGestionApp.toggleClass('active');
-        $('header').toggleClass('inactive');
+        $(this).html(html_content_app);
+        if ($(this).hasClass('active')) {
+            $(this).html('<i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i> Fermer');
+        }
 
-        const hasWindows = windows.length > 0;
-        containerGestionApp.find('span').toggle(!hasWindows);
-        arrowLeft.add(arrowRight).toggle(hasWindows);
-
-        arrowRight.toggleClass('inactive', initialWindows.next('.windows').length === 0);
-        arrowLeft.toggleClass('inactive', initialWindows.prev('.windows').length === 0);
+        $('.container-open-app').toggleClass('active');
+        $('header').toggleClass('inactive')
     });
 
-    containerGestionApp.find('.arrow-right, .arrow-left').on('click', function() {
-        const initialWindows = contentGestionWindows.find('.windows.initial');
-        const isArrowRight = $(this).hasClass('arrow-right');
-        const directionClass = isArrowRight ? 'right' : 'left';
-        const oppositeDirectionClass = isArrowRight ? 'left' : 'right';
-
-        initialWindows.removeClass('initial').addClass(directionClass);
-        initialWindows[isArrowRight ? 'next' : 'prev']('.windows').removeClass(oppositeDirectionClass).addClass('initial');
-
-        $(this).removeClass('inactive');
-
-        const checkArrows = function() {
-            arrowRight.toggleClass('inactive', initialWindows.next('.windows').length === 0);
-            arrowLeft.toggleClass('inactive', initialWindows.prev('.windows').length === 0);
-        };
-
-        if (initialWindows.hasClass('initial')) {
-            checkArrows();
-        } else {
-            $.each(windows, function(_, value) {
-                if ($(value).hasClass('initial') && ($(value)[isArrowRight ? 'next' : 'prev']('.windows').length === 0)) {
-                    $(isArrowRight ? arrowRight : arrowLeft).addClass('inactive');
-                }
-            });
-        }
+    const box_app = $('main .container-open-app .box-app');
+    const btn_rotate_left = $('.btn-rotate-left');
+    const btn_rotate_right = $('.btn-rotate-right');
+    let currentRotation = 0;
+    function rotateBox(degrees) {
+        currentRotation += degrees;
+        box_app.css('transform', 'perspective(1000px) rotateY(' + currentRotation + 'deg)');
+    }
+    btn_rotate_left.click(function() {
+        rotateBox(72);
+    });
+    btn_rotate_right.click(function() {
+        rotateBox(-72);
     });
 });
