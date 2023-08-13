@@ -14,9 +14,15 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/projet.css') }}">
 {% endblock %}
 
+{% block javascripts %}
+    <script src="{{ asset('assets/scripts/main.js') }}"></script>
+    <script src="{{ asset('assets/scripts/windows.js') }}"></script>
+    <script src="{{ asset('assets/scripts/nav.js') }}"></script>
+{% endblock %}
+
 {% block header %}
     {% include "portfolio/__partials/navigation/header.html.twig" %}
-{% endblock header %}
+{% endblock %}
 
 {% block body %}
     {% include "portfolio/__partials/main/main.html.twig" %}
