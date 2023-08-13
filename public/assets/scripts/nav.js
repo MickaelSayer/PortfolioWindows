@@ -71,7 +71,6 @@ $(document).ready(function() {
     $('main .nav-app li').on('click', function() {
         const data_link = $(this).data('link');
         const windowsElement = $(`section.windows.${data_link}`);
-        const itemCopy = windowsElement.clone();
 
         // Gère la visibilité en premier plan de l'élément windows
         windowsSections.css('z-index', '1');
@@ -79,11 +78,6 @@ $(document).ready(function() {
 
         // Fermeture de la navigation avec le bouton windows navigation
         $('main .icon-app-responsive').removeClass('active');
-
-        // Ajout des fenétres windows à la gestion des applications
-        if (elt_gestion_windows.length == 0) {
-            elt_gestion_content.append(itemCopy);
-        }
     });
 
     taskItems.on('click', function() {

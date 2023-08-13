@@ -248,6 +248,8 @@ main .gestion-app i {
 
 main .container-open-app {
     display: none;
+    flex-direction: column;
+    justify-content: center;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -275,6 +277,7 @@ main .container-open-app .box-app {
 
 main .container-open-app span {
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -282,7 +285,15 @@ main .container-open-app span {
     transform-origin: center;
     background: var(--color);
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 72deg)) translateZ(240px);
+}
+
+main .container-open-app span.active {
+    display: flex;
+}
+
+main .container-open-app .counter {
+    margin-bottom: 80px;
+    font-size: 14px;
 }
 
 main .container-open-app .btn-rotate-left {

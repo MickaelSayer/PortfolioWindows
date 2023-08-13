@@ -25,7 +25,22 @@ $(document).ready(function() {
         }
 
         $('.container-open-app').toggleClass('active');
-        $('header').toggleClass('inactive')
+        $('header').toggleClass('inactive');
+
+        var activeSections = $('section.windows.active');
+        var emptySpans = $('main .box-app span:empty');
+        $.each(activeSections, function(index, elt_windows) {
+            var elt_windows_clone = $(elt_windows).clone();
+            if (index < emptySpans.length) {
+                $(emptySpans[index]).append(elt_windows_clone);
+                $(emptySpans[index]).addClass('active');
+            }
+        });
+
+        var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
+        $('main .box-app span.box.active').css('transform', 'rotateY(calc(var(--i) * ' + deg_windows_open + 'deg)) translateZ(240px)');
+
+        $('main .container-open-app .counter').html($('main .box-app span.box.active').length + ' applications ouvertes');
     });
 
     const box_app = $('main .container-open-app .box-app');
@@ -36,10 +51,13 @@ $(document).ready(function() {
         currentRotation += degrees;
         box_app.css('transform', 'perspective(1000px) rotateY(' + currentRotation + 'deg)');
     }
+    
     btn_rotate_left.click(function() {
-        rotateBox(72);
+        var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
+        rotateBox(deg_windows_open);
     });
     btn_rotate_right.click(function() {
-        rotateBox(-72);
+        var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
+        rotateBox(deg_windows_open * -1);
     });
 });
