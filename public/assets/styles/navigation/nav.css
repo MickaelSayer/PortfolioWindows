@@ -276,7 +276,5 @@ nav .sidebar-right .content-mid::after {
 }
 
 @media screen and (max-width: 848px) {
-    nav.nav-link.open-nav {
-        display: none;
-    }
+
 }

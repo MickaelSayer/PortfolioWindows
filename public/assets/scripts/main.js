@@ -1,7 +1,12 @@
 $(document).ready(function() {
+    $(window).on('resize', function() {
+        if ($(window).width() > 849) {
+            $('.gestion-app').click();
+        }
+    });
+
     const discordButton = $('#discord');
     const discordButtonSpan = discordButton.find('span');
-
     discordButton.click(function () {
         const discord = $(this).data('discord') || '';
 
@@ -15,32 +20,48 @@ $(document).ready(function() {
             });
     });
 
-    const html_content_app = $('.gestion-app').html();
+    const html_content_app = $('main .gestion-app span').html();
     $('.gestion-app').click(function() {
-        $(this).toggleClass('active');
-
-        $(this).html(html_content_app);
         if ($(this).hasClass('active')) {
-            $(this).html('<i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i> Fermer');
+            var spansWithContent = $('main .box-app span:not(:empty)');
+            spansWithContent.removeClass('active');
+            spansWithContent.empty();
+            $('main .box-app span.box').css('transform', '');
+        } else {
+            var activeSections = $('section.windows.active');
+            var emptySpans = $('main .box-app span:empty');
+            $.each(activeSections, function(index, elt_windows) {
+                var elt_windows_clone = $(elt_windows).clone();
+                if (index < emptySpans.length) {
+                    $(emptySpans[index]).append(elt_windows_clone);
+                    $(emptySpans[index]).addClass('active');
+                }
+            });
+
+            var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
+            $('main .box-app span.box.active').css('transform', 'rotateY(calc(var(--i) * ' + deg_windows_open + 'deg)) translateZ(240px)');
+        }
+
+        $(this).toggleClass('active');
+        
+        $('main .gestion-app span').html(html_content_app);
+        if ($(this).hasClass('active')) {
+            $('main .gestion-app span').html('<i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i> Fermer');
+        }
+
+        $('main .gestion-app .counter').html($('main .box-app span.box.active').length + '/5');
+
+        if ($('main .box-app span.box.active').length === 0) {
+            $('.btn-rotate-left').toggleClass('hide');
+            $('.btn-rotate-right').toggleClass('hide');
+            $('.no-content').toggleClass('show');
         }
 
         $('.container-open-app').toggleClass('active');
-        $('header').toggleClass('inactive');
 
-        var activeSections = $('section.windows.active');
-        var emptySpans = $('main .box-app span:empty');
-        $.each(activeSections, function(index, elt_windows) {
-            var elt_windows_clone = $(elt_windows).clone();
-            if (index < emptySpans.length) {
-                $(emptySpans[index]).append(elt_windows_clone);
-                $(emptySpans[index]).addClass('active');
-            }
-        });
+        $('header .logo-windows').toggleClass('hide');
 
-        var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
-        $('main .box-app span.box.active').css('transform', 'rotateY(calc(var(--i) * ' + deg_windows_open + 'deg)) translateZ(240px)');
 
-        $('main .container-open-app .counter').html($('main .box-app span.box.active').length + ' applications ouvertes');
     });
 
     const box_app = $('main .container-open-app .box-app');

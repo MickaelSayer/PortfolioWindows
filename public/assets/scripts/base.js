@@ -5,23 +5,7 @@ function actualiserHorloge() {
     var minutes = date.getMinutes().toString().padStart(2, '0');
     var heureActuelle = heure + ":" + minutes;
 
-    if ($(window).width() > 849) {
-        $("header .horloge .heure").text(heureActuelle);
-        $("main .horloge-responsive .heure").text('');
-    } else {
-        $("header .horloge .heure").text('');
-        $("main .horloge-responsive .heure").text(heureActuelle);
-    }
-
-    $(window).on('resize', function() {
-        if ($(window).width() > 849) {
-            $("header .horloge .heure").text(heureActuelle);
-            $("main .horloge-responsive .heure").text('');
-        } else {
-            $("header .horloge .heure").text('');
-            $("main .horloge-responsive .heure").text(heureActuelle);
-        }
-    });
+    $("header .horloge .heure").text(heureActuelle);
 }
 
 $(document).ready(function() {

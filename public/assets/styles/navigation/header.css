@@ -318,50 +318,70 @@ header .icon-extends-right .separator {
 }
 
 @media screen and (max-width: 848px) {
-    header {
-        position: fixed;
-        bottom: 10px;
+    header .container-left .icon-extends-right,
+    header .container-left .icon-extends {
+        display: none;
+    }
+
+    header .icon-app {
+        position: relative;
+        display: flex;
+        margin: 0;
+        top: 0;
+        left: 0;
+        background: none;
+        padding: 0;
+    }
+
+    header .container-task {
+        display: none;
+    }
+
+    header .container-right {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: transparent;
+        padding: 0;
+    }
+    
+    header .navbar {
+        padding: 0 5px;
+    }
+
+    header .container-right .icon {
+        display: flex;
+    }
+
+    header .container-right .icon-black {
+        display: none;
+    }
+
+    header .container-right .horloge {
+        color: white;
+    }
+
+    header .logo-windows {
+        position: absolute;
+        top: 90vh;
         left: 50%;
-        right: initial;
         transform: translateX(-50%);
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        cursor: pointer;
-    }
-    
-    header .navbar-responsive {
-        display: flex;
-        box-shadow: none;
-        background-image: url(/assets/pictures/windows-logo.png);
-        background-size: cover;
-        background-position: center;
-        width: 50px;
-        height: 50px;
-    }
-    
-    header.inactive {
-        display: none;
-    }
-
-    header.active {
-        background: linear-gradient(to bottom, #068bf3, #0962bd);
-    }
-
-    header.inactive {
-        display: none;
-    }
-
-    header .navbar {
         box-shadow: none;
     }
 
-    header:hover {
-        background: linear-gradient(to bottom, #068bf3, #0962bd);
+    header .logo-windows span {
+        display: none;
     }
 
-    header .navbar .container-left,
-    header .navbar .container-right {
+    header {
+        top: 0;
+    }
+
+    header .logo-windows.hide {
         display: none;
     }
 }

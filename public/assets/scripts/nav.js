@@ -5,9 +5,11 @@ $(document).ready(function() {
     const taskItems = $('.navbar .task');
 
     /** Ouverture du menu navigation */
-    logoWindows.on('click', function () {
+    logoWindows.on('click', function (event) {
         navLink.toggleClass('open-nav');
         $(this).toggleClass('active');
+        
+        event.stopPropagation();
     });
 
     /** Fermeture de la navigation */
@@ -56,28 +58,6 @@ $(document).ready(function() {
     $('header .container-left .icon-extends-right').on('click', function() {
         $('.container-right').toggleClass('active');
         $(this).children('i').toggleClass('active');
-    });
-
-    $('header .navbar-responsive').on('click', function() {
-        $('header').toggleClass('active');
-
-        $('main .icon-app-responsive').toggleClass('active');
-
-        setTimeout(function() {
-            $('main .container-bureau').toggleClass('innactive');
-        }, 100);
-    });
-
-    $('main .nav-app li').on('click', function() {
-        const data_link = $(this).data('link');
-        const windowsElement = $(`section.windows.${data_link}`);
-
-        // Gère la visibilité en premier plan de l'élément windows
-        windowsSections.css('z-index', '1');
-        windowsElement.addClass('active').css('z-index', '2');
-
-        // Fermeture de la navigation avec le bouton windows navigation
-        $('main .icon-app-responsive').removeClass('active');
     });
 
     taskItems.on('click', function() {

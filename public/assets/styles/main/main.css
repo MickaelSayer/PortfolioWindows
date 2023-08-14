@@ -209,12 +209,11 @@ main .nav-app li img {
     margin-bottom: 5px;
 }
 
-
 main .gestion-app {
     position: absolute;
-    bottom: 70px;
+    bottom: 100px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0);
     padding: 3px 15px;
     border-radius: 20px;
     display: none;
@@ -230,6 +229,7 @@ main .gestion-app {
 }
 
 main .gestion-app.active {
+    transform: translateX(-50%) translateY(42px);
     padding: 10px 40px;
 }
 
@@ -250,7 +250,6 @@ main .container-open-app {
     display: none;
     flex-direction: column;
     justify-content: center;
-    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -258,11 +257,6 @@ main .container-open-app {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-main .container-open-app.active {
-    display: flex;
-    z-index: 4;
 }
 
 main .container-open-app .box-app {
@@ -275,7 +269,7 @@ main .container-open-app .box-app {
     transition: transform 1s ease;
 }
 
-main .container-open-app span {
+main .container-open-app .box {
     position: absolute;
     display: none;
     top: 0;
@@ -287,44 +281,80 @@ main .container-open-app span {
     transform-style: preserve-3d;
 }
 
-main .container-open-app span.active {
+main .container-open-app .box.active {
     display: flex;
 }
 
-main .container-open-app .counter {
-    margin-bottom: 80px;
+main .container-open-app .content-open-app {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+}
+
+main .content-open-app .no-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     font-size: 14px;
+    font-weight: 600;
 }
 
-main .container-open-app .btn-rotate-left {
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    border-radius: 10px;
+main .content-open-app .no-content.show  {
+    display: block;
+}
+
+main .gestion-app .counter {
     display: flex;
-    justify-content: space-between;
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    top: -100%;
+    padding-bottom: 1px;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #068bf3, #0962bd);
     align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s linear;
 }
 
+main .gestion-app.active .counter {
+    opacity: 1;
+}
+
+main .container-open-app .btn-rotate-left,
 main .container-open-app .btn-rotate-right {
-    position: absolute;
-    bottom: 50%;
-    right: 0;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+main .container-open-app .btn-rotate-left.hide,
+main .container-open-app .btn-rotate-right.hide {
+    display: none;
 }
 
 main .container-open-app .btn-rotate-left i,
 main .container-open-app .btn-rotate-right i {
     margin: 10px;
-    cursor: pointer;
+    color: #1f5081;
 }
 
 main .container-open-app .btn-rotate-left i:hover,
 main .container-open-app .btn-rotate-right i:hover {
     transform: scale(1.2);
+    color: #0962bd;
 }
 
 
@@ -348,7 +378,7 @@ main .container-open-app .btn-rotate-right i:hover {
         margin-top: 150px;
     }
 
-    main .container-bureau.innactive {
+    main .container-bureau.inactive {
         display: none;
     }
 
@@ -363,5 +393,19 @@ main .container-open-app .btn-rotate-right i:hover {
 
     main .gestion-app {
         display: flex;
+    }
+
+    main .container-open-app.active {
+        display: flex;
+        z-index: 4;
+    }
+
+    main .container-open-app .box section.active {
+        transform: scale(0.7);
+    }
+    
+    main .container-open-app.active {
+        display: flex;
+        z-index: 4;
     }
 }
