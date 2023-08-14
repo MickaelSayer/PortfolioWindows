@@ -276,5 +276,40 @@ nav .sidebar-right .content-mid::after {
 }
 
 @media screen and (max-width: 848px) {
+    nav .container-nav {
+        flex-direction: column;
+    }
 
+    nav .sidebar-left,
+    nav .sidebar-right {
+        width: 100%;
+        padding: 6px;
+    }
+
+    nav.nav-link {
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+    }
+
+    nav .nav-footer {
+        padding: 5px 0px;
+    }
+
+    nav .nav-footer .close-computer span {
+        display: none;
+    }
+
+    nav .nav-footer .open-session,
+    nav .nav-footer .close-computer {
+        padding: 0;
+    }
+
+    nav .sidebar-left ul li {
+        padding: 7px;
+    }
+
+    nav .sidebar-left .program {
+        display: none;
+    }
 }

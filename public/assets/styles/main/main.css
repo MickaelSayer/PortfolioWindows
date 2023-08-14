@@ -222,7 +222,7 @@ main .gestion-app {
     cursor: pointer;
     background: linear-gradient(to bottom, #0165B5, #004C99);
     color: white;
-    font-size: 12px;
+    font-size: clamp(10px, 3vw, 12px);
     font-weight: 600;
     z-index: 5;
     transition: .3s linear;
@@ -230,7 +230,7 @@ main .gestion-app {
 
 main .gestion-app.active {
     transform: translateX(-50%) translateY(42px);
-    padding: 10px 40px;
+    padding: 10px 30px;
 }
 
 main .gestion-app:hover {
@@ -299,8 +299,10 @@ main .content-open-app .no-content {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 14px;
+    font-size: clamp(11px, 3vw, 14px);
     font-weight: 600;
+    width: 100%;
+    text-align: center;
 }
 
 main .content-open-app .no-content.show  {
