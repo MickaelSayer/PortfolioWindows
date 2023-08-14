@@ -21,12 +21,16 @@ $(document).ready(function() {
     });
 
     const html_content_app = $('main .gestion-app span').html();
+    let currentRotation = 0;
     $('.gestion-app').click(function() {
         if ($(this).hasClass('active')) {
             var spansWithContent = $('main .box-app span:not(:empty)');
             spansWithContent.removeClass('active');
             spansWithContent.empty();
             $('main .box-app span.box').css('transform', '');
+
+            currentRotation = 0;
+            box_app.css('transform', 'perspective(1000px) rotateY(' + currentRotation + 'deg)');
         } else {
             var activeSections = $('section.windows.active');
             var emptySpans = $('main .box-app span:empty');
@@ -51,28 +55,24 @@ $(document).ready(function() {
 
         $('main .gestion-app .counter').html($('main .box-app span.box.active').length + '/5');
 
-        if ($('main .box-app span.box.active').length === 0) {
-            $('.btn-rotate-left').toggleClass('hide');
-            $('.btn-rotate-right').toggleClass('hide');
-            $('.no-content').toggleClass('show');
-        }
+        var activeBoxCount = $('main .box-app span.box.active').length;
+        $('.btn-rotate-left').toggleClass('hide', activeBoxCount < 2);
+        $('.btn-rotate-right').toggleClass('hide', activeBoxCount < 2);
+        $('.no-content').toggleClass('show', activeBoxCount === 0);
 
         $('.container-open-app').toggleClass('active');
-
         $('header .logo-windows').toggleClass('hide');
-
-
     });
 
     const box_app = $('main .container-open-app .box-app');
     const btn_rotate_left = $('.btn-rotate-left');
     const btn_rotate_right = $('.btn-rotate-right');
-    let currentRotation = 0;
+
     function rotateBox(degrees) {
         currentRotation += degrees;
         box_app.css('transform', 'perspective(1000px) rotateY(' + currentRotation + 'deg)');
     }
-    
+
     btn_rotate_left.click(function() {
         var deg_windows_open = $('main .box-app span.box.active').last().data('rotate');
         rotateBox(deg_windows_open);
