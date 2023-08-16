@@ -220,27 +220,27 @@ main .gestion-app {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background: linear-gradient(to bottom, #0165B5, #004C99);
-    color: white;
+    background-color: #589132;
     font-size: clamp(10px, 3vw, 12px);
     font-weight: 600;
     z-index: 5;
-    transition: .3s linear;
+    color: white;
+    transition: .4s ease;
+}
+
+main .gestion-app:hover {
+    background: #49a30f;
 }
 
 main .gestion-app.active {
     transform: translateX(-50%) translateY(42px);
     padding: 10px 30px;
+    background: #49a30f;
 }
 
-main .gestion-app:hover {
-    background: linear-gradient(to bottom, #068bf3, #0962bd);
+main .gestion-app.active:hover {
+    background-color: #589132;
 }
-
-main .gestion-app.active {
-    background: linear-gradient(to bottom, #068bf3, #0962bd);
-}
-
 
 main .gestion-app i {
     margin-right: 5px;
@@ -315,20 +315,22 @@ main .gestion-app .counter {
     height: 20px;
     position: absolute;
     top: -100%;
+    color: #00000091;
     padding-bottom: 1px;
-    border: 1px solid white;
     border-radius: 12px;
     font-weight: 600;
-    background: linear-gradient(to bottom, #068bf3, #0962bd);
+    background: #e3e3e336;
     align-items: center;
     justify-content: center;
     font-size: 11px;
-    pointer-events: none;
     opacity: 0;
-    transition: opacity .3s linear;
+    transform: scale(0);
+    transition: .5s ease;
+    pointer-events: none;
 }
 
 main .gestion-app.active .counter {
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -350,13 +352,14 @@ main .container-open-app .btn-rotate-right.hide {
 main .container-open-app .btn-rotate-left i,
 main .container-open-app .btn-rotate-right i {
     margin: 10px;
-    color: #1f5081;
+    color: #589132;
+    transition: .3s ease;
 }
 
 main .container-open-app .btn-rotate-left i:hover,
 main .container-open-app .btn-rotate-right i:hover {
     transform: scale(1.2);
-    color: #0962bd;
+    color: #49a30f;
 }
 
 

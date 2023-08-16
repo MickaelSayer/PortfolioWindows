@@ -67,14 +67,31 @@ section.windows .windows-action div:not(:last-child) {
 }
 
 section.windows .minus {
-    border: 1px solid white;
+    border: 2px solid white;
+    background: #5faf2a;
     border-radius: 5px;
     cursor: pointer;
+    transition: .3s ease;
 }
 
-section.windows .minus:hover,
-section.windows .size:hover {
-    background: #ffffff2b;
+section.windows .minus:hover:after,
+section.windows .size:hover:after {
+    animation: bounceLoop 1s infinite;
+}
+
+@keyframes bounceLoop {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-2px);
+    }
+    40%, 60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-4px);
+    }
 }
 
 section.windows .minus::after {
@@ -88,8 +105,10 @@ section.windows .minus::after {
 }
 
 section.windows .size {
-    border: 1px solid white;
+    border: 2px solid white;
+    background: #5faf2a;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 section.windows .extends {
@@ -97,12 +116,30 @@ section.windows .extends {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -52%);
     width: 60%;
     height: 50%;
     border: 1px solid white;
     box-shadow: inset 0px 4px 0 white;
-    cursor: pointer;
+}
+
+section.windows .size:hover .extends {
+    animation: bounceLoop2 1s infinite;
+}
+
+@keyframes bounceLoop2 {
+    0%, 100% {
+        transform: translate(-50%, -52%);
+    }
+    20% {
+        transform: translate(-50%, -40%);
+    }
+    40%, 60% {
+        transform: translate(-50%, -52%);
+    }
+    80% {
+        transform: translate(-50%, -40%);
+    }
 }
 
 section.windows .extends.active {
@@ -118,8 +155,27 @@ section.windows .narrow {
     width: 40%;
     height: 40%;
     border: 2px solid white;
-    background: #004C99;
+    background: transparent;
     cursor: pointer;
+}
+
+section.windows .size:hover .narrow {
+    animation: bounceLoop3 1s infinite;
+}
+
+@keyframes bounceLoop3 {
+    0%, 100% {
+        transform: translate(-40%, -64%);
+    }
+    20% {
+        transform: translate(-40%, -44%);
+    }
+    40%, 60% {
+        transform: translate(-40%, -66%);
+    }
+    80% {
+        transform: translate(-40%, -44%);
+    }
 }
 
 section.windows .narrow::before {
@@ -130,7 +186,7 @@ section.windows .narrow::before {
     transform: translate(-70%, -20%);
     width: 100%;
     height: 100%;
-    background: #004C99;
+    background: white;
     border: 2px solid white;
 }
 
@@ -140,13 +196,14 @@ section.windows .narrow.active {
 
 section.windows .close {
     position: relative;
-    background: #B72525;
+    background: #5faf2a;
     border-radius: 5px;
     cursor: pointer;
+    transition: .2s linear;
 }
 
 section.windows .close:hover {
-    background: #e30d0d;
+    background: #5dcb16;
 }
 
 section.windows .close span {
@@ -277,7 +334,7 @@ section.windows .container-content .content-section {
 section.windows .container-content .extends-sidebar {
     display: flex;
     position: absolute;
-    top: 50%;
+    top: 107px;
     left: 0;
     transform: translateY(-50%);
     height: 30px;
@@ -285,21 +342,34 @@ section.windows .container-content .extends-sidebar {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transform: rotate(0deg);
-    color:#1f3969;
+    transform: rotate(180deg);
+    color:#589132;
+    opacity: 0;
+    animation: sliderTop 0.9s ease forwards;
+    animation-delay: .1s;
+}
+
+@keyframes sliderTop {
+    0% {
+        top: 107px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+section.windows .container-content .extends-sidebar:hover {
+    color:#49a30f;
 }
 
 section.windows .container-content.active .extends-sidebar {
     left: 300px;
-    transform: rotate(180deg);
-}
-
-section.windows .container-content .extends-sidebar i:hover {
-    transform: rotate(180deg);
-}
-
-section.windows .container-content.active .extends-sidebar i:hover {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 }
 
 section.windows .container-sildebar-left {
@@ -397,13 +467,13 @@ section.windows .container-sildebar-left ul li img {
     section.windows .container-content .extends-sidebar {
         display: flex;
         left: calc(100% - 27px);
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
     
     section.windows .container-content.active .extends-sidebar {
         left: 0;
         transform: translateY(-50%);
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
 }
 

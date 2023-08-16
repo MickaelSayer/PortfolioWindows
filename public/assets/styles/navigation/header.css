@@ -91,12 +91,20 @@ header .logo-windows:hover {
     background-color: #49a30f;
 }
 
+header .logo-windows:hover span {
+    letter-spacing: 2.5px;
+    text-shadow: 1px 4px 5px #2b2b2b8f;
+}
+
+header .logo-windows span {
+    transition: .3s ease;
+}
+
 header .logo-windows.active {
     background-color: #49a30f;
 }
 
 header .logo-windows img {
-    margin-right: 5px;
     height: 100%;
 }
 
@@ -366,11 +374,13 @@ header .icon-extends-right .separator {
         position: absolute;
         top: 90vh;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(1);
         width: 50px;
         height: 50px;
         border-radius: 50%;
         box-shadow: none;
+        opacity: 1;
+        transition: .3s ease;
     }
 
     header .logo-windows span {
@@ -382,6 +392,7 @@ header .icon-extends-right .separator {
     }
 
     header .logo-windows.hide {
-        display: none;
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
     }
 }

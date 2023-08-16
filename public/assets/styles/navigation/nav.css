@@ -63,8 +63,28 @@ nav .nav-footer .close-computer {
     padding: 0 5px;
 }
 
-nav .nav-footer .open-session span {
+nav .nav-footer .open-session span:not(.text) {
     text-decoration: underline;
+}
+
+nav .nav-footer .open-session .text {
+    position: relative;
+}
+
+nav .nav-footer .open-session .text::before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    background: white;
+    transition: .3s ease;
+}
+
+nav .nav-footer .open-session:hover .text::before {
+    height: 1px;
+    width: 99%;
 }
 
 nav .nav-footer .open-session img,
@@ -181,17 +201,142 @@ nav .sidebar-left ul {
 }
 
 nav .sidebar-left ul li {
+    position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    transition: .1s linearr;
+    transition: .2s ease;
 }
 
 nav .sidebar-left ul li:hover {
     background-color: #F6F6F6;
+}
+
+nav .sidebar-left ul li .content-presentation {
+    display: flex;
+    align-items: center;
+}
+
+nav .sidebar-left ul li i {
+    display: none;
+}
+
+nav .sidebar-left ul li:hover i {
+    display: none;
+}
+ 
+nav .sidebar-left ul li:hover::after {
+    content: "";
+    top: 38%;
+    left: 1px;
+    position: absolute;
+    background-color: #49a30f;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    animation: liAfterSlide 0.8s ease forwards;
+}
+
+@keyframes liAfterSlide {
+    0% {
+        top: 38%;
+        left: 1px;
+        background-color: #49a30f;
+        border-radius: 50%;
+        height: 5px;
+        width: 5px;
+    }
+    25% {
+        top: 1px;
+        left: 1px;
+        background-color: #49a30f;
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+    }
+    75% {
+        top: -1px;
+        left: 95%;
+        background-color: #49a30f;
+        border-radius: 25%;
+        height: 8px;
+        width: 8px;
+    }
+    100% {
+        top: 38%;
+        left: 98%;
+        background-color: transparent;
+        border-radius: 0px;
+        height: 5px;
+        width: 5px;
+    }
+}
+
+nav .sidebar-left ul li::before,
+nav .sidebar-left ul li::after {
+    display: block;
+}
+
+nav .sidebar-left ul li:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 38%;
+    left: -1px;
+    background-color: #49a30f;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    animation: liABeforeSlide 0.8s ease forwards;
+}
+
+@keyframes liABeforeSlide {
+    0% {
+        bottom: 38%;
+        left: 1px;
+        height: 5px;
+        width: 5px;
+        background-color: #49a30f;
+        border-radius: 50%;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+    }
+    25% {
+        bottom: 1px;
+        left: 1px;
+        height: 8px;
+        width: 8px;
+        background-color: #49a30f;
+        border-radius: 50%;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+    }
+    75% {
+        bottom: -1px;
+        left: 95%;
+        background-color: #49a30f;
+        border-radius: 25%;
+        height: 8px;
+        width: 8px;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+    }
+    100% {
+        bottom: 38%;
+        left: 98%;
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 8px solid #49a30f;
+        background-color: transparent;
+        border-radius: 0px;
+    }
 }
 
 nav .sidebar-left ul li img {
@@ -201,6 +346,13 @@ nav .sidebar-left ul li img {
 nav .sidebar-left ul li span {
     color: black;
     font-size: 14px;
+    letter-spacing: 0vw;
+    transition: .3s ease;
+}
+
+nav .sidebar-left ul li:hover span {
+    letter-spacing: 0.7vw;
+    text-shadow: 1px 4px 5px #2b2b2b8f;
 }
 
 nav .sidebar-left .program {
@@ -310,6 +462,20 @@ nav .sidebar-right .content-mid::after {
     }
 
     nav .sidebar-left .program {
+        display: none;
+    }
+
+    nav .sidebar-left ul li:hover span {
+        letter-spacing: 2vw;
+        text-shadow: 1px 4px 5px #2b2b2b8f;
+    }
+
+    nav .sidebar-left ul li:hover i {
+        display: block;
+    }
+
+    nav .sidebar-left ul li::before,
+    nav .sidebar-left ul li::after {
         display: none;
     }
 }

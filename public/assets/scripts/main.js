@@ -1,7 +1,9 @@
 $(document).ready(function() {
-    $(window).on('resize', function() {
+    $(window).on('resize', function(event) {
         if ($(window).width() > 849) {
-            $('.gestion-app').click();
+            $('.gestion-app.active').click();
+
+            event.stopPropagation();
         }
     });
 
@@ -22,6 +24,7 @@ $(document).ready(function() {
 
     const html_content_app = $('main .gestion-app span').html();
     let currentRotation = 0;
+    var titleGestionApp = $('main .gestion-app').attr('title');
     $('.gestion-app').click(function() {
         if ($(this).hasClass('active')) {
             var spansWithContent = $('main .box-app span:not(:empty)');
@@ -49,8 +52,10 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         
         $('main .gestion-app span').html(html_content_app);
+        $('main .gestion-app').attr('title', titleGestionApp);
         if ($(this).hasClass('active')) {
-            $('main .gestion-app span').html('<i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i> Fermer');
+            $('main .gestion-app span').html('<i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i> <span class="text">Fermer</span>');
+            $('main .gestion-app').attr('title', 'Fermer le gestionnaire d\'application');
         }
 
         $('main .gestion-app .counter').html($('main .box-app span.box.active').length + '/5');
