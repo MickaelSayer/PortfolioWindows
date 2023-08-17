@@ -232,6 +232,25 @@ main .gestion-app:hover {
     background: var(--green-ligth);
 }
 
+main .gestion-app:hover i {
+    animation: bounceLoop14 1s infinite;
+}
+
+@keyframes bounceLoop14 {
+    0%, 100% {
+        transform: translateY(0) translateY(0);
+    }
+    20% {
+        transform: translateY(2px) translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(0) translateY(0);
+    }
+    80% {
+        transform: translateY(4px) translateY(0);
+    }
+}
+
 main .gestion-app.active {
     transform: translateX(-50%) translateY(42px);
     padding: 10px 30px;
