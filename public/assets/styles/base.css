@@ -16,6 +16,6 @@ html {
 
 body {
     font-family: Verdana;
-    background-color: black;
+    background-color: var(--text-black);
     overflow: hidden;
 }

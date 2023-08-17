@@ -67,11 +67,15 @@ section.windows .windows-action div:not(:last-child) {
 }
 
 section.windows .minus {
-    border: 2px solid white;
-    background: #5faf2a;
+    border: 1px solid white;
+    background: var(--green-dark);
     border-radius: 5px;
     cursor: pointer;
     transition: .3s ease;
+}
+
+section.windows .minus:hover {
+    background: var(--green-ligth);
 }
 
 section.windows .minus:hover:after,
@@ -105,10 +109,14 @@ section.windows .minus::after {
 }
 
 section.windows .size {
-    border: 2px solid white;
-    background: #5faf2a;
+    border: 1px solid white;
+    background: var(--green-dark);
     border-radius: 5px;
     cursor: pointer;
+}
+
+section.windows .size:hover {
+    background: var(--green-ligth);
 }
 
 section.windows .extends {
@@ -132,13 +140,13 @@ section.windows .size:hover .extends {
         transform: translate(-50%, -52%);
     }
     20% {
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -2px);
     }
     40%, 60% {
         transform: translate(-50%, -52%);
     }
     80% {
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -4px);
     }
 }
 
@@ -168,13 +176,13 @@ section.windows .size:hover .narrow {
         transform: translate(-40%, -64%);
     }
     20% {
-        transform: translate(-40%, -44%);
+        transform: translate(-40%, -2px);
     }
     40%, 60% {
-        transform: translate(-40%, -66%);
+        transform: translate(-40%, -64%);
     }
     80% {
-        transform: translate(-40%, -44%);
+        transform: translate(-40%, -4px);
     }
 }
 
@@ -196,14 +204,15 @@ section.windows .narrow.active {
 
 section.windows .close {
     position: relative;
-    background: #5faf2a;
+    background: var(--green-dark);
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid white;
     transition: .2s linear;
 }
 
 section.windows .close:hover {
-    background: #5dcb16;
+    background: var(--green-ligth);
 }
 
 section.windows .close span {
@@ -222,6 +231,43 @@ section.windows .close span:first-child {
 
 section.windows .close span:nth-child(2) {
     transform: translate(-50%, -50%) rotate(45deg);
+}
+
+section.windows .close:hover span:first-child {
+    animation: bounceLoop4 1s infinite;
+}
+@keyframes bounceLoop4 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    20% {
+        transform: translate(-50%, 2px) rotate(-45deg);
+    }
+    40%, 60% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    80% {
+        transform: translate(-50%, 4px) rotate(-45deg);
+    }
+}
+
+section.windows .close:hover span:nth-child(2) {
+    animation: bounceLoop5 1s infinite;
+}
+
+@keyframes bounceLoop5 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    20% {
+        transform: translate(-50%, 2px) rotate(45deg);
+    }
+    40%, 60% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    80% {
+        transform: translate(-50%, 4px) rotate(45deg);
+    }
 }
 
 section.windows .content-menu {
@@ -334,37 +380,69 @@ section.windows .container-content .content-section {
 section.windows .container-content .extends-sidebar {
     display: flex;
     position: absolute;
-    top: 107px;
+    top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(0%) rotate(180deg);
     height: 30px;
     width: 30px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transform: rotate(180deg);
-    color:#589132;
-    opacity: 0;
-    animation: sliderTop 0.9s ease forwards;
-    animation-delay: .1s;
+    color:var(--green-dark);
 }
 
-@keyframes sliderTop {
-    0% {
-        top: 107px;
-        opacity: 0;
+section.windows .container-content.active .extends-sidebar:hover {
+    animation: bounceLoop8 1s infinite;
+}
+
+@keyframes bounceLoop8 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(180deg);
     }
-    50% {
-        opacity: 0.7;
+    20% {
+        transform: translateY(0) translateX(-2px) rotate(180deg);
     }
-    100% {
-        top: 50%;
-        opacity: 1;
+    40%, 60% {
+        transform: translateY(0) translateX(0) rotate(180deg);
+    }
+    80% {
+        transform: translateY(0) translateX(-4px) rotate(180deg);
     }
 }
 
 section.windows .container-content .extends-sidebar:hover {
-    color:#49a30f;
+    color:var(--green-ligth);
+    animation: bounceLoop9 1s infinite;
+}
+
+@keyframes bounceLoop9 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    20% {
+        transform: translateY(0) translateX(-2px) rotate(0);
+    }
+    40%, 60% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0) translateX(-4px) rotate(0);
+    }
+}
+
+@keyframes bounceLoop9 {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    20% {
+        transform: translateY(0) translateX(-2px) rotate(0);
+    }
+    40%, 60% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0) translateX(-4px) rotate(0);
+    }
 }
 
 section.windows .container-content.active .extends-sidebar {
@@ -393,7 +471,7 @@ section.windows .sidebar-left-title span {
 }
 
 section.windows .icon-slider-left {
-    background: white;
+    background: var(--green-dark);
     border-radius: 50%;
     height: 20px;
     width: 20px;
@@ -402,6 +480,15 @@ section.windows .icon-slider-left {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+section.windows .icon-slider-left:hover {
+    background: var(--green-ligth);
+}
+
+section.windows .icon-slider-left i {
+    color: white;
+    margin-left: -1px;
 }
 
 section.windows .icon-slider-left.active {

@@ -27,7 +27,7 @@ main .icon-bureau {
     padding: 10px;
     font-size: 14px;
     color: white;
-    text-shadow: 2px 2px 0 black;
+    text-shadow: 2px 2px 0 var(--text-black);
     cursor: pointer;
     border-radius: 3px;
     transition: .2s linear;
@@ -44,7 +44,7 @@ main .icon-bureau:hover {
 main .icon-bureau {
     text-decoration: none;
     color: white;
-    text-shadow: 2px 2px 0 black;
+    text-shadow: 2px 2px 0 var(--text-black);
 }
 
 main .icon-bureau.corbeille {
@@ -80,7 +80,7 @@ main .icon-app-responsive {
     padding: 10px;
     width: 100%;
     height: 39px;
-    background: linear-gradient(to bottom, #0165B5, #004C99);
+    background: var(--bl-blue);
     transition: .2s linear;
     overflow: hidden;
     flex-direction: column;
@@ -220,7 +220,7 @@ main .gestion-app {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: #589132;
+    background-color: var(--green-dark);
     font-size: clamp(10px, 3vw, 12px);
     font-weight: 600;
     z-index: 5;
@@ -229,17 +229,17 @@ main .gestion-app {
 }
 
 main .gestion-app:hover {
-    background: #49a30f;
+    background: var(--green-ligth);
 }
 
 main .gestion-app.active {
     transform: translateX(-50%) translateY(42px);
     padding: 10px 30px;
-    background: #49a30f;
+    background: var(--green-ligth);
 }
 
 main .gestion-app.active:hover {
-    background-color: #589132;
+    background-color: var(--green-dark);
 }
 
 main .gestion-app i {
@@ -352,14 +352,14 @@ main .container-open-app .btn-rotate-right.hide {
 main .container-open-app .btn-rotate-left i,
 main .container-open-app .btn-rotate-right i {
     margin: 10px;
-    color: #589132;
+    color: var(--green-dark);
     transition: .3s ease;
 }
 
 main .container-open-app .btn-rotate-left i:hover,
 main .container-open-app .btn-rotate-right i:hover {
     transform: scale(1.2);
-    color: #49a30f;
+    color: var(--green-ligth);
 }
 
 

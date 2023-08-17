@@ -1,8 +1,32 @@
+function addCssOpacity(elt_focus) {
+    elt_focus.css({
+        'background' : 'white',
+        'display' : 'flex',
+        'opacity': '0.3'
+    });
+    if (elt_focus.hasClass('active')) {
+        elt_focus.removeAttr('style');
+    }
+}
+
+function containerAppNavbarSelected(__this, container) {
+    if (!container.hasClass('active')) {
+        container.removeAttr('style');
+    } else {
+        container.css('display', 'none');
+    }
+
+    container.toggleClass('active');
+    __this.children('i').toggleClass('active');
+}
+
 $(document).ready(function() {
     const logoWindows = $('.logo-windows');
     const navLink = $('.nav-link');
     const windowsSections = $('section.windows');
     const taskItems = $('.navbar .task');
+    const iconApp = $('header .icon-app');
+    const containerRight = $('header .container-right')
 
     /** Ouverture du menu navigation */
     logoWindows.on('click', function (event) {
@@ -38,9 +62,12 @@ $(document).ready(function() {
 
         // Fermeture de la navigation avec le bouton windows navigation
         navLink.removeClass('open-nav');
+        logoWindows.removeClass('active');
 
         // Gère l'ouverture du menu dans la barre des tâches
         $(`#${data_link}`).addClass('active');
+
+        $(this).addClass('open');
     });
 
     $(document).on('click', function(event) {
@@ -51,13 +78,27 @@ $(document).ready(function() {
     });
 
     $('header .container-left .icon-extends').on('click', function() {
-        $('.icon-app').toggleClass('active');
-        $(this).children('i').toggleClass('active');
+        containerAppNavbarSelected($(this), iconApp);
+    });
+
+    $('header .container-left .icon-extends').on('mouseenter', function() {
+        addCssOpacity(iconApp);
+    });
+
+    $('header .container-left .icon-extends').on('mouseleave', function() {
+        iconApp.removeAttr('style');
     });
 
     $('header .container-left .icon-extends-right').on('click', function() {
-        $('.container-right').toggleClass('active');
-        $(this).children('i').toggleClass('active');
+        containerAppNavbarSelected($(this), containerRight);
+    });
+
+    $('header .container-left .icon-extends-right').on('mouseenter', function() {
+        addCssOpacity(containerRight);
+    });
+
+    $('header .container-left .icon-extends-right').on('mouseleave', function() {
+        containerRight.removeAttr('style');
     });
 
     taskItems.on('click', function() {

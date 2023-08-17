@@ -10,6 +10,12 @@ $(document).ready(function() {
         windowsElement.css('z-index', '1');
         windowsElement.find('.size .extends').addClass('active');
         windowsElement.find('.size .narrow').removeClass('active');
+
+        $.each($('nav .sidebar-left ul li'), function (index, value) { 
+            if ($(value).data('link') === dataLink) {
+                $(value).removeClass('open');
+            }
+        });
     });
 
     // Fonction pour réduire la fenêtre à l'icône de la barre des tâches
