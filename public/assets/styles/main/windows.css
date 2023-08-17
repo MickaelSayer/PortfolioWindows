@@ -381,7 +381,7 @@ section.windows .container-content .extends-sidebar {
     display: flex;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 0%;
     transform: translateY(-50%) translateX(0%) rotate(180deg);
     height: 30px;
     width: 30px;
@@ -391,63 +391,49 @@ section.windows .container-content .extends-sidebar {
     color:var(--green-dark);
 }
 
-section.windows .container-content.active .extends-sidebar:hover {
+section.windows .container-content .extends-sidebar:hover {
+    color:var(--green-ligth);
     animation: bounceLoop8 1s infinite;
 }
 
 @keyframes bounceLoop8 {
     0%, 100% {
-        transform: translateY(0) translateX(0) rotate(180deg);
+        transform: translateY(-50%) translateX(0) rotate(180deg);
     }
     20% {
-        transform: translateY(0) translateX(-2px) rotate(180deg);
+        transform: translateY(-50%) translateX(-2px) rotate(180deg);
     }
     40%, 60% {
-        transform: translateY(0) translateX(0) rotate(180deg);
+        transform: translateY(-50%) translateX(0) rotate(180deg);
     }
     80% {
-        transform: translateY(0) translateX(-4px) rotate(180deg);
+        transform:translateY(-50%)  translateX(-4px) rotate(180deg);
     }
 }
 
-section.windows .container-content .extends-sidebar:hover {
+section.windows .container-content.active .extends-sidebar {
+    left: 303px;
+    transform: rotate(0) translateY(-1px);
+}
+
+section.windows .container-content.active .extends-sidebar:hover {
     color:var(--green-ligth);
     animation: bounceLoop9 1s infinite;
 }
 
 @keyframes bounceLoop9 {
     0%, 100% {
-        transform: translateY(0) translateX(0) rotate(0);
+        transform: translateX(0) rotate(0);
     }
     20% {
-        transform: translateY(0) translateX(-2px) rotate(0);
+        transform: translateX(-2px) rotate(0);
     }
     40%, 60% {
-        transform: translateY(0) translateX(0) rotate(0);
+        transform: translateX(0) rotate(0);
     }
     80% {
-        transform: translateY(0) translateX(-4px) rotate(0);
+        transform: translateX(-4px) rotate(0);
     }
-}
-
-@keyframes bounceLoop9 {
-    0%, 100% {
-        transform: translateY(0) translateX(0) rotate(0);
-    }
-    20% {
-        transform: translateY(0) translateX(-2px) rotate(0);
-    }
-    40%, 60% {
-        transform: translateY(0) translateX(0) rotate(0);
-    }
-    80% {
-        transform: translateY(0) translateX(-4px) rotate(0);
-    }
-}
-
-section.windows .container-content.active .extends-sidebar {
-    left: 300px;
-    transform: rotate(0deg);
 }
 
 section.windows .container-sildebar-left {
@@ -480,6 +466,25 @@ section.windows .icon-slider-left {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+section.windows .icon-slider-left:hover i {
+    animation: bounceLoop10 1s infinite;
+}
+
+@keyframes bounceLoop10 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(2px);
+    }
+    40%, 60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(2.5px);
+    }
 }
 
 section.windows .icon-slider-left:hover {
@@ -556,11 +561,52 @@ section.windows .container-sildebar-left ul li img {
         left: calc(100% - 27px);
         transform: rotate(0deg);
     }
+
+    section.windows .container-content .extends-sidebar:hover {
+        color:var(--green-ligth);
+        transform: rotate(0deg);
+        animation: bounceLoop12 1s infinite;
+    }
+
+    @keyframes bounceLoop12 {
+        0%, 100% {
+            transform: translateX(0) rotate(0);
+        }
+        20% {
+            transform: translateX(-2px) rotate(0);
+        }
+        40%, 60% {
+            transform: translateX(0) rotate(0);
+        }
+        80% {
+            transform: translateX(-4px) rotate(0);
+        }
+    }
     
     section.windows .container-content.active .extends-sidebar {
         left: 0;
-        transform: translateY(-50%);
         transform: rotate(180deg);
+    }
+
+    section.windows .container-content.active .extends-sidebar:hover {
+        color:var(--green-ligth);
+        transform: rotate(180deg);
+        animation: bounceLoop13 1s infinite;
+    }
+    
+    @keyframes bounceLoop13 {
+        0%, 100% {
+            transform: translateX(0) rotate(180deg);
+        }
+        20% {
+            transform: translateX(-2px) rotate(180deg);
+        }
+        40%, 60% {
+            transform: translateX(0) rotate(180deg);
+        }
+        80% {
+            transform: translateX(-4px) rotate(180deg);
+        }
     }
 }
 
