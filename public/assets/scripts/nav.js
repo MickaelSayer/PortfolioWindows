@@ -32,6 +32,7 @@ $(document).ready(function() {
     logoWindows.on('click', function (event) {
         navLink.toggleClass('open-nav');
         $(this).toggleClass('active');
+        $('nav .nav-header .params').removeClass('active');
         
         event.stopPropagation();
     });
@@ -131,5 +132,11 @@ $(document).ready(function() {
 
         // Ajout de l'effet visuel de la tâche sélectionnée à la tâche actuelle
         $(this).addClass('selected');
+    });
+
+    $('nav .nav-header .params').on('click', function() {
+        $(this).toggleClass('active');
+
+        $('nav .container-nav').toggleClass('inactive');
     });
 });

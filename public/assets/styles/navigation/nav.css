@@ -43,6 +43,69 @@ nav.nav-link .logo-pseudo {
 
 nav.nav-link .pseudo {
     font-weight: 600;
+    pointer-events: none;
+}
+
+nav.nav-link .btn-params {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    border-bottom: 1px solid transparent;
+    background: #004C99;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+nav.nav-link .btn-params:hover {
+    border-bottom: 1px solid #f1f1f12e;
+    background: #0865c3;
+    width: 100%;
+}
+
+nav.nav-link .btn-params img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+nav.nav-link .btn-params .setting {
+    display: block;
+}
+
+nav.nav-link .btn-params:hover .setting {
+    display: none;
+}
+
+nav.nav-link .btn-params .setting-2 {
+    display: none;
+}
+
+nav.nav-link .btn-params:hover .setting-2 {
+    display: block;
+    animation: bounceLoop15 1s infinite;
+}
+
+@keyframes bounceLoop15 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(2px);
+    }
+    40%, 60% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(4px);
+    }
 }
 
 nav .nav-footer {
@@ -129,6 +192,12 @@ nav .container-nav {
     height: 100vh;
     background: #004C99;
     padding: 3px;
+    transform: translateY(0);
+    transition: .3s ease;
+}
+
+nav .container-nav.inactive {
+    transform: translateY(100%);
 }
 
 nav .sidebar-left,
@@ -493,6 +562,7 @@ nav .sidebar-right .content-mid::after {
         bottom: 0;
         height: 100vh;
         width: 100%;
+        background: #004C99;
     }
 
     nav .sidebar-left ul {
@@ -544,13 +614,16 @@ nav .sidebar-right .content-mid::after {
 
     nav .sidebar-left {
         background: none;
-        height: 90%;
+        height: 89%;
         justify-content: space-evenly;
     }
 
     nav .sidebar-left .content-left {
         height: 100%;
+        width: 70%;
+        margin: 0 auto;
         justify-content: space-evenly;
+        border-bottom: 1px solid #f1f1f12e;
     }
 
     nav .sidebar-left ul li:hover,
@@ -558,8 +631,24 @@ nav .sidebar-right .content-mid::after {
         background-color: #ffffff2b;
     }
 
-    nav .nav-header,
-    nav .nav-footer {
+    nav .nav-footer,
+    nav .logo-pseudo,
+    nav  .pseudo{
         display: none;
+    }
+
+    nav .nav-header {
+        background: #004C99;
+        height: 53px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    nav .sidebar-left .content-top::after {
+        display: none;
+    }
+
+    nav.nav-link .btn-params {
+        display: flex;
     }
 }

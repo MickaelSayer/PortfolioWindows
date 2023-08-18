@@ -36,7 +36,7 @@ header .container-right .separator {
 header .container-left .icon-extends,
 header .container-left .icon-extends-right {
     display: none;
-    color: var(--green-ligth);
+    color: var(--green-dark);
     padding: 3px 7px;
     margin-left: 17px;
     cursor: pointer;
@@ -53,7 +53,7 @@ header .container-left .icon-extends-right {
 
 header .container-left .icon-extends-right:hover,
 header .container-left .icon-extends:hover {
-    color: #62c321;
+    color: var(--green-ligth);
 }
 
 header .container-left .icon-extends-right:hover i.fa-caret-up,

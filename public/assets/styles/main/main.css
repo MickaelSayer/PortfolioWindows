@@ -211,7 +211,7 @@ main .nav-app li img {
 
 main .gestion-app {
     position: absolute;
-    bottom: 100px;
+    bottom: 11%;
     left: 50%;
     transform: translateX(-50%) translateY(0);
     padding: 3px 15px;
