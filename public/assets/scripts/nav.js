@@ -26,7 +26,7 @@ $(document).ready(function() {
     const windowsSections = $('section.windows');
     const taskItems = $('.navbar .task');
     const iconApp = $('header .icon-app');
-    const containerRight = $('header .container-right')
+    const containerRight = $('header .container-right');
 
     /** Ouverture du menu navigation */
     logoWindows.on('click', function (event) {
@@ -134,9 +134,17 @@ $(document).ready(function() {
         $(this).addClass('selected');
     });
 
-    $('nav .nav-header .params').on('click', function() {
+    $('nav .nav-header .btn-params').on('click', function() {
         $(this).toggleClass('active');
-
+        $('nav .nav-header .params').toggleClass('active');
         $('nav .container-nav').toggleClass('inactive');
+        $('header .logo-windows').toggleClass('display');
+    });
+
+    $('nav.nav-link .params .params-close').on('click', function() {
+        $('nav .nav-header .btn-params').removeClass('active');
+        $('nav .nav-header .params').removeClass('active');
+        $('nav .container-nav').removeClass('inactive');
+        $('header .logo-windows').removeClass('display');
     });
 });

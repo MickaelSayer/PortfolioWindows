@@ -454,4 +454,8 @@ header .icon-extends-right .separator {
         opacity: 0;
         transform: translateX(-50%) scale(0);
     }
+
+    header .logo-windows.display {
+        display: none;
+    }
 }

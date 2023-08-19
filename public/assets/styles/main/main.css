@@ -363,8 +363,8 @@ main .container-open-app .btn-rotate-right {
     z-index: 1;
 }
 
-main .container-open-app .btn-rotate-left.hide,
-main .container-open-app .btn-rotate-right.hide {
+main .container-open-app .btn-rotate-left.display,
+main .container-open-app .btn-rotate-right.display {
     display: none;
 }
 

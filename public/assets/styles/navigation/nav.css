@@ -50,37 +50,35 @@ nav.nav-link .btn-params {
     position: absolute;
     top: 0;
     left: 0;
-    width: 44px;
-    height: 44px;
+    width: 60px;
+    height: 60px;
     display: none;
     align-items: center;
     justify-content: flex-start;
     z-index: 1;
     border-bottom: 1px solid transparent;
-    background: #004C99;
-    transition: 0.3s ease;
+    background: transparent;
     cursor: pointer;
-}
-
-nav.nav-link .btn-params:hover {
-    border-bottom: 1px solid #f1f1f12e;
-    background: #0865c3;
-    width: 100%;
 }
 
 nav.nav-link .btn-params img {
     display: block;
     position: absolute;
+    height: 60px;
+    width: 60px;
     top: 0;
     left: 0;
     padding: 10px;
 }
 
-nav.nav-link .btn-params .setting {
+nav.nav-link .btn-params .setting,
+nav.nav-link .btn-params.active .setting-2 {
     display: block;
 }
 
-nav.nav-link .btn-params:hover .setting {
+nav.nav-link .btn-params:hover .setting,
+nav.nav-link .btn-params.active .setting,
+nav.nav-link .btn-params.active:hover .setting-2 {
     display: none;
 }
 
@@ -88,7 +86,8 @@ nav.nav-link .btn-params .setting-2 {
     display: none;
 }
 
-nav.nav-link .btn-params:hover .setting-2 {
+nav.nav-link .btn-params:hover .setting-2,
+nav.nav-link .btn-params.active:hover .setting {
     display: block;
     animation: bounceLoop15 1s infinite;
 }
@@ -98,14 +97,115 @@ nav.nav-link .btn-params:hover .setting-2 {
         transform: translateY(0);
     }
     20% {
-        transform: translateY(2px);
+        transform: translateY(-2px);
     }
     40%, 60% {
         transform: translateY(0);
     }
     80% {
-        transform: translateY(4px);
+        transform: translateY(-4px);
     }
+}
+
+nav.nav-link .params {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #004C99;
+}
+
+nav.nav-link .params.active {
+    background: #0865c3;
+    display: block;
+}
+
+nav.nav-link .params .params-close {
+    display: flex;
+    position: absolute;
+    bottom: 67px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: var(--green-dark);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+nav.nav-link .params .params-close:hover {
+    background: var(--green-ligth);
+}
+
+nav.nav-link .params .params-close:hover i{
+    animation: bounceLoop16 1s infinite;
+}
+
+@keyframes bounceLoop16 {
+    0%, 100% {
+        transform: translateY(0) translateY(0);
+    }
+    20% {
+        transform: translateY(2px) translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(0) translateY(0);
+    }
+    80% {
+        transform: translateY(4px) translateY(0);
+    }
+}
+
+nav.nav-link .params .container-params {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+nav.nav-link .container-params .content-params {
+    position: relative;
+    padding: 10px;
+    width: 115px;
+    height: 115px;
+    background: rgb(255 255 255 / 14%);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+nav.nav-link .container-params .param-title {
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+nav.nav-link .params .container-params img {
+    width: 24px;
+    height: 24px;
 }
 
 nav .nav-footer {
@@ -192,12 +292,11 @@ nav .container-nav {
     height: 100vh;
     background: #004C99;
     padding: 3px;
-    transform: translateY(0);
     transition: .3s ease;
 }
 
 nav .container-nav.inactive {
-    transform: translateY(100%);
+    display: none;
 }
 
 nav .sidebar-left,
@@ -294,6 +393,7 @@ nav .sidebar-left ul li.open {
 nav .sidebar-left ul li .content-presentation {
     display: flex;
     align-items: center;
+    width: 100%;
 }
  
 nav .sidebar-left ul li:hover::after {

@@ -1,12 +1,4 @@
 $(document).ready(function() {
-    $(window).on('resize', function(event) {
-        if ($(window).width() > 849) {
-            $('.gestion-app.active').click();
-
-            event.stopPropagation();
-        }
-    });
-
     const discordButton = $('#discord');
     const discordButtonSpan = discordButton.find('span');
     discordButton.click(function () {
@@ -61,8 +53,8 @@ $(document).ready(function() {
         $('main .gestion-app .counter').html($('main .box-app span.box.active').length + '/5');
 
         var activeBoxCount = $('main .box-app span.box.active').length;
-        $('.btn-rotate-left').toggleClass('hide', activeBoxCount < 2);
-        $('.btn-rotate-right').toggleClass('hide', activeBoxCount < 2);
+        $('.btn-rotate-left').toggleClass('display', activeBoxCount < 2);
+        $('.btn-rotate-right').toggleClass('display', activeBoxCount < 2);
         $('.no-content').toggleClass('show', activeBoxCount === 0);
 
         $('.container-open-app').toggleClass('active');
