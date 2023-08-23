@@ -3,11 +3,27 @@ $(document).ready(function() {
     $('section.windows .close').on('click', function() {
         const windowsElement = $(this).parents('section.windows');
         const dataLink = windowsElement.data('link');
-
         windowsElement.data('full-size', 'min');
         windowsElement.removeClass('active full-size');
         $(`.navbar #${dataLink}`).removeClass('active selected');
-        windowsElement.css('z-index', '1');
+
+        if (windowsElement.css('z-index') == 2) {
+            windowsElement.css('z-index', '1');
+
+            var windowsPrevVoid = windowsElement.prev('section.windows.active').length == 0;
+            var windowsNextVoid = windowsElement.next('section.windows.active').length == 0;
+
+            if (!windowsPrevVoid && windowsNextVoid) {
+                windowsElement.prev('section.windows.active').css('z-index', '2');
+            } else if(!windowsNextVoid && windowsPrevVoid) {
+                windowsElement.next('section.windows.active').css('z-index', '2');
+            } else if(!windowsPrevVoid && !windowsNextVoid) {
+                windowsElement.next('section.windows.active').css('z-index', '2');
+            } else if(windowsPrevVoid && windowsNextVoid) {
+                $('section.windows.active').last().css('z-index', '2');
+            }
+        }
+
         windowsElement.find('.size .extends').addClass('active');
         windowsElement.find('.size .narrow').removeClass('active');
 
