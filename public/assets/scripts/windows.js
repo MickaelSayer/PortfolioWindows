@@ -63,5 +63,12 @@ $(document).ready(function() {
     $('section.windows .extends-sidebar').on('click', function() {
         const dataLink = $(this).parents('section.windows').data('link');
         $(`section.windows.${dataLink} .container-content`).toggleClass('active');
+        $('section.windows .tools').toggleClass('inactive');
+    });
+
+    $('section.windows .tools .menu-extends').on('click', function() {
+        $('section.windows .content-menu').toggleClass('active');
+        $('section.windows .tools').toggleClass('active');
+        $('section.windows .extends-sidebar').toggleClass('inactive');
     });
 });

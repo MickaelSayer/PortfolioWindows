@@ -280,6 +280,63 @@ section.windows .content-menu {
     pointer-events: none;
 }
 
+section.windows .tools .menu-extends {
+    width: 20px;
+    height: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: initial;
+}
+
+section.windows .tools .menu-extends i {
+    color: var(--green-dark);
+}
+
+section.windows .tools:hover .menu-extends i {
+    color: var(--green-ligth);
+    animation: bounceLoop17 1s infinite;
+}
+
+@keyframes bounceLoop17 {
+    0%, 100% {
+        transform: translateY(0) translateY(0);
+    }
+    20% {
+        transform: translateY(2px) translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(0) translateY(0);
+    }
+    80% {
+        transform: translateY(4px) translateY(0);
+    }
+}
+
+section.windows .tools.active .menu-extends i {
+    transform: rotate(180deg);
+}
+
+section.windows .tools.active .menu-extends:hover i {
+    animation: bounceLoop18 1s infinite;
+}
+
+@keyframes bounceLoop18 {
+    0%, 100% {
+        transform: translateY(0) rotate(180deg);
+    }
+    20% {
+        transform: translateY(2px) rotate(180deg);
+    }
+    40%, 60% {
+        transform: translateY(0) rotate(180deg);
+    }
+    80% {
+        transform: translateY(4px) rotate(180deg);
+    }
+}
+
 section.windows .content-menu img {
     height: 40px;
 }
@@ -293,7 +350,7 @@ section.windows .windows-menu {
 
 section.windows .windows-menu li {
     list-style-type: none;
-    font-size: 14px;
+    font-size: clamp(12px, 3vw, 14px);
 }
 
 section.windows .windows-menu li:not(:last-child) {
@@ -613,24 +670,95 @@ section.windows .container-sildebar-left ul li img {
 @media screen and (max-width: 848px) {
     section.windows {
         width: 100%;
-        height: 100%;
+        height: calc(100% - 40px);
         position: absolute;
         top: 0;
         left: 0;
         transform: translate(0%, -100%);
     }
 
-    section.windows .content-menu,
-    section.windows .tools,
-    section.windows .container-content.active .sidebar-left,
-    section.windows .container-content .sidebar-left,
-    section.windows .container-content .extends-sidebar,
-    section.windows .windows-action
+    section.windows .windows-action .size
     {
         display: none;
     }
 
     section.windows .container-content {
         height: calc(100% - 37px);
+    }
+
+    section.windows .content-menu {
+        display: none;
+        border-bottom: 1px solid #bbb8b8;
+    }
+
+    section.windows .content-menu.active {
+        display: flex;
+        height: auto;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    section.windows .windows-menu {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section.windows .content-menu.active .windows-menu {
+        display: flex;
+    }
+
+    section.windows .content-menu.active img {
+        display: block;
+    }
+
+    section.windows .content-menu img {
+        display: none;
+    }
+
+    section.windows .tools.inactive {
+        display: none;
+    }
+
+    section.windows .tools .menu-extends {
+        display: flex;
+    }
+
+    section.windows .tools {
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    section.windows .tools *:not(.menu-extends, .menu-extends i) {
+        display: none;
+        padding: 8px;
+        font-size: clamp(12px, 3vw, 14px);
+    }
+
+    section.windows .tools.active *:not(.menu-extends, .menu-extends i) {
+        display: flex;
+    }
+
+    section.windows .tools.active {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        flex-direction: column;
+    }
+
+    section.windows .tools .arrrow-after,
+    section.windows .tools .folder {
+        border-right: none;
+    }
+
+    section.windows .tools .icon-tools {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-bottom: 1px solid #bbb8b8;
+    }
+
+    section.windows .extends-sidebar.inactive {
+        display: none;
     }
 }

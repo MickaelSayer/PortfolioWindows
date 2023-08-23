@@ -4,6 +4,6 @@ section.windows.langage {
 
 @media screen and (max-width: 848px) {
     section.windows.langage.active {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 40px);
     }
 }

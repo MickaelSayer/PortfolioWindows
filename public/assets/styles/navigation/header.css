@@ -275,16 +275,6 @@ header .container-right .horloge {
     opacity: 0.8;
 }
 
-header .navbar-responsive {
-    display: none;
-    box-shadow: none;
-    background-image: url(/assets/pictures/windows-logo.png);
-    background-size: cover;
-    background-position: center;
-    width: 70px;
-    height: 70px;
-}
-
 header .icon-extends-right .separator {
     display: none;
 }

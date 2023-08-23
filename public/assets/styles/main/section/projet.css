@@ -4,6 +4,6 @@ section.windows.projet {
 
 @media screen and (max-width: 848px) {
     section.windows.projet.active {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 40px);
     }
 }

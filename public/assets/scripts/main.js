@@ -13,4 +13,11 @@ $(document).ready(function() {
                 }, 200);
             });
     });
+
+    $('main .gestion-app').on('click', function() {
+        var windowsOpen = $('section.windows.active');
+        $.each(windowsOpen, function (index, windows) { 
+             
+        });
+    });
 });

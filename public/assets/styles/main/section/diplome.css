@@ -4,6 +4,6 @@ section.windows.diplome {
 
 @media screen and (max-width: 848px) {
     section.windows.diplome.active {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 40px);
     }
 }

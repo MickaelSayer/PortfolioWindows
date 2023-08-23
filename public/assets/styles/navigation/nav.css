@@ -178,8 +178,8 @@ nav.nav-link .params .container-params {
 nav.nav-link .container-params .content-params {
     position: relative;
     padding: 10px;
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
     background: rgb(255 255 255 / 14%);
     display: grid;
     grid-template-rows: repeat(2, 1fr);
