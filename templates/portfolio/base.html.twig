@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>{% block title %}Portfolio Mickael Sayer{% endblock %}</title>
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/root.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/base.css') }}">
-        {% block stylesheets %}{% endblock %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Portfolio Mickael Sayer{% endblock %}</title>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="{{ asset('assets/scripts/base.js') }}"></script>
-        <script src="https://kit.fontawesome.com/ecb3161233.js" crossorigin="anonymous"></script>
-        {% block javascripts %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/root.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/base.css') }}">
+    {% block stylesheets %}{% endblock %}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('assets/scripts/base.js') }}"></script>
+    <script src="https://kit.fontawesome.com/ecb3161233.js" crossorigin="anonymous"></script>
+    {% block javascripts %}{% endblock %}
 
-    {% block header %}
-    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+{% block header %}
+{% endblock %}
 
 
-    {% block body %}
-    {% endblock %}
-    
+{% block body %}
+{% endblock %}
 
-    {% block footer %}
-    {% endblock %}
-    </body>
+
+{% block footer %}
+{% endblock %}
+</body>
+
 </html>

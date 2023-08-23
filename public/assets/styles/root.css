@@ -1,7 +1,7 @@
 :root {
-    --green-dark: #589132;
-    --green-ligth: #49a30f;
-    --text-black: #0C0C0C;
-    --bl-blue: linear-gradient(to bottom, #0165B5, #004C99);
-    --bl-rotate-blue: linear-gradient(to bottom, #004C99, #0165B5);
+  --green-dark: #589132;
+  --green-ligth: #49a30f;
+  --text-black: #0c0c0c;
+  --bl-blue: linear-gradient(to bottom, #0165b5, #004c99);
+  --bl-rotate-blue: linear-gradient(to bottom, #004c99, #0165b5);
 }

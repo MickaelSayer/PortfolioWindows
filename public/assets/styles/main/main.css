@@ -1,304 +1,306 @@
 main {
-    position: absolute;
-    height: calc(100vh - 40px);
-    width: 100vw;
-    background-image: url(/assets/pictures/windows-xp-hd.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 25px;
-    z-index: -1;
+  position: absolute;
+  height: calc(100vh - 40px);
+  width: 100vw;
+  background-image: url(/assets/pictures/windows-xp-hd.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  z-index: -1;
 }
 
 main .container-bureau {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 200px;
-    height: 282px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 200px;
+  height: 282px;
 }
 
 main .icon-bureau {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 80px;
-    padding: 10px;
-    font-size: 14px;
-    color: white;
-    text-shadow: 2px 2px 0 var(--text-black);
-    cursor: pointer;
-    border-radius: 3px;
-    transition: .2s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 2px 2px 0 var(--text-black);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s linear;
 }
 
 main .icon-bureau:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 main .icon-bureau:hover {
-    background-color: #f6f6f640;
+  background-color: #f6f6f640;
 }
 
 main .icon-bureau {
-    text-decoration: none;
-    color: white;
-    text-shadow: 2px 2px 0 var(--text-black);
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 0 var(--text-black);
 }
 
 main .icon-bureau.corbeille {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 25px;
-    pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 25px;
+  pointer-events: none;
 }
 
 main .icon-bureau img {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 main .horloge-responsive {
-    display: none;
-    font-size: 40px;
-    color: transparent;
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-    transform: translate(-50%, -50%);
-    -webkit-text-stroke: 2px white;
-    pointer-events: none;
+  display: none;
+  font-size: 40px;
+  color: transparent;
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: 2px white;
+  pointer-events: none;
 }
 
 main .icon-app-responsive {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    width: 100%;
-    height: 39px;
-    background: var(--bl-blue);
-    transition: .2s linear;
-    overflow: hidden;
-    flex-direction: column;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  height: 39px;
+  background: var(--bl-blue);
+  transition: 0.2s linear;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 main .icon-app-responsive.active {
-    height: 100%;
+  height: 100%;
 }
 
 main .icon-app-responsive .content-top {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    justify-content: space-between;
-    pointer-events: none;
-    border-bottom: 1px solid #ffffff24;
-    padding-bottom: 7px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  pointer-events: none;
+  border-bottom: 1px solid #ffffff24;
+  padding-bottom: 7px;
 }
 
 main .icon-app-responsive .content-top img {
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 }
 
 main .content-app {
-    height: 100%;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: .1s linear;
-    pointer-events: none;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: 0.1s linear;
+  pointer-events: none;
 }
 
 main .icon-app-responsive.active .content-app {
-    opacity: 1;
-    pointer-events: initial;
+  opacity: 1;
+  pointer-events: initial;
 }
 
 main .app {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
 }
 
 main .container-app {
-    position: relative;
-    height: 100px;
-    width: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
-    justify-content: center;
-    background: #0000004f;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px;
-    margin: 10px 10px 20px 10px;
-    align-items: center;
-    justify-items: center;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  justify-content: center;
+  background: #0000004f;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  margin: 10px 10px 20px 10px;
+  align-items: center;
+  justify-items: center;
 }
 
 main .container-app::before {
-    content: var(--title_app);
-    width: 100%;
-    height: 10px;
-    position: absolute;
-    top: -22px;
-    left: 0;
-    background: #0000004f;
-    font-size: 12px;
-    color: white;
-    padding: 5px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: 600;
+  content: var(--title_app);
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: -22px;
+  left: 0;
+  background: #0000004f;
+  font-size: 12px;
+  color: white;
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 600;
 }
 
 main .container-app:first-child img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 main .nav-app {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 main .nav-app ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 main .nav-app li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 120px;
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-    justify-content: flex-start;
-    text-align: center;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  justify-content: flex-start;
+  text-align: center;
 }
 
 main .nav-app li:hover {
-    background: #ffffff2b;
+  background: #ffffff2b;
 }
 
 main .nav-app li img {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 main .gestion-app {
-    position: absolute;
-    bottom: 11%;
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
-    padding: 3px 15px;
-    border-radius: 20px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: var(--green-dark);
-    font-size: clamp(10px, 3vw, 12px);
-    font-weight: 600;
-    z-index: 5;
-    color: white;
-    transition: .4s ease;
+  position: absolute;
+  bottom: 11%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  padding: 3px 15px;
+  border-radius: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--green-dark);
+  font-size: clamp(10px, 3vw, 12px);
+  font-weight: 600;
+  z-index: 5;
+  color: white;
+  transition: 0.4s ease;
 }
 
 main .gestion-app:hover {
-    background: var(--green-ligth);
+  background: var(--green-ligth);
 }
 
 main .gestion-app:hover i {
-    animation: bounceLoop14 1s infinite;
+  animation: bounceLoop14 1s infinite;
 }
 
 @keyframes bounceLoop14 {
-    0%, 100% {
-        transform: translateY(0) translateY(0);
-    }
-    20% {
-        transform: translateY(2px) translateY(0);
-    }
-    40%, 60% {
-        transform: translateY(0) translateY(0);
-    }
-    80% {
-        transform: translateY(4px) translateY(0);
-    }
+  0%,
+  100% {
+    transform: translateY(0) translateY(0);
+  }
+  20% {
+    transform: translateY(2px) translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(0) translateY(0);
+  }
+  80% {
+    transform: translateY(4px) translateY(0);
+  }
 }
 
 main .gestion-app.active {
-    transform: translateX(-50%) translateY(42px);
-    padding: 10px 30px;
-    background: var(--green-ligth);
+  transform: translateX(-50%) translateY(42px);
+  padding: 10px 30px;
+  background: var(--green-ligth);
 }
 
 main .gestion-app.active:hover {
-    background-color: var(--green-dark);
+  background-color: var(--green-dark);
 }
 
 main .gestion-app i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 848px) {
-    main {
-        height: 100vh;
-    }
+  main {
+    height: 100vh;
+  }
 
-    main .horloge-responsive {
-        display: block;
-    }
+  main .horloge-responsive {
+    display: block;
+  }
 
-    main .container-bureau {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        margin-top: 150px;
-    }
+  main .container-bureau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+  }
 
-    main .container-bureau.inactive {
-        display: none;
-    }
+  main .container-bureau.inactive {
+    display: none;
+  }
 
-    main .container-bureau .corbeille {
-        display: none;
-    }
+  main .container-bureau .corbeille {
+    display: none;
+  }
 
-    main .icon-app-responsive {
-        display: flex;
-        z-index: 3;
-    }
+  main .icon-app-responsive {
+    display: flex;
+    z-index: 3;
+  }
 
-    main .gestion-app {
-        display: flex;
-    }
+  main .gestion-app {
+    display: flex;
+  }
 }

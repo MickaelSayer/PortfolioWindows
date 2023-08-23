@@ -1,9 +1,9 @@
 section.windows.presentation {
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 848px) {
-    section.windows.presentation.active {
-        transform: translate(0%, 40px);
-    }
+  section.windows.presentation.active {
+    transform: translate(0%, 40px);
+  }
 }

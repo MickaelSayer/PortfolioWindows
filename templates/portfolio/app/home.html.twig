@@ -1,29 +1,29 @@
 {% extends "portfolio/base.html.twig" %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/header.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/nav.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/header.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/navigation/nav.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/main.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/windows.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/main.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/windows.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/presentation.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/diplome.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/experience.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/langage.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/projet.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/presentation.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/diplome.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/experience.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/langage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main/section/projet.css') }}">
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('assets/scripts/main.js') }}"></script>
-    <script src="{{ asset('assets/scripts/windows.js') }}"></script>
-    <script src="{{ asset('assets/scripts/nav.js') }}"></script>
+<script src="{{ asset('assets/scripts/main.js') }}"></script>
+<script src="{{ asset('assets/scripts/windows.js') }}"></script>
+<script src="{{ asset('assets/scripts/nav.js') }}"></script>
 {% endblock %}
 
 {% block header %}
-    {% include "portfolio/__partials/navigation/header.html.twig" %}
+{% include "portfolio/__partials/navigation/header.html.twig" %}
 {% endblock %}
 
 {% block body %}
-    {% include "portfolio/__partials/main/main.html.twig" %}
+{% include "portfolio/__partials/main/main.html.twig" %}
 {% endblock %}

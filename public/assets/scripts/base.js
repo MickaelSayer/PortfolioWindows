@@ -8,12 +8,12 @@ function actualiserHorloge() {
     $("header .horloge .heure").text(heureActuelle);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     /** Actualisation de l'heure */
     setInterval(actualiserHorloge, 1000);
     actualiserHorloge();
 
-    $(window).on('resize', function(event) {
+    $(window).on('resize', function (event) {
         if ($(window).width() > 849) {
             $('.gestion-app.active').click();
             $('nav.nav-link .btn-params.active').click();

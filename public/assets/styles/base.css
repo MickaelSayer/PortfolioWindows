@@ -1,21 +1,21 @@
 @font-face {
-    font-family: 'Verdana';
-    src: url('/assets/fonts/Verdana.ttf') format('truetype');
+  font-family: "Verdana";
+  src: url("/assets/fonts/Verdana.ttf") format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 html {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 body {
-    font-family: Verdana;
-    background-color: var(--text-black);
-    overflow: hidden;
+  font-family: Verdana;
+  background-color: var(--text-black);
+  overflow: hidden;
 }

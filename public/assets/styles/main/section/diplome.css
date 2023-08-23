@@ -1,9 +1,9 @@
 section.windows.diplome {
-    transform: translate(-46%, -51%);
+  transform: translate(-46%, -51%);
 }
 
 @media screen and (max-width: 848px) {
-    section.windows.diplome.active {
-        transform: translate(0%, 40px);
-    }
+  section.windows.diplome.active {
+    transform: translate(0%, 40px);
+  }
 }

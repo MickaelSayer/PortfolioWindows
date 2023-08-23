@@ -1,7 +1,7 @@
 function addCssOpacity(elt_focus) {
     elt_focus.css({
-        'background' : 'white',
-        'display' : 'flex',
+        'background': 'white',
+        'display': 'flex',
         'opacity': '0.3'
     });
     if (elt_focus.hasClass('active')) {
@@ -20,7 +20,7 @@ function containerAppNavbarSelected(__this, container) {
     __this.children('i').toggleClass('active');
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     const logoWindows = $('.logo-windows');
     const navLink = $('.nav-link');
     const windowsSections = $('section.windows');
@@ -33,7 +33,7 @@ $(document).ready(function() {
         navLink.toggleClass('open-nav');
         $(this).toggleClass('active');
         $('nav .nav-header .params').removeClass('active');
-        
+
         event.stopPropagation();
     });
 
@@ -71,38 +71,38 @@ $(document).ready(function() {
         $(this).addClass('open');
     });
 
-    $(document).on('click', function(event) {
+    $(document).on('click', function (event) {
         if (navLink.hasClass('open-nav') && !navLink.is(event.target) && !logoWindows.is(event.target) && navLink.has(event.target).length === 0) {
             navLink.removeClass('open-nav');
             logoWindows.removeClass('active');
         }
     });
 
-    $('header .container-left .icon-extends').on('click', function() {
+    $('header .container-left .icon-extends').on('click', function () {
         containerAppNavbarSelected($(this), iconApp);
     });
 
-    $('header .container-left .icon-extends').on('mouseenter', function() {
+    $('header .container-left .icon-extends').on('mouseenter', function () {
         addCssOpacity(iconApp);
     });
 
-    $('header .container-left .icon-extends').on('mouseleave', function() {
+    $('header .container-left .icon-extends').on('mouseleave', function () {
         iconApp.removeAttr('style');
     });
 
-    $('header .container-left .icon-extends-right').on('click', function() {
+    $('header .container-left .icon-extends-right').on('click', function () {
         containerAppNavbarSelected($(this), containerRight);
     });
 
-    $('header .container-left .icon-extends-right').on('mouseenter', function() {
+    $('header .container-left .icon-extends-right').on('mouseenter', function () {
         addCssOpacity(containerRight);
     });
 
-    $('header .container-left .icon-extends-right').on('mouseleave', function() {
+    $('header .container-left .icon-extends-right').on('mouseleave', function () {
         containerRight.removeAttr('style');
     });
 
-    taskItems.on('click', function() {
+    taskItems.on('click', function () {
         const elt_id = $(this).attr('id');
         const windowsElement = windowsSections.filter('.' + elt_id);
 
@@ -134,14 +134,14 @@ $(document).ready(function() {
         $(this).addClass('selected');
     });
 
-    $('nav .nav-header .btn-params').on('click', function() {
+    $('nav .nav-header .btn-params').on('click', function () {
         $(this).toggleClass('active');
         $('nav .nav-header .params').toggleClass('active');
         $('nav .container-nav').toggleClass('inactive');
         $('header .logo-windows').toggleClass('display');
     });
 
-    $('nav.nav-link .params .params-close').on('click', function() {
+    $('nav.nav-link .params .params-close').on('click', function () {
         $('nav .nav-header .btn-params').removeClass('active');
         $('nav .nav-header .params').removeClass('active');
         $('nav .container-nav').removeClass('inactive');

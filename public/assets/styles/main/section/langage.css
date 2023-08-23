@@ -1,9 +1,9 @@
 section.windows.langage {
-    transform: translate(-55%, -52%);
+  transform: translate(-55%, -52%);
 }
 
 @media screen and (max-width: 848px) {
-    section.windows.langage.active {
-        transform: translate(0%, 40px);
-    }
+  section.windows.langage.active {
+    transform: translate(0%, 40px);
+  }
 }

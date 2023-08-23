@@ -1,9 +1,9 @@
 section.windows.experience {
-    transform: translate(-51%, -47%);
+  transform: translate(-51%, -47%);
 }
 
 @media screen and (max-width: 848px) {
-    section.windows.experience.active {
-        transform: translate(0%, 40px);
-    }
+  section.windows.experience.active {
+    transform: translate(0%, 40px);
+  }
 }

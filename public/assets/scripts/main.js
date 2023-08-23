@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const discordButton = $('#discord');
     const discordButtonSpan = discordButton.find('span');
     discordButton.click(function () {
@@ -14,10 +14,10 @@ $(document).ready(function() {
             });
     });
 
-    $('main .gestion-app').on('click', function() {
+    $('main .gestion-app').on('click', function () {
         var windowsOpen = $('section.windows.active');
-        $.each(windowsOpen, function (index, windows) { 
-             
+        $.each(windowsOpen, function (index, windows) {
+
         });
     });
 });

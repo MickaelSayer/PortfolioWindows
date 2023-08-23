@@ -1,764 +1,787 @@
 section.windows {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 90%;
-    background-color: white;
-    padding: 5px;
-    background: #034587;
-    overflow: hidden;
-    z-index: 1;
-    display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 90%;
+  background-color: white;
+  padding: 5px;
+  background: #034587;
+  overflow: hidden;
+  z-index: 1;
+  display: none;
 }
 
 section.windows.active {
-    display: block;
+  display: block;
 }
 
 section.windows.full-size.active {
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
 
 section.windows .windows-top {
-    display: flex;
-    flex-direction: column;
-    pointer-events: none;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 section.windows .windows-top .windows-action {
-    pointer-events: initial;
+  pointer-events: initial;
 }
 
 section.windows .container-name {
-    display: flex;
-    padding: 0 5px 5px 5px;
-    justify-content: space-between;
-    background: linear-gradient(to bottom, #0165B5, #034587);
+  display: flex;
+  padding: 0 5px 5px 5px;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
 section.windows .windows-name {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 14px;
-    pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
 }
 
 section.windows .windows-name img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 section.windows .windows-action {
-    display: flex;
+  display: flex;
 }
 
 section.windows .windows-action div {
-    height: 100%;
-    width: 33px;
-    position: relative;
+  height: 100%;
+  width: 33px;
+  position: relative;
 }
 
 section.windows .windows-action div:not(:last-child) {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 section.windows .minus {
-    border: 1px solid white;
-    background: var(--green-dark);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .3s ease;
+  border: 1px solid white;
+  background: var(--green-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 section.windows .minus:hover {
-    background: var(--green-ligth);
+  background: var(--green-ligth);
 }
 
 section.windows .minus:hover:after,
 section.windows .size:hover:after {
-    animation: bounceLoop 1s infinite;
+  animation: bounceLoop 1s infinite;
 }
 
 @keyframes bounceLoop {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(-2px);
-    }
-    40%, 60% {
-        transform: translateY(0);
-    }
-    80% {
-        transform: translateY(-4px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-2px);
+  }
+  40%,
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
 }
 
 section.windows .minus::after {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: 7px;
-    background: white;
-    width: 50%;
-    height: 3px;
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  background: white;
+  width: 50%;
+  height: 3px;
 }
 
 section.windows .size {
-    border: 1px solid white;
-    background: var(--green-dark);
-    border-radius: 5px;
-    cursor: pointer;
+  border: 1px solid white;
+  background: var(--green-dark);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 section.windows .size:hover {
-    background: var(--green-ligth);
+  background: var(--green-ligth);
 }
 
 section.windows .extends {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -52%);
-    width: 60%;
-    height: 50%;
-    border: 1px solid white;
-    box-shadow: inset 0px 4px 0 white;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 60%;
+  height: 50%;
+  border: 1px solid white;
+  box-shadow: inset 0px 4px 0 white;
 }
 
 section.windows .size:hover .extends {
-    animation: bounceLoop2 1s infinite;
+  animation: bounceLoop2 1s infinite;
 }
 
 @keyframes bounceLoop2 {
-    0%, 100% {
-        transform: translate(-50%, -52%);
-    }
-    20% {
-        transform: translate(-50%, -2px);
-    }
-    40%, 60% {
-        transform: translate(-50%, -52%);
-    }
-    80% {
-        transform: translate(-50%, -4px);
-    }
+  0%,
+  100% {
+    transform: translate(-50%, -52%);
+  }
+  20% {
+    transform: translate(-50%, -2px);
+  }
+  40%,
+  60% {
+    transform: translate(-50%, -52%);
+  }
+  80% {
+    transform: translate(-50%, -4px);
+  }
 }
 
 section.windows .extends.active {
-    display: block;
+  display: block;
 }
 
 section.windows .narrow {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -64%);
-    width: 40%;
-    height: 40%;
-    border: 2px solid white;
-    background: transparent;
-    cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -64%);
+  width: 40%;
+  height: 40%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
 }
 
 section.windows .size:hover .narrow {
-    animation: bounceLoop3 1s infinite;
+  animation: bounceLoop3 1s infinite;
 }
 
 @keyframes bounceLoop3 {
-    0%, 100% {
-        transform: translate(-40%, -64%);
-    }
-    20% {
-        transform: translate(-40%, -2px);
-    }
-    40%, 60% {
-        transform: translate(-40%, -64%);
-    }
-    80% {
-        transform: translate(-40%, -4px);
-    }
+  0%,
+  100% {
+    transform: translate(-40%, -64%);
+  }
+  20% {
+    transform: translate(-40%, -2px);
+  }
+  40%,
+  60% {
+    transform: translate(-40%, -64%);
+  }
+  80% {
+    transform: translate(-40%, -4px);
+  }
 }
 
 section.windows .narrow::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-70%, -20%);
-    width: 100%;
-    height: 100%;
-    background: white;
-    border: 2px solid white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -20%);
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 2px solid white;
 }
 
 section.windows .narrow.active {
-    display: block;
+  display: block;
 }
 
 section.windows .close {
-    position: relative;
-    background: var(--green-dark);
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid white;
-    transition: .2s linear;
+  position: relative;
+  background: var(--green-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.2s linear;
 }
 
 section.windows .close:hover {
-    background: var(--green-ligth);
+  background: var(--green-ligth);
 }
 
 section.windows .close span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 60%;
-    height: 3px;
-    background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 60%;
+  height: 3px;
+  background: white;
 }
 
 section.windows .close span:first-child {
-    transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 section.windows .close span:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 section.windows .close:hover span:first-child {
-    animation: bounceLoop4 1s infinite;
+  animation: bounceLoop4 1s infinite;
 }
 @keyframes bounceLoop4 {
-    0%, 100% {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    20% {
-        transform: translate(-50%, 2px) rotate(-45deg);
-    }
-    40%, 60% {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    80% {
-        transform: translate(-50%, 4px) rotate(-45deg);
-    }
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  20% {
+    transform: translate(-50%, 2px) rotate(-45deg);
+  }
+  40%,
+  60% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  80% {
+    transform: translate(-50%, 4px) rotate(-45deg);
+  }
 }
 
 section.windows .close:hover span:nth-child(2) {
-    animation: bounceLoop5 1s infinite;
+  animation: bounceLoop5 1s infinite;
 }
 
 @keyframes bounceLoop5 {
-    0%, 100% {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    20% {
-        transform: translate(-50%, 2px) rotate(45deg);
-    }
-    40%, 60% {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    80% {
-        transform: translate(-50%, 4px) rotate(45deg);
-    }
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  20% {
+    transform: translate(-50%, 2px) rotate(45deg);
+  }
+  40%,
+  60% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  80% {
+    transform: translate(-50%, 4px) rotate(45deg);
+  }
 }
 
 section.windows .content-menu {
-    display: flex;
-    align-items: center;
-    height: 30px;
-    justify-content: space-between;
-    background: #dddddd;
-    padding: 5px;
-    pointer-events: none;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+  background: #dddddd;
+  padding: 5px;
+  pointer-events: none;
 }
 
 section.windows .tools .menu-extends {
-    width: 20px;
-    height: 20px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    pointer-events: initial;
+  width: 20px;
+  height: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: initial;
 }
 
 section.windows .tools .menu-extends i {
-    color: var(--green-dark);
+  color: var(--green-dark);
 }
 
 section.windows .tools:hover .menu-extends i {
-    color: var(--green-ligth);
-    animation: bounceLoop17 1s infinite;
+  color: var(--green-ligth);
+  animation: bounceLoop17 1s infinite;
 }
 
 @keyframes bounceLoop17 {
-    0%, 100% {
-        transform: translateY(0) translateY(0);
-    }
-    20% {
-        transform: translateY(2px) translateY(0);
-    }
-    40%, 60% {
-        transform: translateY(0) translateY(0);
-    }
-    80% {
-        transform: translateY(4px) translateY(0);
-    }
+  0%,
+  100% {
+    transform: translateY(0) translateY(0);
+  }
+  20% {
+    transform: translateY(2px) translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(0) translateY(0);
+  }
+  80% {
+    transform: translateY(4px) translateY(0);
+  }
 }
 
 section.windows .tools.active .menu-extends i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 section.windows .tools.active .menu-extends:hover i {
-    animation: bounceLoop18 1s infinite;
+  animation: bounceLoop18 1s infinite;
 }
 
 @keyframes bounceLoop18 {
-    0%, 100% {
-        transform: translateY(0) rotate(180deg);
-    }
-    20% {
-        transform: translateY(2px) rotate(180deg);
-    }
-    40%, 60% {
-        transform: translateY(0) rotate(180deg);
-    }
-    80% {
-        transform: translateY(4px) rotate(180deg);
-    }
+  0%,
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
+  20% {
+    transform: translateY(2px) rotate(180deg);
+  }
+  40%,
+  60% {
+    transform: translateY(0) rotate(180deg);
+  }
+  80% {
+    transform: translateY(4px) rotate(180deg);
+  }
 }
 
 section.windows .content-menu img {
-    height: 40px;
+  height: 40px;
 }
 
 section.windows .windows-menu {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: #dddddd;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #dddddd;
 }
 
 section.windows .windows-menu li {
-    list-style-type: none;
-    font-size: clamp(12px, 3vw, 14px);
+  list-style-type: none;
+  font-size: clamp(12px, 3vw, 14px);
 }
 
 section.windows .windows-menu li:not(:last-child) {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 section.windows .tools {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: #dddddd;
-    height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #dddddd;
+  height: 40px;
 }
 
 section.windows .tools div {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 15px;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+  font-size: 14px;
 }
 
 section.windows .tools .arrrow-after,
 section.windows .tools .arrrow-before {
-    color: #bbb8b8;
+  color: #bbb8b8;
 }
 
 section.windows .tools .arrrow-before i {
-    margin-right: 15px;
-    transform: scale(1.8);
+  margin-right: 15px;
+  transform: scale(1.8);
 }
 
 section.windows .tools .arrrow-after i {
-    transform: scale(1.8);
+  transform: scale(1.8);
 }
 
 section.windows .tools .arrrow-after {
-    border-right: 1px solid #bbb8b8;
-    margin-right: 5px;
+  border-right: 1px solid #bbb8b8;
+  margin-right: 5px;
 }
 
 section.windows .tools div img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 section.windows .tools .folder {
-    border-right: 1px solid #bbb8b8;
+  border-right: 1px solid #bbb8b8;
 }
 
 section.windows .container-content .sidebar-left {
-    display: none;
-    background: linear-gradient(to bottom, #4e82b9, #3f619f);
-    height: 100%;
-    width: 300px;
-    padding: 15px 25px 15px 15px;
-    font-size: 12px;
+  display: none;
+  background: linear-gradient(to bottom, #4e82b9, #3f619f);
+  height: 100%;
+  width: 300px;
+  padding: 15px 25px 15px 15px;
+  font-size: 12px;
 }
 
 section.windows .container-content.active .sidebar-left {
-    display: block;
+  display: block;
 }
 
 section.windows .container-content {
-    display: flex;
-    height: calc(100% - 106px);
-    width: 100%;
+  display: flex;
+  height: calc(100% - 106px);
+  width: 100%;
 }
 
 section.windows .container-content.active .content-section {
-    width: calc(100% - 300px);
+  width: calc(100% - 300px);
 }
 
 section.windows .container-content .content-section {
-    display: flex;
-    justify-content: center;
-    background: white;
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-    font-size: 12px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: white;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 section.windows .container-content .extends-sidebar {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%) translateX(0%) rotate(180deg);
-    height: 30px;
-    width: 30px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color:var(--green-dark);
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%) translateX(0%) rotate(180deg);
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--green-dark);
 }
 
 section.windows .container-content .extends-sidebar:hover {
-    color:var(--green-ligth);
-    animation: bounceLoop8 1s infinite;
+  color: var(--green-ligth);
+  animation: bounceLoop8 1s infinite;
 }
 
 @keyframes bounceLoop8 {
-    0%, 100% {
-        transform: translateY(-50%) translateX(0) rotate(180deg);
-    }
-    20% {
-        transform: translateY(-50%) translateX(-2px) rotate(180deg);
-    }
-    40%, 60% {
-        transform: translateY(-50%) translateX(0) rotate(180deg);
-    }
-    80% {
-        transform:translateY(-50%)  translateX(-4px) rotate(180deg);
-    }
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0) rotate(180deg);
+  }
+  20% {
+    transform: translateY(-50%) translateX(-2px) rotate(180deg);
+  }
+  40%,
+  60% {
+    transform: translateY(-50%) translateX(0) rotate(180deg);
+  }
+  80% {
+    transform: translateY(-50%) translateX(-4px) rotate(180deg);
+  }
 }
 
 section.windows .container-content.active .extends-sidebar {
-    left: 303px;
-    transform: rotate(0) translateY(-1px);
+  left: 303px;
+  transform: rotate(0) translateY(-1px);
 }
 
 section.windows .container-content.active .extends-sidebar:hover {
-    color:var(--green-ligth);
-    animation: bounceLoop9 1s infinite;
+  color: var(--green-ligth);
+  animation: bounceLoop9 1s infinite;
 }
 
 @keyframes bounceLoop9 {
-    0%, 100% {
-        transform: translateX(0) rotate(0);
-    }
-    20% {
-        transform: translateX(-2px) rotate(0);
-    }
-    40%, 60% {
-        transform: translateX(0) rotate(0);
-    }
-    80% {
-        transform: translateX(-4px) rotate(0);
-    }
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-2px) rotate(0);
+  }
+  40%,
+  60% {
+    transform: translateX(0) rotate(0);
+  }
+  80% {
+    transform: translateX(-4px) rotate(0);
+  }
 }
 
 section.windows .container-sildebar-left {
-    background: #8285a0;
-    margin-bottom: 20px;
+  background: #8285a0;
+  margin-bottom: 20px;
 }
 
 section.windows .sidebar-left-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    background: linear-gradient(to right, white 56%, #9abeff);
-    font-weight: 600;
-    border-radius: 5px 5px 0 0;
-    color: #1a57b7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: linear-gradient(to right, white 56%, #9abeff);
+  font-weight: 600;
+  border-radius: 5px 5px 0 0;
+  color: #1a57b7;
 }
 
 section.windows .sidebar-left-title span {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 section.windows .icon-slider-left {
-    background: var(--green-dark);
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    padding-left: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  background: var(--green-dark);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 section.windows .icon-slider-left:hover i {
-    animation: bounceLoop10 1s infinite;
+  animation: bounceLoop10 1s infinite;
 }
 
 @keyframes bounceLoop10 {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(2px);
-    }
-    40%, 60% {
-        transform: translateY(0);
-    }
-    80% {
-        transform: translateY(2.5px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  40%,
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2.5px);
+  }
 }
 
 section.windows .icon-slider-left:hover {
-    background: var(--green-ligth);
+  background: var(--green-ligth);
 }
 
 section.windows .icon-slider-left i {
-    color: white;
-    margin-left: -1px;
+  color: white;
+  margin-left: -1px;
 }
 
 section.windows .icon-slider-left.active {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 section.windows .icon-slider-left {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 section.windows .icon-slider-left:nth-child(3) {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 section.windows .container-sildebar-left ul {
-    padding: 15px 15px;
-    list-style-type: none;
-    color: #3064c1;
-    background: #dce1fb;
-    pointer-events: none;
+  padding: 15px 15px;
+  list-style-type: none;
+  color: #3064c1;
+  background: #dce1fb;
+  pointer-events: none;
 }
 
 section.windows .container-sildebar-left ul.active {
-    height: 0px;
-    padding: 0;
-    overflow: hidden;
+  height: 0px;
+  padding: 0;
+  overflow: hidden;
 }
 
 section.windows .container-sildebar-left ul li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 section.windows .container-sildebar-left ul li:not(:last-child) {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 section.windows .container-sildebar-left ul li img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 1139px) {
-    section.windows .container-content.active .sidebar-left {
-        display: none;
-    }
-    
-    section.windows .container-content .sidebar-left {
-        display: block;
-        width: 100%;
-    }
+  section.windows .container-content.active .sidebar-left {
+    display: none;
+  }
 
-    section.windows .container-content.active .content-section {
-        display: flex;
-        width: 100%;
-    }
-    
-    section.windows .container-content .content-section {
-        display: none;
-        width: calc(100% - 300px);
-    }
+  section.windows .container-content .sidebar-left {
+    display: block;
+    width: 100%;
+  }
 
-    section.windows .container-content .extends-sidebar {
-        display: flex;
-        left: calc(100% - 27px);
-        transform: rotate(0deg);
-    }
+  section.windows .container-content.active .content-section {
+    display: flex;
+    width: 100%;
+  }
 
-    section.windows .container-content .extends-sidebar:hover {
-        color:var(--green-ligth);
-        transform: rotate(0deg);
-        animation: bounceLoop12 1s infinite;
-    }
+  section.windows .container-content .content-section {
+    display: none;
+    width: calc(100% - 300px);
+  }
 
-    @keyframes bounceLoop12 {
-        0%, 100% {
-            transform: translateX(0) rotate(0);
-        }
-        20% {
-            transform: translateX(-2px) rotate(0);
-        }
-        40%, 60% {
-            transform: translateX(0) rotate(0);
-        }
-        80% {
-            transform: translateX(-4px) rotate(0);
-        }
-    }
-    
-    section.windows .container-content.active .extends-sidebar {
-        left: 0;
-        transform: rotate(180deg);
-    }
+  section.windows .container-content .extends-sidebar {
+    display: flex;
+    left: calc(100% - 27px);
+    transform: rotate(0deg);
+  }
 
-    section.windows .container-content.active .extends-sidebar:hover {
-        color:var(--green-ligth);
-        transform: rotate(180deg);
-        animation: bounceLoop13 1s infinite;
+  section.windows .container-content .extends-sidebar:hover {
+    color: var(--green-ligth);
+    transform: rotate(0deg);
+    animation: bounceLoop12 1s infinite;
+  }
+
+  @keyframes bounceLoop12 {
+    0%,
+    100% {
+      transform: translateX(0) rotate(0);
     }
-    
-    @keyframes bounceLoop13 {
-        0%, 100% {
-            transform: translateX(0) rotate(180deg);
-        }
-        20% {
-            transform: translateX(-2px) rotate(180deg);
-        }
-        40%, 60% {
-            transform: translateX(0) rotate(180deg);
-        }
-        80% {
-            transform: translateX(-4px) rotate(180deg);
-        }
+    20% {
+      transform: translateX(-2px) rotate(0);
     }
+    40%,
+    60% {
+      transform: translateX(0) rotate(0);
+    }
+    80% {
+      transform: translateX(-4px) rotate(0);
+    }
+  }
+
+  section.windows .container-content.active .extends-sidebar {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  section.windows .container-content.active .extends-sidebar:hover {
+    color: var(--green-ligth);
+    transform: rotate(180deg);
+    animation: bounceLoop13 1s infinite;
+  }
+
+  @keyframes bounceLoop13 {
+    0%,
+    100% {
+      transform: translateX(0) rotate(180deg);
+    }
+    20% {
+      transform: translateX(-2px) rotate(180deg);
+    }
+    40%,
+    60% {
+      transform: translateX(0) rotate(180deg);
+    }
+    80% {
+      transform: translateX(-4px) rotate(180deg);
+    }
+  }
 }
 
 @media screen and (max-width: 848px) {
-    section.windows {
-        width: 100%;
-        height: calc(100% - 40px);
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(0%, -100%);
-    }
+  section.windows {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, -100%);
+  }
 
-    section.windows .windows-action .size
-    {
-        display: none;
-    }
+  section.windows .windows-action .size {
+    display: none;
+  }
 
-    section.windows .container-content {
-        height: calc(100% - 37px);
-    }
+  section.windows .container-content {
+    height: calc(100% - 37px);
+  }
 
-    section.windows .content-menu {
-        display: none;
-        border-bottom: 1px solid #bbb8b8;
-    }
+  section.windows .content-menu {
+    display: none;
+    border-bottom: 1px solid #bbb8b8;
+  }
 
-    section.windows .content-menu.active {
-        display: flex;
-        height: auto;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-    }
+  section.windows .content-menu.active {
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
 
-    section.windows .windows-menu {
-        display: none;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  section.windows .windows-menu {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    section.windows .content-menu.active .windows-menu {
-        display: flex;
-    }
+  section.windows .content-menu.active .windows-menu {
+    display: flex;
+  }
 
-    section.windows .content-menu.active img {
-        display: block;
-    }
+  section.windows .content-menu.active img {
+    display: block;
+  }
 
-    section.windows .content-menu img {
-        display: none;
-    }
+  section.windows .content-menu img {
+    display: none;
+  }
 
-    section.windows .tools.inactive {
-        display: none;
-    }
+  section.windows .tools.inactive {
+    display: none;
+  }
 
-    section.windows .tools .menu-extends {
-        display: flex;
-    }
+  section.windows .tools .menu-extends {
+    display: flex;
+  }
 
-    section.windows .tools {
-        justify-content: center;
-        overflow: hidden;
-    }
+  section.windows .tools {
+    justify-content: center;
+    overflow: hidden;
+  }
 
-    section.windows .tools *:not(.menu-extends, .menu-extends i) {
-        display: none;
-        padding: 8px;
-        font-size: clamp(12px, 3vw, 14px);
-    }
+  section.windows .tools *:not(.menu-extends, .menu-extends i) {
+    display: none;
+    padding: 8px;
+    font-size: clamp(12px, 3vw, 14px);
+  }
 
-    section.windows .tools.active *:not(.menu-extends, .menu-extends i) {
-        display: flex;
-    }
+  section.windows .tools.active *:not(.menu-extends, .menu-extends i) {
+    display: flex;
+  }
 
-    section.windows .tools.active {
-        display: flex;
-        flex-wrap: wrap;
-        height: auto;
-        flex-direction: column;
-    }
+  section.windows .tools.active {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: column;
+  }
 
-    section.windows .tools .arrrow-after,
-    section.windows .tools .folder {
-        border-right: none;
-    }
+  section.windows .tools .arrrow-after,
+  section.windows .tools .folder {
+    border-right: none;
+  }
 
-    section.windows .tools .icon-tools {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        border-bottom: 1px solid #bbb8b8;
-    }
+  section.windows .tools .icon-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid #bbb8b8;
+  }
 
-    section.windows .extends-sidebar.inactive {
-        display: none;
-    }
+  section.windows .extends-sidebar.inactive {
+    display: none;
+  }
 }

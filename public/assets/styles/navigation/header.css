@@ -1,451 +1,457 @@
 header {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 40px;
-    background: var(--bl-blue);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--bl-blue);
 }
 
 header .navbar {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px -5px 0px 0px #1f5081;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px -5px 0px 0px #1f5081;
 }
 
 header .container-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 header .separator {
-    color: #0c457f;
-    pointer-events: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
+  color: #0c457f;
+  pointer-events: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 header .container-right .separator {
-    position: absolute;
-    left: -40px;
+  position: absolute;
+  left: -40px;
 }
 
 header .container-left .icon-extends,
 header .container-left .icon-extends-right {
-    display: none;
-    color: var(--green-dark);
-    padding: 3px 7px;
-    margin-left: 17px;
-    cursor: pointer;
-    border-radius: 3px;
-    height: 100%;
-    align-items: center;
+  display: none;
+  color: var(--green-dark);
+  padding: 3px 7px;
+  margin-left: 17px;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 100%;
+  align-items: center;
 }
 
 header .container-left .icon-extends-right {
-    position: absolute;
-    right: 15px;
-    margin-left: 0;
+  position: absolute;
+  right: 15px;
+  margin-left: 0;
 }
 
 header .container-left .icon-extends-right:hover,
 header .container-left .icon-extends:hover {
-    color: var(--green-ligth);
+  color: var(--green-ligth);
 }
 
 header .container-left .icon-extends-right:hover i.fa-caret-up,
 header .container-left .icon-extends:hover i {
-    animation: bounceLoop6 1s infinite;
+  animation: bounceLoop6 1s infinite;
 }
 
 @keyframes bounceLoop6 {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(2px);
-    }
-    40%, 60% {
-        transform: translateY(0);
-    }
-    80% {
-        transform: translateY(4px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  40%,
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(4px);
+  }
 }
 
 header .container-left .icon-extends-right:hover i.fa-caret-up.active,
 header .container-left .icon-extends:hover i.active {
-    animation: bounceLoop7 1s infinite;
+  animation: bounceLoop7 1s infinite;
 }
 
 @keyframes bounceLoop7 {
-    0%, 100% {
-        transform: translateY(0) rotate(180deg);
-    }
-    20% {
-        transform: translateY(2px) rotate(180deg);
-    }
-    40%, 60% {
-        transform: translateY(0) rotate(180deg);
-    }
-    80% {
-        transform: translateY(4px) rotate(180deg);
-    }
+  0%,
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
+  20% {
+    transform: translateY(2px) rotate(180deg);
+  }
+  40%,
+  60% {
+    transform: translateY(0) rotate(180deg);
+  }
+  80% {
+    transform: translateY(4px) rotate(180deg);
+  }
 }
 
 header .container-left .icon-extends i,
 header .container-left .icon-extends-right i {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 header .container-left .icon-extends i.active,
 header .container-left .icon-extends-right i.active {
-    transform: rotate(180deg);
-    color: #62c321;
+  transform: rotate(180deg);
+  color: #62c321;
 }
 
 header .logo-windows {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    background-color: var(--green-dark);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 15px;
-    box-shadow: inset 0px 0px 4px 1px #1b3906;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 14px;
-    width: 160px;
-    transition: .1s linear;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  background-color: var(--green-dark);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  box-shadow: inset 0px 0px 4px 1px #1b3906;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  width: 160px;
+  transition: 0.1s linear;
 }
 
 header .logo-windows:hover {
-    background-color: var(--green-ligth);
+  background-color: var(--green-ligth);
 }
 
 header .logo-windows span {
-    transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 header .logo-windows.active {
-    background-color: var(--green-ligth);
+  background-color: var(--green-ligth);
 }
 
 header .logo-windows.active:hover {
-    background: var(--green-dark);
+  background: var(--green-dark);
 }
 
 header .logo-windows img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 header .logo-windows:hover img {
-    animation: bounceLoop6 1s infinite;
+  animation: bounceLoop6 1s infinite;
 }
 
 @keyframes bounceLoop6 {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(-2px);
-    }
-    40%, 60% {
-        transform: translateY(0);
-    }
-    80% {
-        transform: translateY(-4px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-2px);
+  }
+  40%,
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
 }
 
 header .icon-app {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0 50px 0 30px;
-    pointer-events: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 50px 0 30px;
+  pointer-events: none;
 }
 
 header .icon-app img {
-    transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 header .icon-app img:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 header .container-task {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 header .task {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 0;
-    border-radius: 5px;
-    font-weight: 500;
-    color: white;
-    font-size: 14px;
-    background: linear-gradient(to bottom, #277ed5, #004C99);
-    cursor: pointer;
-    overflow: hidden;
-    transition: .2s linear;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  background: linear-gradient(to bottom, #277ed5, #004c99);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s linear;
 }
 
 header .task.active:hover {
-    background: linear-gradient(to bottom, #2d91f5, #275f97);
+  background: linear-gradient(to bottom, #2d91f5, #275f97);
 }
 
 header .task.active:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 header .task.active {
-    box-shadow: 0 0 20px 2px #004C99;
-    padding: 0 30px;
-    width: 200px;
+  box-shadow: 0 0 20px 2px #004c99;
+  padding: 0 30px;
+  width: 200px;
 }
 
 header .task.selected {
-    box-shadow: inset 0px 0px 8px 5px #1f5081;
+  box-shadow: inset 0px 0px 8px 5px #1f5081;
 }
 
 header .task .content-task {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-header .task img{
-    margin-right: 15px;
+header .task img {
+  margin-right: 15px;
 }
 
 header .container-right {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 15px;
-    background: linear-gradient(to bottom, #277ed5, #004C99);
-    border-radius: 5px;
-    pointer-events: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px;
+  background: linear-gradient(to bottom, #277ed5, #004c99);
+  border-radius: 5px;
+  pointer-events: none;
 }
 
 header .container-right::before {
-    content: "FR";
-    position: absolute;
-    top: 12px;
-    left: -30px;
-    font-size: 12px;
-    color: white;
+  content: "FR";
+  position: absolute;
+  top: 12px;
+  left: -30px;
+  font-size: 12px;
+  color: white;
 }
 
 header .container-right .icon,
 header .container-right .icon-black {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 5px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 5px;
 }
 
 header .container-right .icon-black {
-    display: none;
+  display: none;
 }
 
 header .container-right img {
-    transform: scale(0.6);
-    opacity: 0.8;
+  transform: scale(0.6);
+  opacity: 0.8;
 }
 
 header .container-right .horloge {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 12px;
-    color: white;
-    opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 12px;
+  color: white;
+  opacity: 0.8;
 }
 
 header .icon-extends-right .separator {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1650px) {
-    header .task.active {
-        width: 150px;
-    }
+  header .task.active {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
-    header .task.active {
-        width: 100px;
-    }
+  header .task.active {
+    width: 100px;
+  }
 
-    header .task img {
-        margin-right: 0;
-    }
+  header .task img {
+    margin-right: 0;
+  }
 
-    header .task .content-task {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        transform: scale(0.8);
-    }
+  header .task .content-task {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0.8);
+  }
 }
 
 @media screen and (max-width: 1139px) {
-    header .icon-app .separator {
-        display: none;
-    }
+  header .icon-app .separator {
+    display: none;
+  }
 
-    header .container-task {
-        margin-left: 15px;
-    }
+  header .container-task {
+    margin-left: 15px;
+  }
 
-    header .icon-app {
-        display: none;
-        position: absolute;
-        top: -50px;
-        left: 121px;
-        padding: 0 10px 0 10px;
-        margin: 0;
-        border-radius: 5px;
-        background: white;
-    }
+  header .icon-app {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: 121px;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    border-radius: 5px;
+    background: white;
+  }
 
-    header .icon-app.active {
-        display: flex;
-    }
+  header .icon-app.active {
+    display: flex;
+  }
 
-    header .container-left .icon-extends {
-        display: flex;
-    }
+  header .container-left .icon-extends {
+    display: flex;
+  }
 
-    header .container-left .icon-extends-right {
-        display: flex;
-    }
+  header .container-left .icon-extends-right {
+    display: flex;
+  }
 
-    header .icon-extends-right .separator {
-        display: flex;
-        position: absolute;
-        left: -20px;
-    }
+  header .icon-extends-right .separator {
+    display: flex;
+    position: absolute;
+    left: -20px;
+  }
 
-    header .container-right {
-        position: absolute;
-        top: -50px;
-        right: 0;
-        display: none;
-        background: white;
-    }
+  header .container-right {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: none;
+    background: white;
+  }
 
-    header .container-right.active {
-        display: flex;
-    }
+  header .container-right.active {
+    display: flex;
+  }
 
-    header .container-right::before {
-        display: none;
-    }
+  header .container-right::before {
+    display: none;
+  }
 
-    header .container-right .separator {
-        display: none;
-    }
+  header .container-right .separator {
+    display: none;
+  }
 
-    header .container-right .icon {
-        display: none;
-    }
+  header .container-right .icon {
+    display: none;
+  }
 
-    header .container-right .icon-black {
-        display: flex;
-    }
+  header .container-right .icon-black {
+    display: flex;
+  }
 
-    header .container-right .horloge {
-        color: var(--text-black);
-    }
+  header .container-right .horloge {
+    color: var(--text-black);
+  }
 }
 
 @media screen and (max-width: 848px) {
-    header .container-left .icon-extends-right,
-    header .container-left .icon-extends {
-        display: none;
-    }
+  header .container-left .icon-extends-right,
+  header .container-left .icon-extends {
+    display: none;
+  }
 
-    header .icon-app {
-        position: relative;
-        display: flex;
-        margin: 0;
-        top: 0;
-        left: 0;
-        background: none;
-        padding: 0;
-    }
+  header .icon-app {
+    position: relative;
+    display: flex;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: none;
+    padding: 0;
+  }
 
-    header .container-task {
-        display: none;
-    }
+  header .container-task {
+    display: none;
+  }
 
-    header .container-right {
-        display: flex;
-        position: relative;
-        top: 0;
-        left: 0;
-        background: transparent;
-        padding: 0;
-    }
-    
-    header .navbar {
-        padding: 0 5px;
-    }
+  header .container-right {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 0;
+  }
 
-    header .container-right .icon {
-        display: flex;
-    }
+  header .navbar {
+    padding: 0 5px;
+  }
 
-    header .container-right .icon-black {
-        display: none;
-    }
+  header .container-right .icon {
+    display: flex;
+  }
 
-    header .container-right .horloge {
-        color: white;
-    }
+  header .container-right .icon-black {
+    display: none;
+  }
 
-    header .logo-windows {
-        position: absolute;
-        top: 90vh;
-        left: 50%;
-        transform: translateX(-50%) scale(1);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: none;
-        opacity: 1;
-        z-index: 2;
-        transition: .3s ease;
-    }
+  header .container-right .horloge {
+    color: white;
+  }
 
-    header .logo-windows span {
-        display: none;
-    }
+  header .logo-windows {
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: none;
+    opacity: 1;
+    z-index: 2;
+    transition: 0.3s ease;
+  }
 
-    header {
-        top: 0;
-    }
+  header .logo-windows span {
+    display: none;
+  }
 
-    header .logo-windows.hide {
-        opacity: 0;
-        transform: translateX(-50%) scale(0);
-    }
+  header {
+    top: 0;
+  }
 
-    header .logo-windows.display {
-        display: none;
-    }
+  header .logo-windows.hide {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+
+  header .logo-windows.display {
+    display: none;
+  }
 }
