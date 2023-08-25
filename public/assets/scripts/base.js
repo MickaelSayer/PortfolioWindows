@@ -15,7 +15,10 @@ $(document).ready(function () {
 
     $(window).on('resize', function (event) {
         if ($(window).width() > 849) {
-            $('.gestion-app.active').click();
+            if ($('.gestion-app').hasClass('active')) {
+                $('.gestion-app-close').click();
+            }
+
             $('nav.nav-link .btn-params.active').click();
 
             event.stopPropagation();

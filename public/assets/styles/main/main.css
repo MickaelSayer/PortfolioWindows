@@ -214,9 +214,10 @@ main .gestion-app {
   bottom: 11%;
   left: 50%;
   transform: translateX(-50%) translateY(0);
-  padding: 3px 15px;
-  border-radius: 20px;
+  height: 18px;
+  width: 60px;
   display: none;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -225,11 +226,14 @@ main .gestion-app {
   font-weight: 600;
   z-index: 5;
   color: white;
-  transition: 0.4s ease;
 }
 
 main .gestion-app:hover {
   background: var(--green-ligth);
+}
+
+main .gestion-app.active {
+  display: none;
 }
 
 main .gestion-app:hover i {
@@ -239,32 +243,164 @@ main .gestion-app:hover i {
 @keyframes bounceLoop14 {
   0%,
   100% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(2px) translateY(0);
+    transform: translateY(-2px);
   }
   40%,
   60% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   80% {
-    transform: translateY(4px) translateY(0);
+    transform: translateY(-4px);
   }
 }
 
-main .gestion-app.active {
-  transform: translateX(-50%) translateY(42px);
-  padding: 10px 30px;
+main .content-gestion-app {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  background: white;
+  border-radius: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  padding: 10px;
+  z-index: 3;
+}
+
+main .content-gestion-app.active {
+  display: none;
+}
+
+main .content-gestion-app .content-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 43px;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .content-gestion-app .content-btn div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main .content-gestion-app .close-all.inactive {
+  background: #58913275;
+  cursor: not-allowed;
+}
+
+main .content-gestion-app .close-all.inactive:hover {
+  background: #58913275;
+}
+
+main .content-gestion-app .close-all.inactive:hover i {
+  animation: none;
+}
+
+main .content-gestion-app .content-btn div:hover {
   background: var(--green-ligth);
 }
 
-main .gestion-app.active:hover {
-  background-color: var(--green-dark);
+main .content-gestion-app .content-btn div:hover i {
+  animation: bounceLoop14 1s infinite;
 }
 
-main .gestion-app i {
-  margin-right: 5px;
+main .content-gestion-app .no-content {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(10px, 3vw, 14px);
+  width: 100%;
+  text-align: center;
+}
+
+main .content-gestion-app .no-content.inactive {
+  display: none;
+}
+
+main .container-windows-open {
+  position: relative;
+  display: none;
+  width: calc(50% - 10px);
+  height: 29%;
+  margin: 5px;
+  font-size: clamp(10px, 3vw, 14px);
+  border: 1px solid #1f5081;
+  background: #ffffff33;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main .container-windows-open.delete {
+  background: #ff000014;
+  border: 1px solid #ff000014;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25%, 75% {
+    transform: rotate(-1deg) translateX(-1px);
+  }
+  50% {
+    transform: rotate(1deg) translateX(1px);
+  }
+}
+
+main .container-windows-open.open {
+  display: flex;
+}
+
+main .container-windows-open .title-windows {
+  width: 100%;
+  height: max-content;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(to bottom, #0165b5, #034587);
+}
+
+main .container-windows-open .title-windows.delete {
+  background: #ff000014;
+}
+
+main .container-windows-open .close-app {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  background: var(--green-dark);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+main .container-windows-open .close-app:hover,
+main .container-windows-open .close-app.delete {
+  background: #ff000047;
 }
 
 @media screen and (max-width: 848px) {
@@ -301,6 +437,10 @@ main .gestion-app i {
   }
 
   main .gestion-app {
+    display: flex;
+  }
+
+  main .content-gestion-app.active {
     display: flex;
   }
 }

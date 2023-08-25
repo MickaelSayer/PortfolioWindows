@@ -27,13 +27,32 @@
     </div>
 
     <div class="gestion-app" title="Ouvrir le gestionnaire d'application">
-        <span>
-            <i class="fa-solid fa-expand fa-sm"></i>
-            <span>App</span>
-        </span>
+        <i class="fa-solid fa-bars fa-sm"></i>
     </div>
 
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'projet'] %}
+
+    <div class="content-gestion-app">
+        {% for section in sections %}
+        <div class="container-windows-open">
+            <div class="close-app" title="Fermer l'application" data-windows="">
+                <i class="fa-solid fa-trash fa-sm" style="color: #ffffff;"></i>
+            </div>
+            <h3 class="title-windows"></h3>
+        </div>
+        {% endfor %}
+        <div class="no-content">
+            Aucune application récemment utilisée
+        </div>
+        <div class="content-btn">
+            <div class="close-all" title="Fermer toutes les applications">
+                <i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>
+            </div>
+            <div class="gestion-app-close" title="Fermer le gestionnaire d'application">
+                <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
 
     {% for section in sections %}
     {% include '/portfolio/__partials/main/section/' ~ section ~ '.html.twig' %}

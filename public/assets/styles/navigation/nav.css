@@ -128,7 +128,7 @@ nav.nav-link .params.active {
 nav.nav-link .params .params-close {
   display: flex;
   position: absolute;
-  bottom: 67px;
+  top: 90vh;
   left: 50%;
   transform: translateX(-50%);
   height: 50px;

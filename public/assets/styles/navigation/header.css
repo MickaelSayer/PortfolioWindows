@@ -428,14 +428,12 @@ header .icon-extends-right .separator {
     position: absolute;
     top: 90vh;
     left: 50%;
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-50%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     box-shadow: none;
-    opacity: 1;
     z-index: 2;
-    transition: 0.3s ease;
   }
 
   header .logo-windows span {
@@ -444,11 +442,6 @@ header .icon-extends-right .separator {
 
   header {
     top: 0;
-  }
-
-  header .logo-windows.hide {
-    opacity: 0;
-    transform: translateX(-50%) scale(0);
   }
 
   header .logo-windows.display {
