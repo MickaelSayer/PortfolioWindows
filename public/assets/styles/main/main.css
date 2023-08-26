@@ -346,6 +346,7 @@ main .container-windows-open {
   background: #ffffff33;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 main .container-windows-open.delete {
@@ -370,6 +371,19 @@ main .container-windows-open.open {
   display: flex;
 }
 
+main .container-windows-open .eyes.inactive {
+  display: none;
+
+}
+
+main .container-windows-open .eyes {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 main .container-windows-open .title-windows {
   width: 100%;
   height: max-content;
@@ -388,6 +402,7 @@ main .container-windows-open .close-app {
   position: absolute;
   bottom: 5px;
   left: 50%;
+  transform: translateX(-50%);
   background: var(--green-dark);
   border-radius: 50%;
   width: 30px;

@@ -34,8 +34,11 @@
 
     <div class="content-gestion-app">
         {% for section in sections %}
-        <div class="container-windows-open">
-            <div class="close-app" title="Fermer l'application" data-windows="">
+        <div class="container-windows-open" data-windows="" title="Sélectionner l'application">
+            <div class="eyes inactive">
+                <i class="fa-regular fa-eye fa-2xl"></i>
+            </div>
+            <div class="close-app" title="Fermer l'application">
                 <i class="fa-solid fa-trash fa-sm" style="color: #ffffff;"></i>
             </div>
             <h3 class="title-windows"></h3>

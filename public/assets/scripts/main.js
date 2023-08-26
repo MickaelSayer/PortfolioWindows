@@ -27,7 +27,7 @@ $(document).ready(function () {
 
             $(containerWindows[index]).find('.title-windows').html(windowsTitle);
             $(containerWindows[index]).addClass('open');
-            $(containerWindows[index]).find('.close-app').data('windows', windowsLink);
+            $(containerWindows[index]).data('windows', windowsLink);
         });
 
         $('main .content-gestion-app .close-all').removeClass('inactive');
@@ -78,14 +78,19 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open .close-app').on('click', function() {
-        var dataWindowsDelete = $(this).data('windows');
         var parent = $(this).parent();
+        var dataWindowsDelete = parent.data('windows');
         
         parent.find('.title-windows').html('');
         parent.removeClass('open');
-        parent.find('.close-app').data('windows', '');
+        parent.data('windows', '');
 
         $('section.windows.' + dataWindowsDelete + '.active').find('.close').click();
+
+        if ($('main .container-windows-open.open').length === 0) {
+            $('main .content-gestion-app .no-content').removeClass('inactive');
+            $('main .content-gestion-app .close-all').addClass('inactive');
+        }
     });
 
     $('main .container-windows-open .close-app').on('mouseenter', function() {
@@ -93,6 +98,8 @@ $(document).ready(function () {
 
         parent.find('.title-windows').addClass('delete');
         parent.addClass('delete');
+        parent.removeClass('focus');
+        parent.find('.eyes').addClass('inactive');
     });
 
     $('main .container-windows-open .close-app').on('mouseleave', function() {
@@ -100,5 +107,24 @@ $(document).ready(function () {
 
         parent.find('.title-windows').removeClass('delete'),
         parent.removeClass('delete');
+        parent.addClass('focus');
+        parent.find('.eyes').removeClass('inactive');
+    });
+
+    $('main .container-windows-open').on('click', function() {
+        if ($('section.windows.' + $(this).data('windows')).css('z-index') !== 2) {
+            $('section.windows').css('z-index', '1');
+            $('section.windows.' + $(this).data('windows')).css('z-index', '2');
+        }
+    });
+
+    $('main .container-windows-open').on('mouseenter', function() {
+        $(this).addClass('focus');
+        $(this).find('.eyes').removeClass('inactive');
+    });
+
+    $('main .container-windows-open').on('mouseleave', function() {
+        $(this).removeClass('focus');
+        $(this).find('.eyes').addClass('inactive');
     });
 });
