@@ -617,32 +617,32 @@ section.windows .container-sildebar-left ul li img {
 }
 
 @media screen and (max-width: 1139px) {
-  section.windows .container-content.active .sidebar-left {
+  section.windows .container-content .sidebar-left {
     display: none;
   }
 
-  section.windows .container-content .sidebar-left {
+  section.windows .container-content.active .sidebar-left {
     display: block;
     width: 100%;
   }
 
-  section.windows .container-content.active .content-section {
+  section.windows .container-content .content-section {
     display: flex;
     width: 100%;
   }
 
-  section.windows .container-content .content-section {
+  section.windows .container-content.active .content-section {
     display: none;
     width: calc(100% - 300px);
   }
 
-  section.windows .container-content .extends-sidebar {
+  section.windows .container-content.active .extends-sidebar {
     display: flex;
     left: calc(100% - 27px);
     transform: rotate(0deg);
   }
 
-  section.windows .container-content .extends-sidebar:hover {
+  section.windows .container-content.active .extends-sidebar:hover {
     color: var(--green-ligth);
     transform: rotate(0deg);
     animation: bounceLoop12 1s infinite;
@@ -665,12 +665,12 @@ section.windows .container-sildebar-left ul li img {
     }
   }
 
-  section.windows .container-content.active .extends-sidebar {
+  section.windows .container-content .extends-sidebar {
     left: 0;
     transform: rotate(180deg);
   }
 
-  section.windows .container-content.active .extends-sidebar:hover {
+  section.windows .container-content .extends-sidebar:hover {
     color: var(--green-ligth);
     transform: rotate(180deg);
     animation: bounceLoop13 1s infinite;

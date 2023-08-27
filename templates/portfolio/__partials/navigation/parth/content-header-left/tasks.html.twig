@@ -10,7 +10,7 @@
 
 {% for navigation, detail in navigations %}
     <div class="task" id="{{navigation}}">
-        <div class="content-task">
+        <div class="content-task" title="Afficher la fenêtre">
             <img src="{{ asset('assets/pictures/' ~ detail[0] ~ '.png') }}" alt="{{detail[1]}}">
             {{detail[2]}}
         </div>

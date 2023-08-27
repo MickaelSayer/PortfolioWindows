@@ -59,6 +59,21 @@ $(document).ready(function () {
         iconSliderLeft.toggleClass('active').parents('.container-sildebar-left').children('ul').toggleClass('active');
     });
 
+    var titleIconSliderLeft = "";
+    $('section.windows .icon-slider-left').on('mouseenter', function() {
+        var __this = $(this);
+        titleIconSliderLeft = __this.attr('title');
+
+        if (!__this.hasClass('active')) {
+            __this.attr('title', 'Afficher la liste');
+        }
+    });
+    $('section.windows .icon-slider-left').on('mouseleave', function() {
+        var __this = $(this);
+
+        __this.attr('title', titleIconSliderLeft);
+    });
+
     // Fonction pour afficher/cacher le contenu de la barre latérale
     $('section.windows .extends-sidebar').on('click', function () {
         const dataLink = $(this).parents('section.windows').data('link');
@@ -66,9 +81,38 @@ $(document).ready(function () {
         $('section.windows .tools').toggleClass('inactive');
     });
 
+    var titleIconSidebarLeft = "";
+    $('section.windows .extends-sidebar').on('mouseenter', function() {
+        var __this = $(this);
+        titleIconSidebarLeft = __this.attr('title');
+
+        if (__this.parent('.container-content').hasClass('active')) {
+            __this.attr('title', 'Masquer le gestionnaire de fichiers');
+        }
+    });
+    $('section.windows .extends-sidebar').on('mouseleave', function() {
+        var __this = $(this);
+
+        __this.attr('title', titleIconSidebarLeft);
+    });
+
     $('section.windows .tools .menu-extends').on('click', function () {
         $('section.windows .content-menu').toggleClass('active');
         $('section.windows .tools').toggleClass('active');
         $('section.windows .extends-sidebar').toggleClass('inactive');
+    });
+
+    var titleIconMenuExtends = "";
+    $('section.windows .tools .menu-extends').on('mouseenter', function () {
+        var __this = $(this);
+        titleIconMenuExtends = __this.attr('title');
+
+        if (__this.parent('.tools').hasClass('active')) {
+            __this.attr('title', 'Masquer la barre des tâches');
+        }
+    });
+    $('section.windows .tools .menu-extends').on('mouseleave', function () {
+        var __this = $(this);
+        __this.attr('title', titleIconMenuExtends);
     });
 });

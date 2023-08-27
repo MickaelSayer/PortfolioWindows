@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         $(this).attr('title', titleLogoWindows);
         if ($(this).hasClass('active')) {
-            $(this).attr('title', 'Fermer le menu');
+            $(this).attr('title', 'Masquer le menu');
         }
 
         event.stopPropagation();
@@ -47,6 +47,8 @@ $(document).ready(function () {
     $('.open-session').on('click', function () {
         navLink.removeClass('open-nav');
         logoWindows.removeClass('active');
+
+        logoWindows.attr('title', titleLogoWindows);
     });
 
     $('nav .sidebar-left ul li').on('click', function () {
@@ -77,16 +79,30 @@ $(document).ready(function () {
         $(this).addClass('open');
     });
 
+    var titleTaskSelected = "";
+    taskItems.on('mouseenter', function() {
+        var __this = $(this);
+        titleTaskSelected = __this.find('.content-task').attr('title');
+
+        if (__this.hasClass('selected')) {
+            __this.find('.content-task').attr('title', 'Réduire la fenêtre');
+        }
+    });
+    taskItems.on('mouseleave', function() {
+        var __this = $(this);
+
+        __this.find('.content-task').attr('title', titleTaskSelected);
+    });
+
     var titleNavUl = "";
     $('nav .sidebar-left ul li').on('mouseenter', function() {
         var __this = $(this);
         titleNavUl = __this.attr('title');
 
         if (__this.hasClass('open')) {
-            __this.attr('title', 'Afficher');
+            __this.attr('title', 'Afficher la fenêtre');
         }
     });
-
     $('nav .sidebar-left ul li').on('mouseleave', function() {
         var __this = $(this);
 
@@ -104,24 +120,44 @@ $(document).ready(function () {
         containerAppNavbarSelected($(this), iconApp);
     });
 
+    var titleIconExtends = "";
     $('header .container-left .icon-extends').on('mouseenter', function () {
         addCssOpacity(iconApp);
-    });
 
+        var __this = $(this);
+        titleIconExtends = __this.attr('title');
+
+        if (__this.find('i').hasClass('active')) {
+            __this.attr('title', 'Masquer les icônes cachées');
+        }
+    });
     $('header .container-left .icon-extends').on('mouseleave', function () {
         iconApp.removeAttr('style');
+
+        var __this = $(this);
+        __this.attr('title', titleIconExtends);
     });
 
     $('header .container-left .icon-extends-right').on('click', function () {
         containerAppNavbarSelected($(this), containerRight);
     });
 
+    var titleIconExtendsRigth = "";
     $('header .container-left .icon-extends-right').on('mouseenter', function () {
         addCssOpacity(containerRight);
-    });
 
+        var __this = $(this);
+        titleIconExtendsRigth = __this.attr('title');
+
+        if (__this.find('i').hasClass('active')) {
+            __this.attr('title', 'Masquer les icônes cachées');
+        }
+    });
     $('header .container-left .icon-extends-right').on('mouseleave', function () {
         containerRight.removeAttr('style');
+
+        var __this = $(this);
+        __this.attr('title', titleIconExtendsRigth);
     });
 
     taskItems.on('click', function () {
