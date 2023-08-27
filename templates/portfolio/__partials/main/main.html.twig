@@ -1,63 +1,15 @@
 <main>
-    <div class="container-bureau">
-        <div class="icon-bureau corbeille">
-            <img src="{{ asset('assets/pictures/waste.png') }}" alt="poubelle logo">
-            Corbeille
-        </div>
-        <a href="http://www.linkedin.com/in/mickael-s-925025187" target="_blank" class="icon-bureau" title="Linkedin">
-            <img src="{{ asset('assets/pictures/linkedin.png') }}" alt="linkedin logo">
-            Linkedin
-        </a>
-        <a href="https://github.com/Mickael861" target="_blank" class="icon-bureau" title="GitHub">
-            <img src="{{ asset('assets/pictures/github.png') }}" alt="github logo">
-            GitHub
-        </a>
-        <a href="https://twitter.com/i/lists/1631626056485556224" target="_blank" class="icon-bureau" title="Twitter">
-            <img src="{{ asset('assets/pictures/twitter.png') }}" alt="twitter logo">
-            Twitter
-        </a>
-        <div class="icon-bureau" id="discord" data-discord="Mickael#7768" title="Discord">
-            <img src="{{ asset('assets/pictures/discord.png') }}" alt="discord logo">
-            <span>Discord</span>
-        </div>
-        <a href="mailto:mickael.sayer.dev@gmail.com" class="icon-bureau" title="Gmail">
-            <img src="{{ asset('assets/pictures/gmail.png') }}" alt="Gmail logo">
-            Gmail
-        </a>
-    </div>
+    {% include "portfolio/__partials/main/parth/main/container-bureau.html.twig" %}
 
-    <div class="gestion-app" title="Ouvrir le gestionnaire d'application">
+    <div class="gestion-app" title="Ouvrir le gestionnaire de fenêtres">
         <i class="fa-solid fa-bars fa-sm"></i>
     </div>
 
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'projet'] %}
 
-    <div class="content-gestion-app">
-        {% for section in sections %}
-        <div class="container-windows-open" data-windows="" title="Sélectionner l'application">
-            <div class="eyes inactive">
-                <i class="fa-regular fa-eye fa-2xl"></i>
-            </div>
-            <div class="close-app" title="Fermer l'application">
-                <i class="fa-solid fa-trash fa-sm" style="color: #ffffff;"></i>
-            </div>
-            <h3 class="title-windows"></h3>
-        </div>
-        {% endfor %}
-        <div class="no-content">
-            Aucune application récemment utilisée
-        </div>
-        <div class="content-btn">
-            <div class="close-all" title="Fermer toutes les applications">
-                <i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>
-            </div>
-            <div class="gestion-app-close" title="Fermer le gestionnaire d'application">
-                <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
-            </div>
-        </div>
-    </div>
+    {% include "portfolio/__partials/main/parth/main/content-gestion-app.html.twig" %}
 
     {% for section in sections %}
-    {% include '/portfolio/__partials/main/section/' ~ section ~ '.html.twig' %}
+        {% include '/portfolio/__partials/main/section/' ~ section ~ '/' ~ section ~ '.html.twig' %}
     {% endfor %}
 </main>

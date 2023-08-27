@@ -29,10 +29,16 @@ $(document).ready(function () {
     const containerRight = $('header .container-right');
 
     /** Ouverture du menu navigation */
+    var titleLogoWindows = $('header .logo-windows').attr('title');
     logoWindows.on('click', function (event) {
         navLink.toggleClass('open-nav');
         $(this).toggleClass('active');
         $('nav .nav-header .params').removeClass('active');
+
+        $(this).attr('title', titleLogoWindows);
+        if ($(this).hasClass('active')) {
+            $(this).attr('title', 'Fermer le menu');
+        }
 
         event.stopPropagation();
     });
@@ -69,6 +75,22 @@ $(document).ready(function () {
         $(`#${data_link}`).addClass('active');
 
         $(this).addClass('open');
+    });
+
+    var titleNavUl = "";
+    $('nav .sidebar-left ul li').on('mouseenter', function() {
+        var __this = $(this);
+        titleNavUl = __this.attr('title');
+
+        if (__this.hasClass('open')) {
+            __this.attr('title', 'Afficher');
+        }
+    });
+
+    $('nav .sidebar-left ul li').on('mouseleave', function() {
+        var __this = $(this);
+
+        __this.attr('title', titleNavUl);
     });
 
     $(document).on('click', function (event) {

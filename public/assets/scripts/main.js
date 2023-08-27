@@ -23,7 +23,7 @@ $(document).ready(function () {
         var windowsActive = $('section.windows.active');
         $.each(windowsActive, function (index, value) {
             var windowsLink = $(value).data('link');
-            var windowsTitle = $(value).find('.content-section h1').text();
+            var windowsTitle = $(value).find('.windows-name h1').text();
 
             $(containerWindows[index]).find('.title-windows').html(windowsTitle);
             $(containerWindows[index]).addClass('open');
@@ -115,6 +115,7 @@ $(document).ready(function () {
         if ($('section.windows.' + $(this).data('windows')).css('z-index') !== 2) {
             $('section.windows').css('z-index', '1');
             $('section.windows.' + $(this).data('windows')).css('z-index', '2');
+            $('main .gestion-app-close').click();
         }
     });
 

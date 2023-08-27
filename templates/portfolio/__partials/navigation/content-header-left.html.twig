@@ -30,35 +30,6 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
 
-        <div class="task" id="presentation">
-            <div class="content-task">
-                <img src="{{ asset('assets/pictures/presentation.png') }}" alt="presentation logo">
-                Présentation
-            </div>
-        </div>
-        <div class="task" id="diplome">
-            <div class="content-task">
-                <img src="{{ asset('assets/pictures/graduation.png') }}" alt="diplome logo">
-                Diplôme
-            </div>
-        </div>
-        <div class="task" id="experience">
-            <div class="content-task">
-                <img src="{{ asset('assets/pictures/scientific.png') }}" alt="experience logo">
-                Experiences
-            </div>
-        </div>
-        <div class="task" id="langage">
-            <div class="content-task">
-                <img src="{{ asset('assets/pictures/programming.png') }}" alt="langage logo">
-                Langages
-            </div>
-        </div>
-        <div class="task" id="projet">
-            <div class="content-task">
-                <img src="{{ asset('assets/pictures/idea.png') }}" alt="projet logo">
-                Projets
-            </div>
-        </div>
+        {% include "portfolio/__partials/navigation/parth/content-header-left/tasks.html.twig" %}
     </div>
 </div>

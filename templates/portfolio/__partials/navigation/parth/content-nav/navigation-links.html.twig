@@ -1,0 +1,20 @@
+<ul>
+    {% 
+        set navigationLists = {
+            'presentation': ['Cliquez ici pour me découvrir', 'presentation', 'presentation logo', 'présentation'],
+            'diplome': ['Cliquez ici pour voir mon diplôme', 'graduation', 'diplome logo', 'Diplôme'],
+            'experience': ['Cliquez ici pour voir mes éxperiences', 'scientific', 'experience logo', 'Expériences'],
+            'langage': ['Cliquez ici pour voir mes langages', 'programming', 'Informatique langage logo', 'Langages'],
+            'projet': ['Cliquez ici pour voir mes projets', 'idea', 'projet logo', 'Projets'],
+        } 
+    %}
+    
+    {% for navigationList, detail in navigationLists %}
+    <li title="{{detail[0]}}" data-link="{{navigationList}}">
+        <div class="content-presentation">
+            <img src="{{ asset('assets/pictures/' ~ detail[1] ~ '.png') }}" alt="{{detail[2]}}">
+            <span>{{detail[3]}}</span>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

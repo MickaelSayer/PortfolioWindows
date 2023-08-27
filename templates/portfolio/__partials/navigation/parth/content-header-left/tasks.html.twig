@@ -1,0 +1,18 @@
+{% 
+    set navigations = {
+        'presentation': ['presentation', 'presentation logo', 'Présentation'],
+        'diplome': ['graduation', 'diplome logo', 'Diplôme'],
+        'experience': ['scientific', 'experience logo', 'Experiences'],
+        'langage': ['programming', 'langage logo', 'Langages'],
+        'projet': ['idea', 'projet logo', 'Projets']
+    } 
+%}
+
+{% for navigation, detail in navigations %}
+    <div class="task" id="{{navigation}}">
+        <div class="content-task">
+            <img src="{{ asset('assets/pictures/' ~ detail[0] ~ '.png') }}" alt="{{detail[1]}}">
+            {{detail[2]}}
+        </div>
+    </div>
+{% endfor %}

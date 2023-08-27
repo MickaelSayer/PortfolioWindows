@@ -44,8 +44,11 @@ section.windows .windows-name {
   display: flex;
   align-items: center;
   color: white;
-  font-size: 14px;
   pointer-events: none;
+}
+
+section.windows .windows-name h1 {
+  font-size: 14px;
 }
 
 section.windows .windows-name img {
@@ -701,7 +704,7 @@ section.windows .container-sildebar-left ul li img {
     transform: translate(0%, -100%);
   }
 
-  section.windows .windows-action .size {
+  section.windows .windows-action {
     display: none;
   }
 

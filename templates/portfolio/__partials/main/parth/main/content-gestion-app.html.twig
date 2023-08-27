@@ -1,0 +1,26 @@
+<div class="content-gestion-app">
+    {% for section in sections %}
+    <div class="container-windows-open" data-windows="" title="Afficher">
+        <div class="eyes inactive">
+            <i class="fa-regular fa-eye fa-2xl"></i>
+        </div>
+        <div class="close-app" title="Fermer">
+            <i class="fa-solid fa-trash fa-sm" style="color: #ffffff;"></i>
+        </div>
+        <h3 class="title-windows"></h3>
+    </div>
+    {% endfor %}
+
+    <div class="no-content">
+        Aucune fenêtre ouverte récemment
+    </div>
+
+    <div class="content-btn">
+        <div class="close-all" title="Tout fermer">
+            <i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>
+        </div>
+        <div class="gestion-app-close" title="Fermer le gestionnaire de fenêtres">
+            <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
+        </div>
+    </div>
+</div>
