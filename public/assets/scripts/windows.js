@@ -115,4 +115,9 @@ $(document).ready(function () {
         var __this = $(this);
         __this.attr('title', titleIconMenuExtends);
     });
+
+    $('section.windows .container-icon').on('click', function() {
+        $('section.windows .container-icon').removeClass('selected');
+        $(this).toggleClass('selected');
+    });
 });
