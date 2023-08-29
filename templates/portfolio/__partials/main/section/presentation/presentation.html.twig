@@ -6,28 +6,71 @@
 
 {% block windows_content %}
 
-<div class="container-icon">
-    <div class="icon-img" style="--url:url(/assets/pictures/Freaks.jpg)">
-    </div>
-    <div class="icon-title">Moi.jpg</div>
+<div class="container-icon" data-link="mickael">
+    <div class="icon-img mickael"></div>
+    <div class="icon-title">mickael.jpg</div>
 </div>
 
-<div class="container-icon">
-    <div class="icon-img" style="--url:url(/assets/pictures/Freaks.jpg)">
+<div class="container-icon description" data-link="description">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/pencil.png') }}" alt="Photo de moi" class="bloc note logo">
     </div>
-    <div class="icon-title">Moi.jpg</div>
+    <div class="icon-title">Description</div>
 </div>
 
-<div class="container-icon">
-    <div class="icon-img" style="--url:url(/assets/pictures/Freaks.jpg)">
+<div class="container-icon folder" data-link="loisirs">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/data-storage.png') }}" alt="dossier plein logo">
     </div>
-    <div class="icon-title">Moi.jpg</div>
+    <div class="icon-title">Loisirs</div>
 </div>
 
-<div class="container-icon">
-    <div class="icon-img" style="--url:url(/assets/pictures/Freaks.jpg)">
+<div class="container-folder mickael">
+    <img src="{{ asset('assets/pictures/freaks.jpg') }}" alt="Photo de moi" class="profil">
+</div>
+
+<div class="container-folder loisirs">
+    <div class="container-icon" data-link="steam">
+        <div class="icon-img">
+            <img src="{{ asset('assets/pictures/steam.png') }}" alt="Steam logo">
+        </div>
+        <div class="icon-title">Steam</div>
     </div>
-    <div class="icon-title">Moi.jpg</div>
+
+    <div class="container-icon" data-link="youtube">
+        <div class="icon-img">
+            <img src="{{ asset('assets/pictures/youtube.png') }}" alt="youtube logo">
+        </div>
+        <div class="icon-title">Youtube</div>
+    </div>
+
+    <div class="container-icon" data-link="netflix">
+        <div class="icon-img">
+            <img src="{{ asset('assets/pictures/netflix.png') }}" alt="netflix logo">
+        </div>
+        <div class="icon-title">Netflix</div>
+    </div>
+</div>
+
+<div class="container-folder description">
+    <h2>Description</h2>
+    <ul>
+        <li>Nom : Sayer</li>
+        <li>Prénom : Mickael</li>
+        <li>Date de naissance : 19 mars 1991</li>
+        <li>Âge : 32 ans</li>
+        <li>Ville : Châtellerault</li>
+        <li>métier: Développeur web PHP / Symfony</li>
+        <li>Diplôme : Développeur d'application PHP / Symfony</li>
+        <li>Expériences : 2 ans</li>
+        <li>Entreprise : Vialtic.com</li>
+        <li class="paragraphe">
+            Grâce à mes deux années d'alternance, j'ai eu l'opportunité d'acquérir de l'expérience
+            dans le développement web avec PHP et Symfony.
+            Je suis désormais à la recherche de nouveaux défis professionnels pour continuer à développer mes
+            compétences et contribuer à des projets innovants dans le domaine du développement web.
+        </li>
+    </ul>
 </div>
 
 {% endblock windows_content %}

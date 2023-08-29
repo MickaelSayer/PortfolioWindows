@@ -60,7 +60,7 @@ $(document).ready(function () {
     });
 
     var titleIconSliderLeft = "";
-    $('section.windows .icon-slider-left').on('mouseenter', function() {
+    $('section.windows .icon-slider-left').on('mouseenter', function () {
         var __this = $(this);
         titleIconSliderLeft = __this.attr('title');
 
@@ -68,7 +68,7 @@ $(document).ready(function () {
             __this.attr('title', 'Afficher la liste');
         }
     });
-    $('section.windows .icon-slider-left').on('mouseleave', function() {
+    $('section.windows .icon-slider-left').on('mouseleave', function () {
         var __this = $(this);
 
         __this.attr('title', titleIconSliderLeft);
@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
 
     var titleIconSidebarLeft = "";
-    $('section.windows .extends-sidebar').on('mouseenter', function() {
+    $('section.windows .extends-sidebar').on('mouseenter', function () {
         var __this = $(this);
         titleIconSidebarLeft = __this.attr('title');
 
@@ -90,7 +90,7 @@ $(document).ready(function () {
             __this.attr('title', 'Masquer le gestionnaire de fichiers');
         }
     });
-    $('section.windows .extends-sidebar').on('mouseleave', function() {
+    $('section.windows .extends-sidebar').on('mouseleave', function () {
         var __this = $(this);
 
         __this.attr('title', titleIconSidebarLeft);
@@ -99,6 +99,7 @@ $(document).ready(function () {
     $('section.windows .tools .menu-extends').on('click', function () {
         $('section.windows .content-menu').toggleClass('active');
         $('section.windows .tools').toggleClass('active');
+        $('section.windows .fil-ariane').toggleClass('active');
         $('section.windows .extends-sidebar').toggleClass('inactive');
     });
 
@@ -116,8 +117,60 @@ $(document).ready(function () {
         __this.attr('title', titleIconMenuExtends);
     });
 
-    $('section.windows .container-icon').on('click', function() {
-        $('section.windows .container-icon').removeClass('selected');
+    $('section.windows .container-icon').on('click', function () {
+        var windowsOpen = $(this).parents('section.windows');
+        
+        windowsOpen.find('.container-icon').removeClass('selected');
         $(this).toggleClass('selected');
+    });
+
+    $('section.windows .content-section').on('click', function(event) {
+        var windowsOpen = $(this).parents('section.windows');
+        
+        if ($(event.target).is('div.content-section')) {
+            windowsOpen.find('.container-icon').removeClass('selected');
+        }
+    });
+
+    var folderOpen = "";
+    var pathOpen = [];
+    $('section.windows .container-icon').on('dblclick', function () {
+        var dataLink = $(this).data('link');
+        var windowsOpen = $(this).parents('section.windows');
+        folderOpen = windowsOpen.find('.container-folder.' + dataLink);
+
+        var pathAddressElement = windowsOpen.find('.path-address');
+        var currentText = pathAddressElement.text();
+        var newText = currentText + dataLink + '/';
+        pathAddressElement.text(newText);
+
+        pathOpen.push(dataLink);
+
+        windowsOpen.find('.container-folder.' + dataLink).addClass('open');
+
+        $('section.windows .tools .arrrow-before').addClass('active');
+    });
+
+    $('section.windows .arrrow-before').on('click', function () {
+        if ($(this).hasClass('active')) {
+            var windowsOpen = $(this).parents('section.windows');
+            var folderSelected = windowsOpen.find('.container-folder');
+
+            if (folderSelected.hasClass('open')) {
+                folderSelected.removeClass('open')
+            }
+
+            var lastPath = pathOpen[pathOpen.length - 1];
+
+            var pathFolder = windowsOpen.find('.path-address');
+            var pathFolderText = windowsOpen.find('.path-address').text();
+            var newPathFolder = pathFolderText.replace(lastPath + "/", '');
+            pathFolder.text(newPathFolder);
+
+            pathOpen.pop();
+            if (pathOpen.length === 0) {
+                windowsOpen.find('.arrrow-before').removeClass('active');
+            }
+        }
     });
 });

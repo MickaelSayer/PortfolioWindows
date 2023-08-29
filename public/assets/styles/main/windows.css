@@ -315,17 +315,17 @@ section.windows .tools:hover .menu-extends i {
 @keyframes bounceLoop17 {
   0%,
   100% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(2px) translateY(0);
+    transform: translateY(2px);
   }
   40%,
   60% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   80% {
-    transform: translateY(4px) translateY(0);
+    transform: translateY(4px);
   }
 }
 
@@ -352,6 +352,54 @@ section.windows .tools.active .menu-extends:hover i {
   80% {
     transform: translateY(4px) rotate(180deg);
   }
+}
+
+section.windows .fil-ariane {
+  height: 35px;
+  width: 100%;
+  background: #dddddd;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px;
+}
+
+section.windows .fil-ariane .address {
+  padding: 5px;
+}
+
+section.windows .fil-ariane .container-address {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 0 0px 1px #616161;
+  border-radius: 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section.windows .fil-ariane .icon-address {
+  height: 100%;
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+}
+
+section.windows .fil-ariane .icon-address img {
+  width: 23px;
+  height: 23px;
+}
+
+section.windows .fil-ariane .path-address {
+  width: calc(100% - 32px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 section.windows .content-menu img {
@@ -390,6 +438,34 @@ section.windows .tools div {
   font-size: 14px;
 }
 
+section.windows .tools .arrrow-before.active {
+  color: black;
+  cursor: pointer;
+  pointer-events: initial;
+}
+
+section.windows .tools .arrrow-before.active:hover i {
+  color: var(--green-ligth);
+  animation: bounceLoop19 1s infinite;
+}
+
+@keyframes bounceLoop19 {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.8);
+  }
+  20% {
+    transform: translateY(2px) scale(1.8);
+  }
+  40%,
+  60% {
+    transform: translateY(0) scale(1.8);
+  }
+  80% {
+    transform: translateY(4px) scale(1.8);
+  }
+}
+
 section.windows .tools .arrrow-after,
 section.windows .tools .arrrow-before {
   color: #bbb8b8;
@@ -398,6 +474,10 @@ section.windows .tools .arrrow-before {
 section.windows .tools .arrrow-before i {
   margin-right: 15px;
   transform: scale(1.8);
+}
+
+section.windows .tools .arrrow-before.active i {
+  color: var(--green-dark);
 }
 
 section.windows .tools .arrrow-after i {
@@ -424,6 +504,7 @@ section.windows .container-content .sidebar-left {
   width: 300px;
   padding: 15px 25px 15px 15px;
   font-size: 12px;
+  z-index: 2;
 }
 
 section.windows .container-content.active .sidebar-left {
@@ -432,8 +513,9 @@ section.windows .container-content.active .sidebar-left {
 
 section.windows .container-content {
   display: flex;
-  height: calc(100% - 106px);
+  height: calc(100% - 112px);
   width: 100%;
+  position: relative;
 }
 
 section.windows .container-content.active .content-section {
@@ -443,7 +525,7 @@ section.windows .container-content.active .content-section {
 section.windows .container-content .content-section {
   display: flex;
   background: white;
-  height: 100%;
+  height: calc(100% - 30px);
   width: 100%;
   padding: 15px;
   font-size: 12px;
@@ -457,13 +539,14 @@ section.windows .container-content .extends-sidebar {
   position: absolute;
   top: 50%;
   left: 0%;
-  transform: translateY(-50%) translateX(0%) rotate(180deg);
+  transform: translateY(-100%) translateX(0%) rotate(180deg);
   height: 30px;
   width: 30px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--green-dark);
+  z-index: 2;
 }
 
 section.windows .container-content .extends-sidebar:hover {
@@ -474,17 +557,17 @@ section.windows .container-content .extends-sidebar:hover {
 @keyframes bounceLoop8 {
   0%,
   100% {
-    transform: translateY(-50%) translateX(0) rotate(180deg);
+    transform: translateY(-100%) translateX(0) rotate(180deg);
   }
   20% {
-    transform: translateY(-50%) translateX(-2px) rotate(180deg);
+    transform: translateY(-100%) translateX(-2px) rotate(180deg);
   }
   40%,
   60% {
-    transform: translateY(-50%) translateX(0) rotate(180deg);
+    transform: translateY(-100%) translateX(0) rotate(180deg);
   }
   80% {
-    transform: translateY(-50%) translateX(-4px) rotate(180deg);
+    transform: translateY(-100%) translateX(-4px) rotate(180deg);
   }
 }
 
@@ -620,7 +703,7 @@ section.windows .container-sildebar-left ul li img {
 section.windows .container-icon {
   display: flex;
   position: relative;
-  height: 156px;
+  height: 130px;
   width: 110px;
   flex-direction: column;
   align-items: center;
@@ -630,8 +713,50 @@ section.windows .container-icon {
   border-radius: 5px;
 }
 
+section.windows .container-icon::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -4px;
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid var(--green-ligth);
+  background-color: transparent;
+  transform: scale(0);
+  transition: left .7s ease, transform .9s ease;
+}
+
+section.windows .container-icon::after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--green-dark);
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  left: -4px;
+  transition: .85s ease, border-radius .7s ease, height .3s ease;
+}
+
+section.windows .container-icon:hover::before {
+  top: -5px;
+  left: 96%;
+  transform: scale(1);
+}
+
+section.windows .container-icon:hover::after {
+  top: -2px;
+  left: calc(96% - 15px);
+  width: 15px;
+  height: 4px;
+  border-radius: 1px;
+  background: var(--green-ligth);
+}
+
 section.windows .container-icon:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 section.windows .container-icon:hover {
@@ -643,17 +768,104 @@ section.windows .container-icon.selected {
 }
 
 section.windows .container-icon .icon-img {
-  width: 90%;
+  width: 70%;
   height: 70%;
-  background-image: var(--url);
-  background-size: cover;
-  background-position-y: -5px;
-  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section.windows .container.icon .icon-title {
+section.windows .container-icon .icon-img.mickael {
+  background-image: url(/assets/pictures/Freaks.jpg);
+  background-size: cover;
+  background-position-y: -5px;
+}
+
+section.windows .container-icon .icon-img img {
+  height: 32px;
+  width: 32px;
+  transform: scale(1.1);
+}
+
+section.windows .container-icon .icon-title {
   width: 100%;
   height: 20%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.windows .container-folder {
+  display: none;
+  background: white;
+  width: 100%;
+  height: calc(100% - 30px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px;
+}
+
+section.windows .container-folder.mickael {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.windows .container-folder.mickael.open {
+  display: flex;
+}
+
+section.windows .container-folder.mickael .profil {
+  transform: rotate(0deg);
+  transition: 0.5s ease;
+}
+
+section.windows .container-folder.mickael img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+section.windows .container-content.active .container-folder {
+  width: calc(100% - 300px);
+  left: 300px;
+}
+
+section.windows .container-folder.open {
+  display: flex;
+}
+
+section.windows .container-folder.description {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section.windows .container-folder.description.open {
+  display: flex;
+}
+
+section.windows .container-folder.description h2 {
+  margin-bottom: 25px;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-left: 20px;
+}
+
+section.windows .container-folder.description ul {
+  margin-left: 20px;
+}
+
+section.windows .container-folder.description li {
+  list-style-type: none;
+  font-size: clamp(8px, 3vw, 14px);
+  padding: 5px;
+}
+
+section.windows .container-folder.description li.paragraphe {
+  margin-top: 25px;
+  max-width: 569px;
 }
 
 @media screen and (max-width: 1139px) {
@@ -679,57 +891,52 @@ section.windows .container.icon .icon-title {
   section.windows .container-content.active .extends-sidebar {
     display: flex;
     left: calc(100% - 27px);
-    transform: rotate(0deg);
+    transform: translateY(-100%) translateX(0) rotate(0deg);
   }
 
   section.windows .container-content.active .extends-sidebar:hover {
     color: var(--green-ligth);
-    transform: rotate(0deg);
+    transform: translateY(-100%) translateX(0) rotate(0deg);
     animation: bounceLoop12 1s infinite;
   }
 
   @keyframes bounceLoop12 {
     0%,
     100% {
-      transform: translateX(0) rotate(0);
+      transform: translateY(-100%) translateX(0) rotate(0);
     }
     20% {
-      transform: translateX(-2px) rotate(0);
+      transform: translateY(-100%) translateX(-2px) rotate(0);
     }
     40%,
     60% {
-      transform: translateX(0) rotate(0);
+      transform: translateY(-100%) translateX(0) rotate(0);
     }
     80% {
-      transform: translateX(-4px) rotate(0);
+      transform: translateY(-100%) translateX(-4px) rotate(0);
     }
-  }
-
-  section.windows .container-content .extends-sidebar {
-    left: 0;
-    transform: rotate(180deg);
   }
 
   section.windows .container-content .extends-sidebar:hover {
     color: var(--green-ligth);
-    transform: rotate(180deg);
+    transform: translateY(-100%) translateX(0) rotate(180deg);
     animation: bounceLoop13 1s infinite;
   }
 
   @keyframes bounceLoop13 {
     0%,
     100% {
-      transform: translateX(0) rotate(180deg);
+      transform: translateY(-100%) translateX(0) rotate(180deg);
     }
     20% {
-      transform: translateX(-2px) rotate(180deg);
+      transform: translateY(-100%) translateX(-2px) rotate(180deg);
     }
     40%,
     60% {
-      transform: translateX(0) rotate(180deg);
+      transform: translateY(-100%) translateX(0) rotate(180deg);
     }
     80% {
-      transform: translateX(-4px) rotate(180deg);
+      transform: translateY(-100%) translateX(-4px) rotate(180deg);
     }
   }
 }
@@ -749,7 +956,7 @@ section.windows .container.icon .icon-title {
   }
 
   section.windows .container-content {
-    height: calc(100% - 37px);
+    height: calc(100% - 47px);
   }
 
   section.windows .content-menu {
@@ -812,6 +1019,14 @@ section.windows .container.icon .icon-title {
     flex-direction: column;
   }
 
+  section.windows .fil-ariane.active {
+    display: flex;
+  }
+
+  section.windows .fil-ariane {
+    display: none;
+  }
+
   section.windows .tools .arrrow-after,
   section.windows .tools .folder {
     border-right: none;
@@ -826,5 +1041,15 @@ section.windows .container.icon .icon-title {
 
   section.windows .extends-sidebar.inactive {
     display: none;
+  }
+
+  section.windows .container-folder.mickael img {
+    width: auto;
+    height: 85%;
+    max-height: 390px;
+  }
+
+  section.windows .container-folder.description li.paragraphe {
+    max-width: 90%;
   }
 }
