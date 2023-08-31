@@ -307,7 +307,7 @@ section.windows .tools .menu-extends i {
   color: var(--green-dark);
 }
 
-section.windows .tools:hover .menu-extends i {
+section.windows .tools .menu-extends:hover i {
   color: var(--green-ligth);
   animation: bounceLoop17 1s infinite;
 }
@@ -400,6 +400,29 @@ section.windows .fil-ariane .path-address {
   display: flex;
   align-items: center;
   margin-left: 10px;
+}
+
+section.windows .fil-ariane .address-before {
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.windows .fil-ariane .address-before i {
+  color: #bbb8b8;
+}
+
+section.windows .fil-ariane .address-before.active i {
+  color: var(--green-dark);
+  cursor: pointer;
+  pointer-events: initial;
+}
+
+section.windows .fil-ariane .address-before.active:hover i {
+  color: var(--green-ligth);
+  animation: bounceLoop17 1s infinite;
 }
 
 section.windows .content-menu img {
@@ -713,48 +736,6 @@ section.windows .container-icon {
   border-radius: 5px;
 }
 
-section.windows .container-icon::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -4px;
-  width: 0px;
-  height: 0px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 10px solid var(--green-ligth);
-  background-color: transparent;
-  transform: scale(0);
-  transition: left .7s ease, transform .9s ease;
-}
-
-section.windows .container-icon::after {
-  content: "";
-  height: 10px;
-  width: 10px;
-  background: var(--green-dark);
-  border-radius: 50%;
-  position: absolute;
-  top: -2px;
-  left: -4px;
-  transition: .85s ease, border-radius .7s ease, height .3s ease;
-}
-
-section.windows .container-icon:hover::before {
-  top: -5px;
-  left: 96%;
-  transform: scale(1);
-}
-
-section.windows .container-icon:hover::after {
-  top: -2px;
-  left: calc(96% - 15px);
-  width: 15px;
-  height: 4px;
-  border-radius: 1px;
-  background: var(--green-ligth);
-}
-
 section.windows .container-icon:not(:last-child) {
   margin-right: 20px;
 }
@@ -1017,14 +998,6 @@ section.windows .container-folder.description li.paragraphe {
     flex-wrap: wrap;
     height: auto;
     flex-direction: column;
-  }
-
-  section.windows .fil-ariane.active {
-    display: flex;
-  }
-
-  section.windows .fil-ariane {
-    display: none;
   }
 
   section.windows .tools .arrrow-after,

@@ -99,7 +99,6 @@ $(document).ready(function () {
     $('section.windows .tools .menu-extends').on('click', function () {
         $('section.windows .content-menu').toggleClass('active');
         $('section.windows .tools').toggleClass('active');
-        $('section.windows .fil-ariane').toggleClass('active');
         $('section.windows .extends-sidebar').toggleClass('inactive');
     });
 
@@ -132,12 +131,12 @@ $(document).ready(function () {
         }
     });
 
-    var folderOpen = "";
+    var folderOpen = [];
     var pathOpen = [];
-    $('section.windows .container-icon').on('dblclick', function () {
+    $('section.windows .container-icon').on('click', function () {
         var dataLink = $(this).data('link');
         var windowsOpen = $(this).parents('section.windows');
-        folderOpen = windowsOpen.find('.container-folder.' + dataLink);
+        folderOpen.push(windowsOpen.find('.container-folder.' + dataLink));
 
         var pathAddressElement = windowsOpen.find('.path-address');
         var currentText = pathAddressElement.text();
@@ -149,15 +148,17 @@ $(document).ready(function () {
         windowsOpen.find('.container-folder.' + dataLink).addClass('open');
 
         $('section.windows .tools .arrrow-before').addClass('active');
+        $('section.windows .fil-ariane .address-before').addClass('active');
     });
 
-    $('section.windows .arrrow-before').on('click', function () {
+    $('section.windows .arrrow-before, section.windows .fil-ariane .address-before').on('click', function () {
         if ($(this).hasClass('active')) {
             var windowsOpen = $(this).parents('section.windows');
-            var folderSelected = windowsOpen.find('.container-folder');
 
-            if (folderSelected.hasClass('open')) {
-                folderSelected.removeClass('open')
+            var lastFolderOpen = folderOpen[folderOpen.length - 1];
+            if (lastFolderOpen.hasClass('open')) {
+                lastFolderOpen.removeClass('open');
+                folderOpen.pop();
             }
 
             var lastPath = pathOpen[pathOpen.length - 1];
@@ -170,6 +171,7 @@ $(document).ready(function () {
             pathOpen.pop();
             if (pathOpen.length === 0) {
                 windowsOpen.find('.arrrow-before').removeClass('active');
+                windowsOpen.find('.address-before').removeClass('active');
             }
         }
     });

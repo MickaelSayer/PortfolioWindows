@@ -112,11 +112,9 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open').on('click', function() {
-        if ($('section.windows.' + "'" + $(this).data('windows') + "'").css('z-index') !== '2') {
-            $('section.windows').css('z-index', '1');
-            $('section.windows.' + "'" + $(this).data('windows') + "'").css('z-index', '2');
-            $('main .gestion-app-close').click();
-        }
+        $('section.windows').css('z-index', '1');
+        $('section.windows.' + $(this).data('windows')).css('z-index', '2');
+        $('main .gestion-app-close').click();
     });
 
     $('main .container-windows-open').on('mouseenter', function() {
