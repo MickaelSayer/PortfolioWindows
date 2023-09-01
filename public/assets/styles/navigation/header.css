@@ -386,13 +386,7 @@ header .icon-extends-right .separator {
   }
 
   header .icon-app {
-    position: relative;
-    display: flex;
-    margin: 0;
-    top: 0;
-    left: 0;
-    background: none;
-    padding: 0;
+    display: none;
   }
 
   header .container-task {
@@ -406,10 +400,14 @@ header .icon-extends-right .separator {
     left: 0;
     background: transparent;
     padding: 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
   }
 
   header .navbar {
     padding: 0 5px;
+    justify-content: flex-end;
   }
 
   header .container-right .icon {

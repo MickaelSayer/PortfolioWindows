@@ -116,13 +116,6 @@ $(document).ready(function () {
         __this.attr('title', titleIconMenuExtends);
     });
 
-    $('section.windows .container-icon').on('click', function () {
-        var windowsOpen = $(this).parents('section.windows');
-        
-        windowsOpen.find('.container-icon').removeClass('selected');
-        $(this).toggleClass('selected');
-    });
-
     $('section.windows .content-section').on('click', function(event) {
         var windowsOpen = $(this).parents('section.windows');
         
@@ -136,8 +129,10 @@ $(document).ready(function () {
     $('section.windows .container-icon').on('click', function () {
         var dataLink = $(this).data('link');
         var windowsOpen = $(this).parents('section.windows');
-        folderOpen.push(windowsOpen.find('.container-folder.' + dataLink));
 
+        $(this).toggleClass('selected');
+
+        folderOpen.push(windowsOpen.find('.container-folder.' + dataLink));
         var pathAddressElement = windowsOpen.find('.path-address');
         var currentText = pathAddressElement.text();
         var newText = currentText + dataLink + '/';
@@ -156,6 +151,7 @@ $(document).ready(function () {
             var windowsOpen = $(this).parents('section.windows');
 
             var lastFolderOpen = folderOpen[folderOpen.length - 1];
+            lastFolderOpen.removeClass('selected');
             if (lastFolderOpen.hasClass('open')) {
                 lastFolderOpen.removeClass('open');
                 folderOpen.pop();

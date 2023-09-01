@@ -90,6 +90,7 @@ $(document).ready(function () {
         if ($('main .container-windows-open.open').length === 0) {
             $('main .content-gestion-app .no-content').removeClass('inactive');
             $('main .content-gestion-app .close-all').addClass('inactive');
+            $('main .content-gestion-app .gestion-app-close').click();
         }
     });
 

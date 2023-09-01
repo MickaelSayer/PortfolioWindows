@@ -358,7 +358,7 @@ section.windows .fil-ariane {
   height: 35px;
   width: 100%;
   background: #dddddd;
-  font-size: 12px;
+  font-size: clamp(10px, 2vw, 12px);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -438,7 +438,7 @@ section.windows .windows-menu {
 
 section.windows .windows-menu li {
   list-style-type: none;
-  font-size: clamp(12px, 3vw, 14px);
+  font-size: clamp(9px, 3vw, 14px);
 }
 
 section.windows .windows-menu li:not(:last-child) {
@@ -536,7 +536,7 @@ section.windows .container-content.active .sidebar-left {
 
 section.windows .container-content {
   display: flex;
-  height: calc(100% - 112px);
+  height: calc(100% - 142px);
   width: 100%;
   position: relative;
 }
@@ -545,24 +545,12 @@ section.windows .container-content.active .content-section {
   width: calc(100% - 300px);
 }
 
-section.windows .container-content .content-section {
-  display: flex;
-  background: white;
-  height: calc(100% - 30px);
-  width: 100%;
-  padding: 15px;
-  font-size: 12px;
-  overflow: hidden;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
 section.windows .container-content .extends-sidebar {
   display: flex;
   position: absolute;
   top: 50%;
   left: 0%;
-  transform: translateY(-100%) translateX(0%) rotate(180deg);
+  transform: translateY(-50%) translateX(0) rotate(180deg);
   height: 30px;
   width: 30px;
   align-items: center;
@@ -580,23 +568,23 @@ section.windows .container-content .extends-sidebar:hover {
 @keyframes bounceLoop8 {
   0%,
   100% {
-    transform: translateY(-100%) translateX(0) rotate(180deg);
+    transform: translateY(-50%) translateX(0) rotate(180deg);
   }
   20% {
-    transform: translateY(-100%) translateX(-2px) rotate(180deg);
+    transform: translateY(-50%) translateX(2px) rotate(180deg);
   }
   40%,
   60% {
-    transform: translateY(-100%) translateX(0) rotate(180deg);
+    transform: translateY(-50%) translateX(0) rotate(180deg);
   }
   80% {
-    transform: translateY(-100%) translateX(-4px) rotate(180deg);
+    transform: translateY(-50%) translateX(4px) rotate(180deg);
   }
 }
 
 section.windows .container-content.active .extends-sidebar {
-  left: 303px;
-  transform: rotate(0) translateY(-1px);
+  left: 300px;
+  transform: translateY(-50%) translateX(0) rotate(0);
 }
 
 section.windows .container-content.active .extends-sidebar:hover {
@@ -604,21 +592,32 @@ section.windows .container-content.active .extends-sidebar:hover {
   animation: bounceLoop9 1s infinite;
 }
 
+section.windows .container-content .extends-sidebar i {
+  line-height: 0;
+}
+
 @keyframes bounceLoop9 {
   0%,
   100% {
-    transform: translateX(0) rotate(0);
+    transform: translateY(-50%) translateX(0) rotate(0);
   }
   20% {
-    transform: translateX(-2px) rotate(0);
+    transform: translateY(-50%) translateX(2px) rotate(0);
   }
   40%,
   60% {
-    transform: translateX(0) rotate(0);
+    transform: translateY(-50%) translateX(0) rotate(0);
   }
   80% {
-    transform: translateX(-4px) rotate(0);
+    transform: translateY(-50%) translateX(4px) rotate(0);
   }
+}
+
+section.windows .content-section {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 25px;
 }
 
 section.windows .container-sildebar-left {
@@ -726,8 +725,8 @@ section.windows .container-sildebar-left ul li img {
 section.windows .container-icon {
   display: flex;
   position: relative;
-  height: 130px;
-  width: 110px;
+  height: 120px;
+  width: 100px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -785,7 +784,7 @@ section.windows .container-folder {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 25px;
+  padding: 10px;
 }
 
 section.windows .container-folder.mickael {
@@ -829,7 +828,7 @@ section.windows .container-folder.description.open {
 }
 
 section.windows .container-folder.description h2 {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-size: clamp(14px, 2vw, 16px);
   margin-left: 20px;
 }
@@ -845,8 +844,50 @@ section.windows .container-folder.description li {
 }
 
 section.windows .container-folder.description li.paragraphe {
-  margin-top: 25px;
+  margin-top: 10px;
   max-width: 569px;
+}
+
+section.windows .container-folder.steam {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+section.windows .container-folder.steam .container-game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: min-content;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgb(241 241 241 / 55%);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+section.windows .container-folder.steam .img-game {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.windows .container-folder.steam .details-game {
+  text-align: center;
+  padding: 10px;
+}
+
+section.windows .container-folder.steam .title-game {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section.windows .container-folder.steam .type-game {
+  font-size: 10px;
+  font-style: italic;
 }
 
 @media screen and (max-width: 1139px) {
@@ -856,11 +897,6 @@ section.windows .container-folder.description li.paragraphe {
 
   section.windows .container-content.active .sidebar-left {
     display: block;
-    width: 100%;
-  }
-
-  section.windows .container-content .content-section {
-    display: flex;
     width: 100%;
   }
 
@@ -900,24 +936,24 @@ section.windows .container-folder.description li.paragraphe {
 
   section.windows .container-content .extends-sidebar:hover {
     color: var(--green-ligth);
-    transform: translateY(-100%) translateX(0) rotate(180deg);
+    transform: translateY(-50%) translateX(0) rotate(180deg);
     animation: bounceLoop13 1s infinite;
   }
 
   @keyframes bounceLoop13 {
     0%,
     100% {
-      transform: translateY(-100%) translateX(0) rotate(180deg);
+      transform: translateY(-50%) translateX(0) rotate(180deg);
     }
     20% {
-      transform: translateY(-100%) translateX(-2px) rotate(180deg);
+      transform: translateY(-50%) translateX(-2px) rotate(180deg);
     }
     40%,
     60% {
-      transform: translateY(-100%) translateX(0) rotate(180deg);
+      transform: translateY(-50%) translateX(0) rotate(180deg);
     }
     80% {
-      transform: translateY(-100%) translateX(-4px) rotate(180deg);
+      transform: translateY(-50%) translateX(-4px) rotate(180deg);
     }
   }
 }
@@ -932,84 +968,29 @@ section.windows .container-folder.description li.paragraphe {
     transform: translate(0%, -100%);
   }
 
-  section.windows .windows-action {
+  section.windows .windows-action,
+  section.windows .content-menu img,
+  section.windows .tools,
+  section.windows .fil-ariane .address,
+  section.windows .container-name,
+  section.windows .container-content .sidebar-left,
+  section.windows .container-content .extends-sidebar,
+  section.windows .container-content.active .sidebar-left,
+  section.windows .container-content.active .extends-sidebar {
     display: none;
+  }
+
+  section.windows .windows-menu li:not(:last-child) {
+    margin-right: 10px;
   }
 
   section.windows .container-content {
-    height: calc(100% - 47px);
+    height: calc(100% - 64px);
   }
 
-  section.windows .content-menu {
-    display: none;
-    border-bottom: 1px solid #bbb8b8;
-  }
-
-  section.windows .content-menu.active {
-    display: flex;
-    height: auto;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-  }
-
-  section.windows .windows-menu {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  section.windows .content-menu.active .windows-menu {
-    display: flex;
-  }
-
-  section.windows .content-menu.active img {
+  section.windows .container-content.active .content-section {
     display: block;
-  }
-
-  section.windows .content-menu img {
-    display: none;
-  }
-
-  section.windows .tools.inactive {
-    display: none;
-  }
-
-  section.windows .tools .menu-extends {
-    display: flex;
-  }
-
-  section.windows .tools {
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  section.windows .tools *:not(.menu-extends, .menu-extends i) {
-    display: none;
-    padding: 8px;
-    font-size: clamp(12px, 3vw, 14px);
-  }
-
-  section.windows .tools.active *:not(.menu-extends, .menu-extends i) {
-    display: flex;
-  }
-
-  section.windows .tools.active {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    flex-direction: column;
-  }
-
-  section.windows .tools .arrrow-after,
-  section.windows .tools .folder {
-    border-right: none;
-  }
-
-  section.windows .tools .icon-tools {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-bottom: 1px solid #bbb8b8;
+    width: 100%;
   }
 
   section.windows .extends-sidebar.inactive {
@@ -1018,11 +999,28 @@ section.windows .container-folder.description li.paragraphe {
 
   section.windows .container-folder.mickael img {
     width: auto;
-    height: 85%;
+    height: 70%;
     max-height: 390px;
   }
 
   section.windows .container-folder.description li.paragraphe {
     max-width: 90%;
+  }
+
+  section.windows .container-folder.steam .img-game img {
+    width: 200px;
+  }
+
+  section.windows .container-folder.steam .title-game {
+    font-size: 14px;
+  }
+
+  section.windows .container-icon:not(:last-child) {
+    margin: 10px;
+  }
+
+  section.windows .container-icon {
+    height: 110px;
+    width: 90px;
   }
 }
