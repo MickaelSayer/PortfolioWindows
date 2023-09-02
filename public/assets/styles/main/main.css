@@ -226,6 +226,8 @@ main .gestion-app {
   font-weight: 600;
   z-index: 5;
   color: white;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 main .gestion-app:hover {
@@ -238,6 +240,14 @@ main .gestion-app.active {
 
 main .gestion-app:hover i {
   animation: bounceLoop14 1s infinite;
+}
+
+main .gestion-app.transparent {
+  opacity: 0.4;
+}
+
+main .gestion-app.transparent:hover {
+  opacity: 1;
 }
 
 @keyframes bounceLoop14 {
@@ -356,10 +366,12 @@ main .container-windows-open.delete {
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg) translateX(0);
   }
-  25%, 75% {
+  25%,
+  75% {
     transform: rotate(-1deg) translateX(-1px);
   }
   50% {
@@ -373,7 +385,6 @@ main .container-windows-open.open {
 
 main .container-windows-open .eyes.inactive {
   display: none;
-
 }
 
 main .container-windows-open .eyes {
@@ -418,6 +429,57 @@ main .container-windows-open .close-app.delete {
   background: #ff000047;
 }
 
+main .inactive-windows-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+main .inactive-windows-button:hover {
+  background: var(--green-ligth);
+}
+
+main .inactive-windows-button img {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+main .inactive-windows-button i {
+  display: block;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+main .inactive-windows-button.active i {
+  display: none;
+}
+
+main .inactive-windows-button.active img {
+  display: block;
+}
+
+main .inactive-windows-button:hover img {
+  animation: bounceLoop6 1s infinite;
+}
+
+main .inactive-windows-button:hover i {
+  animation: bounceLoop6 1s infinite;
+}
+
 @media screen and (max-width: 848px) {
   main {
     height: 100vh;
@@ -456,6 +518,10 @@ main .container-windows-open .close-app.delete {
   }
 
   main .content-gestion-app.active {
+    display: flex;
+  }
+
+  main .inactive-windows-button {
     display: flex;
   }
 }

@@ -18,6 +18,7 @@ $(document).ready(function () {
         $(this).addClass('active');
         $('header .logo-windows').addClass('display');
         $('main .content-gestion-app').addClass('active');
+        $('main .inactive-windows-button').addClass('inactive');
 
         var containerWindows = $('main .content-gestion-app .container-windows-open');
         var windowsActive = $('section.windows.active');
@@ -55,6 +56,7 @@ $(document).ready(function () {
         $('main .gestion-app').removeClass('active');
         $('header .logo-windows').removeClass('display');
         $('main .content-gestion-app').removeClass('active');
+        $('main .inactive-windows-button').removeClass('inactive');
     });
 
     $('main .content-gestion-app .close-all').on('click', function() {
@@ -130,5 +132,16 @@ $(document).ready(function () {
     $('main .container-windows-open').on('mouseleave', function() {
         $(this).removeClass('focus');
         $(this).find('.eyes').addClass('inactive');
+    });
+
+    $('main .inactive-windows-button').on('click', function() {
+        $(this).toggleClass('active');
+
+        $('header .logo-windows').removeClass('transparent');
+        $('main .gestion-app').removeClass('transparent');
+        if ($(this).hasClass('active')) {
+            $('header .logo-windows').addClass('transparent');
+            $('main .gestion-app').addClass('transparent');
+        }
     });
 });

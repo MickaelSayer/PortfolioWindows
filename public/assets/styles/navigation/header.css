@@ -125,7 +125,8 @@ header .logo-windows {
   cursor: pointer;
   font-size: 14px;
   width: 160px;
-  transition: 0.1s linear;
+  opacity: 1;
+  transition: 0.1s linear, opacity .3s ease 0s;
 }
 
 header .logo-windows:hover {
@@ -444,5 +445,14 @@ header .icon-extends-right .separator {
 
   header .logo-windows.display {
     display: none;
+  }
+
+
+  header .logo-windows.transparent {
+    opacity: 0.4;
+  }
+  
+  header .logo-windows.transparent:hover {
+    opacity: 1;
   }
 }
