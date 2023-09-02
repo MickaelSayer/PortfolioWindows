@@ -84,9 +84,8 @@ $(document).ready(function () {
         parent.find('.title-windows').html('');
         parent.removeClass('open');
         parent.data('windows', '');
-
+        
         $('section.windows.' + dataWindowsDelete + '.active').find('.close').click();
-
         if ($('main .container-windows-open.open').length === 0) {
             $('main .content-gestion-app .no-content').removeClass('inactive');
             $('main .content-gestion-app .close-all').addClass('inactive');
@@ -112,10 +111,12 @@ $(document).ready(function () {
         parent.find('.eyes').removeClass('inactive');
     });
 
-    $('main .container-windows-open').on('click', function() {
-        $('section.windows').css('z-index', '1');
-        $('section.windows.' + $(this).data('windows')).css('z-index', '2');
-        $('main .gestion-app-close').click();
+    $('main .container-windows-open').on('click', function(event) {
+        if ($(event.target).is($(this))) {
+            $('section.windows').css('z-index', '1');
+            $('section.windows.' + $(this).data('windows')).css('z-index', '2');
+            $('main .gestion-app-close').click();
+        }
     });
 
     $('main .container-windows-open').on('mouseenter', function() {

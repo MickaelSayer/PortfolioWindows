@@ -116,56 +116,68 @@ $(document).ready(function () {
         __this.attr('title', titleIconMenuExtends);
     });
 
-    $('section.windows .content-section').on('click', function(event) {
-        var windowsOpen = $(this).parents('section.windows');
-        
-        if ($(event.target).is('div.content-section')) {
-            windowsOpen.find('.container-icon').removeClass('selected');
-        }
-    });
-
     var folderOpen = [];
     var pathOpen = [];
+    var folderSelected = [];
     $('section.windows .container-icon').on('click', function () {
         var dataLink = $(this).data('link');
         var windowsOpen = $(this).parents('section.windows');
+        var windowsLink = $(this).parents('section.windows').data('link');
 
-        $(this).toggleClass('selected');
+        if (!folderOpen[windowsLink]) {
+            folderOpen[windowsLink] = [];
+        }
+        folderOpen[windowsLink].push(windowsOpen.find('.container-folder.' + dataLink));
 
-        folderOpen.push(windowsOpen.find('.container-folder.' + dataLink));
         var pathAddressElement = windowsOpen.find('.path-address');
         var currentText = pathAddressElement.text();
         var newText = currentText + dataLink + '/';
         pathAddressElement.text(newText);
 
-        pathOpen.push(dataLink);
+        if (!pathOpen[windowsLink]) {
+            pathOpen[windowsLink] = [];
+        }
+        pathOpen[windowsLink].push(dataLink);
 
         windowsOpen.find('.container-folder.' + dataLink).addClass('open');
 
-        $('section.windows .tools .arrrow-before').addClass('active');
-        $('section.windows .fil-ariane .address-before').addClass('active');
+        $(this).addClass('selected');
+        if (!folderSelected[windowsLink]) {
+            folderSelected[windowsLink] = [];
+        }
+        folderSelected[windowsLink].push(dataLink);
+
+        windowsOpen.find('.arrrow-before').addClass('active');
+        windowsOpen.find('.address-before').addClass('active');
     });
 
     $('section.windows .arrrow-before, section.windows .fil-ariane .address-before').on('click', function () {
         if ($(this).hasClass('active')) {
             var windowsOpen = $(this).parents('section.windows');
+            var windowsLink = $(this).parents('section.windows').data('link');
 
-            var lastFolderOpen = folderOpen[folderOpen.length - 1];
+            var lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
             lastFolderOpen.removeClass('selected');
             if (lastFolderOpen.hasClass('open')) {
                 lastFolderOpen.removeClass('open');
-                folderOpen.pop();
+                folderOpen[windowsLink].pop(lastFolderOpen);
             }
 
-            var lastPath = pathOpen[pathOpen.length - 1];
+            $.each(folderSelected[windowsLink], function (index, value) { 
+                if (!pathOpen[windowsLink].includes(value)) {
+                    $('.container-icon[data-link="' + value + '"]').removeClass('selected');
+                }
+            });
+
+            var lastPath = pathOpen[windowsLink][pathOpen[windowsLink].length - 1];
 
             var pathFolder = windowsOpen.find('.path-address');
-            var pathFolderText = windowsOpen.find('.path-address').text();
+            var pathFolderText = pathFolder.text();
             var newPathFolder = pathFolderText.replace(lastPath + "/", '');
             pathFolder.text(newPathFolder);
 
-            pathOpen.pop();
-            if (pathOpen.length === 0) {
+            pathOpen[windowsLink].pop(lastPath);
+            if (pathOpen[windowsLink].length === 0) {
                 windowsOpen.find('.arrrow-before').removeClass('active');
                 windowsOpen.find('.address-before').removeClass('active');
             }

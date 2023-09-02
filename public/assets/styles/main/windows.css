@@ -617,7 +617,13 @@ section.windows .content-section {
   width: 100%;
   height: 100%;
   background: white;
-  padding: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 section.windows .container-sildebar-left {
@@ -730,13 +736,13 @@ section.windows .container-icon {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 6px;
+  padding: 10px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 section.windows .container-icon:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 7px;
 }
 
 section.windows .container-icon:hover {
@@ -780,7 +786,7 @@ section.windows .container-folder {
   display: none;
   background: white;
   width: 100%;
-  height: calc(100% - 30px);
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -791,10 +797,7 @@ section.windows .container-folder.mickael {
   display: none;
   flex-direction: column;
   align-items: center;
-}
-
-section.windows .container-folder.mickael.open {
-  display: flex;
+  justify-content: center;
 }
 
 section.windows .container-folder.mickael .profil {
@@ -839,7 +842,7 @@ section.windows .container-folder.description ul {
 
 section.windows .container-folder.description li {
   list-style-type: none;
-  font-size: clamp(8px, 3vw, 14px);
+  font-size: clamp(10px, 3vw, 14px);
   padding: 5px;
 }
 
@@ -857,7 +860,7 @@ section.windows .container-folder.steam {
 
 section.windows .container-folder.steam .container-game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: min-content;
   margin-bottom: 20px;
@@ -866,17 +869,23 @@ section.windows .container-folder.steam .container-game {
   background: rgb(241 241 241 / 55%);
   padding: 10px;
   border-radius: 5px;
+  width: 90%;
+  max-width: max-content;
 }
 
 section.windows .container-folder.steam .img-game {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+section.windows .container-folder.steam .img-game img {
+  width: 100%;
 }
 
 section.windows .container-folder.steam .details-game {
   text-align: center;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 section.windows .container-folder.steam .title-game {
@@ -1007,20 +1016,7 @@ section.windows .container-folder.steam .type-game {
     max-width: 90%;
   }
 
-  section.windows .container-folder.steam .img-game img {
-    width: 200px;
-  }
-
   section.windows .container-folder.steam .title-game {
     font-size: 14px;
-  }
-
-  section.windows .container-icon:not(:last-child) {
-    margin: 10px;
-  }
-
-  section.windows .container-icon {
-    height: 110px;
-    width: 90px;
   }
 }
