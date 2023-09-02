@@ -112,7 +112,10 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open').on('click', function(event) {
-        if ($(event.target).is($(this))) {
+        if ($(event.target).is($(this)) || $(event.target).is($(this).find('.eyes i'))) {
+            $('.navbar .task').removeClass('selected');
+            $(`.navbar #${$(this).data('windows')}`).addClass('selected');
+
             $('section.windows').css('z-index', '1');
             $('section.windows.' + $(this).data('windows')).css('z-index', '2');
             $('main .gestion-app-close').click();
