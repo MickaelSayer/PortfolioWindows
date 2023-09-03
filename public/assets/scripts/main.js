@@ -111,9 +111,9 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open').on('click', function(event) {
-        if (!$(event.target).is($(this).find('.close-app')) && $(this)) {
+        if (!$(event.target).closest('.close-app').length) {
             $('.navbar .task').removeClass('selected');
-            $(`.navbar #${$(this).data('windows')}`).addClass('selected');
+            $('.navbar #' + $(this).data('windows')).addClass('selected');
 
             $('section.windows').css('z-index', '1');
             $('section.windows.' + $(this).data('windows')).css('z-index', '2');
