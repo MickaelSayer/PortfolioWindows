@@ -348,6 +348,7 @@ main .content-gestion-app .no-content.inactive {
 main .container-windows-open {
   position: relative;
   display: none;
+  flex-direction: column;
   width: calc(50% - 10px);
   height: 29%;
   margin: 5px;
@@ -362,7 +363,7 @@ main .container-windows-open {
 main .container-windows-open.delete {
   background: #ff000014;
   border: 1px solid #ff000014;
-  animation: shake 0.5s infinite;
+  animation: shake .3s infinite;
 }
 
 @keyframes shake {
@@ -395,6 +396,10 @@ main .container-windows-open .eyes {
   transform: translate(-50%, -50%);
 }
 
+main .container-windows-open .eyes i {
+  color: #00000040;
+}
+
 main .container-windows-open .title-windows {
   width: 100%;
   height: max-content;
@@ -405,8 +410,53 @@ main .container-windows-open .title-windows {
   background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
-main .container-windows-open .title-windows.delete {
+main .container-windows-open .content-windows {
+  height: 100%;
+  width: 100%;
+}
+
+main .container-windows-open.focus {
+  border: 1px solid var(--green-dark);
+}
+
+main .container-windows-open.focus:hover {
+  border: 1px solid var(--green-ligth);
+}
+
+main .container-windows-open.focus .title-windows {
+  background: var(--green-dark);
+}
+
+main .container-windows-open.focus:hover .title-windows {
+  background: var(--green-ligth);
+}
+
+main .container-windows-open.focus .eyes.inactive i {
+  color: var(--green-dark);
+}
+
+main .container-windows-open.focus .eyes i {
+  color: var(--green-ligth);
+}
+
+main .container-windows-open.focus .eyes.inactive {
+  display: block;
+}
+
+main .container-windows-open.delete  .title-windows{
   background: #ff000014;
+}
+
+main .container-windows-open.focus.delete .title-windows {
+  background: #ff000014;
+}
+
+main .container-windows-open.focus.delete .eyes i {
+  color: #ff000014;;
+}
+
+main .container-windows-open.focus.delete {
+  border: 1px solid #ff000014;
 }
 
 main .container-windows-open .close-app {
@@ -425,7 +475,7 @@ main .container-windows-open .close-app {
 }
 
 main .container-windows-open .close-app:hover,
-main .container-windows-open .close-app.delete {
+main .container-windows-open.delete .close-app {
   background: #ff000047;
 }
 

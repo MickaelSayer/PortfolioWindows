@@ -153,13 +153,10 @@ $(document).ready(function () {
         $.each(folderSelected[windowsLink], function (index, value) { 
             if (!pathOpen[windowsLink].includes(value)) {
                 $('.container-icon[data-link="' + value + '"]').removeClass('selected');
-                
+
                 folderSelected[windowsLink].splice(index, 1);
             }
         });
-
-        console.log(pathOpen)
-        console.log(folderSelected)
     });
 
     $('section.windows .arrrow-before, section.windows .fil-ariane .address-before').on('click', function () {
