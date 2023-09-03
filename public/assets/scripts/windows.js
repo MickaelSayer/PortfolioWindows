@@ -155,7 +155,7 @@ $(document).ready(function () {
         if ($(this).hasClass('active')) {
             var windowsOpen = $(this).parents('section.windows');
             var windowsLink = $(this).parents('section.windows').data('link');
-
+            
             var lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
             lastFolderOpen.removeClass('selected');
             if (lastFolderOpen.hasClass('open')) {

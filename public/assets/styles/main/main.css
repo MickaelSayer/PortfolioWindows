@@ -431,8 +431,9 @@ main .container-windows-open .close-app.delete {
 
 main .inactive-windows-button {
   position: absolute;
-  bottom: 50px;
-  left: 50px;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -444,39 +445,51 @@ main .inactive-windows-button {
   z-index: 5;
 }
 
+main .inactive-windows-button.active {
+  opacity: 0.4;
+}
+
+main .inactive-windows-button.active:hover {
+  opacity: 1;
+}
+
+main .inactive-windows-button.inactive {
+  display: none;
+}
+
 main .inactive-windows-button:hover {
   background: var(--green-ligth);
 }
 
-main .inactive-windows-button img {
-  display: none;
-  width: 30px;
-  height: 30px;
-}
-
 main .inactive-windows-button i {
-  display: block;
   height: 100%;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   line-height: 0;
 }
 
-main .inactive-windows-button.active i {
+main .inactive-windows-button .visible-nav {
   display: none;
 }
 
-main .inactive-windows-button.active img {
-  display: block;
+main .inactive-windows-button .invisible-nav {
+  display: flex;
 }
 
-main .inactive-windows-button:hover img {
+main .inactive-windows-button.active .visible-nav {
+  display: flex;
+}
+
+main .inactive-windows-button.active .invisible-nav {
+  display: none;
+}
+
+main .inactive-windows-button:hover .invisible-nav {
   animation: bounceLoop6 1s infinite;
 }
 
-main .inactive-windows-button:hover i {
+main .inactive-windows-button:hover .visible-nav {
   animation: bounceLoop6 1s infinite;
 }
 
