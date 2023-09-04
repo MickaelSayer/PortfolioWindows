@@ -410,11 +410,6 @@ main .container-windows-open .title-windows {
   background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
-main .container-windows-open .content-windows {
-  height: 100%;
-  width: 100%;
-}
-
 main .container-windows-open.focus {
   border: 1px solid var(--green-dark);
 }
