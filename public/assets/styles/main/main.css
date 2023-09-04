@@ -2,7 +2,7 @@ main {
   position: absolute;
   height: calc(100vh - 40px);
   width: 100vw;
-  background-image: url(/assets/pictures/windows-xp-hd.jpg);
+  background-image: url(/assets/pictures/icon/windows-xp-hd.jpg);
   background-size: cover;
   background-position: center;
   padding: 25px;

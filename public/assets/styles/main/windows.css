@@ -762,7 +762,7 @@ section.windows .container-icon .icon-img {
 }
 
 section.windows .container-icon .icon-img.mickael {
-  background-image: url(/assets/pictures/Freaks.jpg);
+  background-image: url(/assets/pictures/icon/Freaks.jpg);
   background-size: cover;
   background-position-y: -5px;
 }
@@ -915,6 +915,13 @@ section.windows .container-folder.youtube .content-profil {
   border-radius: 5px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+section.windows .container-folder.youtube .container-profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section.windows .container-folder.youtube .profil-img {
@@ -927,7 +934,9 @@ section.windows .container-folder.youtube .profil-img {
 }
 
 section.windows .container-folder.youtube .profil-name {
-  margin: 5px 0px 10px 0px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 section.windows .container-folder.youtube .profil-link {
