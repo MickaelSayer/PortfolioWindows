@@ -404,7 +404,7 @@ section.windows .fil-ariane .path-address {
 
 section.windows .fil-ariane .address-before {
   height: 100%;
-  padding: 0 10px;
+  padding: 0 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -870,6 +870,13 @@ section.windows .container-folder.steam .container-game {
   border-radius: 5px;
   width: 90%;
   max-width: max-content;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s ease;
+}
+
+section.windows .container-folder.steam .container-game:hover {
+  transform: scale(0.95);
 }
 
 section.windows .container-folder.steam .img-game {
@@ -915,22 +922,58 @@ section.windows .container-folder.youtube .content-profil {
   border-radius: 5px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
 }
 
 section.windows .container-folder.youtube .container-profil {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 
 section.windows .container-folder.youtube .profil-img {
+  position: relative;
   height: 136px;
   width: 136px;
   border-radius: 50%;
   background-image: var(--url);
   background-size: cover;
   box-shadow: 0px 0px 20px 0px grey;
+  transition: .5s ease;
+}
+
+section.windows .container-folder.youtube .profil-img::after {
+  content: "\f0c1";
+  font-family: FontAwesome;
+  display: flex;
+  position: absolute;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  width: 40px;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transform-origin: bottom;
+  transition: .5s ease;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+section.windows .container-folder.youtube .content-profil:hover .profil-img::after {
+  transform: translateX(-50%) scale(1);
+  color: var(--green-ligth);
+  opacity: 1;
+}
+
+section.windows .container-folder.youtube .content-profil:hover .profil-img {
+  transform: translateY(-20px);
+  box-shadow: 0px 20px 20px 0px grey;
 }
 
 section.windows .container-folder.youtube .profil-name {
@@ -939,44 +982,128 @@ section.windows .container-folder.youtube .profil-name {
   font-size: 14px;
 }
 
-section.windows .container-folder.youtube .profil-link {
-  position: relative;
-  width: max-content;
+section.windows .container-folder.youtube .profil-genre {
+  font-size: 10px;
+  font-style: italic;
 }
 
-section.windows .container-folder.youtube .profil-link i {
+section.windows .container-folder.film {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+section.windows .container-folder.film .container-film {
+  width: 100%;
+  padding: 20px 10px 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section.windows .container-folder.film .slider-film {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(150px * 4);
+  overflow-x: clip;
+  margin: 0 25px 0 25px;
+}
+
+section.windows .container-folder.film .before-film,
+section.windows .container-folder.film .next-film {
+  opacity: 1;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  padding: 0 5px;
+  border-radius: 20px;
   color: var(--green-dark);
-  font-size: 12px;
-}
-section.windows .container-folder.youtube .profil-link:hover i {
-  color: var(--green-ligth);
-  animation: bounceLoop10 1s infinite;
-}
-
-section.windows .container-folder.youtube .profil-link a {
-  color: var(--green-dark);
-  text-decoration: none;
-  list-style: none;
-  font-size: 12px;
-}
-
-section.windows .container-folder.youtube .profil-link:hover a {
-  color: var(--green-ligth);
-}
-
-section.windows .container-folder.youtube .profil-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 0%;
-  background: var(--green-ligth);
+  cursor: pointer;
   transition: .3s ease;
 }
 
-section.windows .container-folder.youtube .profil-link:hover::after {
+section.windows .container-folder.film .before-film:hover,
+section.windows .container-folder.film .next-film:hover  {
+  color: var(--green-ligth);
+}
+
+section.windows .container-folder.film .before-film.inactive,
+section.windows .container-folder.film .next-film.inactive {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+section.windows .container-folder.film .before-film:hover i,
+section.windows .container-folder.film .next-film:hover i  {
+  animation: bounceLoop20 1s infinite;
+}
+
+@keyframes bounceLoop20 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(2px);
+  }
+  40%,
+  60% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+section.windows .container-folder.film .genre-film {
+  font-size: 14px;
   width: 100%;
+  font-weight: 600;
+  border-bottom: 1px solid #c1c1c1;
+  margin-bottom: 10px;
+}
+
+section.windows .container-folder.film .list-film {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  transform: translateX(0px);
+  transition: 1s ease;
+}
+
+section.windows .container-folder.film .detail-film {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  text-decoration: none;
+  color: black;
+}
+
+section.windows .container-folder.film .img-film {
+  height: 162px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px grey;
+  transition: 0.2s ease;
+}
+
+section.windows .container-folder.film .img-film:hover {
+  transform: scale(0.95);
+}
+
+section.windows .container-folder.film .title-film {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+section.windows .container-folder.film .title-film.link {
+  color: var(--green-ligth);
 }
 
 @media screen and (max-width: 1139px) {

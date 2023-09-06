@@ -151,17 +151,17 @@ nav.nav-link .params .params-close:hover i {
 @keyframes bounceLoop16 {
   0%,
   100% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   20% {
-    transform: translateY(2px) translateY(0);
+    transform: translateY(2px);
   }
   40%,
   60% {
-    transform: translateY(0) translateY(0);
+    transform: translateY(0);
   }
   80% {
-    transform: translateY(4px) translateY(0);
+    transform: translateY(4px);
   }
 }
 

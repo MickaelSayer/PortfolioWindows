@@ -6,19 +6,19 @@
 
 {% block windows_content %}
 
-<div class="container-icon" data-link="mickael">
+<div class="container-icon" data-link="mickael" title="Une photo de moi">
     <div class="icon-img mickael"></div>
     <div class="icon-title">mickael.jpg</div>
 </div>
 
-<div class="container-icon description" data-link="description">
+<div class="container-icon description" data-link="description" title="Une description rapide">
     <div class="icon-img">
         <img src="{{ asset('assets/pictures/icon/pencil.png') }}" alt="Photo de moi" class="bloc note logo">
     </div>
     <div class="icon-title">Description</div>
 </div>
 
-<div class="container-icon folder" data-link="loisirs">
+<div class="container-icon folder" data-link="loisirs" title="Ce que je fais pendant mon temps libre">
     <div class="icon-img">
         <img src="{{ asset('assets/pictures/icon/data-storage.png') }}" alt="dossier plein logo">
     </div>
@@ -33,5 +33,8 @@
 {% include "portfolio/__partials/main/section/presentation/parth/description.html.twig" %}
 {% include "portfolio/__partials/main/section/presentation/parth/steam.html.twig" %}
 {% include "portfolio/__partials/main/section/presentation/parth/youtube.html.twig" %}
+{% include "portfolio/__partials/main/section/presentation/parth/netflix.html.twig" %}
+{% include "portfolio/__partials/main/section/presentation/parth/film.html.twig" %}
+{% include "portfolio/__partials/main/section/presentation/parth/serie.html.twig" %}
 
 {% endblock windows_content %}
