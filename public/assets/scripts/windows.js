@@ -11,6 +11,24 @@ function movieScrollingNumbers() {
     }
 }
 
+function resetNetflixLoisirsSlider() {
+    sliderFilmDist = [];
+
+    $('section.windows .container-folder.netflix-loisirs .list-netflix-loisirs').css('transform', 'translateX(0px)');
+    $('section.windows .container-folder.netflix-loisirs .before-netflix-loisirs').addClass('inactive');
+    $('section.windows .container-folder.netflix-loisirs .next-netflix-loisirs').removeClass('inactive');
+
+    return sliderFilmDist;
+}
+
+function resetFolderOpen(currentWindows) {
+    $('section.windows.' + currentWindows + ' .container-folder.open').removeClass('open');
+    $('section.windows.' + currentWindows + ' .arrrow-before.active, section.windows.' + currentWindows + ' .fil-ariane .address-before.active').removeClass('active');
+    $('section.windows.' + currentWindows + ' .path-address').html(currentWindows + '/');
+    $('section.windows.' + currentWindows + ' .container-icon.selected').removeClass('selected');
+
+}
+
 $(document).ready(function () {
     // Fonction de fermeture de fenêtre
     $('section.windows .close').on('click', function () {
@@ -45,6 +63,13 @@ $(document).ready(function () {
                 $(value).removeClass('open');
             }
         });
+
+        sliderFilmDist = resetNetflixLoisirsSlider();
+
+        resetFolderOpen(dataLink);
+        folderOpen[dataLink] = [];
+        pathOpen[dataLink] = [];
+        folderSelected[dataLink] = [];
     });
 
     // Fonction pour réduire la fenêtre à l'icône de la barre des tâches
@@ -202,19 +227,21 @@ $(document).ready(function () {
                 windowsOpen.find('.arrrow-before').removeClass('active');
                 windowsOpen.find('.address-before').removeClass('active');
             }
+
+            sliderFilmDist = resetNetflixLoisirsSlider();
         }
     });
 
     var nbrsView;
-    $('section.windows .container-icon#film').on('click', function () {
-        var eltContainerFilm = $('.container-folder.film');
-        var eltListFilm = eltContainerFilm.find('.list-film');
+    $('section.windows .container-icon#film, section.windows .container-icon#serie').on('click', function () {
+        var eltContainerFilm = $('.container-folder.netflix-loisirs');
+        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
         nbrsView = movieScrollingNumbers();
 
         $.each(eltListFilm, function (index, value) {
             var nbrsEltFilm = $(value).find('a').length;
-            var eltNextFilm = $(value).parents('.container-film').find('.next-film');
-            var eltGenreFilm = $(value).parents('.container-film').find('.genre-film');
+            var eltNextFilm = $(value).parents('.container-netflix-loisirs').find('.next-netflix-loisirs');
+            var eltGenreFilm = $(value).parents('.container-netflix-loisirs').find('.genre-netflix-loisirs');
 
             eltGenreFilm.append('<span>(' + nbrsEltFilm + ' Films)</span>');
             if (nbrsEltFilm <= nbrsView) {
@@ -224,12 +251,12 @@ $(document).ready(function () {
     });
 
     var sliderFilmDist = [];
-    $('section.windows .container-folder.film .next-film').on('click', function () {
-        var eltContainerFilm = $(this).parent('.container-film');
-        var genreContainerFilm = eltContainerFilm.find('.genre-film').text();
-        var eltListFilm = eltContainerFilm.find('.list-film');
+    $('section.windows .container-folder.netflix-loisirs .next-netflix-loisirs').on('click', function () {
+        var eltContainerFilm = $(this).parent('.container-netflix-loisirs');
+        var genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
         var nbrstranslateMax = 150 * eltListFilm.find('a').length - (150 * nbrsView);
-        var eltBeforeFilm = eltContainerFilm.find('.before-film');
+        var eltBeforeFilm = eltContainerFilm.find('.before-netflix-loisirs');
 
         if (!sliderFilmDist[genreContainerFilm]) {
             sliderFilmDist[genreContainerFilm] = 0;
@@ -249,11 +276,11 @@ $(document).ready(function () {
         eltBeforeFilm.removeClass('inactive');
     });
 
-    $('section.windows .container-folder.film .before-film').on('click', function () {
-        var eltContainerFilm = $(this).parent('.container-film');
-        var genreContainerFilm = eltContainerFilm.find('.genre-film').text();
-        var eltListFilm = eltContainerFilm.find('.list-film');
-        var eltNextFilm = eltContainerFilm.find('.next-film');
+    $('section.windows .container-folder.netflix-loisirs .before-netflix-loisirs').on('click', function () {
+        var eltContainerFilm = $(this).parent('.container-netflix-loisirs');
+        var genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
+        var eltNextFilm = eltContainerFilm.find('.next-netflix-loisirs');
 
         sliderFilmDist[genreContainerFilm] -= (150 * nbrsView);
         if (sliderFilmDist[genreContainerFilm] < nbrsView) {

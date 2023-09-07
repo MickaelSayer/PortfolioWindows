@@ -1025,12 +1025,13 @@ section.windows .container-folder.youtube .profil-genre {
   font-style: italic;
 }
 
-section.windows .container-folder.film {
+section.windows .container-folder.film,
+section.windows .container-folder.serie {
   flex-direction: column;
   overflow-y: auto;
 }
 
-section.windows .container-folder.film .container-film {
+section.windows .container-folder.netflix-loisirs .container-netflix-loisirs {
   width: 100%;
   padding: 20px 10px 0px 20px;
   display: flex;
@@ -1039,7 +1040,7 @@ section.windows .container-folder.film .container-film {
   justify-content: center;
 }
 
-section.windows .container-folder.film .slider-film {
+section.windows .container-folder.netflix-loisirs .slider-netflix-loisirs {
   display: flex;
   flex-direction: column;
   max-width: calc(150px * 4);
@@ -1048,8 +1049,8 @@ section.windows .container-folder.film .slider-film {
   margin: 0 25px 0 25px;
 }
 
-section.windows .container-folder.film .before-film,
-section.windows .container-folder.film .next-film {
+section.windows .container-folder.netflix-loisirs .before-netflix-loisirs,
+section.windows .container-folder.netflix-loisirs .next-netflix-loisirs {
   opacity: 1;
   height: 50%;
   display: flex;
@@ -1062,19 +1063,19 @@ section.windows .container-folder.film .next-film {
   transition: 0.3s ease;
 }
 
-section.windows .container-folder.film .before-film:hover,
-section.windows .container-folder.film .next-film:hover {
+section.windows .container-folder.netflix-loisirs .before-netflix-loisirs:hover,
+section.windows .container-folder.netflix-loisirs .next-netflix-loisirs:hover {
   color: var(--green-ligth);
 }
 
-section.windows .container-folder.film .before-film.inactive,
-section.windows .container-folder.film .next-film.inactive {
+section.windows .container-folder.netflix-loisirs .before-netflix-loisirs.inactive,
+section.windows .container-folder.netflix-loisirs .next-netflix-loisirs.inactive {
   opacity: 0.1;
   pointer-events: none;
 }
 
-section.windows .container-folder.film .before-film:hover i,
-section.windows .container-folder.film .next-film:hover i {
+section.windows .container-folder.netflix-loisirs .before-netflix-loisirs:hover i,
+section.windows .container-folder.netflix-loisirs .next-netflix-loisirs:hover i {
   animation: bounceLoop20 1s infinite;
 }
 
@@ -1095,7 +1096,7 @@ section.windows .container-folder.film .next-film:hover i {
   }
 }
 
-section.windows .container-folder.film .genre-film {
+section.windows .container-folder.netflix-loisirs .genre-netflix-loisirs {
   font-size: 14px;
   width: 100%;
   font-weight: 600;
@@ -1104,13 +1105,13 @@ section.windows .container-folder.film .genre-film {
   padding-bottom: 3px;
 }
 
-section.windows .container-folder.film .genre-film span {
+section.windows .container-folder.netflix-loisirs .genre-netflix-loisirs span {
   margin-left: 5px;
   font-size: 10px;
   font-style: italic;
 }
 
-section.windows .container-folder.film .list-film {
+section.windows .container-folder.netflix-loisirs .list-netflix-loisirs {
   display: flex;
   width: max-content;
   align-items: center;
@@ -1118,7 +1119,7 @@ section.windows .container-folder.film .list-film {
   transition: 1s ease;
 }
 
-section.windows .container-folder.film .detail-film {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1129,19 +1130,19 @@ section.windows .container-folder.film .detail-film {
   transition: 0.5s ease;
 }
 
-section.windows .container-folder.film .detail-film:hover {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs:hover {
   transform: scale(0.95);
 }
 
-section.windows .container-folder.film .detail-film:hover .img-film {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs:hover .img-netflix-loisirs {
   filter: blur(1px);
 }
 
-section.windows .container-folder.film .detail-film:hover .title-film {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs:hover .title-netflix-loisirs {
   filter: blur(1px);
 }
 
-section.windows .container-folder.film .detail-film::after {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs::after {
   content: "\f0c1";
   font-family: FontAwesome;
   display: flex;
@@ -1161,20 +1162,20 @@ section.windows .container-folder.film .detail-film::after {
   align-items: center;
 }
 
-section.windows .container-folder.film .detail-film:hover::after {
+section.windows .container-folder.netflix-loisirs .detail-netflix-loisirs:hover::after {
   transform: translate(-50%, -50%) scale(1);
   color: var(--green-ligth);
   opacity: 1;
 }
 
-section.windows .container-folder.film .img-film {
+section.windows .container-folder.netflix-loisirs .img-netflix-loisirs {
   height: 162px;
   width: 120px;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px grey;
 }
 
-section.windows .container-folder.film .title-film {
+section.windows .container-folder.netflix-loisirs .title-netflix-loisirs {
   font-size: 12px;
   font-weight: 600;
   margin-top: 5px;
@@ -1182,7 +1183,7 @@ section.windows .container-folder.film .title-film {
   text-align: center;
 }
 
-section.windows .container-folder.film .title-film.link {
+section.windows .container-folder.netflix-loisirs .title-netflix-loisirs.link {
   color: var(--green-ligth);
 }
 
@@ -1253,7 +1254,7 @@ section.windows .container-folder.film .title-film.link {
     }
   }
 
-  section.windows .container-folder.film .slider-film {
+  section.windows .container-folder.netflix-loisirs .slider-netflix-loisirs {
     max-width: calc(150px * 3);
   }
 }
@@ -1311,15 +1312,15 @@ section.windows .container-folder.film .title-film.link {
     font-size: 14px;
   }
 
-  section.windows .container-folder.film .slider-film {
+  section.windows .container-folder.netflix-loisirs .slider-netflix-loisirs {
     max-width: calc(150px * 1);
   }
 
-  section.windows .container-folder.film .slider-film {
+  section.windows .container-folder.netflix-loisirs .slider-netflix-loisirs {
     margin: 0 15px 0 15px;
   }
 
-  section.windows .container-folder.film .container-film {
+  section.windows .container-folder.netflix-loisirs .container-netflix-loisirs {
     padding: 15px 0;
   }
 }
