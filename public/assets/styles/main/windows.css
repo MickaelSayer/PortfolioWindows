@@ -873,7 +873,7 @@ section.windows .container-folder.steam .container-game {
   max-width: max-content;
   text-decoration: none;
   color: black;
-  transition: 0.2s ease;
+  transition: 0.5s ease;
 }
 
 section.windows .container-folder.steam .container-game:hover {
@@ -885,19 +885,19 @@ section.windows .container-folder.steam .container-game::after {
   font-family: FontAwesome;
   display: flex;
   position: absolute;
-  height: 85px;
   border-radius: 50%;
   background: white;
-  width: 85px;
+  height: 40px;
+  width: 40px;
+  font-size: 1rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transform-origin: center;
-  transition: .2s ease;
+  transition: 0.5s ease;
   opacity: 0;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
 }
 
 section.windows .container-folder.steam .container-game:hover::after {
@@ -978,7 +978,7 @@ section.windows .container-folder.youtube .profil-img {
   background-image: var(--url);
   background-size: cover;
   box-shadow: 0px 0px 20px 0px grey;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 section.windows .container-folder.youtube .profil-img::after {
@@ -994,13 +994,16 @@ section.windows .container-folder.youtube .profil-img::after {
   left: 50%;
   transform: translateX(-50%) scale(0);
   transform-origin: bottom;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   justify-content: center;
   align-items: center;
 }
 
-section.windows .container-folder.youtube .content-profil:hover .profil-img::after {
+section.windows
+  .container-folder.youtube
+  .content-profil:hover
+  .profil-img::after {
   transform: translateX(-50%) scale(1);
   color: var(--green-ligth);
   opacity: 1;
@@ -1040,6 +1043,7 @@ section.windows .container-folder.film .slider-film {
   display: flex;
   flex-direction: column;
   max-width: calc(150px * 4);
+  height: 250px;
   overflow-x: clip;
   margin: 0 25px 0 25px;
 }
@@ -1055,11 +1059,11 @@ section.windows .container-folder.film .next-film {
   border-radius: 20px;
   color: var(--green-dark);
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 section.windows .container-folder.film .before-film:hover,
-section.windows .container-folder.film .next-film:hover  {
+section.windows .container-folder.film .next-film:hover {
   color: var(--green-ligth);
 }
 
@@ -1070,7 +1074,7 @@ section.windows .container-folder.film .next-film.inactive {
 }
 
 section.windows .container-folder.film .before-film:hover i,
-section.windows .container-folder.film .next-film:hover i  {
+section.windows .container-folder.film .next-film:hover i {
   animation: bounceLoop20 1s infinite;
 }
 
@@ -1097,6 +1101,13 @@ section.windows .container-folder.film .genre-film {
   font-weight: 600;
   border-bottom: 1px solid #c1c1c1;
   margin-bottom: 10px;
+  padding-bottom: 3px;
+}
+
+section.windows .container-folder.film .genre-film span {
+  margin-left: 5px;
+  font-size: 10px;
+  font-style: italic;
 }
 
 section.windows .container-folder.film .list-film {
@@ -1115,18 +1126,52 @@ section.windows .container-folder.film .detail-film {
   width: 150px;
   text-decoration: none;
   color: black;
+  transition: 0.5s ease;
+}
+
+section.windows .container-folder.film .detail-film:hover {
+  transform: scale(0.95);
+}
+
+section.windows .container-folder.film .detail-film:hover .img-film {
+  filter: blur(1px);
+}
+
+section.windows .container-folder.film .detail-film:hover .title-film {
+  filter: blur(1px);
+}
+
+section.windows .container-folder.film .detail-film::after {
+  content: "\f0c1";
+  font-family: FontAwesome;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  height: 30px;
+  width: 30px;
+  font-size: 0.8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+section.windows .container-folder.film .detail-film:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  color: var(--green-ligth);
+  opacity: 1;
 }
 
 section.windows .container-folder.film .img-film {
   height: 162px;
-  width: auto;
+  width: 120px;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px grey;
-  transition: 0.2s ease;
-}
-
-section.windows .container-folder.film .img-film:hover {
-  transform: scale(0.95);
 }
 
 section.windows .container-folder.film .title-film {
@@ -1207,6 +1252,10 @@ section.windows .container-folder.film .title-film.link {
       transform: translateY(-50%) translateX(-4px) rotate(180deg);
     }
   }
+
+  section.windows .container-folder.film .slider-film {
+    max-width: calc(150px * 3);
+  }
 }
 
 @media screen and (max-width: 848px) {
@@ -1262,9 +1311,15 @@ section.windows .container-folder.film .title-film.link {
     font-size: 14px;
   }
 
-  section.windows .container-folder.steam .container-game::after {
-    height: 40px;
-    width: 40px;
-    font-size: 1rem;
+  section.windows .container-folder.film .slider-film {
+    max-width: calc(150px * 1);
+  }
+
+  section.windows .container-folder.film .slider-film {
+    margin: 0 15px 0 15px;
+  }
+
+  section.windows .container-folder.film .container-film {
+    padding: 15px 0;
   }
 }

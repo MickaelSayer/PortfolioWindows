@@ -1,3 +1,16 @@
+const mediaQuery1139 = window.matchMedia("(max-width: 1139px)");
+const mediaQuery848 = window.matchMedia("(max-width: 848px)");
+
+function movieScrollingNumbers() {
+    if (mediaQuery848.matches) {
+        return 1;
+    } else if (mediaQuery1139.matches) {
+        return 3;
+    } else {
+        return 4;
+    }
+}
+
 $(document).ready(function () {
     // Fonction de fermeture de fenêtre
     $('section.windows .close').on('click', function () {
@@ -150,7 +163,7 @@ $(document).ready(function () {
         windowsOpen.find('.arrrow-before').addClass('active');
         windowsOpen.find('.address-before').addClass('active');
 
-        $.each(folderSelected[windowsLink], function (index, value) { 
+        $.each(folderSelected[windowsLink], function (index, value) {
             if (!pathOpen[windowsLink].includes(value)) {
                 $('.container-icon[data-link="' + value + '"]').removeClass('selected');
 
@@ -163,7 +176,7 @@ $(document).ready(function () {
         if ($(this).hasClass('active')) {
             var windowsOpen = $(this).parents('section.windows');
             var windowsLink = $(this).parents('section.windows').data('link');
-            
+
             var lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
             lastFolderOpen.removeClass('selected');
             if (lastFolderOpen.hasClass('open')) {
@@ -171,7 +184,7 @@ $(document).ready(function () {
                 folderOpen[windowsLink].pop(lastFolderOpen);
             }
 
-            $.each(folderSelected[windowsLink], function (index, value) { 
+            $.each(folderSelected[windowsLink], function (index, value) {
                 if (!pathOpen[windowsLink].includes(value)) {
                     $('.container-icon[data-link="' + value + '"]').removeClass('selected');
                 }
@@ -192,69 +205,67 @@ $(document).ready(function () {
         }
     });
 
-    $('section.windows .container-icon#film').on('click', function() {
+    var nbrsView;
+    $('section.windows .container-icon#film').on('click', function () {
         var eltContainerFilm = $('.container-folder.film');
         var eltListFilm = eltContainerFilm.find('.list-film');
+        nbrsView = movieScrollingNumbers();
 
-        $.each(eltListFilm, function (index, value) { 
+        $.each(eltListFilm, function (index, value) {
             var nbrsEltFilm = $(value).find('a').length;
             var eltNextFilm = $(value).parents('.container-film').find('.next-film');
+            var eltGenreFilm = $(value).parents('.container-film').find('.genre-film');
 
-            if (nbrsEltFilm < 5) {
+            eltGenreFilm.append('<span>(' + nbrsEltFilm + ' Films)</span>');
+            if (nbrsEltFilm <= nbrsView) {
                 eltNextFilm.addClass('inactive')
             }
         });
     });
 
-    var titleFilm = "";
-    $('section.windows .container-folder.film .img-film').on('mouseenter', function() {
-        titleFilm = $(this).parent('.detail-film').find('.title-film').text();
-
-        $(this).parent('.detail-film').find('.title-film').html('<i class="fa-solid fa-link fa-sm"></i> Suivre le lien').addClass('link');
-    });
-
-    $('section.windows .container-folder.film .img-film').on('mouseleave', function() {
-        $(this).parent('.detail-film').find('.title-film').html(titleFilm).removeClass('link');
-    });
-
     var sliderFilmDist = [];
-    $('section.windows .container-folder.film .next-film').on('click', function() {
+    $('section.windows .container-folder.film .next-film').on('click', function () {
         var eltContainerFilm = $(this).parent('.container-film');
         var genreContainerFilm = eltContainerFilm.find('.genre-film').text();
         var eltListFilm = eltContainerFilm.find('.list-film');
-        var nbrsListFilm = eltListFilm.find('a').length;
-        var nbrsListFilmMax = 150 * eltListFilm.find('a').length - (150 * 4);
+        var nbrstranslateMax = 150 * eltListFilm.find('a').length - (150 * nbrsView);
         var eltBeforeFilm = eltContainerFilm.find('.before-film');
 
         if (!sliderFilmDist[genreContainerFilm]) {
             sliderFilmDist[genreContainerFilm] = 0;
         }
 
-        sliderFilmDist[genreContainerFilm] += 150 * (nbrsListFilm - 4);
+        sliderFilmDist[genreContainerFilm] += (150 * nbrsView);
+        if (sliderFilmDist[genreContainerFilm] > nbrstranslateMax) {
+            sliderFilmDist[genreContainerFilm] = nbrstranslateMax;
+        }
 
         eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
 
-        if (sliderFilmDist[genreContainerFilm] === nbrsListFilmMax) {
+        if (sliderFilmDist[genreContainerFilm] === nbrstranslateMax) {
             $(this).addClass('inactive');
         }
 
         eltBeforeFilm.removeClass('inactive');
     });
 
-    $('section.windows .container-folder.film .before-film').on('click', function() {
+    $('section.windows .container-folder.film .before-film').on('click', function () {
         var eltContainerFilm = $(this).parent('.container-film');
         var genreContainerFilm = eltContainerFilm.find('.genre-film').text();
         var eltListFilm = eltContainerFilm.find('.list-film');
-        var nbrsListFilm = eltListFilm.find('a').length;
         var eltNextFilm = eltContainerFilm.find('.next-film');
 
-        sliderFilmDist[genreContainerFilm] -= 150 * (nbrsListFilm - 4);
+        sliderFilmDist[genreContainerFilm] -= (150 * nbrsView);
+        if (sliderFilmDist[genreContainerFilm] < nbrsView) {
+            sliderFilmDist[genreContainerFilm] = 0;
+        }
+
         eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
 
         if (sliderFilmDist[genreContainerFilm] === 0) {
             $(this).addClass('inactive');
-
-            eltNextFilm.removeClass('inactive');
         }
+
+        eltNextFilm.removeClass('inactive');
     });
 })
