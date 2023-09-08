@@ -1,9 +1,9 @@
 /** Affichage de l'heure pour la barre des tâches */
 function actualiserHorloge() {
-    var date = new Date();
-    var heure = date.getHours().toString().padStart(2, '0');
-    var minutes = date.getMinutes().toString().padStart(2, '0');
-    var heureActuelle = heure + ":" + minutes;
+    const date = new Date();
+    const heure = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const heureActuelle = heure + ":" + minutes;
 
     $("header .horloge .heure").text(heureActuelle);
 }

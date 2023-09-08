@@ -20,12 +20,12 @@ $(document).ready(function () {
         $('main .content-gestion-app').addClass('active');
         $('main .inactive-windows-button').addClass('inactive');
 
-        var containerWindows = $('main .content-gestion-app .container-windows-open');
-        var windowsActive = $('section.windows.active');
+        const containerWindows = $('main .content-gestion-app .container-windows-open');
+        const windowsActive = $('section.windows.active');
         $.each(windowsActive, function (index, value) {
-            var windowsLink = $(value).data('link');
-            var windowsFocus = $(value).css('z-index');
-            var windowsTitle = $(value).find('.windows-name h1').text();
+            let windowsLink = $(value).data('link');
+            let windowsFocus = $(value).css('z-index');
+            let windowsTitle = $(value).find('.windows-name h1').text();
 
             $(containerWindows[index]).removeClass('focus');
             if(windowsFocus == 2) {
@@ -46,7 +46,6 @@ $(document).ready(function () {
         }
 
         if ($(this).hasClass('active')) {
-            var containerWindows = $('main .content-gestion-app .container-windows-open');
             $.each(containerWindows, function (index, value) {
                 if ($(windowsActive[index]).length === 0) {
                     $(value).removeClass('open');
@@ -65,7 +64,7 @@ $(document).ready(function () {
     });
 
     $('main .content-gestion-app .close-all').on('click', function() {
-        var windowsActive = $('section.windows.active');
+        const windowsActive = $('section.windows.active');
         if (!$(this).hasClass('inactive')) {
             windowsActive.find('.close').click();
             $('main .content-gestion-app .gestion-app-close').click();
@@ -81,8 +80,8 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open .close-app').on('click', function() {
-        var parent = $(this).parent();
-        var dataWindowsDelete = parent.data('windows');
+        const parent = $(this).parent();
+        const dataWindowsDelete = parent.data('windows');
         
         parent.find('.title-windows').html('');
         parent.removeClass('open');
@@ -97,14 +96,14 @@ $(document).ready(function () {
     });
 
     $('main .container-windows-open .close-app').on('mouseenter', function() {
-        var parent = $(this).parent();
+        const parent = $(this).parent();
 
         parent.addClass('delete');
         parent.find('.eyes').addClass('inactive');
     });
 
     $('main .container-windows-open .close-app').on('mouseleave', function() {
-        var parent = $(this).parent();
+        const parent = $(this).parent();
 
         parent.removeClass('delete');
         parent.find('.eyes').removeClass('inactive');
@@ -121,7 +120,7 @@ $(document).ready(function () {
         }
     });
 
-    var windowsParamTitle = $('main .container-windows-open').attr('title');
+    const windowsParamTitle = $('main .container-windows-open').attr('title');
     $('main .container-windows-open').on('mouseenter', function() {
         if ($(this).hasClass('focus')) {
             $(this).attr('title', 'Fenêtre affichée');

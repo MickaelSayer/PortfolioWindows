@@ -29,7 +29,7 @@ $(document).ready(function () {
     const containerRight = $('header .container-right');
 
     /** Ouverture du menu navigation */
-    var titleLogoWindows = $('header .logo-windows').attr('title');
+    const titleLogoWindows = $('header .logo-windows').attr('title');
     logoWindows.on('click', function (event) {
         navLink.toggleClass('open-nav');
         $(this).toggleClass('active');
@@ -79,9 +79,9 @@ $(document).ready(function () {
         $(this).addClass('open');
     });
 
-    var titleTaskSelected = "";
+    let titleTaskSelected = "";
     taskItems.on('mouseenter', function() {
-        var __this = $(this);
+        const __this = $(this);
         titleTaskSelected = __this.find('.content-task').attr('title');
 
         if (__this.hasClass('selected')) {
@@ -89,14 +89,14 @@ $(document).ready(function () {
         }
     });
     taskItems.on('mouseleave', function() {
-        var __this = $(this);
+        const __this = $(this);
 
         __this.find('.content-task').attr('title', titleTaskSelected);
     });
 
-    var titleNavUl = "";
+    let titleNavUl = "";
     $('nav .sidebar-left ul li').on('mouseenter', function() {
-        var __this = $(this);
+        const __this = $(this);
         titleNavUl = __this.attr('title');
 
         if (__this.hasClass('open')) {
@@ -104,7 +104,7 @@ $(document).ready(function () {
         }
     });
     $('nav .sidebar-left ul li').on('mouseleave', function() {
-        var __this = $(this);
+        const __this = $(this);
 
         __this.attr('title', titleNavUl);
     });
@@ -120,11 +120,11 @@ $(document).ready(function () {
         containerAppNavbarSelected($(this), iconApp);
     });
 
-    var titleIconExtends = "";
+    let titleIconExtends = "";
     $('header .container-left .icon-extends').on('mouseenter', function () {
         addCssOpacity(iconApp);
 
-        var __this = $(this);
+        const __this = $(this);
         titleIconExtends = __this.attr('title');
 
         if (__this.find('i').hasClass('active')) {
@@ -134,7 +134,7 @@ $(document).ready(function () {
     $('header .container-left .icon-extends').on('mouseleave', function () {
         iconApp.removeAttr('style');
 
-        var __this = $(this);
+        const __this = $(this);
         __this.attr('title', titleIconExtends);
     });
 
@@ -142,11 +142,11 @@ $(document).ready(function () {
         containerAppNavbarSelected($(this), containerRight);
     });
 
-    var titleIconExtendsRigth = "";
+    let titleIconExtendsRigth = "";
     $('header .container-left .icon-extends-right').on('mouseenter', function () {
         addCssOpacity(containerRight);
 
-        var __this = $(this);
+        const __this = $(this);
         titleIconExtendsRigth = __this.attr('title');
 
         if (__this.find('i').hasClass('active')) {
@@ -156,7 +156,7 @@ $(document).ready(function () {
     $('header .container-left .icon-extends-right').on('mouseleave', function () {
         containerRight.removeAttr('style');
 
-        var __this = $(this);
+        const __this = $(this);
         __this.attr('title', titleIconExtendsRigth);
     });
 

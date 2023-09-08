@@ -21,12 +21,21 @@ function resetNetflixLoisirsSlider() {
     return sliderFilmDist;
 }
 
-function resetFolderOpen(currentWindows) {
-    $('section.windows.' + currentWindows + ' .container-folder.open').removeClass('open');
-    $('section.windows.' + currentWindows + ' .arrrow-before.active, section.windows.' + currentWindows + ' .fil-ariane .address-before.active').removeClass('active');
-    $('section.windows.' + currentWindows + ' .path-address').html(currentWindows + '/');
-    $('section.windows.' + currentWindows + ' .container-icon.selected').removeClass('selected');
+const folderOpen = [];
+const pathOpen = [];
+const folderSelected = [];
 
+function resetWindowsOpen(currentWindows) {
+    const windowsOpen = $('section.windows.' + currentWindows);
+    windowsOpen.find('.container-folder.open').removeClass('open');
+    windowsOpen.find('.arrrow-before.active').removeClass('active');
+    windowsOpen.find('.fil-ariane .address-before.active').removeClass('active');
+    windowsOpen.find('.path-address').html(currentWindows + '/');
+    windowsOpen.find('.container-icon.selected').removeClass('selected');
+
+    folderOpen[currentWindows] = [];
+    pathOpen[currentWindows] = [];
+    folderSelected[currentWindows] = [];
 }
 
 $(document).ready(function () {
@@ -41,8 +50,8 @@ $(document).ready(function () {
         if (windowsElement.css('z-index') == 2) {
             windowsElement.css('z-index', '1');
 
-            var windowsPrevVoid = windowsElement.prev('section.windows.active').length == 0;
-            var windowsNextVoid = windowsElement.next('section.windows.active').length == 0;
+            const windowsPrevVoid = windowsElement.prev('section.windows.active').length == 0;
+            const windowsNextVoid = windowsElement.next('section.windows.active').length == 0;
 
             if (!windowsPrevVoid && windowsNextVoid) {
                 windowsElement.prev('section.windows.active').css('z-index', '2');
@@ -66,10 +75,7 @@ $(document).ready(function () {
 
         sliderFilmDist = resetNetflixLoisirsSlider();
 
-        resetFolderOpen(dataLink);
-        folderOpen[dataLink] = [];
-        pathOpen[dataLink] = [];
-        folderSelected[dataLink] = [];
+        resetWindowsOpen(dataLink);
     });
 
     // Fonction pour réduire la fenêtre à l'icône de la barre des tâches
@@ -97,9 +103,9 @@ $(document).ready(function () {
         iconSliderLeft.toggleClass('active').parents('.container-sildebar-left').children('ul').toggleClass('active');
     });
 
-    var titleIconSliderLeft = "";
+    let titleIconSliderLeft = "";
     $('section.windows .icon-slider-left').on('mouseenter', function () {
-        var __this = $(this);
+        const __this = $(this);
         titleIconSliderLeft = __this.attr('title');
 
         if (!__this.hasClass('active')) {
@@ -107,7 +113,7 @@ $(document).ready(function () {
         }
     });
     $('section.windows .icon-slider-left').on('mouseleave', function () {
-        var __this = $(this);
+        const __this = $(this);
 
         __this.attr('title', titleIconSliderLeft);
     });
@@ -119,9 +125,9 @@ $(document).ready(function () {
         $('section.windows .tools').toggleClass('inactive');
     });
 
-    var titleIconSidebarLeft = "";
+    let titleIconSidebarLeft = "";
     $('section.windows .extends-sidebar').on('mouseenter', function () {
-        var __this = $(this);
+        const __this = $(this);
         titleIconSidebarLeft = __this.attr('title');
 
         if (__this.parent('.container-content').hasClass('active')) {
@@ -129,7 +135,7 @@ $(document).ready(function () {
         }
     });
     $('section.windows .extends-sidebar').on('mouseleave', function () {
-        var __this = $(this);
+        const __this = $(this);
 
         __this.attr('title', titleIconSidebarLeft);
     });
@@ -140,9 +146,9 @@ $(document).ready(function () {
         $('section.windows .extends-sidebar').toggleClass('inactive');
     });
 
-    var titleIconMenuExtends = "";
+    let titleIconMenuExtends = "";
     $('section.windows .tools .menu-extends').on('mouseenter', function () {
-        var __this = $(this);
+        const __this = $(this);
         titleIconMenuExtends = __this.attr('title');
 
         if (__this.parent('.tools').hasClass('active')) {
@@ -150,26 +156,23 @@ $(document).ready(function () {
         }
     });
     $('section.windows .tools .menu-extends').on('mouseleave', function () {
-        var __this = $(this);
+        const __this = $(this);
         __this.attr('title', titleIconMenuExtends);
     });
 
-    var folderOpen = [];
-    var pathOpen = [];
-    var folderSelected = [];
     $('section.windows .container-icon').on('click', function () {
-        var dataLink = $(this).data('link');
-        var windowsOpen = $(this).parents('section.windows');
-        var windowsLink = $(this).parents('section.windows').data('link');
+        const dataLink = $(this).data('link');
+        const windowsOpen = $(this).parents('section.windows');
+        const windowsLink = $(this).parents('section.windows').data('link');
 
         if (!folderOpen[windowsLink]) {
             folderOpen[windowsLink] = [];
         }
         folderOpen[windowsLink].push(windowsOpen.find('.container-folder.' + dataLink));
 
-        var pathAddressElement = windowsOpen.find('.path-address');
-        var currentText = pathAddressElement.text();
-        var newText = currentText + dataLink + '/';
+        const pathAddressElement = windowsOpen.find('.path-address');
+        const currentText = pathAddressElement.text();
+        const newText = currentText + dataLink + '/';
         pathAddressElement.text(newText);
 
         if (!pathOpen[windowsLink]) {
@@ -199,10 +202,10 @@ $(document).ready(function () {
 
     $('section.windows .arrrow-before, section.windows .fil-ariane .address-before').on('click', function () {
         if ($(this).hasClass('active')) {
-            var windowsOpen = $(this).parents('section.windows');
-            var windowsLink = $(this).parents('section.windows').data('link');
+            const windowsOpen = $(this).parents('section.windows');
+            const windowsLink = $(this).parents('section.windows').data('link');
 
-            var lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
+            const lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
             lastFolderOpen.removeClass('selected');
             if (lastFolderOpen.hasClass('open')) {
                 lastFolderOpen.removeClass('open');
@@ -215,11 +218,11 @@ $(document).ready(function () {
                 }
             });
 
-            var lastPath = pathOpen[windowsLink][pathOpen[windowsLink].length - 1];
+            const lastPath = pathOpen[windowsLink][pathOpen[windowsLink].length - 1];
 
-            var pathFolder = windowsOpen.find('.path-address');
-            var pathFolderText = pathFolder.text();
-            var newPathFolder = pathFolderText.replace(lastPath + "/", '');
+            const pathFolder = windowsOpen.find('.path-address');
+            const pathFolderText = pathFolder.text();
+            const newPathFolder = pathFolderText.replace(lastPath + "/", '');
             pathFolder.text(newPathFolder);
 
             pathOpen[windowsLink].pop(lastPath);
@@ -232,16 +235,16 @@ $(document).ready(function () {
         }
     });
 
-    var nbrsView;
+    let nbrsView;
     $('section.windows .container-icon#film, section.windows .container-icon#serie').on('click', function () {
-        var eltContainerFilm = $('.container-folder.netflix-loisirs');
-        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
+        const eltContainerFilm = $('.container-folder.netflix-loisirs');
+        const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
         nbrsView = movieScrollingNumbers();
 
         $.each(eltListFilm, function (index, value) {
-            var nbrsEltFilm = $(value).find('a').length;
-            var eltNextFilm = $(value).parents('.container-netflix-loisirs').find('.next-netflix-loisirs');
-            var eltGenreFilm = $(value).parents('.container-netflix-loisirs').find('.genre-netflix-loisirs');
+            let nbrsEltFilm = $(value).find('a').length;
+            let eltNextFilm = $(value).parents('.container-netflix-loisirs').find('.next-netflix-loisirs');
+            let eltGenreFilm = $(value).parents('.container-netflix-loisirs').find('.genre-netflix-loisirs');
 
             eltGenreFilm.append('<span>(' + nbrsEltFilm + ' Films)</span>');
             if (nbrsEltFilm <= nbrsView) {
@@ -250,13 +253,13 @@ $(document).ready(function () {
         });
     });
 
-    var sliderFilmDist = [];
+    let sliderFilmDist = [];
     $('section.windows .container-folder.netflix-loisirs .next-netflix-loisirs').on('click', function () {
-        var eltContainerFilm = $(this).parent('.container-netflix-loisirs');
-        var genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
-        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
-        var nbrstranslateMax = 150 * eltListFilm.find('a').length - (150 * nbrsView);
-        var eltBeforeFilm = eltContainerFilm.find('.before-netflix-loisirs');
+        const eltContainerFilm = $(this).parent('.container-netflix-loisirs');
+        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
+        const nbrstranslateMax = 150 * eltListFilm.find('a').length - (150 * nbrsView);
+        const eltBeforeFilm = eltContainerFilm.find('.before-netflix-loisirs');
 
         if (!sliderFilmDist[genreContainerFilm]) {
             sliderFilmDist[genreContainerFilm] = 0;
@@ -277,10 +280,10 @@ $(document).ready(function () {
     });
 
     $('section.windows .container-folder.netflix-loisirs .before-netflix-loisirs').on('click', function () {
-        var eltContainerFilm = $(this).parent('.container-netflix-loisirs');
-        var genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
-        var eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
-        var eltNextFilm = eltContainerFilm.find('.next-netflix-loisirs');
+        const eltContainerFilm = $(this).parent('.container-netflix-loisirs');
+        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
+        const eltNextFilm = eltContainerFilm.find('.next-netflix-loisirs');
 
         sliderFilmDist[genreContainerFilm] -= (150 * nbrsView);
         if (sliderFilmDist[genreContainerFilm] < nbrsView) {
