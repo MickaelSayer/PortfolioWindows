@@ -239,14 +239,13 @@ $(document).ready(function () {
     $('section.windows .container-icon#film, section.windows .container-icon#serie').on('click', function () {
         const eltContainerFilm = $('.container-folder.netflix-loisirs');
         const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
+  
         nbrsView = movieScrollingNumbers();
 
         $.each(eltListFilm, function (index, value) {
             let nbrsEltFilm = $(value).find('a').length;
             let eltNextFilm = $(value).parents('.container-netflix-loisirs').find('.next-netflix-loisirs');
-            let eltGenreFilm = $(value).parents('.container-netflix-loisirs').find('.genre-netflix-loisirs');
 
-            eltGenreFilm.append('<span>(' + nbrsEltFilm + ' Films)</span>');
             if (nbrsEltFilm <= nbrsView) {
                 eltNextFilm.addClass('inactive')
             }
