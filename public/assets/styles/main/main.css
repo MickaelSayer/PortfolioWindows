@@ -55,6 +55,10 @@ main .icon-bureau.corbeille {
   pointer-events: none;
 }
 
+main .icon-bureau#discord {
+  cursor: url('/assets/pictures/icon/copy.png'), pointer;
+}
+
 main .icon-bureau img {
   margin-bottom: 5px;
 }

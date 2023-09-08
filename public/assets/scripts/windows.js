@@ -162,6 +162,9 @@ $(document).ready(function () {
 
     $('section.windows .container-icon').on('click', function () {
         const dataLink = $(this).data('link');
+        if (dataLink === 'curriculum') {
+            return;
+        }
         const windowsOpen = $(this).parents('section.windows');
         const windowsLink = $(this).parents('section.windows').data('link');
 

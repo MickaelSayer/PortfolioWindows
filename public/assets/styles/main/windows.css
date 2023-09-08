@@ -739,6 +739,8 @@ section.windows .container-icon {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 section.windows .container-icon:not(:last-child) {
@@ -780,6 +782,11 @@ section.windows .container-icon .icon-title {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+section.windows .container-icon.curriculum {
+  cursor: url('/assets/pictures/icon/file.png'), pointer;
 }
 
 section.windows .container-folder {

@@ -5,12 +5,37 @@
 {% set img = 'graduation' %}
 
 {% block windows_content %}
-<div class="container-icon" data-link="georges">
-    <div class="icon-img mickael"></div>
-    <div class="icon-title">mickael.jpg</div>
+<div class="container-icon diplome" data-link="diplome" title="Mon diplôme OpenClassRoom">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/icon/graduation.png') }}" alt="Logo diplôme">
+    </div>
+    <div class="icon-title">Diplôme</div>
 </div>
 
-<div class="container-folder georges">
-    <img src="{{ asset('assets/pictures/icon/freaks.jpg') }}" alt="Photo de moi" class="profil">
+<div class="container-folder diplome">
+    <div class="ecole-name"><span>C</span>PENCLASSROOMS</div>
+    <div class="ecole-logo">C</div>
+    <div class="content-diplome">
+        <div class="top-content">
+            <p>Vu la décision du jury de certification du 19 avril 2023, OpenClassrooms accorde à </p>
+            <p>Mickael Sayer</p>
+            <p>Né(e) le 19 mars 1991 à Châtellerault (France)</p>
+            <p>la certification professionnelle enregistrée au Répertoire National des Certifications Professionnelles au
+                niveau 6 (code 326t) par décision de France compétences publiée le 4 octobre 2016
+            </p>
+        </div>
+        <div class="bottom-content">
+            <div class="signature-president">
+                <p>Paris, le 19 avril 2023</p>
+                <p>Président d'OpenClassrooms</p>
+                <p>Pierre Dubuc</p>
+            </div>
+
+            <div class="signature-pres">
+                <p>Signature du titulaire</p>
+            </div>
+        </div>
+
+    </div>
 </div>
 {% endblock windows_content %}
