@@ -2,8 +2,164 @@ section.windows.diplome {
   transform: translate(-46%, -51%);
 }
 
+section.windows.diplome .container-folder.diplome {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+}
+
+section.windows.diplome .container-folder .container-diplome {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 1000px;
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+section.windows.diplome .container-folder .ecole-name {
+  writing-mode: vertical-rl;
+  transform: rotateY(180deg) rotateX(180deg);
+  font-size: 54px;
+  font-weight: bold;
+  color: #7451eb;
+  -webkit-text-stroke: 2px #7451eb;
+  height: 100%;
+  width: max-content;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+section.windows.diplome .container-folder .ecole-name span {
+  transform: rotate(-90deg) translate(-11px, 2px);
+  writing-mode: initial;
+}
+
+section.windows.diplome .container-folder .ecole-logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 54px;
+  font-weight: bold;
+  transform: rotateY(180deg);
+  color: #7451eb;
+  -webkit-text-stroke: 2px #7451eb;
+}
+
+section.windows.diplome .container-folder .content-diplome {
+  height: 100%;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: clamp(10px, 1.5vw, 15px);
+  color: #07368b;
+}
+
+section.windows.diplome .container-folder .top-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 25px;
+}
+
+section.windows.diplome .container-folder .bottom-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 60px;
+}
+
+section.windows.diplome .container-folder .people-name {
+  font-size: clamp(20px, 3vw, 35px);
+  margin: 25px 0;
+  font-weight: 600;
+}
+
+section.windows.diplome .container-folder .date-naissance {
+  margin-bottom: 50px;
+}
+
+section.windows.diplome .container-folder .diplome-name {
+  font-size: clamp(25px, 3vw, 45px);
+  margin: 25px 0;
+  font-weight: 600;
+}
+
+section.windows.diplome .container-folder .signature-president {
+  margin-right: 50px;
+}
+
+section.windows.diplome .container-folder .signature-president img,
+section.windows.diplome .container-folder .signature-pres img {
+  margin-top: 15px;
+  height: 35px;
+  width: 35px;
+}
+
+section.windows.diplome .container-folder .signature-president span {
+  font-weight: 600;
+}
+
+section.windows.diplome .container-folder .signature-pres {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 848px) {
   section.windows.diplome.active {
     transform: translate(0%, 40px);
+  }
+
+  section.windows.diplome .container-folder.diplome {
+    align-items: center;
+  }
+
+  section.windows.diplome .container-folder .container-diplome {
+    flex-direction: column;
+    width: 100%;
+    height: min-content;
+  }
+
+  section.windows.diplome .container-folder .ecole-name {
+    writing-mode: initial;
+    transform: none;
+    font-size: 20px;
+    height: max-content;
+    width: 100%;
+    text-align: center;
+  }
+
+  section.windows.diplome .container-folder .ecole-logo {
+    display: none;
+  }
+
+  section.windows.diplome .container-folder .content-diplome {
+    height: 90%;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  section.windows.diplome .container-folder .top-content {
+    line-height: normal;
+  }
+
+  section.windows.diplome .container-folder .people-name {
+    margin: 15px 0;
+  }
+
+  section.windows.diplome .container-folder .diplome-name {
+    margin: 20px 0;
+  }
+
+  section.windows.diplome .container-folder .date-naissance {
+    margin-bottom: 30px;
+  }
+
+  section.windows.diplome .container-folder .bottom-content {
+    margin-top: 10px;
   }
 }
