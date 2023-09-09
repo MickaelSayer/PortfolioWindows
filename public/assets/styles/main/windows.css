@@ -772,11 +772,15 @@ section.windows .container-icon .icon-img img {
 section.windows .container-icon .icon-title {
   width: 100%;
   height: 20%;
-  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+section.windows .container-icon .icon-title h2 {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 section.windows .container-folder {

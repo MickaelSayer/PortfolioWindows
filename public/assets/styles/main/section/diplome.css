@@ -34,7 +34,7 @@ section.windows.diplome .container-folder .ecole-name {
 }
 
 section.windows.diplome .container-folder .ecole-name span {
-  transform: rotate(-90deg) translateY(2px);
+  transform: rotate(-90deg) translateY(-3px);
   writing-mode: initial;
 }
 
@@ -86,7 +86,7 @@ section.windows.diplome .container-folder .date-naissance {
 }
 
 section.windows.diplome .container-folder .diplome-name {
-  font-size: clamp(25px, 3vw, 45px);
+  font-size: clamp(20px, 3vw, 45px);
   margin: 25px 0;
   font-weight: 600;
 }
@@ -135,7 +135,7 @@ section.windows.diplome .container-folder .signature-pres {
   }
 
   section.windows.diplome .container-folder .ecole-name span {
-    transform: rotate(-180deg) translateX(2px) translateY(1px);
+    transform: rotate(-180deg) translateX(2px) translateY(-2px);
   }
 
   section.windows.diplome .container-folder .ecole-logo {

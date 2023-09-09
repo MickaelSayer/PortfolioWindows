@@ -29,12 +29,6 @@ section.windows.presentation .container-folder.description {
   justify-content: flex-start;
 }
 
-section.windows.presentation .container-folder.description h2 {
-  margin-bottom: 10px;
-  font-size: clamp(14px, 2vw, 16px);
-  margin-left: 20px;
-}
-
 section.windows.presentation .container-folder.description ul {
   margin-left: 20px;
 }
