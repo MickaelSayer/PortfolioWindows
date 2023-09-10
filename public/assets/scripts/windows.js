@@ -235,6 +235,8 @@ $(document).ready(function () {
             }
 
             sliderFilmDist = resetNetflixLoisirsSlider();
+            windowsOpen.find('.content-notif.expand-notif').removeClass('expand-notif');
+            windowsOpen.find('.number-day.event-formation.inactive').removeClass('inactive');
         }
     });
 
@@ -299,5 +301,16 @@ $(document).ready(function () {
         }
 
         eltNextFilm.removeClass('inactive');
+    });
+
+    $('section.windows.experience .number-day.event-formation').on('click', function() {
+        $(this).parents('.container-calendar').find('.content-notif').addClass('expand-notif');
+
+        $(this).addClass('inactive');
+    });
+
+    $('section.windows.experience .closing-notif').on('click', function() {
+        $(this).parent('.content-notif').removeClass('expand-notif');
+        $(this).parents('.container-calendar').find('.number-day.event-formation.inactive').removeClass('inactive');
     });
 })

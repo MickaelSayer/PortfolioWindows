@@ -4,6 +4,123 @@
 {% set title = 'Expériences' %}
 {% set img = 'scientific' %}
 
+{% set days = ['Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.', 'Dim.'] %}
+
 {% block windows_content %}
+
+<div class="container-icon calendrier-vialtic" data-link="calendrier-vialtic" title="Apprentissage - Vialtic.com">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/icon/calendar.png') }}" alt="Logo calendrier">
+    </div>
+    <div class="icon-title">
+        <h2>Vialtic.com</h2>
+    </div>
+</div>
+
+<div class="container-folder calendrier-vialtic">
+    <div class="container-calendar">
+        <div class="years-calendar">2021</div>
+        <div class="month-calendar">Mars</div>
+        <div class="content-calendar">
+            <div class="days">
+                {% for day in days %}
+                <div class="day">{{day}}</div>
+                {% endfor %}
+            </div>
+            <div class="numbers-day">
+                {% for i in 1..31 %}
+                <div class="number-day {% if i == 19 %}event-formation{% endif %}" {% if i==19
+                    %}title="Début d'apprentissage Vialtic.com" {% endif %}>
+                    {{i}}
+                    {% if i == 19 %}
+                    <div class="notif-formation">
+                        Début d'appr.
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="content-notif">
+            <div class="closing-notif">
+                <i class="fa-regular fa-calendar-xmark fa-xl"></i>
+            </div>
+            <div class="notif-name">Début d'apprentissage - vialtic.com</div>
+            <div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-compass fa-xl"></i>
+                    Route de brioux, périgné
+                </div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-clock fa-xl"></i>
+                    08h00 - 17h00
+                </div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-bell fa-xl"></i>
+                    06h25
+                </div>
+            </div>
+            <a href="https://www.google.com/maps/place/Rte+de+Brioux,+79170+P%C3%A9rign%C3%A9/data=!4m2!3m1!1s0x4800b48fa3fc9427:0xf2b1fad3c6a584b5?sa=X&ved=2ahUKEwjqyOSJ65-BAxXOTqQEHUobD14Q8gF6BAgSEAA&ved=2ahUKEwjqyOSJ65-BAxXOTqQEHUobD14Q8gF6BAgWEAI"
+                target="_blank" class="notif-map" title="Suivre le lien vers Google Maps">
+                <img src="{{ asset('assets/pictures/icon/brioux-map.png') }}" alt="image map localisation">
+                <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-calendar">
+        <div class="years-calendar">2023</div>
+        <div class="month-calendar">Mars</div>
+        <div class="content-calendar">
+            <div class="days">
+                {% for day in days %}
+                <div class="day">{{day}}</div>
+                {% endfor %}
+            </div>
+            <div class="numbers-day">
+                <div class="number-day"></div>
+                <div class="number-day"></div>
+                {% for i in 1..31 %}
+                <div class="number-day {% if i == 19 %}event-formation{% endif %}" {% if i==19
+                    %}title="Fin d'apprentissage Vialtic.com" {% endif %}>
+                    {{i}}
+                    {% if i == 19 %}
+                    <div class="notif-formation">
+                        Fin d'appr.
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="content-notif">
+            <div class="closing-notif">
+                <i class="fa-regular fa-calendar-xmark fa-xl"></i>
+            </div>
+            <div class="notif-name">Fin d'apprentissage - vialtic.com</div>
+            <div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-compass fa-xl"></i>
+                    Châtellerault
+                </div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-clock fa-xl"></i>
+                    17h00
+                </div>
+                <div class="notif-detail">
+                    <i class="fa-regular fa-bell fa-xl"></i>
+                    17h00
+                </div>
+            </div>
+            <a href="https://www.google.com/maps/place/2+Bd+Sadi+Carnot,+86100+Ch%C3%A2tellerault/data=!4m2!3m1!1s0x47fda9e4bba96d2f:0xcdec7f348a3bd111?sa=X&ved=2ahUKEwjGlJOV_p-BAxVMRqQEHRCKBzcQ8gF6BAgQEAA&ved=2ahUKEwjGlJOV_p-BAxVMRqQEHRCKBzcQ8gF6BAgTEAI"
+                target="_blank" class="notif-map" title="Suivre le lien vers Google Maps">
+                <img src="{{ asset('assets/pictures/icon/chatellerault.png') }}" alt="image map localisation">
+                <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock windows_content %}
