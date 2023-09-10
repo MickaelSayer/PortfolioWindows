@@ -88,12 +88,16 @@ section.windows.experience .number-day.event-formation:hover {
 }
 
 section.windows.experience .notif-formation {
-  height: 50%;
+  height: 60%;
   width: 100%;
   border-left: 2px solid var(--green-dark);
   overflow: hidden;
-  font-size: 10px;
-  padding: 0 4px;
+  font-size: clamp(8px, 1vw, 10px);
+  display: flex;
+  padding-left: 2px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
 section.windows.experience .notif-formation:hover {
@@ -194,5 +198,18 @@ section.windows.experience .content-notif .closing-notif:hover i {
 @media screen and (max-width: 848px) {
   section.windows.experience.active {
     transform: translate(0%, 40px);
+  }
+
+  section.windows.experience .container-calendar {
+    margin: 5px;
+  }
+
+  section.windows.experience .container-calendar {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  section.windows.experience .container-calendar {
+    width: 100%;
   }
 }
