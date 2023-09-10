@@ -38,6 +38,11 @@ function resetWindowsOpen(currentWindows) {
     folderSelected[currentWindows] = [];
 }
 
+function resetExperienceCalendar(windowsOpen) {
+    $(windowsOpen).find('.content-notif.expand-notif').removeClass('expand-notif');
+    $(windowsOpen).find('.number-day.event-formation.inactive').removeClass('inactive');
+}
+
 $(document).ready(function () {
     // Fonction de fermeture de fenêtre
     $('section.windows .close').on('click', function () {
@@ -76,6 +81,8 @@ $(document).ready(function () {
         sliderFilmDist = resetNetflixLoisirsSlider();
 
         resetWindowsOpen(dataLink);
+
+        resetExperienceCalendar(windowsElement);
     });
 
     // Fonction pour réduire la fenêtre à l'icône de la barre des tâches
@@ -235,8 +242,7 @@ $(document).ready(function () {
             }
 
             sliderFilmDist = resetNetflixLoisirsSlider();
-            windowsOpen.find('.content-notif.expand-notif').removeClass('expand-notif');
-            windowsOpen.find('.number-day.event-formation.inactive').removeClass('inactive');
+            resetExperienceCalendar(resetExperienceCalendar);
         }
     });
 
