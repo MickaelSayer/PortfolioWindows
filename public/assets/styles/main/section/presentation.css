@@ -47,7 +47,6 @@ section.windows.presentation .container-folder.description li.paragraphe {
 section.windows.presentation .container-folder.steam {
   flex-wrap: wrap;
   justify-content: space-evenly;
-  overflow-y: auto;
 }
 
 section.windows.presentation .container-folder.steam .container-game {
@@ -137,7 +136,6 @@ section.windows.presentation .container-folder.youtube {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-y: auto;
 }
 
 section.windows.presentation .container-folder.youtube .content-profil {
@@ -221,7 +219,6 @@ section.windows.presentation .container-folder.youtube .profil-genre {
 section.windows.presentation .container-folder.film,
 section.windows.presentation .container-folder.serie {
   flex-direction: column;
-  overflow-y: auto;
 }
 
 section.windows.presentation .container-folder.netflix-loisirs .container-netflix-loisirs {

@@ -6,7 +6,6 @@ section.windows.experience .container-folder.calendrier-vialtic {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  overflow-y: auto;
 }
 
 section.windows.experience .container-calendar {

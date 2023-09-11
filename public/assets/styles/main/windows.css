@@ -792,6 +792,7 @@ section.windows .container-folder {
   top: 0;
   left: 0;
   padding: 10px;
+  overflow-y: auto;
 }
 
 section.windows .container-content.active .container-folder {
