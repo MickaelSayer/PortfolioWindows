@@ -1,15 +1,12 @@
 <div class="container-calendar">
-    <div class="years-calendar">2023</div>
-    <div class="month-calendar">Mars</div>
+    <div class="years-calendar">Mars 2023</div>
     <div class="content-calendar">
-        <div class="days">
-            {% for day in days %}
-            <div class="day">{{day}}</div>
-            {% endfor %}
-        </div>
         <div class="numbers-day">
-            <div class="number-day"></div>
-            <div class="number-day"></div>
+            {% for day in days %}
+            <div class="number-day day">{{day}}</div>
+            {% endfor %}
+            <div class="number-day inactive"></div>
+            <div class="number-day inactive"></div>
             {% for i in 1..31 %}
             <div class="number-day {% if i == 19 %}event-formation{% endif %}" {% if i==19
                 %}title="Fin d'apprentissage Vialtic.com" {% endif %}>
@@ -21,6 +18,8 @@
                 {% endif %}
             </div>
             {% endfor %}
+            <div class="number-day inactive"></div>
+            <div class="number-day inactive"></div>
         </div>
     </div>
 
