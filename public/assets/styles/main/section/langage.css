@@ -2,8 +2,209 @@ section.windows.langage {
   transform: translate(-55%, -52%);
 }
 
+section.windows.langage .container-folder.bibliotheques {
+  justify-content: center;
+}
+
+section.windows.langage .container-langage {
+  position: relative;
+  width: 70px;
+  height: 190px;
+  background: rgb(217 217 217 / 10%);
+  border-radius: 30px;
+  border: 8px solid transparent;
+  box-shadow: 0px 0px 15px 0px #00000022;
+  margin: 80px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.windows.langage .content-langage {
+  width: calc(230px * 4);
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section.windows.langage .liquid {
+  position: absolute;
+  top: calc(100% - var(--lvl));
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+  border-radius: 0 0 30px 30px;
+}
+
+section.windows.langage .liquid::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 20px;
+  background: var(--clr-shadow);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 20px var(--clr-shadow));
+}
+
+section.windows.langage .liquid span {
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  writing-mode: vertical-rl;
+  color: #4c4c4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+section.windows.langage .langage-name {
+  font-size: 10px;
+  font-weight: 600;
+  position: relative;
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px 0px #e8e8e8;
+  pointer-events: none;
+  position: relative;
+  top: 50px;
+}
+
+section.windows.langage .langage-name::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #e1e1e1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px #000000;
+}
+
+section.windows.langage .langage-name::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #e1e1e1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 2px 0px #000000;
+}
+
+section.windows.langage .liquid-bubble {
+  content: "";
+  background: var(--clr-bubble);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+section.windows.langage .liquid-bubble::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+
+section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble1 {
+  top: 83%;
+  left: 7px;
+  animation: bubbleUp1 1.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes bubbleUp1 {
+  0% {
+    transform: translateY(0px) scale(0);
+  }
+  20% {
+    transform: translateY(-60px) scale(0.5);
+  }
+  40% {
+    transform: translateY(-110px) scale(0.8);
+  }
+  100% {
+    transform: translateY(-150px) scale(1.05);
+  }
+}
+
+section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble2 {
+  left: 21px;
+  top: 87%;
+  animation: bubbleUp2 1.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes bubbleUp2 {
+  0% {
+    transform: translateY(0px) scale(0);
+  }
+  20% {
+    transform: translateY(-60px) scale(0.5);
+  }
+  40% {
+    transform: translateY(-115px) scale(1);
+  }
+  100% {
+    transform: translateY(-170px) scale(1.25);
+  }
+}
+
+section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble3 {
+  left: 33px;
+  top: 82%;
+  animation: bubbleUp3 1.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes bubbleUp3 {
+  0% {
+    transform: translateY(0px) scale(0);
+  }
+  20% {
+    transform: translateY(-75px) scale(0.5);
+  }
+  40% {
+    transform: translateY(-125px) scale(0.9);
+  }
+  100% {
+    transform: translateY(-155px) scale(1.15);
+  }
+}
+
 @media screen and (max-width: 848px) {
   section.windows.langage.active {
     transform: translate(0%, 40px);
+  }
+
+  section.windows.langage .content-langage {
+    justify-content: center;
   }
 }
