@@ -4,7 +4,7 @@ section.windows.langage {
   transform: translate(-55%, -52%);
 }
 
-section.windows.langage .container-folder.bibliotheques {
+section.windows.langage .container-folder.laboratoire {
   flex-direction: column;
   align-items: center;
 }
