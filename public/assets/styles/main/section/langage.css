@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 section.windows.langage {
   transform: translate(-55%, -52%);
 }
@@ -8,22 +10,68 @@ section.windows.langage .container-folder.bibliotheques {
 }
 
 section.windows.langage .content-legend {
+  position: relative;
   width: 100%;
+  max-width: max-content;
   padding: 15px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
+  border-radius: 10px;
+  background: #313131;
+  color: white;
+  font-family: 'Caveat', cursive;
+}
+
+section.windows.langage .title-lvl {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: clamp(12px, 1.5vw, 17px);
+  font-family: 'Caveat', cursive;
+  text-decoration: underline;
+}
+
+section.windows.langage .nail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5d5d5d;
+  border: 2px solid #7b7b7b;
+}
+
+section.windows.langage .nail-top-right {
+  top: 5px;
+  right: 5px;
+}
+
+section.windows.langage .nail-top-left {
+  top: 5px;
+  left: 5px;
+}
+
+section.windows.langage .nail-bottom-right {
+  bottom: 5px;
+  right: 5px;
+}
+
+section.windows.langage .nail-bottom-left {
+  bottom: 5px;
+  left: 5px;
 }
 
 section.windows.langage .legend-lvl {
-  font-size: clamp(10px, 1vw, 12px);
-  margin: 0 25px;
+  font-size: clamp(12px, 1.5vw, 17px);
+  margin: 10px 25px;
 }
 
 section.windows.langage .legend-lvl li {
   position: relative;
   list-style-type: none;
-  height: auto;
-  margin-bottom: 25px;
+  height: 43px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -260,5 +308,9 @@ section.windows.langage .liquid-bubble.bubble3::before {
 
   section.windows.langage .content-langage {
     justify-content: center;
+  }
+
+  section.windows.langage .legend-lvl li {
+    height: 65px;
   }
 }
