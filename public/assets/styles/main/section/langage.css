@@ -3,7 +3,42 @@ section.windows.langage {
 }
 
 section.windows.langage .container-folder.bibliotheques {
+  flex-direction: column;
+  align-items: center;
+}
+
+section.windows.langage .content-legend {
+  width: 100%;
+  padding: 15px;
+  display: flex;
   justify-content: center;
+}
+
+section.windows.langage .legend-lvl {
+  font-size: clamp(10px, 1vw, 12px);
+  margin: 0 25px;
+}
+
+section.windows.langage .legend-lvl li {
+  position: relative;
+  list-style-type: none;
+  height: auto;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.windows.langage .legend-lvl li:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -28px;
+  background-image: var(--lvl-icon);
+  background-size: cover;
 }
 
 section.windows.langage .container-langage {
@@ -22,7 +57,7 @@ section.windows.langage .container-langage {
 }
 
 section.windows.langage .content-langage {
-  width: calc(230px * 4);
+  width: 100%;
   height: max-content;
   display: flex;
   flex-direction: row;
@@ -60,12 +95,14 @@ section.windows.langage .liquid span {
   height: 100%;
   text-align: center;
   writing-mode: vertical-rl;
-  color: #4c4c4c;
+  color: #000000;
+  -webkit-text-stroke: 0.4px #000000;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(180deg);
   pointer-events: none;
+  letter-spacing: 2px;
 }
 
 section.windows.langage .langage-name {
@@ -120,68 +157,80 @@ section.windows.langage .liquid-bubble {
   height: 15px;
   position: absolute;
   border-radius: 50%;
+  animation: bubbleUp1 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
 }
 
 section.windows.langage .liquid-bubble::before {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 2px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #f5f5f5;
 }
 
-section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble1 {
+section.windows.langage
+  .container-folder.bibliotheques.open
+  .liquid-bubble.bubble1 {
   top: 83%;
   left: 7px;
-  animation: bubbleUp1 1.5s ease-in-out infinite;
   animation-delay: 1s;
 }
 
 @keyframes bubbleUp1 {
   0% {
-    transform: translateY(0px) scale(0);
+    transform: translateY(0) scale(0);
   }
   20% {
-    transform: translateY(-60px) scale(0.5);
+    transform: translateY(0) scale(0.5);
   }
   40% {
-    transform: translateY(-110px) scale(0.8);
+    transform: translateY(0) scale(0.7);
   }
   100% {
-    transform: translateY(-150px) scale(1.05);
+    transform: translateY(-181px) scale(1.05);
   }
 }
 
-section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble2 {
+section.windows.langage .liquid-bubble.bubble1::before {
+  top: 1px;
+  left: 2px;
+}
+
+section.windows.langage
+  .container-folder.bibliotheques.open
+  .liquid-bubble.bubble2 {
   left: 21px;
   top: 87%;
-  animation: bubbleUp2 1.5s ease-in-out infinite;
   animation-delay: 2s;
 }
 
 @keyframes bubbleUp2 {
   0% {
-    transform: translateY(0px) scale(0);
+    transform: translateY(0) scale(0);
   }
   20% {
-    transform: translateY(-60px) scale(0.5);
+    transform: translateY(0) scale(0.5);
   }
   40% {
-    transform: translateY(-115px) scale(1);
+    transform: translateY(0) scale(0.9);
   }
   100% {
-    transform: translateY(-170px) scale(1.25);
+    transform: translateY(-170px) scale(1.45);
   }
 }
 
-section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubble3 {
+section.windows.langage
+  .container-folder.bibliotheques.open
+  .liquid-bubble.bubble3 {
   left: 33px;
   top: 82%;
-  animation: bubbleUp3 1.5s ease-in-out infinite;
   animation-delay: 1.5s;
+}
+
+section.windows.langage .liquid-bubble.bubble2::before {
+  top: 7px;
+  left: 3px;
 }
 
 @keyframes bubbleUp3 {
@@ -189,14 +238,19 @@ section.windows.langage .container-folder.bibliotheques.open .liquid-bubble.bubb
     transform: translateY(0px) scale(0);
   }
   20% {
-    transform: translateY(-75px) scale(0.5);
+    transform: translateY(0) scale(0.5);
   }
   40% {
-    transform: translateY(-125px) scale(0.9);
+    transform: translateY(0) scale(0.8);
   }
   100% {
-    transform: translateY(-155px) scale(1.15);
+    transform: translateY(-173px) scale(1.15);
   }
+}
+
+section.windows.langage .liquid-bubble.bubble3::before {
+  top: 3px;
+  left: 2px;
 }
 
 @media screen and (max-width: 848px) {
