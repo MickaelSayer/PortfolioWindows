@@ -192,6 +192,70 @@ section.windows.experience .content-notif .closing-notif:hover i {
   animation: bounceLoop 1s infinite;
 }
 
+section.windows.experience .container-folder.todolist {
+  align-items: center;
+  justify-content: center;
+}
+
+section.windows.experience .container-todolist {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  border: 1px solid #e2e2e2;
+}
+
+section.windows.experience .title-todolist {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+section.windows.experience .subtitle-todolist {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 0;
+  border-bottom: 1px solid #e2e2e2;
+  color: #FD301ED4;
+  font-weight: 600;
+}
+
+section.windows.experience .container-todolist ul {
+  padding: 15px;
+  height: calc(100% - 81px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+section.windows.experience .container-todolist li {
+  position: relative;
+  list-style: none;
+  font-size: clamp(10px, 1vw, 12px);
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+section.windows.experience .container-todolist li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+section.windows.experience .container-todolist li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  height: 15px;
+  width: 15px;
+  background-image: url(/assets/pictures/icon/accept.png);
+  background-size: cover;
+}
+
 @media screen and (max-width: 848px) {
   section.windows.experience.active {
     transform: translate(0%, 40px);

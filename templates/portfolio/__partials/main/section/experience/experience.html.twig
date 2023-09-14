@@ -13,7 +13,16 @@
         <img src="{{ asset('assets/pictures/icon/calendar.png') }}" alt="Logo calendrier">
     </div>
     <div class="icon-title">
-        <h2>Vialtic.com</h2>
+        <h2>Calendrier</h2>
+    </div>
+</div>
+
+<div class="container-icon todolist" data-link="todolist" title="Mes compétences">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/icon/check.png') }}" alt="Logo todo list">
+    </div>
+    <div class="icon-title">
+        <h2>ToDoList</h2>
     </div>
 </div>
 
@@ -21,5 +30,7 @@
     {% include "portfolio/__partials/main/section/experience/parth/container-calendar-2021.html.twig" %}
     {% include "portfolio/__partials/main/section/experience/parth/container-calendar-2023.html.twig" %}
 </div>
+
+{% include "portfolio/__partials/main/section/experience/parth/todolist.html.twig" %}
 
 {% endblock windows_content %}

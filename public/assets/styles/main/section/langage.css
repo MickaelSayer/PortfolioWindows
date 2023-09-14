@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
 section.windows.langage {
   transform: translate(-55%, -52%);
 }
@@ -20,7 +18,7 @@ section.windows.langage .content-legend {
   border-radius: 10px;
   background: #313131;
   color: white;
-  font-family: 'Caveat', cursive;
+  font-family: Caveat;
 }
 
 section.windows.langage .title-lvl {
@@ -30,7 +28,7 @@ section.windows.langage .title-lvl {
   transform: translateX(-50%);
   color: white;
   font-size: clamp(12px, 1.5vw, 17px);
-  font-family: 'Caveat', cursive;
+  font-family: Caveat;
   text-decoration: underline;
 }
 
@@ -138,7 +136,7 @@ section.windows.langage .liquid::before {
 }
 
 section.windows.langage .liquid span {
-  font-size: 12px;
+  font-size: 18px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -151,10 +149,11 @@ section.windows.langage .liquid span {
   transform: rotate(180deg);
   pointer-events: none;
   letter-spacing: 2px;
+  font-family: Caveat;
 }
 
 section.windows.langage .langage-name {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   position: relative;
   width: 200px;
@@ -170,6 +169,7 @@ section.windows.langage .langage-name {
   pointer-events: none;
   position: relative;
   top: 50px;
+  font-family: Caveat;
 }
 
 section.windows.langage .langage-name::after {
@@ -205,100 +205,124 @@ section.windows.langage .liquid-bubble {
   height: 15px;
   position: absolute;
   border-radius: 50%;
-  animation: bubbleUp1 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
+  animation: 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
 }
 
 section.windows.langage .liquid-bubble::before {
   content: "";
   position: absolute;
-  width: 6px;
+  width: 4px;
   height: 6px;
   border-radius: 50%;
   background: #f5f5f5;
 }
 
 section.windows.langage
-  .container-folder.bibliotheques.open
+  .container-folder.laboratoire.open
   .liquid-bubble.bubble1 {
   top: 83%;
   left: 7px;
+  animation-name: bubbleUp1;
   animation-delay: 1s;
 }
 
 @keyframes bubbleUp1 {
-  0% {
-    transform: translateY(0) scale(0);
+  0%, 50% {
+    transform: translateY(0px) scale(0);
   }
-  20% {
-    transform: translateY(0) scale(0.5);
+  60% {
+    transform: translateY(0) scale(1);
   }
-  40% {
-    transform: translateY(0) scale(0.7);
+  70% {
+    transform: translateY(0), scale(1.1);
+  }
+  80% {
+    transform: translateY(0), scale(1.2);
+  }
+  90% {
+    transform: translateY(0), scale(1.3);
   }
   100% {
-    transform: translateY(-181px) scale(1.05);
+    transform: translateY(-181px) scale(1.4);
   }
 }
 
 section.windows.langage .liquid-bubble.bubble1::before {
   top: 1px;
   left: 2px;
+  transform: rotate(42deg);
 }
 
 section.windows.langage
-  .container-folder.bibliotheques.open
+  .container-folder.laboratoire.open
   .liquid-bubble.bubble2 {
   left: 21px;
   top: 87%;
+  animation-name: bubbleUp2;
   animation-delay: 2s;
 }
 
 @keyframes bubbleUp2 {
-  0% {
-    transform: translateY(0) scale(0);
+  0%, 50% {
+    transform: translateY(0px) scale(0);
   }
-  20% {
-    transform: translateY(0) scale(0.5);
+  60% {
+    transform: translateY(0) scale(1);
   }
-  40% {
-    transform: translateY(0) scale(0.9);
+  70% {
+    transform: translateY(0), scale(1.1);
+  }
+  80% {
+    transform: translateY(0), scale(1.2);
+  }
+  90% {
+    transform: translateY(0), scale(1.3);
   }
   100% {
-    transform: translateY(-170px) scale(1.45);
+    transform: translateY(-170px) scale(1.4);
   }
 }
 
 section.windows.langage
-  .container-folder.bibliotheques.open
+  .container-folder.laboratoire.open
   .liquid-bubble.bubble3 {
   left: 33px;
   top: 82%;
+  animation-name: bubbleUp3;
   animation-delay: 1.5s;
 }
 
 section.windows.langage .liquid-bubble.bubble2::before {
   top: 7px;
   left: 3px;
+  transform: rotate(124deg);
 }
 
 @keyframes bubbleUp3 {
-  0% {
+  0%, 50% {
     transform: translateY(0px) scale(0);
   }
-  20% {
-    transform: translateY(0) scale(0.5);
+  60% {
+    transform: translateY(0) scale(1);
   }
-  40% {
-    transform: translateY(0) scale(0.8);
+  70% {
+    transform: translateY(0), scale(1.1);
+  }
+  80% {
+    transform: translateY(0), scale(1.2);
+  }
+  90% {
+    transform: translateY(0), scale(1.3);
   }
   100% {
-    transform: translateY(-173px) scale(1.15);
+    transform: translateY(-173px) scale(1.4);
   }
 }
 
 section.windows.langage .liquid-bubble.bubble3::before {
   top: 3px;
   left: 2px;
+  transform: rotate(21deg);
 }
 
 @media screen and (max-width: 848px) {

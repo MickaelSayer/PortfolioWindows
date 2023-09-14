@@ -110,6 +110,65 @@ section.windows.diplome .container-folder .signature-pres {
   font-weight: 600;
 }
 
+section.windows.diplome .container-folder.todolist {
+  align-items: center;
+  justify-content: center;
+}
+
+section.windows.diplome .container-todolist {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  border: 1px solid #e2e2e2;
+}
+
+section.windows.diplome .title-todolist {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+section.windows.diplome .subtitle-todolist {
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 0;
+  border-bottom: 1px solid #e2e2e2;
+  color: #7451eb;
+  font-weight: 600;
+}
+
+section.windows.diplome .container-todolist ul {
+  padding: 15px;
+  height: calc(100% - 81px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+section.windows.diplome .container-todolist li {
+  position: relative;
+  list-style: none;
+  font-size: clamp(10px, 1vw, 12px);
+  margin-left: 30px;
+}
+
+section.windows.diplome .container-todolist li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  height: 15px;
+  width: 15px;
+  background-image: url(/assets/pictures/icon/accept.png);
+  background-size: cover;
+}
+
 @media screen and (max-width: 848px) {
   section.windows.diplome.active {
     transform: translate(0%, 40px);
@@ -128,7 +187,7 @@ section.windows.diplome .container-folder .signature-pres {
 
   section.windows.diplome .container-folder .ecole-name {
     writing-mode: initial;
-    transform: rotateY(0deg) rotateX(0deg);;
+    transform: rotateY(0deg) rotateX(0deg);
     font-size: 20px;
     height: max-content;
     width: 100%;

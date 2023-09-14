@@ -3,6 +3,11 @@
   src: url("/assets/fonts/Verdana.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Caveat";
+  src: url("/assets/fonts/Caveat.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;

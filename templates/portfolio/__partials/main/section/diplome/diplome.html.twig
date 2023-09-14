@@ -9,8 +9,18 @@
     <div class="icon-img">
         <img src="{{ asset('assets/pictures/icon/doc.png') }}" alt="Logo diplôme">
     </div>
-    <div class="icon-title"><h2>Développer</h2></div>
+    <div class="icon-title"><h2>Développer PHP/Symfony</h2></div>
 </div>
 
-{% include "portfolio/__partials/main/section/diplome/parth/diplome.html.twig" %}
+<div class="container-icon todolist" data-link="todolist" title="Mes compétences">
+    <div class="icon-img">
+        <img src="{{ asset('assets/pictures/icon/check.png') }}" alt="Logo todo list">
+    </div>
+    <div class="icon-title">
+        <h2>ToDoList</h2>
+    </div>
+</div>
+
+{% include "portfolio/__partials/main/section/diplome/parth/developper.html.twig" %}
+{% include "portfolio/__partials/main/section/diplome/parth/todolist.html.twig" %}
 {% endblock windows_content %}
