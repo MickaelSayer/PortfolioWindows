@@ -2,6 +2,10 @@ section.windows.projet {
   transform: translate(-43%, -48%);
 }
 
+section.windows.projet .container-icon {
+  pointer-events: none;
+}
+
 @media screen and (max-width: 848px) {
   section.windows.projet.active {
     transform: translate(0%, 40px);
