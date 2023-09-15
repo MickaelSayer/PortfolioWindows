@@ -284,9 +284,10 @@ main .content-gestion-app {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  align-content: flex-start;
+  align-content: space-between;
   padding: 10px;
   z-index: 3;
+  overflow-y: auto;
 }
 
 main .content-gestion-app.active {
@@ -295,11 +296,9 @@ main .content-gestion-app.active {
 
 main .content-gestion-app .content-btn {
   width: 100%;
-  position: absolute;
-  bottom: 43px;
-  left: 0;
   display: flex;
   justify-content: space-evenly;
+  padding: 25px 0;
 }
 
 main .content-gestion-app .content-btn div {
@@ -336,11 +335,7 @@ main .content-gestion-app .content-btn div:hover i {
 
 main .content-gestion-app .no-content {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(10px, 3vw, 14px);
+  font-size: 14px;
   width: 100%;
   text-align: center;
 }
@@ -354,7 +349,7 @@ main .container-windows-open {
   display: none;
   flex-direction: column;
   width: calc(50% - 10px);
-  height: 29%;
+  height: 155px;
   margin: 5px;
   font-size: clamp(10px, 3vw, 14px);
   border: 1px solid #1f5081;
