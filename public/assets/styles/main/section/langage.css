@@ -227,7 +227,8 @@ section.windows.langage
 }
 
 @keyframes bubbleUp1 {
-  0%, 50% {
+  0%,
+  50% {
     transform: translateY(0px) scale(0);
   }
   60% {
@@ -263,7 +264,8 @@ section.windows.langage
 }
 
 @keyframes bubbleUp2 {
-  0%, 50% {
+  0%,
+  50% {
     transform: translateY(0px) scale(0);
   }
   60% {
@@ -299,7 +301,8 @@ section.windows.langage .liquid-bubble.bubble2::before {
 }
 
 @keyframes bubbleUp3 {
-  0%, 50% {
+  0%,
+  50% {
     transform: translateY(0px) scale(0);
   }
   60% {

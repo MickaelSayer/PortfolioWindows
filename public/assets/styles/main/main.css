@@ -56,7 +56,7 @@ main .icon-bureau.corbeille {
 }
 
 main .icon-bureau#discord {
-  cursor: url('/assets/pictures/icon/copy.png'), pointer;
+  cursor: url("/assets/pictures/icon/copy.png"), pointer;
 }
 
 main .icon-bureau img {
@@ -367,7 +367,7 @@ main .container-windows-open {
 main .container-windows-open.delete {
   background: #ff000014;
   border: 1px solid #ff000014;
-  animation: shake .3s infinite;
+  animation: shake 0.3s infinite;
 }
 
 @keyframes shake {
@@ -442,7 +442,7 @@ main .container-windows-open.focus .eyes.inactive {
   display: block;
 }
 
-main .container-windows-open.delete  .title-windows{
+main .container-windows-open.delete .title-windows {
   background: #ff000014;
 }
 
@@ -451,7 +451,7 @@ main .container-windows-open.focus.delete .title-windows {
 }
 
 main .container-windows-open.focus.delete .eyes i {
-  color: #ff000014;;
+  color: #ff000014;
 }
 
 main .container-windows-open.focus.delete {
