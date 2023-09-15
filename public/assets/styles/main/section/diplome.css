@@ -1,40 +1,63 @@
 section.windows.diplome {
+  -webkit-transform: translate(-46%, -51%);
+  -ms-transform: translate(-46%, -51%);
   transform: translate(-46%, -51%);
 }
 
 section.windows.diplome .container-folder.developper {
   font-family: "Inter", sans-serif;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 25px;
 }
 
 section.windows.diplome .container-folder .container-diplome {
   position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 1000px;
   border-radius: 10px;
   border: 2px solid #f6f6f6;
   padding: 15px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 section.windows.diplome .container-folder .ecole-name {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
+  -webkit-transform: rotateY(180deg) rotateX(180deg);
   transform: rotateY(180deg) rotateX(180deg);
   font-size: 50px;
   font-weight: bold;
   color: #7451eb;
   -webkit-text-stroke: 2px #7451eb;
   height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 section.windows.diplome .container-folder .ecole-name span {
+  -webkit-transform: rotate(-90deg) translateY(2px);
+  -ms-transform: rotate(-90deg) translateY(2px);
   transform: rotate(-90deg) translateY(2px);
+  -webkit-writing-mode: initial;
+  -ms-writing-mode: initial;
   writing-mode: initial;
 }
 
@@ -44,6 +67,7 @@ section.windows.diplome .container-folder .ecole-logo {
   right: 15px;
   font-size: 54px;
   font-weight: bold;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   color: #7451eb;
   -webkit-text-stroke: 2px #7451eb;
@@ -53,24 +77,46 @@ section.windows.diplome .container-folder .content-diplome {
   height: 100%;
   width: 100%;
   padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: clamp(10px, 1.5vw, 15px);
   color: #07368b;
 }
 
 section.windows.diplome .container-folder .top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   line-height: 25px;
 }
 
 section.windows.diplome .container-folder .bottom-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 60px;
 }
@@ -111,7 +157,11 @@ section.windows.diplome .container-folder .signature-pres {
 }
 
 section.windows.diplome .container-folder.todolist {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -144,9 +194,18 @@ section.windows.diplome .subtitle-todolist {
 section.windows.diplome .container-todolist ul {
   padding: 15px;
   height: calc(100% - 81px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -161,6 +220,8 @@ section.windows.diplome .container-todolist li::after {
   content: "";
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: -30px;
   height: 15px;
@@ -171,29 +232,45 @@ section.windows.diplome .container-todolist li::after {
 
 @media screen and (max-width: 848px) {
   section.windows.diplome.active {
+    -webkit-transform: translate(0%, 40px);
+    -ms-transform: translate(0%, 40px);
     transform: translate(0%, 40px);
   }
 
   section.windows.diplome .container-folder.diplome {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 10px;
   }
 
   section.windows.diplome .container-folder .container-diplome {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
   }
 
   section.windows.diplome .container-folder .ecole-name {
+    -webkit-writing-mode: initial;
+    -ms-writing-mode: initial;
     writing-mode: initial;
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
     transform: rotateY(0deg) rotateX(0deg);
     font-size: 20px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
   }
 
   section.windows.diplome .container-folder .ecole-name span {
+    -webkit-transform: rotate(-180deg) translateX(2px) translateY(1px);
+    -ms-transform: rotate(-180deg) translateX(2px) translateY(1px);
     transform: rotate(-180deg) translateX(2px) translateY(1px);
   }
 
@@ -204,6 +281,8 @@ section.windows.diplome .container-todolist li::after {
   section.windows.diplome .container-folder .content-diplome {
     height: 90%;
     padding: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 

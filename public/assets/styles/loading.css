@@ -6,8 +6,15 @@
   top: 0;
   left: 0;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -31,6 +38,15 @@
   position: absolute;
   bottom: -1px;
   left: 0;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#04329d),
+    color-stop(#bdd4fd),
+    to(#04329d)
+  );
+  background: -o-linear-gradient(right, #04329d, #bdd4fd, #04329d);
   background: linear-gradient(to left, #04329d, #bdd4fd, #04329d);
   height: 3px;
   width: 100%;
@@ -49,6 +65,15 @@
   position: absolute;
   top: -1px;
   left: 0;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#04329d),
+    color-stop(#ec923c),
+    to(#04329d)
+  );
+  background: -o-linear-gradient(right, #04329d, #ec923c, #04329d);
   background: linear-gradient(to left, #04329d, #ec923c, #04329d);
   height: 3px;
   width: 100%;
@@ -57,24 +82,46 @@
 
 .container-loading .mid {
   height: 100%;
+  background: -o-radial-gradient(top left, circle, white -20%, #5d7edd 20%);
   background: radial-gradient(circle at top left, white -20%, #5d7edd 20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   color: white;
 }
 
 .container-loading .mid.login {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .container-loading .mid .content-loading {
   height: 350px;
   width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   pointer-events: none;
 }
@@ -84,7 +131,11 @@
   height: 350px;
   width: 500px;
   display: none;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: 52px;
   padding: 40px;
@@ -98,11 +149,24 @@
   height: 100%;
   width: 3px;
   border-radius: 50%;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#5d7edd),
+    color-stop(#bdd4fd),
+    to(#5d7edd)
+  );
+  background: -o-linear-gradient(bottom, #5d7edd, #bdd4fd, #5d7edd);
   background: linear-gradient(to top, #5d7edd, #bdd4fd, #5d7edd);
 }
 
 .container-loading .mid .login-loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -112,6 +176,8 @@
 }
 
 .container-loading .mid.login .content-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -170,10 +236,14 @@
   .container-loading .mid .content-loading {
     width: 100%;
     padding: 18px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .container-loading .mid.login .content-loading {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
@@ -187,13 +257,20 @@
   }
 
   .container-loading .mid.login {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .container-loading .mid .content-login {
     width: 100%;
     margin-left: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 20px;
   }
