@@ -425,7 +425,7 @@ header .icon-extends-right .separator {
 
   header .logo-windows {
     position: absolute;
-    top: 90vh;
+    top: 80vh;
     left: 50%;
     transform: translateX(-50%);
     width: 50px;

@@ -128,7 +128,7 @@ nav.nav-link .params.active {
 nav.nav-link .params .params-close {
   display: flex;
   position: absolute;
-  top: 90vh;
+  top: 80vh;
   left: 50%;
   transform: translateX(-50%);
   height: 50px;
@@ -661,6 +661,10 @@ nav .sidebar-right .content-mid::after {
     padding: 6px;
     border-right: none;
     color: white;
+    background: none;
+    height: 77%;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #f1f1f12e;
   }
 
   nav.nav-link {
@@ -673,19 +677,18 @@ nav .sidebar-right .content-mid::after {
   nav .sidebar-left ul {
     position: relative;
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
+    overflow-y: auto;
   }
 
   nav .sidebar-left ul li {
     flex-direction: column;
     padding: 10px;
-    width: 100%;
+    width: 225px;
+    margin: 10px;
   }
 
   nav .sidebar-left ul li img {
@@ -717,18 +720,11 @@ nav .sidebar-right .content-mid::after {
     display: none;
   }
 
-  nav .sidebar-left {
-    background: none;
-    height: 89%;
-    justify-content: space-evenly;
-  }
-
   nav .sidebar-left .content-left {
     height: 100%;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-evenly;
-    border-bottom: 1px solid #f1f1f12e;
   }
 
   nav .sidebar-left ul li:hover,

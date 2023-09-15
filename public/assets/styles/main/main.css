@@ -215,7 +215,7 @@ main .nav-app li img {
 
 main .gestion-app {
   position: absolute;
-  bottom: 11%;
+  bottom: 21%;
   left: 50%;
   transform: translateX(-50%) translateY(0);
   height: 18px;
@@ -480,9 +480,9 @@ main .container-windows-open.delete .close-app {
 
 main .inactive-windows-button {
   position: absolute;
-  bottom: 14%;
-  left: 50%;
-  transform: translateX(-50%) translateY(0);
+  bottom: calc(21% - 26px);
+  left: calc(50% - -42px);
+  transform: translateX(-50%);
   width: 30px;
   height: 30px;
   border-radius: 50%;
