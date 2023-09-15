@@ -226,4 +226,8 @@ section.windows.diplome .container-todolist li::after {
   section.windows.diplome .container-folder .bottom-content {
     margin-top: 10px;
   }
+
+  section.windows.diplome .container-folder.developper {
+    padding: 10px;
+  }
 }
