@@ -764,8 +764,8 @@ section.windows .container-icon .icon-img {
 }
 
 section.windows .container-icon .icon-img img {
-  height: 40px;
-  width: 40px;
+  height: 33px;
+  width: 33px;
   transform: scale(1.1);
 }
 
