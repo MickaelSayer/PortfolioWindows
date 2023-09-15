@@ -558,8 +558,7 @@ main .inactive-windows-button:hover .visible-nav {
     align-content: center;
     flex-wrap: wrap;
     width: 100%;
-    height: auto;
-    margin-top: 150px;
+    height: 100%;
   }
 
   main .container-bureau.inactive {
