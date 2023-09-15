@@ -250,7 +250,7 @@ $(document).ready(function () {
     $('section.windows .container-icon#film, section.windows .container-icon#serie').on('click', function () {
         const eltContainerFilm = $('.container-folder.netflix-loisirs');
         const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
-  
+
         nbrsView = movieScrollingNumbers();
 
         $.each(eltListFilm, function (index, value) {
@@ -309,13 +309,13 @@ $(document).ready(function () {
         eltNextFilm.removeClass('inactive');
     });
 
-    $('section.windows.experience .number-day.event-formation').on('click', function() {
+    $('section.windows.experience .number-day.event-formation').on('click', function () {
         $(this).parents('.container-calendar').find('.content-notif').addClass('expand-notif');
 
         $(this).addClass('inactive');
     });
 
-    $('section.windows.experience .closing-notif').on('click', function() {
+    $('section.windows.experience .closing-notif').on('click', function () {
         $(this).parent('.content-notif').removeClass('expand-notif');
         $(this).parents('.container-calendar').find('.number-day.event-formation.inactive').removeClass('inactive');
     });

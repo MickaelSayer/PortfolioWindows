@@ -80,7 +80,7 @@ $(document).ready(function () {
     });
 
     let titleTaskSelected = "";
-    taskItems.on('mouseenter', function() {
+    taskItems.on('mouseenter', function () {
         const __this = $(this);
         titleTaskSelected = __this.find('.content-task').attr('title');
 
@@ -88,14 +88,14 @@ $(document).ready(function () {
             __this.find('.content-task').attr('title', 'Réduire la fenêtre');
         }
     });
-    taskItems.on('mouseleave', function() {
+    taskItems.on('mouseleave', function () {
         const __this = $(this);
 
         __this.find('.content-task').attr('title', titleTaskSelected);
     });
 
     let titleNavUl = "";
-    $('nav .sidebar-left ul li').on('mouseenter', function() {
+    $('nav .sidebar-left ul li').on('mouseenter', function () {
         const __this = $(this);
         titleNavUl = __this.attr('title');
 
@@ -103,7 +103,7 @@ $(document).ready(function () {
             __this.attr('title', 'Afficher la fenêtre');
         }
     });
-    $('nav .sidebar-left ul li').on('mouseleave', function() {
+    $('nav .sidebar-left ul li').on('mouseleave', function () {
         const __this = $(this);
 
         __this.attr('title', titleNavUl);

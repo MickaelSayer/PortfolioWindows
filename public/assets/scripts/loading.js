@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     setInterval(showDots, 600);
 
-    $('.container-loading .mid .login-loading').on('click', function() {
+    $('.container-loading .mid .login-loading').on('click', function () {
         $('.container-loading').addClass('inactive');
         $('#audio-windows')[0].play();
 

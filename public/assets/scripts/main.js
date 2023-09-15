@@ -28,7 +28,7 @@ $(document).ready(function () {
             let windowsTitle = $(value).find('.windows-name h1').text();
 
             $(containerWindows[index]).removeClass('focus');
-            if(windowsFocus == 2) {
+            if (windowsFocus == 2) {
                 $(containerWindows[index]).addClass('focus');
             }
             $(containerWindows[index]).find('.title-windows').html(windowsTitle);
@@ -56,14 +56,14 @@ $(document).ready(function () {
         }
     });
 
-    $('main .content-gestion-app .gestion-app-close').on('click', function() {
+    $('main .content-gestion-app .gestion-app-close').on('click', function () {
         $('main .gestion-app').removeClass('active');
         $('header .logo-windows').removeClass('display');
         $('main .content-gestion-app').removeClass('active');
         $('main .inactive-windows-button').removeClass('inactive');
     });
 
-    $('main .content-gestion-app .close-all').on('click', function() {
+    $('main .content-gestion-app .close-all').on('click', function () {
         const windowsActive = $('section.windows.active');
         if (!$(this).hasClass('inactive')) {
             windowsActive.find('.close').click();
@@ -71,22 +71,22 @@ $(document).ready(function () {
         }
     });
 
-    $('main .content-gestion-app .close-all').on('mouseenter', function() {
+    $('main .content-gestion-app .close-all').on('mouseenter', function () {
         $('main .container-windows-open.open').addClass('delete');
     });
 
-    $('main .content-gestion-app .close-all').on('mouseleave', function() {
+    $('main .content-gestion-app .close-all').on('mouseleave', function () {
         $('main .container-windows-open.open').removeClass('delete');
     });
 
-    $('main .container-windows-open .close-app').on('click', function() {
+    $('main .container-windows-open .close-app').on('click', function () {
         const parent = $(this).parent();
         const dataWindowsDelete = parent.data('windows');
-        
+
         parent.find('.title-windows').html('');
         parent.removeClass('open');
         parent.data('windows', '');
-        
+
         $('section.windows.' + dataWindowsDelete + '.active').find('.close').click();
         if ($('main .container-windows-open.open').length === 0) {
             $('main .content-gestion-app .no-content').removeClass('inactive');
@@ -95,21 +95,21 @@ $(document).ready(function () {
         }
     });
 
-    $('main .container-windows-open .close-app').on('mouseenter', function() {
+    $('main .container-windows-open .close-app').on('mouseenter', function () {
         const parent = $(this).parent();
 
         parent.addClass('delete');
         parent.find('.eyes').addClass('inactive');
     });
 
-    $('main .container-windows-open .close-app').on('mouseleave', function() {
+    $('main .container-windows-open .close-app').on('mouseleave', function () {
         const parent = $(this).parent();
 
         parent.removeClass('delete');
         parent.find('.eyes').removeClass('inactive');
     });
 
-    $('main .container-windows-open').on('click', function(event) {
+    $('main .container-windows-open').on('click', function (event) {
         if (!$(event.target).closest('.close-app').length) {
             $('.navbar .task').removeClass('selected');
             $('.navbar #' + $(this).data('windows')).addClass('selected');
@@ -121,14 +121,14 @@ $(document).ready(function () {
     });
 
     const windowsParamTitle = $('main .container-windows-open').attr('title');
-    $('main .container-windows-open').on('mouseenter', function() {
+    $('main .container-windows-open').on('mouseenter', function () {
         if ($(this).hasClass('focus')) {
             $(this).attr('title', 'Fenêtre affichée');
         }
         $(this).find('.eyes').removeClass('inactive');
     });
 
-    $('main .container-windows-open').on('mouseleave', function() {
+    $('main .container-windows-open').on('mouseleave', function () {
         if ($(this).hasClass('focus')) {
             $(this).attr('title', windowsParamTitle);
         }
@@ -136,7 +136,7 @@ $(document).ready(function () {
         $(this).find('.eyes').addClass('inactive');
     });
 
-    $('main .inactive-windows-button').on('click', function() {
+    $('main .inactive-windows-button').on('click', function () {
         $(this).toggleClass('active');
 
         $('header .logo-windows').removeClass('transparent');
