@@ -161,10 +161,7 @@ section.windows.langage .content-langage {
 
 section.windows.langage .liquid {
   position: absolute;
-  top: calc(100% - var(--lvl));
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  inset: calc(100% - var(--lvl)) 5px 5px 5px;
   background: var(--clr);
   -webkit-filter: drop-shadow(0 0 20px var(--clr));
   filter: drop-shadow(0 0 20px var(--clr));
