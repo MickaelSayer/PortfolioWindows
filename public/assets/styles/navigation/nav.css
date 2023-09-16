@@ -740,7 +740,7 @@ nav .sidebar-left ul li .content-presentation::after {
   border-bottom: 4px solid transparent;
   border-left: 8px solid transparent;
   background-color: transparent;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 nav .sidebar-left ul li.open .content-presentation::after {
