@@ -430,22 +430,34 @@ main .content-gestion-app {
   height: calc(100% - 40px);
   background: white;
   border-radius: 5px;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
   z-index: 3;
+}
+
+main .container-gestion-app {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-y: auto;
 }
 
@@ -506,7 +518,13 @@ main .content-gestion-app .content-btn div:hover i {
 
 main .content-gestion-app .no-content {
   display: block;
-  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: clamp(10px, 3vw, 14px);
   width: 100%;
   text-align: center;
 }
@@ -607,14 +625,8 @@ main .container-windows-open .title-windows {
   text-align: center;
   color: white;
   font-weight: 500;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#0165b5),
-    to(#034587)
-  );
   background: -o-linear-gradient(top, #0165b5, #034587);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0165b5), to(#034587));
   background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
