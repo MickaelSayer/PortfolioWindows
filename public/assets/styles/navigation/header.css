@@ -451,13 +451,13 @@ header .icon-extends-right .separator {
   display: none;
 }
 
-@media screen and (max-width: 1650px) {
+@media screen and (max-width <= 1650px) {
   header .task.active {
     width: 150px;
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width <= 1400px) {
   header .task.active {
     width: 100px;
   }

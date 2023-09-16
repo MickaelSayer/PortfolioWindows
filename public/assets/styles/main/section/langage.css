@@ -473,8 +473,8 @@ section.windows.langage .liquid-bubble.bubble2::before {
 @-webkit-keyframes bubbleup3 {
   0%,
   50% {
-    -webkit-transform: translateY(0px) scale(0);
-    transform: translateY(0px) scale(0);
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
   }
 
   60% {
@@ -506,8 +506,8 @@ section.windows.langage .liquid-bubble.bubble2::before {
 @keyframes bubbleup3 {
   0%,
   50% {
-    -webkit-transform: translateY(0px) scale(0);
-    transform: translateY(0px) scale(0);
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
   }
 
   60% {

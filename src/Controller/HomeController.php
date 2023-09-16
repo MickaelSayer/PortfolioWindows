@@ -9,8 +9,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-
-
     /**
      * @Route("/", name="app_home")
      * @return Response
@@ -19,8 +17,5 @@ class HomeController extends AbstractController
     {
 
         return $this->render('/portfolio/app/home.html.twig');
-
-    }//end homeAction()
-
-
-}//end homeAction()
+    }
+}

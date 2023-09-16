@@ -772,7 +772,7 @@ section.windows .tools {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background: #dddddd;
+  background: #ddd;
   height: 40px;
 }
 
