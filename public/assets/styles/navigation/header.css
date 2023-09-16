@@ -83,15 +83,18 @@ header .container-left .icon-extends:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -104,15 +107,18 @@ header .container-left .icon-extends:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -131,15 +137,18 @@ header .container-left .icon-extends:hover i.active {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(2px) rotate(180deg);
     transform: translateY(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(4px) rotate(180deg);
     transform: translateY(4px) rotate(180deg);
@@ -152,15 +161,18 @@ header .container-left .icon-extends:hover i.active {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(2px) rotate(180deg);
     transform: translateY(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(4px) rotate(180deg);
     transform: translateY(4px) rotate(180deg);
@@ -243,15 +255,18 @@ header .logo-windows:hover img {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+  
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);

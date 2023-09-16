@@ -309,22 +309,27 @@ section.windows.langage
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+
   100% {
     -webkit-transform: translateY(-181px) scale(1.4);
     transform: translateY(-181px) scale(1.4);
@@ -337,22 +342,27 @@ section.windows.langage
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+
   100% {
     -webkit-transform: translateY(-181px) scale(1.4);
     transform: translateY(-181px) scale(1.4);
@@ -384,22 +394,27 @@ section.windows.langage
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+
   100% {
     -webkit-transform: translateY(-170px) scale(1.4);
     transform: translateY(-170px) scale(1.4);
@@ -412,22 +427,27 @@ section.windows.langage
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+
   100% {
     -webkit-transform: translateY(-170px) scale(1.4);
     transform: translateY(-170px) scale(1.4);
@@ -459,22 +479,27 @@ section.windows.langage .liquid-bubble.bubble2::before {
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+
   100% {
     -webkit-transform: translateY(-173px) scale(1.4);
     transform: translateY(-173px) scale(1.4);
@@ -487,22 +512,27 @@ section.windows.langage .liquid-bubble.bubble2::before {
     -webkit-transform: translateY(0px) scale(0);
     transform: translateY(0px) scale(0);
   }
+
   60% {
     -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
+
   70% {
     -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
+
   80% {
     -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
+
   90% {
     -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
+  
   100% {
     -webkit-transform: translateY(-173px) scale(1.4);
     transform: translateY(-173px) scale(1.4);

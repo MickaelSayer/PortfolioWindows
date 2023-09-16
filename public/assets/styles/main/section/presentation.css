@@ -427,15 +427,18 @@ section.windows.presentation
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   20% {
     -webkit-transform: translateX(2px);
     transform: translateX(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   80% {
     -webkit-transform: translateX(4px);
     transform: translateX(4px);
@@ -448,15 +451,18 @@ section.windows.presentation
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   20% {
     -webkit-transform: translateX(2px);
     transform: translateX(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+  
   80% {
     -webkit-transform: translateX(4px);
     transform: translateX(4px);

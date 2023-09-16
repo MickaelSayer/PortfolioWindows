@@ -115,15 +115,18 @@ nav.nav-link .btn-params.active:hover .setting {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -136,15 +139,18 @@ nav.nav-link .btn-params.active:hover .setting {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -205,15 +211,18 @@ nav.nav-link .params .params-close:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -226,15 +235,18 @@ nav.nav-link .params .params-close:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -414,15 +426,18 @@ nav .nav-footer .open-session:hover img {
     -webkit-transform: translateY(0) scale(0.8);
     transform: translateY(0) scale(0.8);
   }
+
   20% {
     -webkit-transform: translateY(2px) scale(0.8);
     transform: translateY(2px) scale(0.8);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) scale(0.8);
     transform: translateY(0) scale(0.8);
   }
+
   80% {
     -webkit-transform: translateY(2.5px) scale(0.8);
     transform: translateY(2.5px) scale(0.8);
@@ -435,15 +450,18 @@ nav .nav-footer .open-session:hover img {
     -webkit-transform: translateY(0) scale(0.8);
     transform: translateY(0) scale(0.8);
   }
+
   20% {
     -webkit-transform: translateY(2px) scale(0.8);
     transform: translateY(2px) scale(0.8);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) scale(0.8);
     transform: translateY(0) scale(0.8);
   }
+
   80% {
     -webkit-transform: translateY(2.5px) scale(0.8);
     transform: translateY(2.5px) scale(0.8);
@@ -641,6 +659,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 5px;
     width: 5px;
   }
+
   25% {
     top: 1px;
     left: 1px;
@@ -649,6 +668,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 8px;
     width: 8px;
   }
+
   75% {
     top: -1px;
     left: 98%;
@@ -657,6 +677,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 8px;
     width: 8px;
   }
+
   100% {
     top: 38%;
     left: 99.5%;
@@ -676,6 +697,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 5px;
     width: 5px;
   }
+
   25% {
     top: 1px;
     left: 1px;
@@ -684,6 +706,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 8px;
     width: 8px;
   }
+
   75% {
     top: -1px;
     left: 98%;
@@ -692,6 +715,7 @@ nav .sidebar-left ul li.open:hover::before {
     height: 8px;
     width: 8px;
   }
+
   100% {
     top: 38%;
     left: 99.5%;
@@ -781,6 +805,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+
   25% {
     bottom: 1px;
     left: 1px;
@@ -792,6 +817,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+
   75% {
     bottom: -1px;
     left: 98%;
@@ -803,6 +829,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+
   100% {
     bottom: 38%;
     left: calc(100% - 4px);
@@ -828,6 +855,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+
   25% {
     bottom: 1px;
     left: 1px;
@@ -839,6 +867,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+
   75% {
     bottom: -1px;
     left: 98%;
@@ -850,6 +879,7 @@ nav .sidebar-left ul li:hover::before {
     border-bottom: 0px solid transparent;
     border-left: 0px solid transparent;
   }
+  
   100% {
     bottom: 38%;
     left: calc(100% - 4px);

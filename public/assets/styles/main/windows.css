@@ -120,15 +120,18 @@ section.windows .size:hover:after {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -141,15 +144,18 @@ section.windows .size:hover:after {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -203,15 +209,18 @@ section.windows .size:hover .extends {
     -webkit-transform: translate(-50%, -52%);
     transform: translate(-50%, -52%);
   }
+
   20% {
     -webkit-transform: translate(-50%, -2px);
     transform: translate(-50%, -2px);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -52%);
     transform: translate(-50%, -52%);
   }
+
   80% {
     -webkit-transform: translate(-50%, -4px);
     transform: translate(-50%, -4px);
@@ -224,15 +233,18 @@ section.windows .size:hover .extends {
     -webkit-transform: translate(-50%, -52%);
     transform: translate(-50%, -52%);
   }
+
   20% {
     -webkit-transform: translate(-50%, -2px);
     transform: translate(-50%, -2px);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -52%);
     transform: translate(-50%, -52%);
   }
+
   80% {
     -webkit-transform: translate(-50%, -4px);
     transform: translate(-50%, -4px);
@@ -269,15 +281,18 @@ section.windows .size:hover .narrow {
     -webkit-transform: translate(-40%, -64%);
     transform: translate(-40%, -64%);
   }
+
   20% {
     -webkit-transform: translate(-40%, -2px);
     transform: translate(-40%, -2px);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-40%, -64%);
     transform: translate(-40%, -64%);
   }
+
   80% {
     -webkit-transform: translate(-40%, -4px);
     transform: translate(-40%, -4px);
@@ -290,15 +305,18 @@ section.windows .size:hover .narrow {
     -webkit-transform: translate(-40%, -64%);
     transform: translate(-40%, -64%);
   }
+
   20% {
     -webkit-transform: translate(-40%, -2px);
     transform: translate(-40%, -2px);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-40%, -64%);
     transform: translate(-40%, -64%);
   }
+
   80% {
     -webkit-transform: translate(-40%, -4px);
     transform: translate(-40%, -4px);
@@ -372,15 +390,18 @@ section.windows .close:hover span:first-child {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   20% {
     -webkit-transform: translate(-50%, 2px) rotate(-45deg);
     transform: translate(-50%, 2px) rotate(-45deg);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   80% {
     -webkit-transform: translate(-50%, 4px) rotate(-45deg);
     transform: translate(-50%, 4px) rotate(-45deg);
@@ -392,15 +413,18 @@ section.windows .close:hover span:first-child {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   20% {
     -webkit-transform: translate(-50%, 2px) rotate(-45deg);
     transform: translate(-50%, 2px) rotate(-45deg);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   80% {
     -webkit-transform: translate(-50%, 4px) rotate(-45deg);
     transform: translate(-50%, 4px) rotate(-45deg);
@@ -418,15 +442,18 @@ section.windows .close:hover span:nth-child(2) {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
     transform: translate(-50%, -50%) rotate(45deg);
   }
+
   20% {
     -webkit-transform: translate(-50%, 2px) rotate(45deg);
     transform: translate(-50%, 2px) rotate(45deg);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
     transform: translate(-50%, -50%) rotate(45deg);
   }
+
   80% {
     -webkit-transform: translate(-50%, 4px) rotate(45deg);
     transform: translate(-50%, 4px) rotate(45deg);
@@ -439,15 +466,18 @@ section.windows .close:hover span:nth-child(2) {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
     transform: translate(-50%, -50%) rotate(45deg);
   }
+
   20% {
     -webkit-transform: translate(-50%, 2px) rotate(45deg);
     transform: translate(-50%, 2px) rotate(45deg);
   }
+
   40%,
   60% {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
     transform: translate(-50%, -50%) rotate(45deg);
   }
+
   80% {
     -webkit-transform: translate(-50%, 4px) rotate(45deg);
     transform: translate(-50%, 4px) rotate(45deg);
@@ -500,15 +530,18 @@ section.windows .tools .menu-extends:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -521,15 +554,18 @@ section.windows .tools .menu-extends:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
@@ -553,15 +589,18 @@ section.windows .tools.active .menu-extends:hover i {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(2px) rotate(180deg);
     transform: translateY(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(4px) rotate(180deg);
     transform: translateY(4px) rotate(180deg);
@@ -574,15 +613,18 @@ section.windows .tools.active .menu-extends:hover i {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(2px) rotate(180deg);
     transform: translateY(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(4px) rotate(180deg);
     transform: translateY(4px) rotate(180deg);
@@ -762,15 +804,18 @@ section.windows .tools .arrrow-before.active:hover i {
     -webkit-transform: translateY(0) scale(1.8);
     transform: translateY(0) scale(1.8);
   }
+
   20% {
     -webkit-transform: translateY(2px) scale(1.8);
     transform: translateY(2px) scale(1.8);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) scale(1.8);
     transform: translateY(0) scale(1.8);
   }
+
   80% {
     -webkit-transform: translateY(4px) scale(1.8);
     transform: translateY(4px) scale(1.8);
@@ -783,15 +828,18 @@ section.windows .tools .arrrow-before.active:hover i {
     -webkit-transform: translateY(0) scale(1.8);
     transform: translateY(0) scale(1.8);
   }
+
   20% {
     -webkit-transform: translateY(2px) scale(1.8);
     transform: translateY(2px) scale(1.8);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0) scale(1.8);
     transform: translateY(0) scale(1.8);
   }
+
   80% {
     -webkit-transform: translateY(4px) scale(1.8);
     transform: translateY(4px) scale(1.8);
@@ -903,15 +951,18 @@ section.windows .container-content .extends-sidebar:hover {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
     transform: translateY(-50%) translateX(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(-50%) translateX(2px) rotate(180deg);
     transform: translateY(-50%) translateX(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
     transform: translateY(-50%) translateX(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(-50%) translateX(4px) rotate(180deg);
     transform: translateY(-50%) translateX(4px) rotate(180deg);
@@ -924,15 +975,18 @@ section.windows .container-content .extends-sidebar:hover {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
     transform: translateY(-50%) translateX(0) rotate(180deg);
   }
+
   20% {
     -webkit-transform: translateY(-50%) translateX(2px) rotate(180deg);
     transform: translateY(-50%) translateX(2px) rotate(180deg);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
     transform: translateY(-50%) translateX(0) rotate(180deg);
   }
+
   80% {
     -webkit-transform: translateY(-50%) translateX(4px) rotate(180deg);
     transform: translateY(-50%) translateX(4px) rotate(180deg);
@@ -962,15 +1016,18 @@ section.windows .container-content .extends-sidebar i {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
     transform: translateY(-50%) translateX(0) rotate(0);
   }
+
   20% {
     -webkit-transform: translateY(-50%) translateX(2px) rotate(0);
     transform: translateY(-50%) translateX(2px) rotate(0);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
     transform: translateY(-50%) translateX(0) rotate(0);
   }
+
   80% {
     -webkit-transform: translateY(-50%) translateX(4px) rotate(0);
     transform: translateY(-50%) translateX(4px) rotate(0);
@@ -983,15 +1040,18 @@ section.windows .container-content .extends-sidebar i {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
     transform: translateY(-50%) translateX(0) rotate(0);
   }
+
   20% {
     -webkit-transform: translateY(-50%) translateX(2px) rotate(0);
     transform: translateY(-50%) translateX(2px) rotate(0);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
     transform: translateY(-50%) translateX(0) rotate(0);
   }
+
   80% {
     -webkit-transform: translateY(-50%) translateX(4px) rotate(0);
     transform: translateY(-50%) translateX(4px) rotate(0);
@@ -1085,15 +1145,18 @@ section.windows .icon-slider-left:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(2.5px);
     transform: translateY(2.5px);
@@ -1106,15 +1169,18 @@ section.windows .icon-slider-left:hover i {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(2.5px);
     transform: translateY(2.5px);
@@ -1323,15 +1389,18 @@ section.windows .container-folder.open {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
       transform: translateY(-100%) translateX(0) rotate(0);
     }
+
     20% {
       -webkit-transform: translateY(-100%) translateX(-2px) rotate(0);
       transform: translateY(-100%) translateX(-2px) rotate(0);
     }
+
     40%,
     60% {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
       transform: translateY(-100%) translateX(0) rotate(0);
     }
+
     80% {
       -webkit-transform: translateY(-100%) translateX(-4px) rotate(0);
       transform: translateY(-100%) translateX(-4px) rotate(0);
@@ -1344,15 +1413,18 @@ section.windows .container-folder.open {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
       transform: translateY(-100%) translateX(0) rotate(0);
     }
+
     20% {
       -webkit-transform: translateY(-100%) translateX(-2px) rotate(0);
       transform: translateY(-100%) translateX(-2px) rotate(0);
     }
+
     40%,
     60% {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
       transform: translateY(-100%) translateX(0) rotate(0);
     }
+
     80% {
       -webkit-transform: translateY(-100%) translateX(-4px) rotate(0);
       transform: translateY(-100%) translateX(-4px) rotate(0);
@@ -1374,15 +1446,18 @@ section.windows .container-folder.open {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
       transform: translateY(-50%) translateX(0) rotate(180deg);
     }
+
     20% {
       -webkit-transform: translateY(-50%) translateX(-2px) rotate(180deg);
       transform: translateY(-50%) translateX(-2px) rotate(180deg);
     }
+
     40%,
     60% {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
       transform: translateY(-50%) translateX(0) rotate(180deg);
     }
+
     80% {
       -webkit-transform: translateY(-50%) translateX(-4px) rotate(180deg);
       transform: translateY(-50%) translateX(-4px) rotate(180deg);
@@ -1395,15 +1470,18 @@ section.windows .container-folder.open {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
       transform: translateY(-50%) translateX(0) rotate(180deg);
     }
+
     20% {
       -webkit-transform: translateY(-50%) translateX(-2px) rotate(180deg);
       transform: translateY(-50%) translateX(-2px) rotate(180deg);
     }
+
     40%,
     60% {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
       transform: translateY(-50%) translateX(0) rotate(180deg);
     }
+
     80% {
       -webkit-transform: translateY(-50%) translateX(-4px) rotate(180deg);
       transform: translateY(-50%) translateX(-4px) rotate(180deg);

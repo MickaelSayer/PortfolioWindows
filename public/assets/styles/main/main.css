@@ -385,15 +385,18 @@ main .gestion-app.transparent:hover {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -406,15 +409,18 @@ main .gestion-app.transparent:hover {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
+
   40%,
   60% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   80% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
@@ -565,11 +571,13 @@ main .container-windows-open.delete {
     -webkit-transform: rotate(0deg) translateX(0);
     transform: rotate(0deg) translateX(0);
   }
+
   25%,
   75% {
     -webkit-transform: rotate(-1deg) translateX(-1px);
     transform: rotate(-1deg) translateX(-1px);
   }
+
   50% {
     -webkit-transform: rotate(1deg) translateX(1px);
     transform: rotate(1deg) translateX(1px);
@@ -582,11 +590,13 @@ main .container-windows-open.delete {
     -webkit-transform: rotate(0deg) translateX(0);
     transform: rotate(0deg) translateX(0);
   }
+
   25%,
   75% {
     -webkit-transform: rotate(-1deg) translateX(-1px);
     transform: rotate(-1deg) translateX(-1px);
   }
+  
   50% {
     -webkit-transform: rotate(1deg) translateX(1px);
     transform: rotate(1deg) translateX(1px);
