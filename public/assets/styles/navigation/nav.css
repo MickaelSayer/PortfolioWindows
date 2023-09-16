@@ -574,7 +574,6 @@ nav .detail-content-top span:nth-child(2) {
 
 nav .sidebar-left ul {
   position: relative;
-  margin-top: 5px;
 }
 
 nav .sidebar-left ul li {
@@ -1018,6 +1017,9 @@ nav .sidebar-right .content-mid::after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     overflow-y: auto;
   }
 

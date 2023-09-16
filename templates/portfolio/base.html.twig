@@ -13,14 +13,14 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('assets/scripts/base.js') }}"></script>
-   {# <script src="{{ asset('assets/scripts/loading.js') }}"></script>#}
+    <script src="{{ asset('assets/scripts/loading.js') }}"></script>
     <script src="https://kit.fontawesome.com/ecb3161233.js" crossorigin="anonymous"></script>
     {% block javascripts %}{% endblock %}
 
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/pictures/icon/favicon.ico') }}" />
 </head>
 
-{#{% include "portfolio/__partials/loading.html.twig" %}#}
+{% include "portfolio/__partials/loading.html.twig" %}
 
 {% block header %}
 {% endblock %}
