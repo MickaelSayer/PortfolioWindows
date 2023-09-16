@@ -773,7 +773,7 @@ nav .sidebar-left ul li.open .content-presentation::before {
   transform: scale(1);
 }
 
-nav .sidebar-left ul li:hover .content-presentation:before {
+nav .sidebar-left ul li:hover .content-presentation::before {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -789,11 +789,11 @@ nav .sidebar-left ul li:hover::before {
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  -webkit-animation: liABeforeSlide 0.8s ease forwards;
-  animation: liABeforeSlide 0.8s ease forwards;
+  -webkit-animation: liabeforeslide 0.8s ease forwards;
+  animation: liabeforeslide 0.8s ease forwards;
 }
 
-@-webkit-keyframes liABeforeSlide {
+@-webkit-keyframes liabeforeslide {
   0% {
     bottom: 38%;
     left: 1px;
@@ -843,7 +843,7 @@ nav .sidebar-left ul li:hover::before {
   }
 }
 
-@keyframes liABeforeSlide {
+@keyframes liabeforeslide {
   0% {
     bottom: 38%;
     left: 1px;

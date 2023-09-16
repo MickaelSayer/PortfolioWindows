@@ -307,8 +307,8 @@ section.windows.presentation
   -webkit-transform: translateY(-20px);
   -ms-transform: translateY(-20px);
   transform: translateY(-20px);
-  -webkit-box-shadow: 0px 20px 20px 0px grey;
-  box-shadow: 0px 20px 20px 0px grey;
+  -webkit-box-shadow: 0 20px 20px 0 grey;
+  box-shadow: 0 20px 20px 0 grey;
 }
 
 section.windows.presentation .container-folder.youtube .profil-name {
@@ -501,9 +501,9 @@ section.windows.presentation
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: 1s ease;
   -o-transition: 1s ease;
   transition: 1s ease;

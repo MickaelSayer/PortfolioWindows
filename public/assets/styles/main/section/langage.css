@@ -96,7 +96,7 @@ section.windows.langage .legend-lvl li {
   justify-content: flex-start;
 }
 
-section.windows.langage .legend-lvl li:before {
+section.windows.langage .legend-lvl li::before {
   content: "";
   width: 30px;
   height: 30px;
@@ -265,8 +265,8 @@ section.windows.langage .langage-name::before {
   transform: translateY(-50%);
   right: 5px;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 2px 2px 0px #000000;
-  box-shadow: 0px 2px 2px 0px #000000;
+  -webkit-box-shadow: 0px 2px 2px 0px #000;
+  box-shadow: 0px 2px 2px 0px #000;
 }
 
 section.windows.langage .liquid-bubble {
@@ -456,8 +456,8 @@ section.windows.langage
   .liquid-bubble.bubble3 {
   left: 33px;
   top: 82%;
-  -webkit-animation-name: bubbleUp3;
-  animation-name: bubbleUp3;
+  -webkit-animation-name: bubbleup3;
+  animation-name: bubbleup3;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }

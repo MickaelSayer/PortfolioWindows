@@ -5,7 +5,7 @@ section.windows.diplome {
 }
 
 section.windows.diplome .container-folder.developper {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
