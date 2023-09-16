@@ -989,7 +989,7 @@ nav .sidebar-right .content-mid::after {
     border-right: none;
     color: white;
     background: none;
-    height: 77%;
+    height: 88%;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
@@ -1018,8 +1018,8 @@ nav .sidebar-right .content-mid::after {
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     overflow-y: auto;
   }
 
@@ -1100,5 +1100,11 @@ nav .sidebar-right .content-mid::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  nav .sidebar-left {
+    height: 77%;
   }
 }

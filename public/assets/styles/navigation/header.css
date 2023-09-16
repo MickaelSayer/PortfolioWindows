@@ -607,7 +607,7 @@ header .icon-extends-right .separator {
 
   header .logo-windows {
     position: absolute;
-    top: 80vh;
+    top: 90vh;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -638,5 +638,11 @@ header .icon-extends-right .separator {
 
   header .logo-windows.transparent:hover {
     opacity: 1;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  header .logo-windows {
+    top: 80vh;
   }
 }

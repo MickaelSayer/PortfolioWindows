@@ -331,7 +331,7 @@ main .nav-app li img {
 
 main .gestion-app {
   position: absolute;
-  bottom: 21%;
+  bottom: 11%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(0);
   -ms-transform: translateX(-50%) translateY(0);
@@ -432,8 +432,8 @@ main .content-gestion-app {
   border-radius: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 10px;
   z-index: 3;
 }
@@ -446,18 +446,18 @@ main .container-gestion-app {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow-y: auto;
 }
 
@@ -523,8 +523,8 @@ main .content-gestion-app .no-content {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-size: clamp(10px, 3vw, 14px);
   width: 100%;
   text-align: center;
@@ -627,7 +627,13 @@ main .container-windows-open .title-windows {
   color: white;
   font-weight: 500;
   background: -o-linear-gradient(top, #0165b5, #034587);
-  background: -webkit-gradient(linear, left top, left bottom, from(#0165b5), to(#034587));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#0165b5),
+    to(#034587)
+  );
   background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
@@ -705,7 +711,7 @@ main .container-windows-open.delete .close-app {
 
 main .inactive-windows-button {
   position: absolute;
-  bottom: calc(21% - 26px);
+  bottom: calc(11% - 26px);
   left: calc(50% - -42px);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -842,5 +848,15 @@ main .inactive-windows-button:hover .visible-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main .gestion-app {
+    bottom: 21%;
+  }
+
+  main .inactive-windows-button {
+    bottom: calc(21% - 26px);
   }
 }
