@@ -1,3 +1,6 @@
+/**
+ * Gére l'horloge de la barre des tâches
+ */
 function actualiserHorloge() {
     const date = new Date();
     const heure = date.getHours().toString().padStart(2, '0');
