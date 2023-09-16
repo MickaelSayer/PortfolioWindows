@@ -12,7 +12,7 @@ function movieScrollingNumbers() {
 }
 
 function resetNetflixLoisirsSlider() {
-    sliderFilmDist = [];
+    const sliderFilmDist = [];
 
     $('section.windows .container-folder.netflix-loisirs .list-netflix-loisirs').css('transform', 'translateX(0px)');
     $('section.windows .container-folder.netflix-loisirs .before-netflix-loisirs').addClass('inactive');
