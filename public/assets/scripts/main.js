@@ -28,7 +28,7 @@ $(document).ready(function () {
             let windowsTitle = $(value).find('.windows-name h1').text();
 
             $(containerWindows[index]).removeClass('focus');
-            if (windowsFocus == 2) {
+            if (windowsFocus === 2) {
                 $(containerWindows[index]).addClass('focus');
             }
             $(containerWindows[index]).find('.title-windows').html(windowsTitle);

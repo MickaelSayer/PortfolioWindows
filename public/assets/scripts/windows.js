@@ -51,11 +51,11 @@ $(document).ready(function () {
         windowsElement.removeClass('active full-size');
         $(`.navbar #${dataLink}`).removeClass('active selected');
 
-        if (windowsElement.css('z-index') == 2) {
+        if (windowsElement.css('z-index') === 2) {
             windowsElement.css('z-index', '1');
 
-            const windowsPrevVoid = windowsElement.prev('section.windows.active').length == 0;
-            const windowsNextVoid = windowsElement.next('section.windows.active').length == 0;
+            const windowsPrevVoid = windowsElement.prev('section.windows.active').length === 0;
+            const windowsNextVoid = windowsElement.next('section.windows.active').length === 0;
 
             if (!windowsPrevVoid && windowsNextVoid) {
                 windowsElement.prev('section.windows.active').css('z-index', '2');
