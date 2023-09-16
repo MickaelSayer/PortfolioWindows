@@ -634,7 +634,7 @@ section.windows.presentation
   }
 }
 
-@media screen and (max-width: 848px) {
+@media screen and (max-width <= 848px) {
   section.windows.presentation.presentation.active {
     -webkit-transform: translate(0%, 40px);
     -ms-transform: translate(0%, 40px);

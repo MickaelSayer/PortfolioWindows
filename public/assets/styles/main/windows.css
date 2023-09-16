@@ -1491,7 +1491,7 @@ section.windows .container-folder.open {
   }
 }
 
-@media screen and (max-width: 848px) {
+@media screen and (max-width <= 848px) {
   section.windows {
     width: 100%;
     height: calc(100% - 40px);

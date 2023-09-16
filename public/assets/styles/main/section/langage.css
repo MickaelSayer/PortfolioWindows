@@ -544,7 +544,7 @@ section.windows.langage .liquid-bubble.bubble3::before {
   transform: rotate(21deg);
 }
 
-@media screen and (max-width: 848px) {
+@media screen and (max-width <= 848px) {
   section.windows.langage.active {
     -webkit-transform: translate(0%, 40px);
     -ms-transform: translate(0%, 40px);

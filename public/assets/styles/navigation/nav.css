@@ -1008,7 +1008,7 @@ nav .sidebar-right .content-mid::after {
   background-color: #99a8df;
 }
 
-@media screen and (max-width: 848px) {
+@media screen and (max-width <= 848px) {
   nav .container-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
