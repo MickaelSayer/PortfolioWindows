@@ -367,8 +367,8 @@ main .gestion-app.active {
 }
 
 main .gestion-app:hover i {
-  -webkit-animation: bounceLoop14 1s infinite;
-  animation: bounceLoop14 1s infinite;
+  -webkit-animation: bounceloop14 1s infinite;
+  animation: bounceloop14 1s infinite;
 }
 
 main .gestion-app.transparent {
@@ -379,7 +379,7 @@ main .gestion-app.transparent:hover {
   opacity: 1;
 }
 
-@-webkit-keyframes bounceLoop14 {
+@-webkit-keyframes bounceloop14 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -400,7 +400,7 @@ main .gestion-app.transparent:hover {
   }
 }
 
-@keyframes bounceLoop14 {
+@keyframes bounceloop14 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -513,8 +513,8 @@ main .content-gestion-app .content-btn div:hover {
 }
 
 main .content-gestion-app .content-btn div:hover i {
-  -webkit-animation: bounceLoop14 1s infinite;
-  animation: bounceLoop14 1s infinite;
+  -webkit-animation: bounceloop14 1s infinite;
+  animation: bounceloop14 1s infinite;
 }
 
 main .content-gestion-app .no-content {
@@ -780,13 +780,13 @@ main .inactive-windows-button.active .invisible-nav {
 }
 
 main .inactive-windows-button:hover .invisible-nav {
-  -webkit-animation: bounceLoop6 1s infinite;
-  animation: bounceLoop6 1s infinite;
+  -webkit-animation: bounceloop6 1s infinite;
+  animation: bounceloop6 1s infinite;
 }
 
 main .inactive-windows-button:hover .visible-nav {
-  -webkit-animation: bounceLoop6 1s infinite;
-  animation: bounceLoop6 1s infinite;
+  -webkit-animation: bounceloop6 1s infinite;
+  animation: bounceloop6 1s infinite;
 }
 
 @media screen and (max-width: 848px) {

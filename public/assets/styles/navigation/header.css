@@ -73,11 +73,11 @@ header .container-left .icon-extends:hover {
 
 header .container-left .icon-extends-right:hover i.fa-caret-up,
 header .container-left .icon-extends:hover i {
-  -webkit-animation: bounceLoop6 1s infinite;
-  animation: bounceLoop6 1s infinite;
+  -webkit-animation: bounceloop6 1s infinite;
+  animation: bounceloop6 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop6 {
+@-webkit-keyframes bounceloop6 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -98,7 +98,7 @@ header .container-left .icon-extends:hover i {
   }
 }
 
-@keyframes bounceLoop6 {
+@keyframes bounceloop6 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -121,11 +121,11 @@ header .container-left .icon-extends:hover i {
 
 header .container-left .icon-extends-right:hover i.fa-caret-up.active,
 header .container-left .icon-extends:hover i.active {
-  -webkit-animation: bounceLoop7 1s infinite;
-  animation: bounceLoop7 1s infinite;
+  -webkit-animation: bounceloop7 1s infinite;
+  animation: bounceloop7 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop7 {
+@-webkit-keyframes bounceloop7 {
   0%,
   100% {
     -webkit-transform: translateY(0) rotate(180deg);
@@ -146,7 +146,7 @@ header .container-left .icon-extends:hover i.active {
   }
 }
 
-@keyframes bounceLoop7 {
+@keyframes bounceloop7 {
   0%,
   100% {
     -webkit-transform: translateY(0) rotate(180deg);
@@ -233,11 +233,11 @@ header .logo-windows img {
 }
 
 header .logo-windows:hover img {
-  -webkit-animation: bounceLoop6 1s infinite;
-  animation: bounceLoop6 1s infinite;
+  -webkit-animation: bounceloop6 1s infinite;
+  animation: bounceloop6 1s infinite;
 }
 
-@keyframes bounceLoop6 {
+@keyframes bounceloop6 {
   0%,
   100% {
     -webkit-transform: translateY(0);

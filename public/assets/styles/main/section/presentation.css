@@ -417,11 +417,11 @@ section.windows.presentation
   .container-folder.netflix-loisirs
   .next-netflix-loisirs:hover
   i {
-  -webkit-animation: bounceLoop20 1s infinite;
-  animation: bounceLoop20 1s infinite;
+  -webkit-animation: bounceloop20 1s infinite;
+  animation: bounceloop20 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop20 {
+@-webkit-keyframes bounceloop20 {
   0%,
   100% {
     -webkit-transform: translateX(0);
@@ -442,7 +442,7 @@ section.windows.presentation
   }
 }
 
-@keyframes bounceLoop20 {
+@keyframes bounceloop20 {
   0%,
   100% {
     -webkit-transform: translateX(0);

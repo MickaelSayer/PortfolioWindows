@@ -110,11 +110,11 @@ section.windows .minus:hover {
 
 section.windows .minus:hover:after,
 section.windows .size:hover:after {
-  -webkit-animation: bounceLoop 1s infinite;
-  animation: bounceLoop 1s infinite;
+  -webkit-animation: bounceloop 1s infinite;
+  animation: bounceloop 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop {
+@-webkit-keyframes bounceloop {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -135,7 +135,7 @@ section.windows .size:hover:after {
   }
 }
 
-@keyframes bounceLoop {
+@keyframes bounceloop {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -193,11 +193,11 @@ section.windows .extends {
 }
 
 section.windows .size:hover .extends {
-  -webkit-animation: bounceLoop2 1s infinite;
-  animation: bounceLoop2 1s infinite;
+  -webkit-animation: bounceloop2 1s infinite;
+  animation: bounceloop2 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop2 {
+@-webkit-keyframes bounceloop2 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -52%);
@@ -218,7 +218,7 @@ section.windows .size:hover .extends {
   }
 }
 
-@keyframes bounceLoop2 {
+@keyframes bounceloop2 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -52%);
@@ -259,11 +259,11 @@ section.windows .narrow {
 }
 
 section.windows .size:hover .narrow {
-  -webkit-animation: bounceLoop3 1s infinite;
-  animation: bounceLoop3 1s infinite;
+  -webkit-animation: bounceloop3 1s infinite;
+  animation: bounceloop3 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop3 {
+@-webkit-keyframes bounceloop3 {
   0%,
   100% {
     -webkit-transform: translate(-40%, -64%);
@@ -284,7 +284,7 @@ section.windows .size:hover .narrow {
   }
 }
 
-@keyframes bounceLoop3 {
+@keyframes bounceloop3 {
   0%,
   100% {
     -webkit-transform: translate(-40%, -64%);
@@ -363,10 +363,10 @@ section.windows .close span:nth-child(2) {
 }
 
 section.windows .close:hover span:first-child {
-  -webkit-animation: bounceLoop4 1s infinite;
-  animation: bounceLoop4 1s infinite;
+  -webkit-animation: bounceloop4 1s infinite;
+  animation: bounceloop4 1s infinite;
 }
-@-webkit-keyframes bounceLoop4 {
+@-webkit-keyframes bounceloop4 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
@@ -386,7 +386,7 @@ section.windows .close:hover span:first-child {
     transform: translate(-50%, 4px) rotate(-45deg);
   }
 }
-@keyframes bounceLoop4 {
+@keyframes bounceloop4 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
@@ -408,11 +408,11 @@ section.windows .close:hover span:first-child {
 }
 
 section.windows .close:hover span:nth-child(2) {
-  -webkit-animation: bounceLoop5 1s infinite;
-  animation: bounceLoop5 1s infinite;
+  -webkit-animation: bounceloop5 1s infinite;
+  animation: bounceloop5 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop5 {
+@-webkit-keyframes bounceloop5 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -433,7 +433,7 @@ section.windows .close:hover span:nth-child(2) {
   }
 }
 
-@keyframes bounceLoop5 {
+@keyframes bounceloop5 {
   0%,
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -490,11 +490,11 @@ section.windows .tools .menu-extends i {
 
 section.windows .tools .menu-extends:hover i {
   color: var(--green-ligth);
-  -webkit-animation: bounceLoop17 1s infinite;
-  animation: bounceLoop17 1s infinite;
+  -webkit-animation: bounceloop17 1s infinite;
+  animation: bounceloop17 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop17 {
+@-webkit-keyframes bounceloop17 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -515,7 +515,7 @@ section.windows .tools .menu-extends:hover i {
   }
 }
 
-@keyframes bounceLoop17 {
+@keyframes bounceloop17 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -543,11 +543,11 @@ section.windows .tools.active .menu-extends i {
 }
 
 section.windows .tools.active .menu-extends:hover i {
-  -webkit-animation: bounceLoop18 1s infinite;
-  animation: bounceLoop18 1s infinite;
+  -webkit-animation: bounceloop18 1s infinite;
+  animation: bounceloop18 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop18 {
+@-webkit-keyframes bounceloop18 {
   0%,
   100% {
     -webkit-transform: translateY(0) rotate(180deg);
@@ -568,7 +568,7 @@ section.windows .tools.active .menu-extends:hover i {
   }
 }
 
-@keyframes bounceLoop18 {
+@keyframes bounceloop18 {
   0%,
   100% {
     -webkit-transform: translateY(0) rotate(180deg);
@@ -688,8 +688,8 @@ section.windows .fil-ariane .address-before.active i {
 
 section.windows .fil-ariane .address-before.active:hover i {
   color: var(--green-ligth);
-  -webkit-animation: bounceLoop17 1s infinite;
-  animation: bounceLoop17 1s infinite;
+  -webkit-animation: bounceloop17 1s infinite;
+  animation: bounceloop17 1s infinite;
 }
 
 section.windows .content-menu img {
@@ -752,11 +752,11 @@ section.windows .tools .arrrow-before.active {
 
 section.windows .tools .arrrow-before.active:hover i {
   color: var(--green-ligth);
-  -webkit-animation: bounceLoop19 1s infinite;
-  animation: bounceLoop19 1s infinite;
+  -webkit-animation: bounceloop19 1s infinite;
+  animation: bounceloop19 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop19 {
+@-webkit-keyframes bounceloop19 {
   0%,
   100% {
     -webkit-transform: translateY(0) scale(1.8);
@@ -777,7 +777,7 @@ section.windows .tools .arrrow-before.active:hover i {
   }
 }
 
-@keyframes bounceLoop19 {
+@keyframes bounceloop19 {
   0%,
   100% {
     -webkit-transform: translateY(0) scale(1.8);
@@ -893,11 +893,11 @@ section.windows .container-content .extends-sidebar {
 
 section.windows .container-content .extends-sidebar:hover {
   color: var(--green-ligth);
-  -webkit-animation: bounceLoop8 1s infinite;
-  animation: bounceLoop8 1s infinite;
+  -webkit-animation: bounceloop8 1s infinite;
+  animation: bounceloop8 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop8 {
+@-webkit-keyframes bounceloop8 {
   0%,
   100% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
@@ -918,7 +918,7 @@ section.windows .container-content .extends-sidebar:hover {
   }
 }
 
-@keyframes bounceLoop8 {
+@keyframes bounceloop8 {
   0%,
   100% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
@@ -948,15 +948,15 @@ section.windows .container-content.active .extends-sidebar {
 
 section.windows .container-content.active .extends-sidebar:hover {
   color: var(--green-ligth);
-  -webkit-animation: bounceLoop9 1s infinite;
-  animation: bounceLoop9 1s infinite;
+  -webkit-animation: bounceloop9 1s infinite;
+  animation: bounceloop9 1s infinite;
 }
 
 section.windows .container-content .extends-sidebar i {
   line-height: 0;
 }
 
-@-webkit-keyframes bounceLoop9 {
+@-webkit-keyframes bounceloop9 {
   0%,
   100% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
@@ -977,7 +977,7 @@ section.windows .container-content .extends-sidebar i {
   }
 }
 
-@keyframes bounceLoop9 {
+@keyframes bounceloop9 {
   0%,
   100% {
     -webkit-transform: translateY(-50%) translateX(0) rotate(0);
@@ -1075,11 +1075,11 @@ section.windows .icon-slider-left {
 }
 
 section.windows .icon-slider-left:hover i {
-  -webkit-animation: bounceLoop10 1s infinite;
-  animation: bounceLoop10 1s infinite;
+  -webkit-animation: bounceloop10 1s infinite;
+  animation: bounceloop10 1s infinite;
 }
 
-@-webkit-keyframes bounceLoop10 {
+@-webkit-keyframes bounceloop10 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -1100,7 +1100,7 @@ section.windows .icon-slider-left:hover i {
   }
 }
 
-@keyframes bounceLoop10 {
+@keyframes bounceloop10 {
   0%,
   100% {
     -webkit-transform: translateY(0);
@@ -1313,11 +1313,11 @@ section.windows .container-folder.open {
     -webkit-transform: translateY(-100%) translateX(0) rotate(0deg);
     -ms-transform: translateY(-100%) translateX(0) rotate(0deg);
     transform: translateY(-100%) translateX(0) rotate(0deg);
-    -webkit-animation: bounceLoop12 1s infinite;
-    animation: bounceLoop12 1s infinite;
+    -webkit-animation: bounceloop12 1s infinite;
+    animation: bounceloop12 1s infinite;
   }
 
-  @-webkit-keyframes bounceLoop12 {
+  @-webkit-keyframes bounceloop12 {
     0%,
     100% {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
@@ -1338,7 +1338,7 @@ section.windows .container-folder.open {
     }
   }
 
-  @keyframes bounceLoop12 {
+  @keyframes bounceloop12 {
     0%,
     100% {
       -webkit-transform: translateY(-100%) translateX(0) rotate(0);
@@ -1364,11 +1364,11 @@ section.windows .container-folder.open {
     -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
     -ms-transform: translateY(-50%) translateX(0) rotate(180deg);
     transform: translateY(-50%) translateX(0) rotate(180deg);
-    -webkit-animation: bounceLoop13 1s infinite;
-    animation: bounceLoop13 1s infinite;
+    -webkit-animation: bounceloop13 1s infinite;
+    animation: bounceloop13 1s infinite;
   }
 
-  @-webkit-keyframes bounceLoop13 {
+  @-webkit-keyframes bounceloop13 {
     0%,
     100% {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);
@@ -1389,7 +1389,7 @@ section.windows .container-folder.open {
     }
   }
 
-  @keyframes bounceLoop13 {
+  @keyframes bounceloop13 {
     0%,
     100% {
       -webkit-transform: translateY(-50%) translateX(0) rotate(180deg);

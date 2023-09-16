@@ -272,8 +272,8 @@ section.windows.experience .content-notif .closing-notif:hover {
 }
 
 section.windows.experience .content-notif .closing-notif:hover i {
-  -webkit-animation: bounceLoop 1s infinite;
-  animation: bounceLoop 1s infinite;
+  -webkit-animation: bounceloop 1s infinite;
+  animation: bounceloop 1s infinite;
 }
 
 section.windows.experience .container-folder.todolist {
