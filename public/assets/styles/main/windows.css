@@ -1444,7 +1444,7 @@ section.windows .container-folder.open {
   }
 
   section.windows .container-content.active .content-section {
-    display: block;
+    display: flex;
     width: 100%;
   }
 
