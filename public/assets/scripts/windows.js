@@ -32,6 +32,9 @@ function resetWindowsOpen(currentWindows) {
     windowsOpen.find('.fil-ariane .address-before.active').removeClass('active');
     windowsOpen.find('.path-address').html(currentWindows + '/');
     windowsOpen.find('.container-icon.selected').removeClass('selected');
+    windowsOpen.find('.container-content.active').removeClass('active');
+    windowsOpen.find('.container-sildebar-left ul.active').removeClass('active');
+    windowsOpen.find('.container-content .icon-slider-left:not("active")').addClass('active');
 
     folderOpen[currentWindows] = [];
     pathOpen[currentWindows] = [];
