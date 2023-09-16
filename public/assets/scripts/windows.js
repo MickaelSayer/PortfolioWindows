@@ -1,6 +1,10 @@
 const mediaQuery1139 = window.matchMedia("(max-width: 1139px)");
 const mediaQuery848 = window.matchMedia("(max-width: 848px)");
 
+/**
+ * Détermine le nombre de films à faire défiler en fonction de la taille de l'écran.
+ * @returns {number} - Le nombre de films à faire défiler.
+ */
 function movieScrollingNumbers() {
     if (mediaQuery848.matches) {
         return 1;
@@ -11,6 +15,10 @@ function movieScrollingNumbers() {
     }
 }
 
+/**
+ * Réinitialise le slider Netflix Loisirs.
+ * @returns {Array} - Un tableau vide représentant les distances du slider.
+ */
 function resetNetflixLoisirsSlider() {
     const sliderFilmDist = [];
 
@@ -25,6 +33,10 @@ const folderOpen = [];
 const pathOpen = [];
 const folderSelected = [];
 
+/**
+ * Réinitialise l'état des fenêtres ouvertes.
+ * @param {*} currentWindows - La fenêtre actuelle à réinitialiser.
+ */
 function resetWindowsOpen(currentWindows) {
     const windowsOpen = $('section.windows.' + currentWindows);
     windowsOpen.find('.container-folder.open').removeClass('open');
@@ -41,6 +53,10 @@ function resetWindowsOpen(currentWindows) {
     folderSelected[currentWindows] = [];
 }
 
+/**
+ * Réinitialise l'affichage du calendrier d'expérience dans une fenêtre ouverte.
+ * @param {*} windowsOpen - La fenêtre ouverte contenant le calendrier.
+ */
 function resetExperienceCalendar(windowsOpen) {
     $(windowsOpen).find('.content-notif.expand-notif').removeClass('expand-notif');
     $(windowsOpen).find('.number-day.event-formation.inactive').removeClass('inactive');
@@ -67,7 +83,8 @@ $(document).ready(function () {
             } else if (!windowsPrevVoid && !windowsNextVoid) {
                 windowsElement.next('section.windows.active').css('z-index', '2');
             } else if (windowsPrevVoid && windowsNextVoid) {
-                $('section.windows.active').last().css('z-index', '2');
+                const lastWindowsActive = windowsElement.hasClass('.active').last();
+                lastWindowsActive.css('z-index', '2');
             }
         }
 
