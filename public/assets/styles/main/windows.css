@@ -1290,6 +1290,7 @@ section.windows .container-folder.open {
   section.windows .container-content.active .sidebar-left {
     display: block;
     width: 100%;
+    overflow-y: auto;
   }
 
   section.windows .container-content.active .content-section {
