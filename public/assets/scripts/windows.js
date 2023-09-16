@@ -73,18 +73,11 @@ $(document).ready(function () {
         if (windowsElement.css('z-index') === 2) {
             windowsElement.css('z-index', '1');
 
-            const windowsPrevVoid = windowsElement.prev('section.windows.active').length === 0;
-            const windowsNextVoid = windowsElement.next('section.windows.active').length === 0;
-
-            if (!windowsPrevVoid && windowsNextVoid) {
-                windowsElement.prev('section.windows.active').css('z-index', '2');
-            } else if (!windowsNextVoid && windowsPrevVoid) {
-                windowsElement.next('section.windows.active').css('z-index', '2');
-            } else if (!windowsPrevVoid && !windowsNextVoid) {
-                windowsElement.next('section.windows.active').css('z-index', '2');
-            } else if (windowsPrevVoid && windowsNextVoid) {
-                const lastWindowsActive = windowsElement.hasClass('.active').last();
-                lastWindowsActive.css('z-index', '2');
+            const prevActive = windowsElement.prev('section.windows.active');
+            const nextActive = windowsElement.next('section.windows.active');
+        
+            if (prevActive.length || nextActive.length) {
+                (prevActive.length ? prevActive : nextActive).css('z-index', '2');
             }
         }
 
