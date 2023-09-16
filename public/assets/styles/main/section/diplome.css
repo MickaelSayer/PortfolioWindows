@@ -230,7 +230,7 @@ section.windows.diplome .container-todolist li::after {
   background-size: cover;
 }
 
-@media screen and (max-width <= 848px) {
+@media screen and (max-width: 848px) {
   section.windows.diplome.active {
     -webkit-transform: translate(0%, 40px);
     -ms-transform: translate(0%, 40px);

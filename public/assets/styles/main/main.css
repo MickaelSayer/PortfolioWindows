@@ -721,7 +721,7 @@ main .inactive-windows-button:hover .visible-nav {
   animation: bounceloop6 1s infinite;
 }
 
-@media screen and (max-width <= 848px) {
+@media screen and (max-width: 848px) {
   main {
     height: 100vh;
   }
@@ -783,7 +783,7 @@ main .inactive-windows-button:hover .visible-nav {
   }
 }
 
-@media screen and (max-width <= 848px) and (orientation: landscape) {
+@media screen and (max-width: 848px) and (orientation: landscape) {
   main .gestion-app {
     bottom: 21%;
   }
