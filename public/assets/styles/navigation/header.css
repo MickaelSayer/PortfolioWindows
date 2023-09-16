@@ -359,8 +359,8 @@ header .task.active {
 }
 
 header .task.selected {
-  -webkit-box-shadow: inset 0px 0px 8px 5px #1f5081;
-  box-shadow: inset 0px 0px 8px 5px #1f5081;
+  -webkit-box-shadow: inset 0 0 8px 5px #1f5081;
+  box-shadow: inset 0 0 8px 5px #1f5081;
 }
 
 header .task .content-task {

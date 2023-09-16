@@ -639,8 +639,8 @@ nav .sidebar-left ul li:hover::after {
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  -webkit-animation: liAfterSlide 0.8s ease forwards;
-  animation: liAfterSlide 0.8s ease forwards;
+  -webkit-animation: liafterslide 0.8s ease forwards;
+  animation: liafterslide 0.8s ease forwards;
 }
 
 nav .sidebar-left ul li.open:hover::after,
@@ -650,7 +650,7 @@ nav .sidebar-left ul li.open:hover::before {
   animation: none;
 }
 
-@-webkit-keyframes liAfterSlide {
+@-webkit-keyframes liafterslide {
   0% {
     top: 38%;
     left: 1px;
@@ -688,7 +688,7 @@ nav .sidebar-left ul li.open:hover::before {
   }
 }
 
-@keyframes liAfterSlide {
+@keyframes liafterslide {
   0% {
     top: 38%;
     left: 1px;
