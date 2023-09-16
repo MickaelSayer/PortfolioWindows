@@ -1136,7 +1136,7 @@ nav .sidebar-right .content-mid::after {
   }
 }
 
-@media screen and (max-width: 848px) and (orientation: landscape) {
+@media screen and (max-width <= 848px) and (orientation: landscape) {
   nav .sidebar-left {
     height: 77%;
   }

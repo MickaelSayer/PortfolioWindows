@@ -1350,7 +1350,7 @@ section.windows .container-folder.open {
   display: flex;
 }
 
-@media screen and (max-width: 1139px) {
+@media screen and (max-width <= 1139px) {
   section.windows .container-content .sidebar-left {
     display: none;
   }
