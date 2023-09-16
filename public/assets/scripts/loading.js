@@ -8,6 +8,9 @@ $(document).ready(function () {
 
     let currentDotIndex = 0;
 
+    /**
+     * Gére l'animation des points de la page loading
+     */
     function showDots() {
         const dotsArray = ['.', '..', '...'];
 

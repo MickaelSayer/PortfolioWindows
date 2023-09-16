@@ -232,7 +232,7 @@
   left: 100%;
 }
 
-@media screen and (max-width: 848px) {
+@media (max-width: 848px) {
   .container-loading .mid .content-loading {
     width: 100%;
     padding: 18px;

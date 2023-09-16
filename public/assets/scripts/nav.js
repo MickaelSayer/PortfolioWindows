@@ -1,3 +1,7 @@
+/**
+ * Applique un style à l'élément passé en argument pour changer l'opacité et l'apparence.
+ * @param {*} elt_focus L'élément auquel appliquer les styles.
+ */
 function addCssOpacity(elt_focus) {
     elt_focus.css({
         'background': 'white',
@@ -9,6 +13,11 @@ function addCssOpacity(elt_focus) {
     }
 }
 
+/**
+ * Gère la sélection d'un conteneur de la barre de navigation dans l'application.
+ * @param {*} __this - L'élément déclencheur de l'événement.
+ * @param {*} container - Le conteneur ciblé.
+ */
 function containerAppNavbarSelected(__this, container) {
     if (!container.hasClass('active')) {
         container.removeAttr('style');
