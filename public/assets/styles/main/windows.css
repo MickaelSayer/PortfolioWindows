@@ -636,7 +636,7 @@ section.windows .tools.active .menu-extends:hover i {
 section.windows .fil-ariane {
   height: 35px;
   width: 100%;
-  background: #dddddd;
+  background: #ddd;
   font-size: clamp(10px, 2vw, 12px);
   display: -webkit-box;
   display: -ms-flexbox;

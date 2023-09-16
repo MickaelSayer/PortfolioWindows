@@ -469,7 +469,7 @@ main .container-windows-open {
   margin: 5px;
   font-size: clamp(10px, 3vw, 14px);
   border: 1px solid #1f5081;
-  background: #ffffff33;
+  background: #fff3;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;

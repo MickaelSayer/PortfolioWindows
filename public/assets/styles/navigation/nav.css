@@ -682,7 +682,7 @@ nav .sidebar-left ul li.open:hover::before {
     top: 38%;
     left: 99.5%;
     background-color: transparent;
-    border-radius: 0px;
+    border-radius: 0;
     height: 5px;
     width: 5px;
   }
@@ -801,9 +801,9 @@ nav .sidebar-left ul li:hover::before {
     width: 5px;
     background-color: var(--green-dark);
     border-radius: 50%;
-    border-top: 0px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-left: 0px solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 0 solid transparent;
   }
 
   25% {
