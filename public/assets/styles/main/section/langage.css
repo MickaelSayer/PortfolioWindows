@@ -388,8 +388,8 @@ section.windows.langage
 @-webkit-keyframes bubbleup2 {
   0%,
   50% {
-    -webkit-transform: translateY(0px) scale(0);
-    transform: translateY(0px) scale(0);
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
   }
 
   60% {
@@ -421,8 +421,8 @@ section.windows.langage
 @keyframes bubbleup2 {
   0%,
   50% {
-    -webkit-transform: translateY(0px) scale(0);
-    transform: translateY(0px) scale(0);
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
   }
 
   60% {

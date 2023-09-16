@@ -351,15 +351,15 @@ section.windows.experience .container-todolist li::after {
   left: -30px;
   height: 15px;
   width: 15px;
-  background-image: url(/assets/pictures/icon/accept.png);
+  background-image: url("/assets/pictures/icon/accept.png");
   background-size: cover;
 }
 
 @media screen and (max-width: 848px) {
   section.windows.experience.active {
-    -webkit-transform: translate(0%, 40px);
-    -ms-transform: translate(0%, 40px);
-    transform: translate(0%, 40px);
+    -webkit-transform: translate(0, 40px);
+    -ms-transform: translate(0, 40px);
+    transform: translate(0, 40px);
   }
 
   section.windows.experience .container-calendar {
