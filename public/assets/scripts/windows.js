@@ -44,7 +44,6 @@ function resetExperienceCalendar(windowsOpen) {
 }
 
 $(document).ready(function () {
-    // Fonction de fermeture de fenêtre
     $('section.windows .close').on('click', function () {
         const windowsElement = $(this).parents('section.windows');
         const dataLink = windowsElement.data('link');
@@ -85,7 +84,6 @@ $(document).ready(function () {
         resetExperienceCalendar(windowsElement);
     });
 
-    // Fonction pour réduire la fenêtre à l'icône de la barre des tâches
     $('section.windows .minus').on('click', function () {
         const windowsElement = $(this).parents('section.windows');
         const dataLink = windowsElement.data('link');
@@ -94,7 +92,6 @@ $(document).ready(function () {
         $(`.navbar #${dataLink}`).removeClass('selected');
     });
 
-    // Fonction pour gérer la taille de la fenêtre (agrandir/réduire)
     $('section.windows .size').on('click', function () {
         const windowsElement = $(this).parents('section.windows');
         const isMinSize = windowsElement.data('full-size') === 'min';
@@ -104,7 +101,6 @@ $(document).ready(function () {
         windowsElement.toggleClass('full-size');
     });
 
-    // Fonction pour afficher/cacher une barre latérale
     $('section.windows .icon-slider-left').on('click', function () {
         const iconSliderLeft = $(this);
         iconSliderLeft.toggleClass('active').parents('.container-sildebar-left').children('ul').toggleClass('active');
@@ -125,7 +121,6 @@ $(document).ready(function () {
         __this.attr('title', titleIconSliderLeft);
     });
 
-    // Fonction pour afficher/cacher le contenu de la barre latérale
     $('section.windows .extends-sidebar').on('click', function () {
         const dataLink = $(this).parents('section.windows').data('link');
         $(`section.windows.${dataLink} .container-content`).toggleClass('active');

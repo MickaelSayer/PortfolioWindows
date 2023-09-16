@@ -1,4 +1,3 @@
-/** Affichage de l'heure pour la barre des tâches */
 function actualiserHorloge() {
     const date = new Date();
     const heure = date.getHours().toString().padStart(2, '0');
@@ -9,7 +8,6 @@ function actualiserHorloge() {
 }
 
 $(document).ready(function () {
-    /** Actualisation de l'heure */
     setInterval(actualiserHorloge, 1000);
     actualiserHorloge();
 
