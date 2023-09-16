@@ -9,13 +9,11 @@ $(document).ready(function () {
     let currentDotIndex = 0;
 
     function showDots() {
-        if (Number.isInteger(currentDotIndex)) {
-            const dotsArray = ['.', '..', '...'];
+        const dotsArray = ['.', '..', '...'];
 
-            dotsElement.text(dotsArray[currentDotIndex]);
-    
-            currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
-        }
+        dotsElement.text(dotsArray[currentDotIndex]);
+
+        currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
     }
 
     setInterval(showDots, 600);

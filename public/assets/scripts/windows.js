@@ -26,18 +26,6 @@ const pathOpen = [];
 const folderSelected = [];
 
 function resetWindowsOpen(currentWindows) {
-    const dataLinkExpected = [
-        'presentation',
-        'diplome',
-        'experience',
-        'langage',
-        'projet'
-    ];
-
-    if ($.inArray(currentWindows, dataLinkExpected) === -1) {
-        return;
-    }
-
     const windowsOpen = $('section.windows.' + currentWindows);
     windowsOpen.find('.container-folder.open').removeClass('open');
     windowsOpen.find('.arrrow-before.active').removeClass('active');
