@@ -14,6 +14,7 @@ nav.nav-link {
   width: 500px;
   background: white;
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 nav.nav-link.open-nav {
@@ -44,12 +45,12 @@ nav .nav-header {
 nav.nav-link .logo-pseudo {
   border: 3px solid #b2cbe3;
   width: 60px;
-  height: 90%;
+  height: 60px;
   background-image: url("/assets/pictures/icon/Freaks.jpg");
   background-size: cover;
   background-position-y: -5px;
   border-radius: 10px;
-  margin: 0 10px 0 3px;
+  margin: 5px;
 }
 
 nav.nav-link .pseudo {
@@ -496,6 +497,7 @@ nav .sidebar-left {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 nav .sidebar-left .content-left {
@@ -937,6 +939,7 @@ nav .sidebar-right {
   -ms-flex-pack: start;
   justify-content: flex-start;
   font-size: clamp(10px, 3vw, 12px);
+  overflow-y: auto;
 }
 
 nav .sidebar-right .content-top {
@@ -1103,7 +1106,7 @@ nav .sidebar-right .content-mid::after {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 848px) and (orientation: landscape) {
   nav .sidebar-left {
     height: 77%;
   }

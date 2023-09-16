@@ -641,7 +641,7 @@ header .icon-extends-right .separator {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 848px) and (orientation: landscape) {
   header .logo-windows {
     top: 80vh;
   }

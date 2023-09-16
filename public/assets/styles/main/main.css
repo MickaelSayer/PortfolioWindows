@@ -851,7 +851,7 @@ main .inactive-windows-button:hover .visible-nav {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 848px) and (orientation: landscape) {
   main .gestion-app {
     bottom: 21%;
   }
