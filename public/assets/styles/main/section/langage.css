@@ -117,8 +117,8 @@ section.windows.langage .container-langage {
   background: rgb(217 217 217 / 10%);
   border-radius: 30px;
   border: 8px solid transparent;
-  -webkit-box-shadow: 0 0 15px 0 #00000022;
-  box-shadow: 0 0 15px 0 #00000022;
+  -webkit-box-shadow: 0 0 15px 0 #0002;
+  box-shadow: 0 0 15px 0 #0002;
   margin: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
