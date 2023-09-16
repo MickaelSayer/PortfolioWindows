@@ -226,7 +226,7 @@ section.windows.diplome .container-todolist li::after {
   left: -30px;
   height: 15px;
   width: 15px;
-  background-image: url(/assets/pictures/icon/accept.png);
+  background-image: url("/assets/pictures/icon/accept.png");
   background-size: cover;
 }
 

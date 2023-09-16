@@ -249,8 +249,8 @@ section.windows.langage .langage-name::after {
   transform: translateY(-50%);
   left: 5px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 2px 0 #000000;
-  box-shadow: 0 2px 2px 0 #000000;
+  -webkit-box-shadow: 0 2px 2px 0 #000;
+  box-shadow: 0 2px 2px 0 #000;
 }
 
 section.windows.langage .langage-name::before {
