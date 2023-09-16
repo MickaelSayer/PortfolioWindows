@@ -20,7 +20,7 @@ class HomeController extends AbstractController
 
         return $this->render('/portfolio/app/home.html.twig');
 
-    }// end homeAction()
+    }//end homeAction()
 
 
 }
