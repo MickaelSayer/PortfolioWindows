@@ -10,6 +10,39 @@ function actualiserHorloge() {
     $("header .horloge .heure").text(heureActuelle);
 }
 
+/**
+ * Vérifie si la valeur donnée est présente dans le tableau des noms de fenêtres attendus.
+ * @param {*} windowsName - La valeur à vérifier.
+ * @returns {boolean} - True si la valeur est présente, sinon False.
+ */
+function windowsNameExpected(windowsName) {
+    const windowsNameExpected = [
+        'presentation',
+        'diplome',
+        'experience',
+        'langage',
+        'projet'
+    ];
+
+    return windowsNameExpected.includes(windowsName);
+}
+
+/**
+ * Vérifie si la valeur donnée est présente dans le tableau des catégories film et série.
+ * @param {*} categorie - La valeur à vérifier.
+ * @returns {boolean} - True si la valeur est présente, sinon False.
+ */
+function categorieNameExpected(categorie) {
+    const categorieNameExpected = [
+        'Drame',
+        'Comédie',
+        'Action',
+        'Epouvante-horreur'
+    ];
+
+    return categorieNameExpected.includes(categorie);
+}
+
 $(document).ready(function () {
     setInterval(actualiserHorloge, 1000);
     actualiserHorloge();

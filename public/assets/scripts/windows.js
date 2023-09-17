@@ -38,15 +38,7 @@ const folderSelected = [];
  * @param {*} currentWindows - La fenêtre actuelle à réinitialiser.
  */
 function resetWindowsOpen(currentWindows) {
-    const windowsNameExpected = [
-        'presentation',
-        'diplome',
-        'experience',
-        'langage',
-        'projet'
-    ];
-
-    if (typeof currentWindows === 'string' && windowsNameExpected.includes(currentWindows)) {
+    if (typeof currentWindows === 'string' && windowsNameExpected(currentWindows)) {
         const windowsOpen = $('section.windows.' + currentWindows);
         windowsOpen.find('.container-folder.open').removeClass('open');
         windowsOpen.find('.arrrow-before.active').removeClass('active');
@@ -85,7 +77,7 @@ $(document).ready(function () {
 
             const prevActive = windowsElement.prev('section.windows.active');
             const nextActive = windowsElement.next('section.windows.active');
-        
+
             if (prevActive.length || nextActive.length) {
                 (prevActive.length ? prevActive : nextActive).css('z-index', '2');
             }
@@ -193,39 +185,43 @@ $(document).ready(function () {
         const windowsOpen = $(this).parents('section.windows');
         const windowsLink = $(this).parents('section.windows').data('link');
 
-        if (!folderOpen[windowsLink]) {
-            folderOpen[windowsLink] = [];
-        }
-        folderOpen[windowsLink].push(windowsOpen.find('.container-folder.' + dataLink));
-
-        const pathAddressElement = windowsOpen.find('.path-address');
-        const currentText = pathAddressElement.text();
-        const newText = currentText + dataLink + '/';
-        pathAddressElement.text(newText);
-
-        if (!pathOpen[windowsLink]) {
-            pathOpen[windowsLink] = [];
-        }
-        pathOpen[windowsLink].push(dataLink);
-
-        windowsOpen.find('.container-folder.' + dataLink).addClass('open');
-
-        $(this).addClass('selected');
-        if (!folderSelected[windowsLink]) {
-            folderSelected[windowsLink] = [];
-        }
-        folderSelected[windowsLink].push(dataLink);
-
-        windowsOpen.find('.arrrow-before').addClass('active');
-        windowsOpen.find('.address-before').addClass('active');
-
-        $.each(folderSelected[windowsLink], function (index, value) {
-            if (!pathOpen[windowsLink].includes(value)) {
-                $('.container-icon[data-link="' + value + '"]').removeClass('selected');
-
-                folderSelected[windowsLink].splice(index, 1);
+        if (typeof windowsLink === 'string' && windowsNameExpected(windowsLink)) {
+            if (!folderOpen[windowsLink]) {
+                folderOpen[windowsLink] = [];
             }
-        });
+            folderOpen[windowsLink].push(windowsOpen.find('.container-folder.' + dataLink));
+
+            const pathAddressElement = windowsOpen.find('.path-address');
+            const currentText = pathAddressElement.text();
+            const newText = currentText + dataLink + '/';
+            pathAddressElement.text(newText);
+
+            if (!pathOpen[windowsLink]) {
+                pathOpen[windowsLink] = [];
+            }
+            pathOpen[windowsLink].push(dataLink);
+
+            windowsOpen.find('.container-folder.' + dataLink).addClass('open');
+
+            $(this).addClass('selected');
+            if (!folderSelected[windowsLink]) {
+                folderSelected[windowsLink] = [];
+            }
+            folderSelected[windowsLink].push(dataLink);
+
+            windowsOpen.find('.arrrow-before').addClass('active');
+            windowsOpen.find('.address-before').addClass('active');
+
+            $.each(folderSelected[windowsLink], function (index, value) {
+                let folderIndex = parseInt(index, 10);
+
+                if (Number.isInteger(folderIndex) && !pathOpen[windowsLink].includes(value)) {
+                    $('.container-icon[data-link="' + value + '"]').removeClass('selected');
+
+                    folderSelected[windowsLink].splice(folderIndex, 1);
+                }
+            });
+        }
     });
 
     $('section.windows .arrrow-before, section.windows .fil-ariane .address-before').on('click', function () {
@@ -233,34 +229,37 @@ $(document).ready(function () {
             const windowsOpen = $(this).parents('section.windows');
             const windowsLink = $(this).parents('section.windows').data('link');
 
-            const lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
-            lastFolderOpen.removeClass('selected');
-            if (lastFolderOpen.hasClass('open')) {
-                lastFolderOpen.removeClass('open');
-                folderOpen[windowsLink].pop(lastFolderOpen);
-            }
+            if (typeof windowsLink === 'string' && windowsNameExpected(windowsLink)) {
+                const lastFolderOpen = folderOpen[windowsLink][folderOpen[windowsLink].length - 1];
 
-            $.each(folderSelected[windowsLink], function (index, value) {
-                if (!pathOpen[windowsLink].includes(value)) {
-                    $('.container-icon[data-link="' + value + '"]').removeClass('selected');
+                lastFolderOpen.removeClass('selected');
+                if (lastFolderOpen.hasClass('open')) {
+                    lastFolderOpen.removeClass('open');
+                    folderOpen[windowsLink].pop(lastFolderOpen);
                 }
-            });
 
-            const lastPath = pathOpen[windowsLink][pathOpen[windowsLink].length - 1];
+                $.each(folderSelected[windowsLink], function (index, value) {
+                    if (!pathOpen[windowsLink].includes(value)) {
+                        $('.container-icon[data-link="' + value + '"]').removeClass('selected');
+                    }
+                });
 
-            const pathFolder = windowsOpen.find('.path-address');
-            const pathFolderText = pathFolder.text();
-            const newPathFolder = pathFolderText.replace(lastPath + "/", '');
-            pathFolder.text(newPathFolder);
+                const lastPath = pathOpen[windowsLink][pathOpen[windowsLink].length - 1];
 
-            pathOpen[windowsLink].pop(lastPath);
-            if (pathOpen[windowsLink].length === 0) {
-                windowsOpen.find('.arrrow-before').removeClass('active');
-                windowsOpen.find('.address-before').removeClass('active');
+                const pathFolder = windowsOpen.find('.path-address');
+                const pathFolderText = pathFolder.text();
+                const newPathFolder = pathFolderText.replace(lastPath + "/", '');
+                pathFolder.text(newPathFolder);
+
+                pathOpen[windowsLink].pop(lastPath);
+                if (pathOpen[windowsLink].length === 0) {
+                    windowsOpen.find('.arrrow-before').removeClass('active');
+                    windowsOpen.find('.address-before').removeClass('active');
+                }
+
+                sliderFilmDist = resetNetflixLoisirsSlider();
+                resetExperienceCalendar(resetExperienceCalendar);
             }
-
-            sliderFilmDist = resetNetflixLoisirsSlider();
-            resetExperienceCalendar(resetExperienceCalendar);
         }
     });
 
@@ -284,47 +283,51 @@ $(document).ready(function () {
     let sliderFilmDist = [];
     $('section.windows .container-folder.netflix-loisirs .next-netflix-loisirs').on('click', function () {
         const eltContainerFilm = $(this).parent('.container-netflix-loisirs');
-        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text().split(' ')[0];
         const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
         const nbrstranslateMax = 150 * eltListFilm.find('a').length - (150 * nbrsView);
         const eltBeforeFilm = eltContainerFilm.find('.before-netflix-loisirs');
 
-        if (!sliderFilmDist[genreContainerFilm]) {
-            sliderFilmDist[genreContainerFilm] = 0;
+        if (typeof genreContainerFilm === 'string' && categorieNameExpected(genreContainerFilm)) {
+            if (!sliderFilmDist[genreContainerFilm]) {
+                sliderFilmDist[genreContainerFilm] = 0;
+            }
+
+            sliderFilmDist[genreContainerFilm] += (150 * nbrsView);
+            if (sliderFilmDist[genreContainerFilm] > nbrstranslateMax) {
+                sliderFilmDist[genreContainerFilm] = nbrstranslateMax;
+            }
+
+            eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
+
+            if (sliderFilmDist[genreContainerFilm] === nbrstranslateMax) {
+                $(this).addClass('inactive');
+            }
+
+            eltBeforeFilm.removeClass('inactive');
         }
-
-        sliderFilmDist[genreContainerFilm] += (150 * nbrsView);
-        if (sliderFilmDist[genreContainerFilm] > nbrstranslateMax) {
-            sliderFilmDist[genreContainerFilm] = nbrstranslateMax;
-        }
-
-        eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
-
-        if (sliderFilmDist[genreContainerFilm] === nbrstranslateMax) {
-            $(this).addClass('inactive');
-        }
-
-        eltBeforeFilm.removeClass('inactive');
     });
 
     $('section.windows .container-folder.netflix-loisirs .before-netflix-loisirs').on('click', function () {
         const eltContainerFilm = $(this).parent('.container-netflix-loisirs');
-        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text();
+        const genreContainerFilm = eltContainerFilm.find('.genre-netflix-loisirs').text().split(' ')[0];
         const eltListFilm = eltContainerFilm.find('.list-netflix-loisirs');
         const eltNextFilm = eltContainerFilm.find('.next-netflix-loisirs');
 
-        sliderFilmDist[genreContainerFilm] -= (150 * nbrsView);
-        if (sliderFilmDist[genreContainerFilm] < nbrsView) {
-            sliderFilmDist[genreContainerFilm] = 0;
+        if (typeof genreContainerFilm === 'string' && categorieNameExpected(genreContainerFilm)) {
+            sliderFilmDist[genreContainerFilm] -= (150 * nbrsView);
+            if (sliderFilmDist[genreContainerFilm] < nbrsView) {
+                sliderFilmDist[genreContainerFilm] = 0;
+            }
+    
+            eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
+    
+            if (sliderFilmDist[genreContainerFilm] === 0) {
+                $(this).addClass('inactive');
+            }
+    
+            eltNextFilm.removeClass('inactive');
         }
-
-        eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
-
-        if (sliderFilmDist[genreContainerFilm] === 0) {
-            $(this).addClass('inactive');
-        }
-
-        eltNextFilm.removeClass('inactive');
     });
 
     $('section.windows.experience .number-day.event-formation').on('click', function () {
