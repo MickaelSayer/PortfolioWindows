@@ -29,7 +29,7 @@ $(document).ready(function () {
             let windowsFocus = $(value).css('z-index');
             let windowsTitle = $(value).find('.windows-name h1').text();
 
-            if (windowsIndex >= 0 && windowsIndex <= (windowsActive.length - 1) && Number.isInteger(windowsIndex)) {
+            if (Number.isInteger(windowsIndex) && windowsIndex >= 0 && windowsIndex <= windowsActive.length - 1) {
                 $(containerWindows[windowsIndex]).removeClass('focus');
                 if (parseInt(windowsFocus, 10) === 2) {
                     $(containerWindows[windowsIndex]).addClass('focus');
@@ -51,7 +51,9 @@ $(document).ready(function () {
 
         if ($(this).hasClass('active')) {
             $.each(containerWindows, function (index, value) {
-                if ($(windowsActive[index]).length === 0) {
+                let windowsIndex = parseInt(index, 10);
+
+                if (Number.isInteger(windowsIndex) && $(windowsActive[windowsIndex]).length === 0) {
                     $(value).removeClass('open');
                     $(value).find('.title-windows').html('');
                     $(value).data('link', '');
