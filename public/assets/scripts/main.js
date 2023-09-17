@@ -23,17 +23,21 @@ $(document).ready(function () {
         const containerWindows = $('main .content-gestion-app .container-windows-open');
         const windowsActive = $('section.windows.active');
         $.each(windowsActive, function (index, value) {
+            let windowsIndex = parseInt(index, 10);
+
             let windowsLink = $(value).data('link');
             let windowsFocus = $(value).css('z-index');
             let windowsTitle = $(value).find('.windows-name h1').text();
 
-            $(containerWindows[index]).removeClass('focus');
-            if (parseInt(windowsFocus, 10) === 2) {
-                $(containerWindows[index]).addClass('focus');
+            if (windowsIndex >= 0 && windowsIndex <= (windowsActive.length - 1) && Number.isInteger(windowsIndex)) {
+                $(containerWindows[windowsIndex]).removeClass('focus');
+                if (parseInt(windowsFocus, 10) === 2) {
+                    $(containerWindows[windowsIndex]).addClass('focus');
+                }
+                $(containerWindows[windowsIndex]).find('.title-windows').html(windowsTitle);
+                $(containerWindows[windowsIndex]).addClass('open');
+                $(containerWindows[windowsIndex]).data('windows', windowsLink);
             }
-            $(containerWindows[index]).find('.title-windows').html(windowsTitle);
-            $(containerWindows[index]).addClass('open');
-            $(containerWindows[index]).data('windows', windowsLink);
         });
 
         $('main .content-gestion-app .close-all').removeClass('inactive');

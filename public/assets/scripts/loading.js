@@ -7,8 +7,8 @@ $(document).ready(function () {
     function showDots() {
         const dotsElement = $('.container-loading .content-loading span.dots');
         const dotsArray = ['.', '..', '...'];
-        console.log(currentDotIndex)
-        if (currentDotIndex >= 0 && currentDotIndex <= 2) {
+
+        if (currentDotIndex >= 0 && currentDotIndex <= 2 && Number.isInteger(currentDotIndex)) {
             dotsElement.text(dotsArray[currentDotIndex]);
 
             currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
