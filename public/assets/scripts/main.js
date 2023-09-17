@@ -23,20 +23,21 @@ $(document).ready(function () {
         const containerWindows = $('main .content-gestion-app .container-windows-open');
         const windowsActive = $('section.windows.active');
         $.each(windowsActive, function (index, value) {
-            let windowsIndex = parseInt(index, 10);
+            let windowsActiveIndex = parseInt(index, 10);
 
             let windowsLink = $(value).data('link');
             let windowsFocus = $(value).css('z-index');
             let windowsTitle = $(value).find('.windows-name h1').text();
-
-            if (Number.isInteger(windowsIndex) && windowsIndex >= 0 && windowsIndex <= windowsActive.length - 1) {
-                $(containerWindows[windowsIndex]).removeClass('focus');
+            
+            if (Number.isInteger(windowsActiveIndex) && windowsActiveIndex >= 0 && windowsActiveIndex <= windowsActive.length - 1) {
+                $(containerWindows[windowsActiveIndex]).removeClass('focus');
                 if (parseInt(windowsFocus, 10) === 2) {
-                    $(containerWindows[windowsIndex]).addClass('focus');
+                    $(containerWindows[windowsActiveIndex]).addClass('focus');
                 }
-                $(containerWindows[windowsIndex]).find('.title-windows').html(windowsTitle);
-                $(containerWindows[windowsIndex]).addClass('open');
-                $(containerWindows[windowsIndex]).data('windows', windowsLink);
+
+                $(containerWindows[windowsActiveIndex]).find('.title-windows').html(windowsTitle);
+                $(containerWindows[windowsActiveIndex]).addClass('open');
+                $(containerWindows[windowsActiveIndex]).data('windows', windowsLink);
             }
         });
 
@@ -51,9 +52,9 @@ $(document).ready(function () {
 
         if ($(this).hasClass('active')) {
             $.each(containerWindows, function (index, value) {
-                let windowsIndex = parseInt(index, 10);
-                
-                if (Number.isInteger(windowsIndex) && windowsIndex >= 0 && windowsIndex <= windowsActive.length - 1) {
+                let containerWindowsIndex = parseInt(index, 10);
+
+                if (Number.isInteger(containerWindowsIndex) && $(windowsActive[containerWindowsIndex]).length === 0) {
                     $(value).removeClass('open');
                     $(value).find('.title-windows').html('');
                     $(value).data('link', '');
