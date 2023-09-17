@@ -1,25 +1,28 @@
 $(document).ready(function () {
-    setTimeout(() => {
-        $('.container-loading .mid').addClass('login');
-        $('.container-loading .mid .loader').html("Pour commencer, cliquez sur votre nom d'utilisateur");
-    }, 5000);
-
-    const dotsElement = $('.container-loading .content-loading span.dots');
-
-    let currentDotIndex = 0;
-
+    let currentDotIndex = parseInt(0, 10);
+    let intervalId;
     /**
      * Gére l'animation des points de la page loading
      */
     function showDots() {
+        const dotsElement = $('.container-loading .content-loading span.dots');
         const dotsArray = ['.', '..', '...'];
+        console.log(currentDotIndex)
+        if (currentDotIndex >= 0 && currentDotIndex <= 2) {
+            dotsElement.text(dotsArray[currentDotIndex]);
 
-        dotsElement.text(dotsArray[currentDotIndex]);
-
-        currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
+            currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
+        }
     }
 
-    setInterval(showDots, 600);
+    intervalId = setInterval(showDots, 600);
+
+    setTimeout(() => {
+        $('.container-loading .mid').addClass('login');
+        $('.container-loading .mid .loader').html("Pour commencer, cliquez sur votre nom d'utilisateur");
+
+        clearInterval(intervalId);
+    }, 5000);
 
     $('.container-loading .mid .login-loading').on('click', function () {
         $('.container-loading').addClass('inactive');
