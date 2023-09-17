@@ -64,6 +64,39 @@ function resetExperienceCalendar(windowsOpen) {
     $(windowsOpen).find('.number-day.event-formation.inactive').removeClass('inactive');
 }
 
+/**
+ * Vérifie si la valeur donnée est présente dans le tableau des noms de fenêtres attendus.
+ * @param {*} windowsName - La valeur à vérifier.
+ * @returns {boolean} - True si la valeur est présente, sinon False.
+ */
+function windowsNameExpected(windowsName) {
+    const windowsNameExpected = [
+        'presentation',
+        'diplome',
+        'experience',
+        'langage',
+        'projet'
+    ];
+
+    return windowsNameExpected.includes(windowsName);
+}
+
+/**
+ * Vérifie si la valeur donnée est présente dans le tableau des catégories film et série.
+ * @param {*} categorie - La valeur à vérifier.
+ * @returns {boolean} - True si la valeur est présente, sinon False.
+ */
+function categorieNameExpected(categorie) {
+    const categorieNameExpected = [
+        'Drame',
+        'Comédie',
+        'Action',
+        'Epouvante-horreur'
+    ];
+
+    return categorieNameExpected.includes(categorie);
+}
+
 $(document).ready(function () {
     $('section.windows .close').on('click', function () {
         const windowsElement = $(this).parents('section.windows');

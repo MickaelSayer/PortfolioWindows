@@ -52,8 +52,8 @@ $(document).ready(function () {
         if ($(this).hasClass('active')) {
             $.each(containerWindows, function (index, value) {
                 let windowsIndex = parseInt(index, 10);
-
-                if (Number.isInteger(windowsIndex) && $(windowsActive[windowsIndex]).length === 0) {
+                
+                if (Number.isInteger(windowsIndex) && windowsIndex >= 0 && windowsIndex <= windowsActive.length - 1) {
                     $(value).removeClass('open');
                     $(value).find('.title-windows').html('');
                     $(value).data('link', '');
