@@ -1,0 +1,22 @@
+{% extends "portfolio/__partials/main/windows.html.twig" %}
+
+{% set name = 'credit' %}
+{% set title = 'crédits' %}
+{% set img = 'slack' %}
+
+{% block windows_content %}
+
+<div class="container-icon" data-link="Remerciement" title="Ici, je tiens principalement à remercier les créateurs des icônes/images utilisées pour mon portfolio">
+    <div class="icon-img Remerciement">
+        <img src="{{ asset('assets/pictures/icon/merci.png') }}" alt="Photo de moi">
+    </div>
+    <div class="icon-title">
+        <h2>Remerciements</h2>
+    </div>
+</div>
+
+<div class="container-folder Remerciement">
+    <a href="https://www.flaticon.com/free-icons/merci" title="merci icons">Merci icons created by Freepik - Flaticon</a>
+</div>
+
+{% endblock windows_content %}

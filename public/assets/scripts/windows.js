@@ -75,7 +75,7 @@ function windowsNameExpected(windowsName) {
         'diplome',
         'experience',
         'langage',
-        'projet'
+        'credit'
     ];
 
     return windowsNameExpected.includes(windowsName);
