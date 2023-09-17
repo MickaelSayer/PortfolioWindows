@@ -38,19 +38,29 @@ const folderSelected = [];
  * @param {*} currentWindows - La fenêtre actuelle à réinitialiser.
  */
 function resetWindowsOpen(currentWindows) {
-    const windowsOpen = $('section.windows.' + currentWindows);
-    windowsOpen.find('.container-folder.open').removeClass('open');
-    windowsOpen.find('.arrrow-before.active').removeClass('active');
-    windowsOpen.find('.fil-ariane .address-before.active').removeClass('active');
-    windowsOpen.find('.path-address').html(currentWindows + '/');
-    windowsOpen.find('.container-icon.selected').removeClass('selected');
-    windowsOpen.find('.container-content.active').removeClass('active');
-    windowsOpen.find('.container-sildebar-left ul.active').removeClass('active');
-    windowsOpen.find('.container-content .icon-slider-left:not("active")').addClass('active');
+    const windowsNameExpected = [
+        'presentation',
+        'diplome',
+        'experience',
+        'langage',
+        'projet'
+    ];
 
-    folderOpen[currentWindows] = [];
-    pathOpen[currentWindows] = [];
-    folderSelected[currentWindows] = [];
+    if (typeof currentWindows === 'string' && windowsNameExpected.includes(currentWindows)) {
+        const windowsOpen = $('section.windows.' + currentWindows);
+        windowsOpen.find('.container-folder.open').removeClass('open');
+        windowsOpen.find('.arrrow-before.active').removeClass('active');
+        windowsOpen.find('.fil-ariane .address-before.active').removeClass('active');
+        windowsOpen.find('.path-address').html(currentWindows + '/');
+        windowsOpen.find('.container-icon.selected').removeClass('selected');
+        windowsOpen.find('.container-content.active').removeClass('active');
+        windowsOpen.find('.container-sildebar-left ul.active').removeClass('active');
+        windowsOpen.find('.container-content .icon-slider-left:not("active")').addClass('active');
+
+        folderOpen[currentWindows] = [];
+        pathOpen[currentWindows] = [];
+        folderSelected[currentWindows] = [];
+    }
 }
 
 /**

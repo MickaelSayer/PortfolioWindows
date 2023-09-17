@@ -10,7 +10,6 @@ $(document).ready(function () {
 
         if (Number.isInteger(currentDotIndex) && currentDotIndex >= 0 && currentDotIndex <= 2) {
             dotsElement.text(dotsArray[currentDotIndex]);
-
             currentDotIndex = (currentDotIndex + 1) % dotsArray.length;
         }
     }
