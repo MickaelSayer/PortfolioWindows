@@ -6,8 +6,8 @@
 
 {% block windows_content %}
 
-<div class="container-icon" data-link="Remerciement" title="Ici, je tiens principalement à remercier les créateurs des icônes/images utilisées pour mon portfolio">
-    <div class="icon-img Remerciement">
+<div class="container-icon" data-link="remerciement" title="Ici, je tiens principalement à remercier les créateurs des icônes/images utilisées pour mon portfolio">
+    <div class="icon-img remerciement">
         <img src="{{ asset('assets/pictures/icon/merci.png') }}" alt="Photo de moi">
     </div>
     <div class="icon-title">
@@ -15,8 +15,27 @@
     </div>
 </div>
 
-<div class="container-folder Remerciement">
-    <a href="https://www.flaticon.com/free-icons/merci" title="merci icons">Merci icons created by Freepik - Flaticon</a>
+<div class="container-folder remerciement">
+    <a href="https://www.microsoft.com/fr-fr/" class="link" target="_blank">
+        <div class="content-thanks">
+            <img src="/assets/pictures/icon/windows-logo.png" alt="Windows logo" width="64" height="64">
+            Windows
+        </div>
+        Merci Windows pour l'inspiration
+    </a>
+
+    <a href="https://www.flaticon.com/free-icons/merci" title="merci icons" class="link" target="_blank">
+        <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" title="Flaticon logo" width="154" height="30">
+        Merci Freepik - Flaticon pour les icones
+    </a>
+
+    <a href="https://fontawesome.com/" title="merci fontawesome" class="link" target="_blank">
+        <div class="content-thanks">
+            <img src="{{ asset('assets/pictures/icon/flags.png') }}" alt="fontawesome logo" width="30" height="30">
+            FontAwesome
+        </div>
+        Merci fontawesome pour les icones
+    </a>
 </div>
 
 {% endblock windows_content %}
