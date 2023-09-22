@@ -91,6 +91,8 @@ $(document).ready(function () {
         const dataWindowsDelete = parent.data('windows');
 
         parent.find('.title-windows').html('');
+        parent.removeClass('focus');
+        parent.find('.eyes').addClass('inactive');
         parent.removeClass('open');
         parent.data('windows', '');
 

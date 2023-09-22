@@ -105,14 +105,22 @@ $(document).ready(function () {
         windowsElement.removeClass('active full-size');
         $(`.navbar #${dataLink}`).removeClass('active selected');
 
-        if (windowsElement.css('z-index') === 2) {
+        if (parseInt(windowsElement.css('z-index'), 10) === 2) {
             windowsElement.css('z-index', '1');
 
             const prevActive = windowsElement.prev('section.windows.active');
             const nextActive = windowsElement.next('section.windows.active');
 
             if (prevActive.length || nextActive.length) {
-                (prevActive.length ? prevActive : nextActive).css('z-index', '2');
+                const windowsFocus = (prevActive.length ? prevActive : nextActive);
+                const dataWindowsFocus = windowsFocus.data('link');
+
+                windowsFocus.css('z-index', '2');
+                $.each($('.container-windows-open.open'), function (index, value) { 
+                     if ($(value).data('windows') === dataWindowsFocus) {
+                        $(value).addClass('focus');
+                     }
+                });
             }
         }
 

@@ -898,6 +898,7 @@ section.windows .container-content .sidebar-left {
   width: 300px;
   padding: 15px 25px 15px 15px;
   font-size: 12px;
+  overflow: auto;
   z-index: 2;
 }
 
@@ -1336,7 +1337,7 @@ section.windows .container-folder {
   top: 0;
   left: 0;
   padding: 10px;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 section.windows .container-content.active .container-folder {
@@ -1358,7 +1359,7 @@ section.windows .container-folder.open {
   section.windows .container-content.active .sidebar-left {
     display: block;
     width: 100%;
-    overflow-y: auto;
+    overflow: auto;
   }
 
   section.windows .container-content.active .content-section {

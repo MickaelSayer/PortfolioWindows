@@ -31,7 +31,7 @@ section.windows.langage .content-legend {
   border-radius: 10px;
   background: #313131;
   color: white;
-  font-family: Caveat;
+  font-family: Caveat, sans-serif;
 }
 
 section.windows.langage .title-lvl {
@@ -43,7 +43,7 @@ section.windows.langage .title-lvl {
   transform: translateX(-50%);
   color: white;
   font-size: clamp(12px, 1.5vw, 17px);
-  font-family: Caveat;
+  font-family: Caveat, sans-serif;
   text-decoration: underline;
 }
 
@@ -204,7 +204,7 @@ section.windows.langage .liquid span {
   transform: rotate(180deg);
   pointer-events: none;
   letter-spacing: 2px;
-  font-family: Caveat;
+  font-family: Caveat, sans-serif;
 }
 
 section.windows.langage .langage-name {
@@ -234,7 +234,7 @@ section.windows.langage .langage-name {
   pointer-events: none;
   position: relative;
   top: 50px;
-  font-family: Caveat;
+  font-family: Caveat, sans-serif;
 }
 
 section.windows.langage .langage-name::after {

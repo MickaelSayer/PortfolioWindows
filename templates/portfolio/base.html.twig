@@ -22,18 +22,15 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/pictures/icon/favicon.ico') }}" />
 </head>
 
-{% include "portfolio/__partials/loading.html.twig" %}
+<body>
+    {% block header %}
+    {% endblock %}
 
-{% block header %}
-{% endblock %}
+    {% block body %}
+    {% endblock %}
 
-
-{% block body %}
-{% endblock %}
-
-
-{% block footer %}
-{% endblock %}
+    {% block footer %}
+    {% endblock %}
 </body>
 
 </html>

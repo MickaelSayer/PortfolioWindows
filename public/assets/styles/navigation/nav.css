@@ -14,7 +14,7 @@ nav.nav-link {
   width: 500px;
   background: white;
   border-radius: 10px;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 nav.nav-link.open-nav {
@@ -178,7 +178,7 @@ nav.nav-link .params .params-close {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 80vh;
+  top: 90vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -515,7 +515,7 @@ nav .sidebar-left {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 nav .sidebar-left .content-left {
@@ -969,7 +969,7 @@ nav .sidebar-right {
   -ms-flex-pack: start;
   justify-content: flex-start;
   font-size: clamp(10px, 3vw, 12px);
-  overflow-y: auto;
+  overflow: auto;
 }
 
 nav .sidebar-right .content-top {
@@ -1053,7 +1053,7 @@ nav .sidebar-right .content-mid::after {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    overflow-y: auto;
+    overflow: auto;
   }
 
   nav .sidebar-left ul li {

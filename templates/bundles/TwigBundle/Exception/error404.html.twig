@@ -1,0 +1,49 @@
+{% extends 'portfolio/base.html.twig' %}
+
+{% block title %}Erreur critique{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/errors/error404.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container-error404">
+    <h1>*** ERREUR CRITIQUE DU SYSTÈME ***</h1>
+
+    <p>Un problème inattendu a été détecté dans l'URL.</p>
+
+    <p>URL_FAULT_IN_NONPAGED_AREA</p>
+
+    <p>
+        Si c'est la première fois que vous voyez ce message d'erreur,
+        vérifiez l'URL de la page que vous essayez d'atteindre. <br>
+        Si l'erreur persiste, revenez à la page précédente. <br>
+        Si ce message apparaît à nouveau, suivez ces étapes :
+    </p>
+
+    <ul>
+        <li>Assurez-vous que l'URL est correcte.</li>
+        <li>Vérifiez votre connexion Internet pour vous assurer qu'elle est stable.</li>
+        <li>Consultez la console de développement pour des erreurs JavaScript.</li>
+    </ul>
+
+    <ul class="error404-list">
+        <li>Informations techniques :</li>
+        <li>*** Échec du chargement de l'URL ***</li>
+        <li>Adresse URL : {{ app.request.uri }}</li>
+        <li>Code d'erreur : 404 (Not Found)</li>
+    </ul>
+
+    <p>
+        Initiation de la recherche d'une solution... Veuillez patienter.
+        <span class="loading-animation"></span>
+    </p>
+
+    <p>
+        Sinon, retournez à l'accueil en cliquant sur le bouton ci-dessous :
+    </p>
+    <a href="{{ path('app_home') }}" class="btn-redirect">
+        Accueil
+    </a>
+</div>
+{% endblock %}
