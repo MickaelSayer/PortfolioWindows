@@ -60,8 +60,8 @@ nav.nav-link .pseudo {
 
 nav.nav-link .btn-params {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
   width: 35px;
   height: 35px;
   display: none;
@@ -127,8 +127,8 @@ nav.nav-link .btn-params.active:hover .setting {
   }
 
   80% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
   }
 }
 
@@ -151,8 +151,8 @@ nav.nav-link .btn-params.active:hover .setting {
   }
 
   80% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
   }
 }
 
@@ -397,7 +397,7 @@ nav .container-nav {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: calc(100vh - 53px);
+  height: 100vh;
   background: #004c99;
   padding: 3px;
   -webkit-transition: 0.3s ease;
@@ -963,9 +963,9 @@ nav .sidebar-right .content-mid::after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-evenly;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     overflow: auto;
   }
 
