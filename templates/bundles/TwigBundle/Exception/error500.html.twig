@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html.twig' %}
+
+{% block title %}Portfolio Mickael Sayer - ERREUR 500{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/errors/error500.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container-error500">
+    <h1>*** Windows a cessé de fonctionner ***</h1>
+    <p class="type-error">Code d'erreur : 500 (Internal Server Error)</p>
+    <img src="{{ asset('assets/pictures/icon/erreur500.png') }}" alt="logo erreur 500">
+    <a href="{{ path('app_home') }}" class="btn-redirect">
+        Accueil
+    </a>
+</div>
+{% endblock %}
