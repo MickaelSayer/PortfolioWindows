@@ -14,60 +14,10 @@ $(document).ready(function () {
             });
     });
 
-    $('main .gestion-app').on('click', function () {
-        $(this).addClass('active');
-        $('header .logo-windows').addClass('display');
-        $('main .content-gestion-app').addClass('active');
-        $('main .inactive-windows-button').addClass('inactive');
-
-        const containerWindows = $('main .content-gestion-app .container-windows-open');
-        const windowsActive = $('section.windows.active');
-        $.each(windowsActive, function (index, value) {
-            let windowsActiveIndex = parseInt(index, 10);
-
-            let windowsLink = $(value).data('link');
-            let windowsFocus = $(value).css('z-index');
-            let windowsTitle = $(value).find('.windows-name h1').text();
-            
-            if (Number.isInteger(windowsActiveIndex) && windowsActiveIndex >= 0 && windowsActiveIndex <= windowsActive.length - 1) {
-                $(containerWindows[windowsActiveIndex]).removeClass('focus');
-                if (parseInt(windowsFocus, 10) === 2) {
-                    $(containerWindows[windowsActiveIndex]).addClass('focus');
-                }
-
-                $(containerWindows[windowsActiveIndex]).find('.title-windows').html(windowsTitle);
-                $(containerWindows[windowsActiveIndex]).addClass('open');
-                $(containerWindows[windowsActiveIndex]).data('windows', windowsLink);
-            }
-        });
-
-        $('main .content-gestion-app .close-all').removeClass('inactive');
-        $('main .content-gestion-app .close-app').removeClass('inactive');
-        $('main .content-gestion-app .no-content').addClass('inactive');
-        if (windowsActive.length === 0) {
-            $('main .content-gestion-app .close-all').addClass('inactive');
-            $('main .content-gestion-app .close-app').addClass('inactive');
-            $('main .content-gestion-app .no-content').removeClass('inactive');
-        }
-
-        if ($(this).hasClass('active')) {
-            $.each(containerWindows, function (index, value) {
-                let containerWindowsIndex = parseInt(index, 10);
-
-                if (Number.isInteger(containerWindowsIndex) && $(windowsActive[containerWindowsIndex]).length === 0) {
-                    $(value).removeClass('open');
-                    $(value).find('.title-windows').html('');
-                    $(value).data('link', '');
-                }
-            });
-        }
-    });
-
     $('main .content-gestion-app .gestion-app-close').on('click', function () {
-        $('main .gestion-app').removeClass('active');
+        $('header .gestion-app').removeClass('active');
         $('header .logo-windows').removeClass('display');
         $('main .content-gestion-app').removeClass('active');
-        $('main .inactive-windows-button').removeClass('inactive');
     });
 
     $('main .content-gestion-app .close-all').on('click', function () {
@@ -143,16 +93,5 @@ $(document).ready(function () {
         }
 
         $(this).find('.eyes').addClass('inactive');
-    });
-
-    $('main .inactive-windows-button').on('click', function () {
-        $(this).toggleClass('active');
-
-        $('header .logo-windows').removeClass('transparent');
-        $('main .gestion-app').removeClass('transparent');
-        if ($(this).hasClass('active')) {
-            $('header .logo-windows').addClass('transparent');
-            $('main .gestion-app').addClass('transparent');
-        }
     });
 });

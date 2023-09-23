@@ -62,8 +62,8 @@ nav.nav-link .btn-params {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -80,11 +80,10 @@ nav.nav-link .btn-params {
 nav.nav-link .btn-params img {
   display: block;
   position: absolute;
-  height: 60px;
-  width: 60px;
-  top: 0;
-  left: 0;
-  padding: 10px;
+  height: 35px;
+  width: 35px;
+  top: 2px;
+  left: 2px;
 }
 
 nav.nav-link .btn-params .setting,
@@ -171,62 +170,6 @@ nav.nav-link .params {
 nav.nav-link .params.active {
   background: #0865c3;
   display: block;
-}
-
-nav.nav-link .params .params-close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 80vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: var(--green-dark);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-nav.nav-link .params .params-close:hover {
-  background: var(--green-ligth);
-}
-
-nav.nav-link .params .params-close:hover i {
-  -webkit-animation: bounceloop16 1s infinite;
-  animation: bounceloop16 1s infinite;
-}
-
-@-webkit-keyframes bounceloop16 {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  20% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-
-  40%,
-  60% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  80% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
 }
 
 @keyframes bounceloop16 {
@@ -992,11 +935,10 @@ nav .sidebar-right .content-mid::after {
     border-right: none;
     color: white;
     background: none;
-    height: 77%;
+    height: 100%;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    border-bottom: 1px solid #f1f1f12e;
   }
 
   nav.nav-link {

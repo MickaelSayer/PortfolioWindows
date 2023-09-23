@@ -1,4 +1,13 @@
 <div class="content-gestion-app">
+    <div class="content-btn">
+        <div class="close-all" title="Fermer toutes les fenêtres">
+            <i class="fa-solid fa-xmark fa-xs" style="color: #ffffff;"></i>
+        </div>
+        <div class="gestion-app-close" title="Masquer le gestionnaire de fenêtres">
+            <i class="fa-solid fa-bars fa-xs" style="color: #ffffff;"></i>
+        </div>
+    </div>
+
     <div class="container-gestion-app">
         {% for section in sections %}
         <div class="container-windows-open" data-windows="" title="Afficher la fenêtre">
@@ -15,14 +24,5 @@
 
     <div class="no-content">
         Aucune fenêtre ouverte récemment
-    </div>
-
-    <div class="content-btn">
-        <div class="close-all" title="Fermer toutes les fenêtres">
-            <i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>
-        </div>
-        <div class="gestion-app-close" title="Masquer le gestionnaire de fenêtres">
-            <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
-        </div>
     </div>
 </div>

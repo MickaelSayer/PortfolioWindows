@@ -215,10 +215,9 @@ header .logo-windows {
   cursor: pointer;
   font-size: 14px;
   width: 160px;
-  opacity: 1;
-  -webkit-transition: 0.1s linear, opacity 0.3s ease 0s;
-  -o-transition: 0.1s linear, opacity 0.3s ease 0s;
-  transition: 0.1s linear, opacity 0.3s ease 0s;
+  -webkit-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
 }
 
 header .logo-windows:hover {
@@ -451,6 +450,92 @@ header .icon-extends-right .separator {
   display: none;
 }
 
+header .gestion-app {
+  position: absolute;
+  bottom: 3px;
+  left: calc(50% + 20px);
+  -webkit-transform: translateX(-50%) translateY(0);
+  -ms-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+  height: 35px;
+  width: 35px;
+  display: none;
+  border-radius: 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--green-dark);
+  font-size: clamp(10px, 3vw, 12px);
+  font-weight: 600;
+  z-index: 5;
+  color: white;
+}
+
+header .gestion-app:hover {
+  background: var(--green-ligth);
+}
+
+header .gestion-app.active {
+  display: none;
+}
+
+header .gestion-app:hover i {
+  -webkit-animation: bounceloop14 1s infinite;
+  animation: bounceloop14 1s infinite;
+}
+
+@-webkit-keyframes bounceloop14 {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  80% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes bounceloop14 {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  80% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
 @media screen and (max-width: 1650px) {
   header .task.active {
     width: 150px;
@@ -622,21 +707,26 @@ header .icon-extends-right .separator {
 
   header .logo-windows {
     position: absolute;
-    top: 80vh;
-    left: 50%;
+    top: 2px;
+    left: calc(50% - 20px);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     -webkit-box-shadow: none;
     box-shadow: none;
     z-index: 2;
+    border-radius: 5px;
   }
 
   header .logo-windows span {
     display: none;
+  }
+
+  header .logo-windows img {
+    width: 35px;
+    height: 35px;
   }
 
   header {
@@ -647,17 +737,9 @@ header .icon-extends-right .separator {
     display: none;
   }
 
-  header .logo-windows.transparent {
-    opacity: 0.4;
-  }
-
-  header .logo-windows.transparent:hover {
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 848px) and (orientation: landscape) {
-  header .logo-windows {
-    top: 80vh;
+  header .gestion-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }

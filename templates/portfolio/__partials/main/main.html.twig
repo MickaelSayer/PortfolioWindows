@@ -1,17 +1,6 @@
 <main>
     {% include "portfolio/__partials/main/parth/main/container-bureau.html.twig" %}
 
-    <div class="gestion-app" title="Afficher le gestionnaire de fenêtres">
-        <i class="fa-solid fa-bars fa-sm"></i>
-    </div>
-
-    <div class="inactive-windows-button">
-        <i class="fa-solid fa-eye-slash fa-2xs invisible-nav" style="color: #ffffff;"
-            title="Masquer le bouton du menu windows"></i>
-        <i class="fa-solid fa-eye fa-2xs visible-nav" style="color: #ffffff;"
-            title="Afficher le bouton du menu windows"></i>
-    </div>
-
     {% set sections = ['presentation', 'diplome', 'experience', 'langage', 'credit'] %}
 
     {% include "portfolio/__partials/main/parth/main/content-gestion-app.html.twig" %}
