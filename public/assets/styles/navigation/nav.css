@@ -992,7 +992,7 @@ nav .sidebar-right .content-mid::after {
     border-right: none;
     color: white;
     background: none;
-    height: 88%;
+    height: 77%;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
@@ -1023,7 +1023,7 @@ nav .sidebar-right .content-mid::after {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow: auto;
   }
 

@@ -363,7 +363,7 @@ main .content-gestion-app {
 
 main .container-gestion-app {
   width: 100%;
-  height: calc(100% - 60px);
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
