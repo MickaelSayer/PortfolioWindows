@@ -397,7 +397,7 @@ nav .container-nav {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 100vh;
+  height: calc(100vh - 53px);
   background: #004c99;
   padding: 3px;
   -webkit-transition: 0.3s ease;
