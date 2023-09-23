@@ -248,7 +248,7 @@ main .nav-app li img {
 
 main .gestion-app {
   position: absolute;
-  bottom: 11%;
+  bottom: 21%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(0);
   -ms-transform: translateX(-50%) translateY(0);
@@ -643,7 +643,7 @@ main .container-windows-open .close-app:hover i {
 
 main .inactive-windows-button {
   position: absolute;
-  bottom: calc(11% - 26px);
+  bottom: calc(21% - 26px);
   left: calc(50% - -42px);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
