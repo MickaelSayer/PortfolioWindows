@@ -30,16 +30,3 @@ body {
   background-color: var(--text-black);
   overflow: hidden;
 }
-
-#upToBottom {
-  display: none;
-  height: 100px;
-  width: 100%;
-  pointer-events: none;
-}
-
-@media screen and (max-width: 848px) {
-  #upToBottom {
-    display: block;
-  }
-}
