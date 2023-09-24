@@ -31,8 +31,15 @@ body {
   overflow: hidden;
 }
 
-#upToTop {
+#upToBottom {
+  display: flex;
   height: 100px;
   width: 100%;
   pointer-events: none;
+}
+
+@media screen and (max-width: 848px) {
+  #upToBottom {
+    display: block;
+  }
 }
