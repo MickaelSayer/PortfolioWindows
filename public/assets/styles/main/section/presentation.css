@@ -61,7 +61,6 @@ section.windows.presentation .container-folder.steam {
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  padding: 10px 10px 100px 10px;
 }
 
 section.windows.presentation .container-folder.steam .container-game {
@@ -202,7 +201,6 @@ section.windows.presentation .container-folder.youtube {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 10px 10px 100px 10px;
 }
 
 section.windows.presentation .container-folder.youtube .content-profil {
@@ -330,7 +328,6 @@ section.windows.presentation .container-folder.serie {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px 10px 100px 10px;
 }
 
 section.windows.presentation
