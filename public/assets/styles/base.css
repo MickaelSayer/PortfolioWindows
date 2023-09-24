@@ -30,3 +30,9 @@ body {
   background-color: var(--text-black);
   overflow: hidden;
 }
+
+#upToTop {
+  height: 50px;
+  width: 100%;
+  pointer-events: none;
+}
