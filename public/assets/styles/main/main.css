@@ -368,7 +368,7 @@ main .container-windows-open {
   -ms-flex-direction: column;
   flex-direction: column;
   width: calc(50% - 10px);
-  height: 145px;
+  height: 20%;
   margin: 5px;
   font-size: clamp(10px, 3vw, 14px);
   border: 1px solid #1f5081;
