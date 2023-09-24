@@ -13,10 +13,6 @@
   src: url("/assets/fonts/Inconsolata.ttf") format("truetype");
 }
 
-:root {
-  --combined-bar-height: auto;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -33,5 +29,4 @@ body {
   font-family: Verdana, sans-serif;
   background-color: var(--text-black);
   overflow: hidden;
-  margin-top: var(--combined-bar-height);
 }

@@ -25,18 +25,4 @@ $(document).ready(function () {
             event.stopPropagation();
         }
     });
-
-    let prevScrollPos = window.scrollY || window.pageYOffset;
-
-    window.addEventListener('scroll', () => {
-        let currentScrollPos = window.scrollY || window.pageYOffset;
-
-        if (prevScrollPos > currentScrollPos) {
-            document.documentElement.style.setProperty('--combined-bar-height', 'auto');
-        } else {
-            document.documentElement.style.setProperty('--combined-bar-height', '0');
-        }
-
-        prevScrollPos = currentScrollPos;
-    });
 });
