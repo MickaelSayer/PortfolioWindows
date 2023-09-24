@@ -81,7 +81,7 @@
 }
 
 .container-loading .mid {
-  height: 100%;
+  height: calc(100% - 200px);
   background: -o-radial-gradient(top left, circle, white -20%, #5d7edd 20%);
   background: radial-gradient(circle at top left, white -20%, #5d7edd 20%);
   display: -webkit-box;
