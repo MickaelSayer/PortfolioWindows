@@ -954,7 +954,7 @@ nav .sidebar-right .content-mid::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100%;
+    height: calc(100vh - 50px);
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
