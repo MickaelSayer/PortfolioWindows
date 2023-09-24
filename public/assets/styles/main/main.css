@@ -10,34 +10,18 @@ main {
 }
 
 main .container-bureau {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 200px;
   height: 282px;
 }
 
 main .icon-bureau {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 80px;
   padding: 10px;
@@ -46,8 +30,6 @@ main .icon-bureau {
   text-shadow: 2px 2px 0 var(--text-black);
   cursor: pointer;
   border-radius: 3px;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
@@ -88,13 +70,7 @@ main .horloge-responsive {
   position: absolute;
   top: 65px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-text-stroke: 2px white;
   pointer-events: none;
 }
 
@@ -107,13 +83,8 @@ main .icon-app-responsive {
   width: 100%;
   height: 39px;
   background: var(--bl-blue);
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
   transition: 0.2s linear;
   overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -122,15 +93,9 @@ main .icon-app-responsive.active {
 }
 
 main .icon-app-responsive .content-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
   width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   pointer-events: none;
   border-bottom: 1px solid #ffffff24;
@@ -146,22 +111,11 @@ main .content-app {
   height: 100%;
   width: 100%;
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   opacity: 0;
-  -webkit-transition: 0.1s linear;
-  -o-transition: 0.1s linear;
   transition: 0.1s linear;
   pointer-events: none;
 }
@@ -172,57 +126,30 @@ main .icon-app-responsive.active .content-app {
 }
 
 main .app {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-line-pack: start;
   align-content: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 main .nav-app {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 main .nav-app ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 main .nav-app li {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin: 5px;
   padding: 5px;
@@ -232,8 +159,6 @@ main .nav-app li {
   font-size: 14px;
   font-weight: 600;
   color: white;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   text-align: center;
 }
@@ -255,9 +180,6 @@ main .content-gestion-app {
   height: calc(100% - 40px);
   background: white;
   border-radius: 5px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 10px;
   z-index: 3;
@@ -266,22 +188,11 @@ main .content-gestion-app {
 main .container-gestion-app {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-line-pack: start;
   align-content: flex-start;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   overflow: auto;
 }
@@ -292,11 +203,7 @@ main .content-gestion-app.active {
 
 main .content-gestion-app .content-btn {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -308,14 +215,8 @@ main .content-gestion-app .content-btn div {
   height: 35px;
   border-radius: 50%;
   background: var(--green-dark);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -330,7 +231,6 @@ main .content-gestion-app .close-all.inactive:hover {
 }
 
 main .content-gestion-app .close-all.inactive:hover i {
-  -webkit-animation: none;
   animation: none;
 }
 
@@ -339,7 +239,6 @@ main .content-gestion-app .content-btn div:hover {
 }
 
 main .content-gestion-app .content-btn div:hover i {
-  -webkit-animation: bounceloop14 1s infinite;
   animation: bounceloop14 1s infinite;
 }
 
@@ -348,8 +247,6 @@ main .content-gestion-app .no-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: clamp(10px, 3vw, 14px);
   width: 100%;
@@ -363,9 +260,6 @@ main .content-gestion-app .no-content.inactive {
 main .container-windows-open {
   position: relative;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: calc(50% - 10px);
   height: 20%;
@@ -381,51 +275,26 @@ main .container-windows-open {
 main .container-windows-open.delete {
   background: #ff000014;
   border: 1px solid #ff000014;
-  -webkit-animation: shake 0.3s infinite;
   animation: shake 0.3s infinite;
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: rotate(0deg) translateX(0);
-    transform: rotate(0deg) translateX(0);
-  }
-
-  25%,
-  75% {
-    -webkit-transform: rotate(-1deg) translateX(-1px);
-    transform: rotate(-1deg) translateX(-1px);
-  }
-
-  50% {
-    -webkit-transform: rotate(1deg) translateX(1px);
-    transform: rotate(1deg) translateX(1px);
-  }
 }
 
 @keyframes shake {
   0%,
   100% {
-    -webkit-transform: rotate(0deg) translateX(0);
     transform: rotate(0deg) translateX(0);
   }
 
   25%,
   75% {
-    -webkit-transform: rotate(-1deg) translateX(-1px);
     transform: rotate(-1deg) translateX(-1px);
   }
   
   50% {
-    -webkit-transform: rotate(1deg) translateX(1px);
     transform: rotate(1deg) translateX(1px);
   }
 }
 
 main .container-windows-open.open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -438,8 +307,6 @@ main .container-windows-open .eyes {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -449,21 +316,11 @@ main .container-windows-open .eyes i {
 
 main .container-windows-open .title-windows {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   padding: 5px;
   text-align: center;
   color: white;
   font-weight: 500;
-  background: -o-linear-gradient(top, #0165b5, #034587);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#0165b5),
-    to(#034587)
-  );
   background: linear-gradient(to bottom, #0165b5, #034587);
 }
 
@@ -515,21 +372,13 @@ main .container-windows-open .close-app {
   position: absolute;
   bottom: 5px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background: var(--green-dark);
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
 }
@@ -540,7 +389,6 @@ main .container-windows-open.delete .close-app {
 }
 
 main .container-windows-open .close-app:hover i {
-  -webkit-animation: bounceloop14 1s infinite;
   animation: bounceloop14 1s infinite;
 }
 
@@ -554,19 +402,10 @@ main .container-windows-open .close-app:hover i {
   }
 
   main .container-bureau {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-line-pack: center;
     align-content: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
@@ -581,15 +420,11 @@ main .container-windows-open .close-app:hover i {
   }
 
   main .icon-app-responsive {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     z-index: 3;
   }
 
   main .content-gestion-app.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }

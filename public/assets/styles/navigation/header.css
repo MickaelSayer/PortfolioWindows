@@ -9,22 +9,13 @@ header {
 
 header .navbar {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-shadow: 0 -5px 0 0 #1f5081;
   box-shadow: 0 -5px 0 0 #1f5081;
 }
 
 header .container-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -32,11 +23,7 @@ header .separator {
   color: #0c457f;
   pointer-events: none;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-right: 10px;
 }
@@ -55,8 +42,6 @@ header .container-left .icon-extends-right {
   cursor: pointer;
   border-radius: 3px;
   height: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -73,150 +58,79 @@ header .container-left .icon-extends:hover {
 
 header .container-left .icon-extends-right:hover i.fa-caret-up,
 header .container-left .icon-extends:hover i {
-  -webkit-animation: bounceloop6 1s infinite;
   animation: bounceloop6 1s infinite;
-}
-
-@-webkit-keyframes bounceloop6 {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  20% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-
-  40%,
-  60% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  80% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-  }
 }
 
 @keyframes bounceloop6 {
   0%,
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   20% {
-    -webkit-transform: translateY(2px);
     transform: translateY(2px);
   }
 
   40%,
   60% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   80% {
-    -webkit-transform: translateY(4px);
     transform: translateY(4px);
   }
 }
 
 header .container-left .icon-extends-right:hover i.fa-caret-up.active,
 header .container-left .icon-extends:hover i.active {
-  -webkit-animation: bounceloop7 1s infinite;
   animation: bounceloop7 1s infinite;
-}
-
-@-webkit-keyframes bounceloop7 {
-  0%,
-  100% {
-    -webkit-transform: translateY(0) rotate(180deg);
-    transform: translateY(0) rotate(180deg);
-  }
-
-  20% {
-    -webkit-transform: translateY(2px) rotate(180deg);
-    transform: translateY(2px) rotate(180deg);
-  }
-
-  40%,
-  60% {
-    -webkit-transform: translateY(0) rotate(180deg);
-    transform: translateY(0) rotate(180deg);
-  }
-
-  80% {
-    -webkit-transform: translateY(4px) rotate(180deg);
-    transform: translateY(4px) rotate(180deg);
-  }
 }
 
 @keyframes bounceloop7 {
   0%,
   100% {
-    -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
 
   20% {
-    -webkit-transform: translateY(2px) rotate(180deg);
     transform: translateY(2px) rotate(180deg);
   }
 
   40%,
   60% {
-    -webkit-transform: translateY(0) rotate(180deg);
     transform: translateY(0) rotate(180deg);
   }
 
   80% {
-    -webkit-transform: translateY(4px) rotate(180deg);
     transform: translateY(4px) rotate(180deg);
   }
 }
 
 header .container-left .icon-extends i,
 header .container-left .icon-extends-right i {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 
 header .container-left .icon-extends i.active,
 header .container-left .icon-extends-right i.active {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   color: #62c321;
 }
 
 header .logo-windows {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   height: 100%;
   background-color: var(--green-dark);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 15px;
-  -webkit-box-shadow: inset 0 0 4px 1px #1b3906;
   box-shadow: inset 0 0 4px 1px #1b3906;
   color: white;
   font-weight: 600;
   cursor: pointer;
   font-size: 14px;
   width: 160px;
-  -webkit-transition: 0.1s linear;
-  -o-transition: 0.1s linear;
   transition: 0.1s linear;
 }
 
@@ -225,8 +139,6 @@ header .logo-windows:hover {
 }
 
 header .logo-windows span {
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -244,40 +156,31 @@ header .logo-windows img {
 }
 
 header .logo-windows:hover img {
-  -webkit-animation: bounceloop6 1s infinite;
   animation: bounceloop6 1s infinite;
 }
 
 @keyframes bounceloop6 {
   0%,
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   20% {
-    -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 
   40%,
   60% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   
   80% {
-    -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
 }
 
 header .icon-app {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
   margin: 0 50px 0 30px;
@@ -285,8 +188,6 @@ header .icon-app {
 }
 
 header .icon-app img {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
   transform: scale(0.8);
 }
 
@@ -295,22 +196,14 @@ header .icon-app img:not(:last-child) {
 }
 
 header .container-task {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
 
 header .task {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   height: 100%;
   width: 0;
@@ -318,31 +211,13 @@ header .task {
   font-weight: 500;
   color: white;
   font-size: 14px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#277ed5),
-    to(#004c99)
-  );
-  background: -o-linear-gradient(top, #277ed5, #004c99);
   background: linear-gradient(to bottom, #277ed5, #004c99);
   cursor: pointer;
   overflow: hidden;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
 header .task.active:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#2d91f5),
-    to(#275f97)
-  );
-  background: -o-linear-gradient(top, #2d91f5, #275f97);
   background: linear-gradient(to bottom, #2d91f5, #275f97);
 }
 
@@ -351,23 +226,17 @@ header .task.active:not(:last-child) {
 }
 
 header .task.active {
-  -webkit-box-shadow: 0 0 20px 2px #004c99;
   box-shadow: 0 0 20px 2px #004c99;
   padding: 0 30px;
   width: 200px;
 }
 
 header .task.selected {
-  -webkit-box-shadow: inset 0 0 8px 5px #1f5081;
   box-shadow: inset 0 0 8px 5px #1f5081;
 }
 
 header .task .content-task {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -377,22 +246,10 @@ header .task img {
 
 header .container-right {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
   padding: 0 15px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#277ed5),
-    to(#004c99)
-  );
-  background: -o-linear-gradient(top, #277ed5, #004c99);
   background: linear-gradient(to bottom, #277ed5, #004c99);
   border-radius: 5px;
   pointer-events: none;
@@ -409,11 +266,7 @@ header .container-right::before {
 
 header .container-right .icon,
 header .container-right .icon-black {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
   margin-right: 5px;
@@ -424,22 +277,13 @@ header .container-right .icon-black {
 }
 
 header .container-right img {
-  -webkit-transform: scale(0.6);
-  -ms-transform: scale(0.6);
   transform: scale(0.6);
   opacity: 0.8;
 }
 
 header .container-right .horloge {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
   font-size: 12px;
   color: white;
@@ -454,18 +298,12 @@ header .gestion-app {
   position: absolute;
   bottom: 3px;
   left: calc(50% + 20px);
-  -webkit-transform: translateX(-50%) translateY(0);
-  -ms-transform: translateX(-50%) translateY(0);
   transform: translateX(-50%) translateY(0);
   height: 35px;
   width: 35px;
   display: none;
   border-radius: 5px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
   background-color: var(--green-dark);
@@ -484,54 +322,25 @@ header .gestion-app.active {
 }
 
 header .gestion-app:hover i {
-  -webkit-animation: bounceloop14 1s infinite;
   animation: bounceloop14 1s infinite;
-}
-
-@-webkit-keyframes bounceloop14 {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  20% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-  }
-
-  40%,
-  60% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  80% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
 }
 
 @keyframes bounceloop14 {
   0%,
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   20% {
-    -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 
   40%,
   60% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   80% {
-    -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
 }
@@ -552,18 +361,9 @@ header .gestion-app:hover i {
   }
 
   header .task .content-task {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
 }
@@ -589,26 +389,18 @@ header .gestion-app:hover i {
   }
 
   header .icon-app.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
   header .container-left .icon-extends {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
   header .container-left .icon-extends-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
   header .icon-extends-right .separator {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: absolute;
     left: -20px;
@@ -623,8 +415,6 @@ header .gestion-app:hover i {
   }
 
   header .container-right.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -641,8 +431,6 @@ header .gestion-app:hover i {
   }
 
   header .container-right .icon-black {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -666,34 +454,23 @@ header .gestion-app:hover i {
   }
 
   header .container-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
     top: 0;
     left: 0;
     background: transparent;
     padding: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
   }
 
   header .navbar {
     padding: 0 5px;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
   header .container-right .icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -709,12 +486,9 @@ header .gestion-app:hover i {
     position: absolute;
     top: 2px;
     left: calc(50% - 20px);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 35px;
     height: 35px;
-    -webkit-box-shadow: none;
     box-shadow: none;
     z-index: 2;
     border-radius: 5px;
@@ -738,8 +512,6 @@ header .gestion-app:hover i {
   }
 
   header .gestion-app {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }

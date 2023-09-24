@@ -1,6 +1,4 @@
 section.windows.presentation.presentation {
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -15,12 +13,7 @@ section.windows.presentation .container-icon.curriculum {
 }
 
 section.windows.presentation .container-folder.mickael {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -31,12 +24,7 @@ section.windows.presentation .container-folder.mickael img {
 }
 
 section.windows.presentation .container-folder.description {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -56,56 +44,35 @@ section.windows.presentation .container-folder.description li.paragraphe {
 }
 
 section.windows.presentation .container-folder.steam {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
 section.windows.presentation .container-folder.steam .container-game {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 10px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background: rgb(241 241 241 / 55%);
   padding: 10px;
   border-radius: 5px;
   width: 90%;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
   text-decoration: none;
   color: black;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 section.windows.presentation .container-folder.steam .container-game:hover {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 
 section.windows.presentation .container-folder.steam .container-game::after {
   content: "\f0c1";
   font-family: FontAwesome;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   border-radius: 50%;
@@ -115,29 +82,17 @@ section.windows.presentation .container-folder.steam .container-game::after {
   font-size: 1rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 section.windows.presentation
   .container-folder.steam
   .container-game:hover::after {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   color: var(--green-ligth);
@@ -147,11 +102,7 @@ section.windows.presentation .container-folder.steam .img-game {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -159,7 +110,6 @@ section.windows.presentation
   .container-folder.steam
   .container-game:hover
   .img-game {
-  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -176,7 +126,6 @@ section.windows.presentation
   .container-folder.steam
   .container-game:hover
   .details-game {
-  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -192,55 +141,31 @@ section.windows.presentation .container-folder.steam .type-game {
 }
 
 section.windows.presentation .container-folder.youtube {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 section.windows.presentation .container-folder.youtube .content-profil {
   width: 272px;
   height: 272px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 15px;
   background: rgb(241 241 241 / 55%);
   padding: 20px;
   border-radius: 5px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: black;
   text-decoration: none;
 }
 
 section.windows.presentation .container-folder.youtube .container-profil {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -251,18 +176,13 @@ section.windows.presentation .container-folder.youtube .profil-img {
   border-radius: 50%;
   background-image: var(--url);
   background-size: cover;
-  -webkit-box-shadow: 0 0 20px 0 grey;
   box-shadow: 0 0 20px 0 grey;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 section.windows.presentation .container-folder.youtube .profil-img::after {
   content: "\f0c1";
   font-family: FontAwesome;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   height: 40px;
@@ -271,21 +191,11 @@ section.windows.presentation .container-folder.youtube .profil-img::after {
   width: 40px;
   bottom: -24px;
   left: 50%;
-  -webkit-transform: translateX(-50%) scale(0);
-  -ms-transform: translateX(-50%) scale(0);
   transform: translateX(-50%) scale(0);
-  -webkit-transform-origin: bottom;
-  -ms-transform-origin: bottom;
   transform-origin: bottom;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -293,8 +203,6 @@ section.windows.presentation
   .container-folder.youtube
   .content-profil:hover
   .profil-img::after {
-  -webkit-transform: translateX(-50%) scale(1);
-  -ms-transform: translateX(-50%) scale(1);
   transform: translateX(-50%) scale(1);
   color: var(--green-ligth);
   opacity: 1;
@@ -304,10 +212,7 @@ section.windows.presentation
   .container-folder.youtube
   .content-profil:hover
   .profil-img {
-  -webkit-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
   transform: translateY(-20px);
-  -webkit-box-shadow: 0 20px 20px 0 grey;
   box-shadow: 0 20px 20px 0 grey;
 }
 
@@ -324,9 +229,6 @@ section.windows.presentation .container-folder.youtube .profil-genre {
 
 section.windows.presentation .container-folder.film,
 section.windows.presentation .container-folder.serie {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -338,27 +240,15 @@ section.windows.presentation
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 section.windows.presentation
   .container-folder.netflix-loisirs
   .slider-netflix-loisirs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   max-width: calc(150px * 4);
   height: 250px;
@@ -374,19 +264,13 @@ section.windows.presentation
   .next-netflix-loisirs {
   opacity: 1;
   height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background: #f6f6f6;
   padding: 0 5px;
   border-radius: 20px;
   color: var(--green-dark);
   cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -417,54 +301,25 @@ section.windows.presentation
   .container-folder.netflix-loisirs
   .next-netflix-loisirs:hover
   i {
-  -webkit-animation: bounceloop20 1s infinite;
   animation: bounceloop20 1s infinite;
-}
-
-@-webkit-keyframes bounceloop20 {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  20% {
-    -webkit-transform: translateX(2px);
-    transform: translateX(2px);
-  }
-
-  40%,
-  60% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  80% {
-    -webkit-transform: translateX(4px);
-    transform: translateX(4px);
-  }
 }
 
 @keyframes bounceloop20 {
   0%,
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   20% {
-    -webkit-transform: translateX(2px);
     transform: translateX(2px);
   }
 
   40%,
   60% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   
   80% {
-    -webkit-transform: translateX(4px);
     transform: translateX(4px);
   }
 }
@@ -492,20 +347,10 @@ section.windows.presentation
 section.windows.presentation
   .container-folder.netflix-loisirs
   .list-netflix-loisirs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: 1s ease;
-  -o-transition: 1s ease;
   transition: 1s ease;
 }
 
@@ -513,29 +358,18 @@ section.windows.presentation
   .container-folder.netflix-loisirs
   .detail-netflix-loisirs {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 150px;
   text-decoration: none;
   color: black;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
 section.windows.presentation
   .container-folder.netflix-loisirs
   .detail-netflix-loisirs:hover {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 
@@ -543,7 +377,6 @@ section.windows.presentation
   .container-folder.netflix-loisirs
   .detail-netflix-loisirs:hover
   .img-netflix-loisirs {
-  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -551,7 +384,6 @@ section.windows.presentation
   .container-folder.netflix-loisirs
   .detail-netflix-loisirs:hover
   .title-netflix-loisirs {
-  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -560,8 +392,6 @@ section.windows.presentation
   .detail-netflix-loisirs::after {
   content: "\f0c1";
   font-family: FontAwesome;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   border-radius: 50%;
@@ -571,29 +401,17 @@ section.windows.presentation
   font-size: 0.8rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 section.windows.presentation
   .container-folder.netflix-loisirs
   .detail-netflix-loisirs:hover::after {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
   color: var(--green-ligth);
   opacity: 1;
@@ -605,7 +423,6 @@ section.windows.presentation
   height: 162px;
   width: 120px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 5px 1px grey;
   box-shadow: 0 0 5px 1px grey;
 }
 
@@ -636,8 +453,6 @@ section.windows.presentation
 
 @media screen and (max-width: 848px) {
   section.windows.presentation.presentation.active {
-    -webkit-transform: translate(0%, 40px);
-    -ms-transform: translate(0%, 40px);
     transform: translate(0%, 40px);
   }
 

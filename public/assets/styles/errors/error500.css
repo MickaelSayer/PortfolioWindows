@@ -1,11 +1,11 @@
 .container-error500 {
-  width: 100vw;
-  height: 100vh;
-  background: rgb(0, 50, 240);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 50, 240);
   font-family: Inconsolata;
   color: white;
   font-size: clamp(10px, 2vw, 16px);
@@ -13,8 +13,8 @@
 }
 
 .container-error500 .type-error {
-    font-style: italic;
-    margin-top: 5px;
+  font-style: italic;
+  margin-top: 5px;
 }
 
 .container-error500 img {
@@ -23,21 +23,16 @@
 }
 
 .container-error500 .btn-redirect {
+  width: max-content;
   padding: 3px 13px;
   background: #a6a5a5;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   font-size: 20px;
   color: black;
-  -webkit-transition: 0.1s linear;
-  -o-transition: 0.1s linear;
   transition: 0.1s linear;
   text-decoration: none;
   pointer-events: initial;
 }
 
 .container-error500 .btn-redirect:hover {
-  -webkit-box-shadow: inset 0 0 0 2px #7b7b7b;
   box-shadow: inset 0 0 0 2px #7b7b7b;
 }

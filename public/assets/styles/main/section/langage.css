@@ -1,32 +1,19 @@
 section.windows.langage {
-  -webkit-transform: translate(-55%, -52%);
-  -ms-transform: translate(-55%, -52%);
   transform: translate(-55%, -52%);
 }
 
 section.windows.langage .container-folder.laboratoire {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 section.windows.langage .content-legend {
   position: relative;
   width: 100%;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
   padding: 15px;
   margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 10px;
   background: #313131;
@@ -38,8 +25,6 @@ section.windows.langage .title-lvl {
   position: absolute;
   top: 2px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   color: white;
   font-size: clamp(12px, 1.5vw, 17px);
@@ -85,14 +70,8 @@ section.windows.langage .legend-lvl li {
   position: relative;
   list-style-type: none;
   height: 43px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -102,8 +81,6 @@ section.windows.langage .legend-lvl li::before {
   height: 30px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: -28px;
   background-image: var(--lvl-icon);
@@ -117,45 +94,22 @@ section.windows.langage .container-langage {
   background: rgb(217 217 217 / 10%);
   border-radius: 30px;
   border: 8px solid transparent;
-  -webkit-box-shadow: 0 0 15px 0 #0002;
   box-shadow: 0 0 15px 0 #0002;
   margin: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 section.windows.langage .content-langage {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -163,7 +117,6 @@ section.windows.langage .liquid {
   position: absolute;
   inset: calc(100% - var(--lvl)) 5px 5px 5px;
   background: var(--clr);
-  -webkit-filter: drop-shadow(0 0 20px var(--clr));
   filter: drop-shadow(0 0 20px var(--clr));
   border-radius: 0 0 30px 30px;
 }
@@ -176,7 +129,6 @@ section.windows.langage .liquid::before {
   height: 20px;
   background: var(--clr-shadow);
   border-radius: 50%;
-  -webkit-filter: drop-shadow(0 0 20px var(--clr-shadow));
   filter: drop-shadow(0 0 20px var(--clr-shadow));
 }
 
@@ -185,22 +137,12 @@ section.windows.langage .liquid span {
   width: 100%;
   height: 100%;
   text-align: center;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   color: #000;
   -webkit-text-stroke: 0.4px #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   pointer-events: none;
   letter-spacing: 2px;
@@ -213,23 +155,13 @@ section.windows.langage .langage-name {
   position: relative;
   width: 200px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 3px;
   border: 1px solid #e6e6e6;
   border-radius: 20px;
-  -webkit-box-shadow: 0 1px 2px 0 #e8e8e8;
   box-shadow: 0 1px 2px 0 #e8e8e8;
   pointer-events: none;
   position: relative;
@@ -244,12 +176,9 @@ section.windows.langage .langage-name::after {
   background: #e1e1e1;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 5px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 2px 0 #000;
   box-shadow: 0 2px 2px 0 #000;
 }
 
@@ -260,12 +189,9 @@ section.windows.langage .langage-name::before {
   background: #e1e1e1;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 5px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 2px 0 #000;
   box-shadow: 0 2px 2px 0 #000;
 }
 
@@ -276,7 +202,6 @@ section.windows.langage .liquid-bubble {
   height: 15px;
   position: absolute;
   border-radius: 50%;
-  -webkit-animation: 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
   animation: 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
 }
 
@@ -294,74 +219,33 @@ section.windows.langage
   .liquid-bubble.bubble1 {
   top: 83%;
   left: 7px;
-  -webkit-animation-name: bubbleup1;
   animation-name: bubbleup1;
-  -webkit-animation-delay: 1s;
   animation-delay: 1s;
-}
-
-@-webkit-keyframes bubbleup1 {
-  0%,
-  50% {
-    -webkit-transform: translateY(0) scale(0);
-    transform: translateY(0) scale(0);
-  }
-
-  60% {
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-
-  70% {
-    -webkit-transform: translateY(0), scale(1.1);
-    transform: translateY(0), scale(1.1);
-  }
-
-  80% {
-    -webkit-transform: translateY(0), scale(1.2);
-    transform: translateY(0), scale(1.2);
-  }
-
-  90% {
-    -webkit-transform: translateY(0), scale(1.3);
-    transform: translateY(0), scale(1.3);
-  }
-
-  100% {
-    -webkit-transform: translateY(-181px) scale(1.4);
-    transform: translateY(-181px) scale(1.4);
-  }
 }
 
 @keyframes bubbleup1 {
   0%,
   50% {
-    -webkit-transform: translateY(0) scale(0);
     transform: translateY(0) scale(0);
   }
 
   60% {
-    -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
 
   70% {
-    -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
 
   80% {
-    -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
 
   90% {
-    -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
 
   100% {
-    -webkit-transform: translateY(-181px) scale(1.4);
     transform: translateY(-181px) scale(1.4);
   }
 }
@@ -369,8 +253,6 @@ section.windows.langage
 section.windows.langage .liquid-bubble.bubble1::before {
   top: 1px;
   left: 2px;
-  -webkit-transform: rotate(42deg);
-  -ms-transform: rotate(42deg);
   transform: rotate(42deg);
 }
 
@@ -379,74 +261,33 @@ section.windows.langage
   .liquid-bubble.bubble2 {
   left: 21px;
   top: 87%;
-  -webkit-animation-name: bubbleup2;
   animation-name: bubbleup2;
-  -webkit-animation-delay: 2s;
   animation-delay: 2s;
-}
-
-@-webkit-keyframes bubbleup2 {
-  0%,
-  50% {
-    -webkit-transform: translateY(0) scale(0);
-    transform: translateY(0) scale(0);
-  }
-
-  60% {
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-
-  70% {
-    -webkit-transform: translateY(0), scale(1.1);
-    transform: translateY(0), scale(1.1);
-  }
-
-  80% {
-    -webkit-transform: translateY(0), scale(1.2);
-    transform: translateY(0), scale(1.2);
-  }
-
-  90% {
-    -webkit-transform: translateY(0), scale(1.3);
-    transform: translateY(0), scale(1.3);
-  }
-
-  100% {
-    -webkit-transform: translateY(-170px) scale(1.4);
-    transform: translateY(-170px) scale(1.4);
-  }
 }
 
 @keyframes bubbleup2 {
   0%,
   50% {
-    -webkit-transform: translateY(0) scale(0);
     transform: translateY(0) scale(0);
   }
 
   60% {
-    -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
 
   70% {
-    -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
 
   80% {
-    -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
 
   90% {
-    -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
 
   100% {
-    -webkit-transform: translateY(-170px) scale(1.4);
     transform: translateY(-170px) scale(1.4);
   }
 }
@@ -456,82 +297,39 @@ section.windows.langage
   .liquid-bubble.bubble3 {
   left: 33px;
   top: 82%;
-  -webkit-animation-name: bubbleup3;
   animation-name: bubbleup3;
-  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
 
 section.windows.langage .liquid-bubble.bubble2::before {
   top: 7px;
   left: 3px;
-  -webkit-transform: rotate(124deg);
-  -ms-transform: rotate(124deg);
   transform: rotate(124deg);
-}
-
-@-webkit-keyframes bubbleup3 {
-  0%,
-  50% {
-    -webkit-transform: translateY(0) scale(0);
-    transform: translateY(0) scale(0);
-  }
-
-  60% {
-    -webkit-transform: translateY(0) scale(1);
-    transform: translateY(0) scale(1);
-  }
-
-  70% {
-    -webkit-transform: translateY(0), scale(1.1);
-    transform: translateY(0), scale(1.1);
-  }
-
-  80% {
-    -webkit-transform: translateY(0), scale(1.2);
-    transform: translateY(0), scale(1.2);
-  }
-
-  90% {
-    -webkit-transform: translateY(0), scale(1.3);
-    transform: translateY(0), scale(1.3);
-  }
-
-  100% {
-    -webkit-transform: translateY(-173px) scale(1.4);
-    transform: translateY(-173px) scale(1.4);
-  }
 }
 
 @keyframes bubbleup3 {
   0%,
   50% {
-    -webkit-transform: translateY(0) scale(0);
     transform: translateY(0) scale(0);
   }
 
   60% {
-    -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
 
   70% {
-    -webkit-transform: translateY(0), scale(1.1);
     transform: translateY(0), scale(1.1);
   }
 
   80% {
-    -webkit-transform: translateY(0), scale(1.2);
     transform: translateY(0), scale(1.2);
   }
 
   90% {
-    -webkit-transform: translateY(0), scale(1.3);
     transform: translateY(0), scale(1.3);
   }
   
   100% {
-    -webkit-transform: translateY(-173px) scale(1.4);
     transform: translateY(-173px) scale(1.4);
   }
 }
@@ -539,21 +337,15 @@ section.windows.langage .liquid-bubble.bubble2::before {
 section.windows.langage .liquid-bubble.bubble3::before {
   top: 3px;
   left: 2px;
-  -webkit-transform: rotate(21deg);
-  -ms-transform: rotate(21deg);
   transform: rotate(21deg);
 }
 
 @media screen and (max-width: 848px) {
   section.windows.langage.active {
-    -webkit-transform: translate(0%, 40px);
-    -ms-transform: translate(0%, 40px);
     transform: translate(0%, 40px);
   }
 
   section.windows.langage .content-langage {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 
