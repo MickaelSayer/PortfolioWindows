@@ -641,6 +641,13 @@ section.windows.presentation
     transform: translate(0%, 40px);
   }
 
+  section.windows.presentation .container-folder.steam,
+  section.windows.presentation .container-folder.youtube,
+  section.windows.presentation .container-folder.film,
+  section.windows.presentation .container-folder.serie {
+    padding-bottom: 50px;
+  }
+
   section.windows.presentation .container-folder.description li.paragraphe {
     max-width: 90%;
   }
