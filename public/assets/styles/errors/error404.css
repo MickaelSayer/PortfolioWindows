@@ -10,7 +10,6 @@
   font-family: Inconsolata;
   font-weight: 600;
   font-size: clamp(10px, 2vw, 16px);
-  overflow: auto;
   pointer-events: none;
 }
 

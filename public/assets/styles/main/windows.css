@@ -7,7 +7,6 @@ section.windows {
   background-color: var(--clr-white);
   padding: 5px;
   background: #034587;
-  overflow: hidden;
   z-index: 1;
   display: none;
 }
@@ -26,7 +25,6 @@ section.windows .windows-top {
   display: flex;
   flex-direction: column;
   pointer-events: none;
-  overflow: hidden;
 }
 
 section.windows .windows-top .windows-action {
@@ -552,7 +550,6 @@ section.windows .container-content .sidebar-left {
   width: 300px;
   padding: 15px 25px 15px 15px;
   font-size: 12px;
-  overflow: auto;
   z-index: 2;
 }
 
@@ -676,7 +673,6 @@ section.windows .content-section {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  overflow: auto;
 }
 
 section.windows .container-sildebar-left {
@@ -767,7 +763,6 @@ section.windows .container-sildebar-left ul {
 section.windows .container-sildebar-left ul.active {
   height: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 section.windows .container-sildebar-left ul li {
@@ -848,7 +843,6 @@ section.windows .container-folder {
   top: 0;
   left: 0;
   padding: 10px;
-  overflow: auto;
 }
 
 section.windows .container-content.active .container-folder {
@@ -868,7 +862,6 @@ section.windows .container-folder.open {
   section.windows .container-content.active .sidebar-left {
     display: block;
     width: 100%;
-    overflow: auto;
   }
 
   section.windows .container-content.active .content-section {

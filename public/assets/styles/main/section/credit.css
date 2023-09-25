@@ -46,7 +46,6 @@ section.windows.credit .link::after {
   height: 50px;
   border-radius: var(--border-radius-rounded);
   background: var(--clr-white);
-  overflow: hidden;
   font-size: clamp(15px, 2vw, 20px);
   color: var(--green-ligth);
   opacity: 0;

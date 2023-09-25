@@ -9,7 +9,6 @@ nav.nav-link {
   width: 500px;
   background: var(--clr-white);
   border-radius: var(--border-radius-lg);
-  overflow: auto;
 }
 
 nav.nav-link.open-nav {
@@ -303,7 +302,6 @@ nav .sidebar-left {
   border-right: 1px solid lightgrey;
   flex-direction: column;
   justify-content: space-between;
-  overflow: auto;
 }
 
 nav .sidebar-left .content-left {
@@ -607,7 +605,6 @@ nav .sidebar-right {
   flex-direction: column;
   justify-content: flex-start;
   font-size: clamp(10px, 3vw, 12px);
-  overflow: auto;
 }
 
 nav .sidebar-right .content-top {
@@ -675,7 +672,6 @@ nav .sidebar-right .content-mid::after {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: auto;
   }
 
   nav .sidebar-left ul li {
