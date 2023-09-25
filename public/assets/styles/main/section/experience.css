@@ -12,7 +12,7 @@ section.windows.experience .container-calendar {
   width: 500px;
   height: 500px;
   background: #f6f6f6;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   padding: 25px;
   margin: 25px;
   box-shadow: 0 0 8px 2px #dddbdb;
@@ -61,7 +61,7 @@ section.windows.experience .number-day {
   align-items: flex-start;
   pointer-events: none;
   margin: 4px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.1),
     -5px -5px 10px rgba(255, 255, 255, 1);
 }
@@ -106,7 +106,7 @@ section.windows.experience .content-notif {
   height: 100%;
   width: 100%;
   background: #f6f6f6;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   top: 0;
   left: 0;
   padding: 15px;
@@ -158,7 +158,7 @@ section.windows.experience .content-notif .notif-map i {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: var(--tranform-translate-center) scale(0);
   transform-origin: center;
   color: var(--green-ligth);
   opacity: 0;
@@ -166,13 +166,13 @@ section.windows.experience .content-notif .notif-map i {
 }
 
 section.windows.experience .content-notif .notif-map:hover i {
-  transform: translate(-50%, -50%) scale(1);
+  transform: var(--tranform-translate-center) scale(1);
   opacity: 1;
 }
 
 section.windows.experience .content-notif .notif-map img {
   width: 100%;
-  border-radius: 3px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
 }
 
@@ -200,7 +200,7 @@ section.windows.experience .container-folder.todolist {
 section.windows.experience .container-todolist {
   width: 400px;
   height: 500px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   border: 1px solid #e2e2e2;
 }
 

@@ -1,7 +1,37 @@
 :root {
   --green-dark: #589132;
   --green-ligth: #49a30f;
-  --text-black: #0c0c0c;
-  --bl-blue: linear-gradient(to bottom, #0165b5, #004c99);
-  --bl-rotate-blue: linear-gradient(to bottom, #004c99, #0165b5);
+  --clr-black: #0c0c0c;
+  --clr-white: #fff;
+  
+  --bg-lg-blueligth: linear-gradient(to bottom, #0165b5, #004c99);
+  --bg-lg-bluedark: linear-gradient(to bottom, #004c99, #0165b5);
+  --bg-bluedark : #04329d;
+
+  --fz-base: 1em;
+  --fz-6xs: calc(var(--fz-base) * 0.25);
+  --fz-5xs: calc(var(--fz-base) * 0.3125);
+  --fz-4xs: calc(var(--fz-base) * 0.375);
+  --fz-3xs: calc(var(--fz-base) * 0.5);
+  --fz-2xs: calc(var(--fz-base) * 0.625);
+  --fz-xs: calc(var(--fz-base) * 0.75);
+  --fz-sm: calc(var(--fz-base) * 0.875);
+  --fz-md: var(--fz-base);
+  --fz-lg: calc(var(--fz-base) * 1.25);
+  --fz-xl: calc(var(--fz-base) * 1.5);
+  --fz-2xl: calc(var(--fz-base) * 2);
+  --fz-3xl: calc(var(--fz-base) * 2.5);
+  --fz-4xl: calc(var(--fz-base) * 3);
+  --fz-5xl: calc(var(--fz-base) * 3.75);
+  --fz-6xl: calc(var(--fz-base) * 4.5);
+
+  --border-radius-xs: 1px;
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 30px;
+  --border-radius-rounded: 50%;
+
+  --tranform-translate-center: translate(-50%, -50%);
 }

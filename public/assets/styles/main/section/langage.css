@@ -15,9 +15,9 @@ section.windows.langage .content-legend {
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   background: #313131;
-  color: white;
+  color: var(--clr-white);
   font-family: Caveat, sans-serif;
 }
 
@@ -26,7 +26,7 @@ section.windows.langage .title-lvl {
   top: 2px;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
+  color: var(--clr-white);
   font-size: clamp(12px, 1.5vw, 17px);
   font-family: Caveat, sans-serif;
   text-decoration: underline;
@@ -36,7 +36,7 @@ section.windows.langage .nail {
   position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   background: #5d5d5d;
   border: 2px solid #7b7b7b;
 }
@@ -92,7 +92,7 @@ section.windows.langage .container-langage {
   width: 70px;
   height: 190px;
   background: rgb(217 217 217 / 10%);
-  border-radius: 30px;
+  border-radius: var(--border-radius-2xl);
   border: 8px solid transparent;
   box-shadow: 0 0 15px 0 #0002;
   margin: 80px;
@@ -118,7 +118,7 @@ section.windows.langage .liquid {
   inset: calc(100% - var(--lvl)) 5px 5px 5px;
   background: var(--clr);
   filter: drop-shadow(0 0 20px var(--clr));
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 var(--border-radius-2xl) var(--border-radius-2xl);
 }
 
 section.windows.langage .liquid::before {
@@ -128,7 +128,7 @@ section.windows.langage .liquid::before {
   width: 100%;
   height: 20px;
   background: var(--clr-shadow);
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   filter: drop-shadow(0 0 20px var(--clr-shadow));
 }
 
@@ -161,7 +161,7 @@ section.windows.langage .langage-name {
   align-items: center;
   letter-spacing: 3px;
   border: 1px solid #e6e6e6;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   box-shadow: 0 1px 2px 0 #e8e8e8;
   pointer-events: none;
   position: relative;
@@ -178,7 +178,7 @@ section.windows.langage .langage-name::after {
   top: 50%;
   transform: translateY(-50%);
   left: 5px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-shadow: 0 2px 2px 0 #000;
 }
 
@@ -191,7 +191,7 @@ section.windows.langage .langage-name::before {
   top: 50%;
   transform: translateY(-50%);
   right: 5px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-shadow: 0 2px 2px 0 #000;
 }
 
@@ -201,7 +201,7 @@ section.windows.langage .liquid-bubble {
   width: 15px;
   height: 15px;
   position: absolute;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   animation: 3s cubic-bezier(0, 0.01, 0.51, 0.95) infinite;
 }
 
@@ -210,7 +210,7 @@ section.windows.langage .liquid-bubble::before {
   position: absolute;
   width: 4px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   background: #f5f5f5;
 }
 

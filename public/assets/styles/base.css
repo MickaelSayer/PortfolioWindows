@@ -20,12 +20,11 @@
   letter-spacing: 1px;
 }
 
-html {
-  font-size: 18px;
-}
-
 body {
   font-family: Verdana, sans-serif;
-  background-color: var(--text-black);
+  background-color: var(--clr-black);
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-size: var(--fz-base);
 }

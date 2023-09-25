@@ -13,7 +13,7 @@ section.windows.diplome .container-folder .container-diplome {
   display: flex;
   justify-content: center;
   width: 1000px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-lg);
   border: 2px solid #f6f6f6;
   padding: 15px;
   justify-content: space-between;
@@ -117,7 +117,7 @@ section.windows.diplome .container-folder.todolist {
 section.windows.diplome .container-todolist {
   width: 400px;
   height: 500px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-xl);
   border: 1px solid #e2e2e2;
 }
 

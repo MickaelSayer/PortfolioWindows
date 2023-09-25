@@ -20,9 +20,9 @@ section.windows.credit .link {
   height: 125px;
   background: #0b2239;
   padding: 20px 0;
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
   line-height: 46px;
-  color: white;
+  color: var(--clr-white);
   text-decoration: none;
   font-size: clamp(9px, 2vw, 14px);
   font-weight: 600;
@@ -44,13 +44,13 @@ section.windows.credit .link::after {
   align-items: center;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background: white;
+  border-radius: var(--border-radius-rounded);
+  background: var(--clr-white);
   overflow: hidden;
   font-size: clamp(15px, 2vw, 20px);
   color: var(--green-ligth);
   opacity: 0;
-  background: white;
+  background: var(--clr-white);
   box-shadow: 0 9px 9px 0 #eee;
   transition: 0.5s ease;
 }
