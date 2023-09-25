@@ -81,7 +81,7 @@
 
 .container-loading .mid .content-login {
   position: relative;
-  height: 350px;
+  height: 70%;
   width: max-content;
   display: none;
   justify-content: flex-start;
