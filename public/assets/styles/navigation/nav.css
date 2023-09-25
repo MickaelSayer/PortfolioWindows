@@ -666,11 +666,11 @@ nav .sidebar-right .content-mid::after {
   nav .sidebar-left ul {
     position: relative;
     display: flex;
-    height: calc(100% + -100px);
+    height: 100%;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   nav .sidebar-left ul li {
@@ -740,11 +740,5 @@ nav .sidebar-right .content-mid::after {
 
   nav.nav-link .btn-params {
     display: flex;
-  }
-}
-
-@media screen and (max-width: 848px) and (orientation: landscape) {
-  nav .sidebar-left {
-    height: 77%;
   }
 }

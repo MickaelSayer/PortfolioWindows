@@ -16,12 +16,12 @@ $(document).ready(function () {
 
     intervalId = setInterval(showDots, 600);
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         $('.container-loading .mid').addClass('login');
         $('.container-loading .mid .loader').html("Pour commencer, cliquez sur votre nom d'utilisateur");
 
         clearInterval(intervalId);
-    }, 5000);
+    }, 5000);*/
 
     $('.container-loading .mid .login-loading').on('click', function () {
         $('.container-loading').addClass('inactive');
