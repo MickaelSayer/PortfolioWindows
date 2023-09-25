@@ -34,4 +34,6 @@
   --border-radius-rounded: 50%;
 
   --tranform-translate-center: translate(-50%, -50%);
+
+  --min-height-container: 400px;
 }

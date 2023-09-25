@@ -70,7 +70,7 @@
 
 .container-loading .mid {
   height: 100%;
-  min-height: 400px;
+  min-height: var(--min-height-container);
   background: radial-gradient(
     circle at top left,
     var(--clr-white) -20%,

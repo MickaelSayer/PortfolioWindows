@@ -6,9 +6,11 @@ nav.nav-link {
   bottom: 40px;
   left: 0;
   height: calc(100% - 40px);
+  max-height: 600px;
   width: 500px;
   overflow-y: auto;
   background: var(--clr-white);
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
 
 nav.nav-link.open-nav {
@@ -279,7 +281,7 @@ nav .container-nav {
   display: flex;
   flex-direction: row;
   height: 100%;
-  min-height: 500px;
+  min-height: 470px;
   background: #004c99;
   padding: 3px;
   transition: 0.3s ease;
@@ -551,7 +553,7 @@ nav .sidebar-left ul li img {
 
 nav .sidebar-left ul li span {
   color: var(--clr-black);
-  font-size: clamp(11px, 3vw, 14px);
+  font-size: 14px;
   letter-spacing: 0;
   transition: 0.3s ease;
 }
@@ -603,7 +605,6 @@ nav .sidebar-right {
   background: #bde0fd;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: clamp(10px, 3vw, 12px);
 }
 
 nav .sidebar-right .content-top {
