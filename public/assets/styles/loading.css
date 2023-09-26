@@ -25,7 +25,7 @@
 .container-loading .top-bar {
   position: relative;
   width: 100%;
-  min-height: 100px;
+  height: 100px;
   background: var(--bg-bluedark);
 }
 
@@ -48,7 +48,7 @@
 .container-loading .bottom-bar {
   position: relative;
   width: 100%;
-  min-height: 100px;
+  height: 100px;
   background: var(--bg-bluedark);
 }
 
@@ -70,7 +70,6 @@
 
 .container-loading .mid {
   height: 100%;
-  min-height: var(--min-height-container);
   background: radial-gradient(
     circle at top left,
     var(--clr-white) -20%,
@@ -189,7 +188,7 @@
 
 @media screen and (max-width: 848px) {
   .container-loading .mid {
-    height: calc(100% - 100px);
+    height: calc(100% - 150px);
   }
 
   .container-loading .mid .content-loading {
@@ -232,10 +231,10 @@
   }
 
   .container-loading .top-bar {
-    height: 50px;
+    height: 75px;
   }
 
   .container-loading .bottom-bar {
-    height: 50px;
+    height: 75px;
   }
 }

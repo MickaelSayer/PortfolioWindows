@@ -4,13 +4,13 @@ main {
   justify-content: center;
   position: absolute;
   height: 100%;
-  min-height: var(--min-height-container);
   width: 100%;
   background-image: url(/assets/pictures/icon/windows-xp-hd.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1;
   align-items: center;
+  overflow: hidden;
 }
 
 main .container-bureau {
@@ -56,9 +56,10 @@ main .icon-bureau {
 
 main .icon-bureau.corbeille {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   right: 10px;
-  margin: 10px;
+  margin: 0;
+  padding: 0;
   pointer-events: none;
 }
 
@@ -386,10 +387,6 @@ main .container-windows-open .close-app:hover i {
 }
 
 @media screen and (max-width: 848px) {
-  main {
-    height: 100%;
-  }
-
   main .container-bureau {
     flex-direction: row;
     justify-content: center;
@@ -403,8 +400,8 @@ main .container-windows-open .close-app:hover i {
     display: none;
   }
 
-  main .container-bureau .corbeille {
-    display: none;
+  main .icon-bureau.corbeille {
+    bottom: 10px;
   }
 
   main .icon-app-responsive {

@@ -1,6 +1,5 @@
 section.windows.credit {
-  top: 12px;
-  left: 35px;
+  transform: translate(-39%, -57%);
 }
 
 section.windows .container-folder.remerciement {

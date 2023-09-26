@@ -1,6 +1,5 @@
-section.windows.presentation.presentation {
-  top: 0;
-  left: 0;
+section.windows.presentation {
+  transform: translate(-50%, -50%);
 }
 
 section.windows.presentation .container-icon .icon-img.mickael {

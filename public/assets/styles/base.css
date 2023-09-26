@@ -24,6 +24,14 @@ body {
   font-family: Verdana, sans-serif;
   background-color: var(--clr-black);
   height: 100%;
+  min-height: var(--min-height-container);
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   font-size: var(--fz-base);
+  overflow-y: auto;
 }

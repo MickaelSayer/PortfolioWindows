@@ -1,6 +1,5 @@
 section.windows.experience {
-  top: 18px;
-  left: 75px;
+  transform: translate(-48%, -48%);
 }
 
 section.windows.experience .container-folder.calendrier-vialtic {

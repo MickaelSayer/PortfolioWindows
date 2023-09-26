@@ -1,12 +1,11 @@
 nav.nav-link {
-  position: fixed;
+  position: absolute;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   bottom: 40px;
   left: 0;
-  height: calc(100% - 40px);
-  max-height: 600px;
+  height: 600px;
   width: 500px;
   overflow-y: auto;
   background: var(--clr-white);
@@ -281,7 +280,6 @@ nav .container-nav {
   display: flex;
   flex-direction: row;
   height: 100%;
-  min-height: 470px;
   background: #004c99;
   padding: 3px;
   transition: 0.3s ease;

@@ -1,6 +1,5 @@
 section.windows.diplome {
-  left: 50px;
-  top: -50px;
+  transform: translate(-46%, -53%);
 }
 
 section.windows.diplome .container-folder.developper {
