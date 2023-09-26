@@ -1,5 +1,6 @@
 section.windows.diplome {
-  transform: translate(-46%, -51%);
+  left: 50px;
+  top: -50px;
 }
 
 section.windows.diplome .container-folder.developper {
@@ -13,6 +14,7 @@ section.windows.diplome .container-folder .container-diplome {
   display: flex;
   justify-content: center;
   width: 1000px;
+  height: 100%;
   border-radius: var(--border-radius-lg);
   border: 2px solid #f6f6f6;
   padding: 15px;
@@ -22,7 +24,7 @@ section.windows.diplome .container-folder .container-diplome {
 section.windows.diplome .container-folder .ecole-name {
   writing-mode: vertical-rl;
   transform: rotateY(180deg) rotateX(180deg);
-  font-size: 50px;
+  font-size: var(--fz-3xl);
   font-weight: bold;
   color: #7451eb;
   -webkit-text-stroke: 2px #7451eb;
@@ -42,7 +44,7 @@ section.windows.diplome .container-folder .ecole-logo {
   position: absolute;
   top: 5px;
   right: 15px;
-  font-size: 54px;
+  font-size: var(--fz-3xl);
   font-weight: bold;
   transform: rotateY(180deg);
   color: #7451eb;
@@ -55,8 +57,9 @@ section.windows.diplome .container-folder .content-diplome {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: clamp(10px, 1.5vw, 15px);
+  font-size: clamp(var(--fz-xs), 1vw, var(--fz-md));
   color: #07368b;
+  text-align: justify;
 }
 
 section.windows.diplome .container-folder .top-content {
@@ -64,28 +67,28 @@ section.windows.diplome .container-folder .top-content {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  line-height: 25px;
+  line-height: 17px;
 }
 
 section.windows.diplome .container-folder .bottom-content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 60px;
+  line-height: 20px;
 }
 
 section.windows.diplome .container-folder .people-name {
-  font-size: clamp(20px, 3vw, 35px);
+  font-size: clamp(20px, 2vw, 35px);
   margin: 25px 0;
   font-weight: 600;
 }
 
 section.windows.diplome .container-folder .date-naissance {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 section.windows.diplome .container-folder .diplome-name {
-  font-size: clamp(20px, 3vw, 45px);
+  font-size: clamp(20px, 2vw, 35px);
   margin: 25px 0;
   font-weight: 600;
 }
@@ -116,7 +119,7 @@ section.windows.diplome .container-folder.todolist {
 
 section.windows.diplome .container-todolist {
   width: 400px;
-  height: 500px;
+  height: 100%;
   border-radius: var(--border-radius-xl);
   border: 1px solid #e2e2e2;
 }
@@ -181,6 +184,7 @@ section.windows.diplome .container-todolist li::after {
   section.windows.diplome .container-folder .container-diplome {
     flex-direction: column;
     width: 100%;
+    min-height: 448px;
     height: min-content;
   }
 

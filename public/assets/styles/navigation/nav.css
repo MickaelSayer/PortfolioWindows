@@ -376,6 +376,10 @@ nav .sidebar-left ul li {
   transition: 0.2s ease;
 }
 
+nav .sidebar-left ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 nav .sidebar-left ul li:hover,
 nav .sidebar-left ul li.open {
   background-color: #f6f6f6;

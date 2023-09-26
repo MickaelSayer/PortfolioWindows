@@ -1,5 +1,6 @@
 section.windows.experience {
-  transform: translate(-51%, -47%);
+  top: 18px;
+  left: 75px;
 }
 
 section.windows.experience .container-folder.calendrier-vialtic {
@@ -198,7 +199,7 @@ section.windows.experience .container-folder.todolist {
 
 section.windows.experience .container-todolist {
   width: 400px;
-  height: 500px;
+  height: 100%;
   border-radius: var(--border-radius-xl);
   border: 1px solid #e2e2e2;
 }

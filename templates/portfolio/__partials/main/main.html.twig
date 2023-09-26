@@ -5,7 +5,9 @@
 
     {% include "portfolio/__partials/main/parth/main/content-gestion-app.html.twig" %}
 
-    {% for section in sections %}
-    {% include '/portfolio/__partials/main/section/' ~ section ~ '/' ~ section ~ '.html.twig' %}
-    {% endfor %}
+    <div class="container-section">
+        {% for section in sections %}
+        {% include '/portfolio/__partials/main/section/' ~ section ~ '/' ~ section ~ '.html.twig' %}
+        {% endfor %}
+    </div>
 </main>

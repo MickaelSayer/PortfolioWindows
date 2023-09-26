@@ -1,5 +1,6 @@
 section.windows.presentation.presentation {
-  transform: var(--tranform-translate-center);
+  top: 0;
+  left: 0;
 }
 
 section.windows.presentation .container-icon .icon-img.mickael {
@@ -18,9 +19,8 @@ section.windows.presentation .container-folder.mickael {
 }
 
 section.windows.presentation .container-folder.mickael img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 section.windows.presentation .container-folder.description {

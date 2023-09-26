@@ -1,5 +1,6 @@
 section.windows.langage {
-  transform: translate(-55%, -52%);
+  top: 0;
+  left: -50px;
 }
 
 section.windows.langage .container-folder.laboratoire {
