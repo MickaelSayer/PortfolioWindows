@@ -1,4 +1,4 @@
-const mediaQuery1139 = window.matchMedia("(max-width: 1139px)");
+const mediaQuery1550 = window.matchMedia("(max-width: 1550px)");
 const mediaQuery848 = window.matchMedia("(max-width: 848px)");
 
 /**
@@ -8,7 +8,7 @@ const mediaQuery848 = window.matchMedia("(max-width: 848px)");
 function movieScrollingNumbers() {
     if (mediaQuery848.matches) {
         return 1;
-    } else if (mediaQuery1139.matches) {
+    } else if (mediaQuery1550.matches) {
         return 3;
     } else {
         return 4;
