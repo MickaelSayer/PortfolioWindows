@@ -9,7 +9,7 @@ section.windows.langage .container-folder.laboratoire {
 
 section.windows.langage .content-legend {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: max-content;
   padding: 15px;
   margin-top: 25px;
@@ -27,7 +27,7 @@ section.windows.langage .title-lvl {
   left: 50%;
   transform: translateX(-50%);
   color: var(--clr-white);
-  font-size: clamp(12px, 1.5vw, 17px);
+  font-size: var(--fz-2xl);
   font-family: Caveat, sans-serif;
   text-decoration: underline;
 }
@@ -62,8 +62,8 @@ section.windows.langage .nail-bottom-left {
 }
 
 section.windows.langage .legend-lvl {
-  font-size: clamp(12px, 1.5vw, 17px);
-  margin: 10px 25px;
+  font-size: var(--fz-md);
+  margin: 45px 35px;
 }
 
 section.windows.langage .legend-lvl li {
@@ -73,6 +73,10 @@ section.windows.langage .legend-lvl li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+section.windows.langage .legend-lvl li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 section.windows.langage .legend-lvl li::before {
@@ -133,13 +137,12 @@ section.windows.langage .liquid::before {
 }
 
 section.windows.langage .liquid span {
-  font-size: 18px;
+  font-size: var(--fz-md);
   width: 100%;
   height: 100%;
   text-align: center;
   writing-mode: vertical-rl;
   color: #000;
-  -webkit-text-stroke: 0.4px #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +153,7 @@ section.windows.langage .liquid span {
 }
 
 section.windows.langage .langage-name {
-  font-size: 15px;
+  font-size: var(--fz-md);
   font-weight: 600;
   position: relative;
   width: 200px;
