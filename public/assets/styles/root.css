@@ -3,11 +3,9 @@
   --green-ligth: #49a30f;
   --clr-black: #0c0c0c;
   --clr-white: #fff;
-  
   --bg-lg-blueligth: linear-gradient(to bottom, #0165b5, #004c99);
   --bg-lg-bluedark: linear-gradient(to bottom, #004c99, #0165b5);
   --bg-bluedark : #04329d;
-
   --fz-base: 1em;
   --fz-6xs: calc(var(--fz-base) * 0.25);
   --fz-5xs: calc(var(--fz-base) * 0.3125);
@@ -24,7 +22,6 @@
   --fz-4xl: calc(var(--fz-base) * 3);
   --fz-5xl: calc(var(--fz-base) * 3.75);
   --fz-6xl: calc(var(--fz-base) * 4.5);
-
   --border-radius-xs: 1px;
   --border-radius-sm: 3px;
   --border-radius-md: 5px;
@@ -32,9 +29,7 @@
   --border-radius-xl: 20px;
   --border-radius-2xl: 30px;
   --border-radius-rounded: 50%;
-
   --tranform-translate-center: translate(-50%, -50%);
-
   --min-height-container: 700px;
   --height-windows: calc(100% - 142px);
 }
