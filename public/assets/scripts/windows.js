@@ -116,10 +116,10 @@ $(document).ready(function () {
                 const dataWindowsFocus = windowsFocus.data('link');
 
                 windowsFocus.css('z-index', '2');
-                $.each($('.container-windows-open.open'), function (index, value) { 
-                     if ($(value).data('windows') === dataWindowsFocus) {
+                $.each($('.container-windows-open.open'), function (index, value) {
+                    if ($(value).data('windows') === dataWindowsFocus) {
                         $(value).addClass('focus');
-                     }
+                    }
                 });
             }
         }
@@ -360,13 +360,13 @@ $(document).ready(function () {
             if (sliderFilmDist[genreContainerFilm] < nbrsView) {
                 sliderFilmDist[genreContainerFilm] = 0;
             }
-    
+
             eltListFilm.css('transform', 'translateX(-' + sliderFilmDist[genreContainerFilm] + 'px)');
-    
+
             if (sliderFilmDist[genreContainerFilm] === 0) {
                 $(this).addClass('inactive');
             }
-    
+
             eltNextFilm.removeClass('inactive');
         }
     });

@@ -23,13 +23,13 @@ section.windows.diplome .container-folder .container-diplome {
 section.windows.diplome .container-folder .ecole-name {
   writing-mode: vertical-rl;
   transform: rotateY(180deg) rotateX(180deg);
-  font-size: var(--fz-3xl);
+  font-size: 2.2em;
   font-weight: bold;
   color: #7451eb;
   -webkit-text-stroke: 2px #7451eb;
   height: 100%;
   width: max-content;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: center;
 }
@@ -43,7 +43,8 @@ section.windows.diplome .container-folder .ecole-logo {
   position: absolute;
   top: 5px;
   right: 15px;
-  font-size: var(--fz-3xl);
+  font-size: var(--fz-4xl);
+  -webkit-text-stroke: 2px #7451eb;
   font-weight: bold;
   transform: rotateY(180deg);
   color: #7451eb;
@@ -55,8 +56,8 @@ section.windows.diplome .container-folder .content-diplome {
   padding: 0 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-size: clamp(var(--fz-xs), 1vw, var(--fz-md));
+  justify-content: space-around;
+  font-size: clamp(var(--fz-xs), 1vw, var(--fz-sm));
   color: #07368b;
   text-align: justify;
 }
@@ -78,17 +79,11 @@ section.windows.diplome .container-folder .bottom-content {
 
 section.windows.diplome .container-folder .people-name {
   font-size: clamp(20px, 2vw, 35px);
-  margin: 25px 0;
   font-weight: 600;
-}
-
-section.windows.diplome .container-folder .date-naissance {
-  margin-bottom: 25px;
 }
 
 section.windows.diplome .container-folder .diplome-name {
   font-size: clamp(20px, 2vw, 35px);
-  margin: 25px 0;
   font-weight: 600;
 }
 
@@ -96,9 +91,13 @@ section.windows.diplome .container-folder .signature-president {
   margin-right: 50px;
 }
 
+section.windows.diplome .container-folder .signature-president p:first-child {
+  margin-bottom: 10px;
+}
+
 section.windows.diplome .container-folder .signature-president img,
 section.windows.diplome .container-folder .signature-pres img {
-  margin-top: 15px;
+  margin-top: 10px;
   height: 35px;
   width: 35px;
 }
