@@ -64,6 +64,7 @@ section.windows.experience .number-day {
   border-radius: var(--border-radius-lg);
   box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.1),
     -5px -5px 10px rgba(255, 255, 255, 1);
+  overflow: hidden;
 }
 
 section.windows.experience .number-day.inactive {
@@ -111,7 +112,7 @@ section.windows.experience .content-notif {
   padding: 15px;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 section.windows.experience .content-notif.expand-notif {
@@ -119,7 +120,7 @@ section.windows.experience .content-notif.expand-notif {
 }
 
 section.windows.experience .content-notif .notif-name {
-  font-size: var(--fz-lg);
+  font-size: var(--fz-md);
   font-weight: 600;
   text-align: center;
   padding-bottom: 10px;
@@ -131,7 +132,7 @@ section.windows.experience .content-notif .notif-detail {
   height: 35px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-size: var(--fz-sm);
 }
 

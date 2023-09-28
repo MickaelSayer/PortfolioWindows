@@ -193,15 +193,13 @@ section.windows.diplome .container-todolist li::after {
 
   section.windows.diplome .container-diplome {
     flex-direction: column;
-    width: 100%;
-    min-height: 448px;
-    height: min-content;
+    max-height: 100%;
   }
 
   section.windows.diplome .ecole-name {
     writing-mode: initial;
     transform: rotateY(0deg) rotateX(0deg);
-    font-size: var(--fz-2xl);
+    font-size: var(--fz-lg);
     height: max-content;
     width: 100%;
   }
@@ -224,14 +222,11 @@ section.windows.diplome .container-todolist li::after {
     line-height: normal;
   }
 
-  section.windows.diplome .people-name {
-    margin: 15px 0;
-  }
-
+  section.windows.diplome .people-name,
   section.windows.diplome .diplome-name {
-    margin: 20px 0;
+    margin: 10px 0;
   }
-
+  
   section.windows.diplome .date-naissance {
     margin-bottom: 30px;
   }
