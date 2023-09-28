@@ -853,6 +853,7 @@ section.windows .container-folder {
   left: 0;
   padding: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 section.windows .container-content.active .container-folder {
