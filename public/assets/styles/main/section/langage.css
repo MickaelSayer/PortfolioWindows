@@ -354,5 +354,6 @@ section.windows.langage .liquid-bubble.bubble3::before {
 
   section.windows.langage .legend-lvl li {
     height: 65px;
+    font-size: var(--fz-xs);
   }
 }
