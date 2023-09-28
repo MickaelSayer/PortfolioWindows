@@ -20,8 +20,8 @@ $(document).ready(function () {
         $('.container-loading .mid').addClass('login');
         $('.container-loading .mid .loader').html(
             `<i class="fa-solid fa-circle-info fa-lg"></i>
+            <br> 
             Seuls les endroits où il y a du vert sont cliquables
-            <i class="fa-solid fa-circle-info fa-lg"></i>
             <br> 
             Pour commencer, cliquez sur ma session`
         );

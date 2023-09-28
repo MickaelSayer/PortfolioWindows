@@ -40,10 +40,6 @@ main .icon-bureau {
   transition: 0.2s linear;
 }
 
-main .icon-bureau:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 main .icon-bureau:hover {
   background-color: #f6f6f640;
 }
