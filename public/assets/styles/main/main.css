@@ -183,13 +183,13 @@ main .content-gestion-app {
 
 main .container-gestion-app {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  align-content: flex-start;
 }
 
 main .content-gestion-app.active {
@@ -198,6 +198,7 @@ main .content-gestion-app.active {
 
 main .content-gestion-app .content-btn {
   width: 100%;
+  height: 60px;
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 10px;
@@ -219,6 +220,10 @@ main .content-gestion-app .content-btn div {
 main .content-gestion-app .close-all.inactive {
   background: #58913275;
   cursor: not-allowed;
+}
+
+main .content-gestion-app .close-all i {
+  margin-left: 1px;
 }
 
 main .content-gestion-app .close-all.inactive:hover {
@@ -256,14 +261,15 @@ main .container-windows-open {
   position: relative;
   display: none;
   flex-direction: column;
-  width: calc(50% - 10px);
-  height: 20%;
-  margin: 5px;
-  font-size: clamp(10px, 3vw, 14px);
+  width: 130px;
+  height: 100px;
+  margin: 7px;
+  font-size: var(--fz-xs);
   border: 1px solid #1f5081;
   background: #fff3;
   border-radius: var(--border-radius-lg);
   cursor: pointer;
+  overflow: hidden;
 }
 
 main .container-windows-open.delete {
@@ -364,7 +370,7 @@ main .container-windows-open.focus.delete {
 
 main .container-windows-open .close-app {
   position: absolute;
-  bottom: 5px;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--green-dark);

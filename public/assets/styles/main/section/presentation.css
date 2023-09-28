@@ -19,7 +19,9 @@ section.windows.presentation .container-folder.mickael {
 
 section.windows.presentation .container-folder.mickael img {
   width: auto;
-  height: 100%;
+  max-width: 270px;
+  min-height: 400px;
+  height: auto;
 }
 
 section.windows.presentation .container-folder.description {
@@ -128,7 +130,7 @@ section.windows.presentation
 }
 
 section.windows.presentation .container-folder.steam .title-game {
-  font-size: var(--fz-lg);
+  font-size: clamp(var(--fz-xs), 3vw, var(--fz-lg));
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -223,6 +225,8 @@ section.windows.presentation .container-folder.youtube .profil-name {
 section.windows.presentation .container-folder.youtube .profil-genre {
   font-size: var(--fz-2xs);
   font-style: italic;
+  margin-top: 10px;
+  text-align: center;
 }
 
 section.windows.presentation .container-folder.film,

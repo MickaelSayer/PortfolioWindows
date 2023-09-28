@@ -679,7 +679,8 @@ nav .sidebar-right .content-mid::after {
   nav .sidebar-left ul li {
     flex-direction: column;
     padding: 10px;
-    width: 85%;
+    width: 40%;
+    min-width: 215px;
     margin: 10px;
   }
 
@@ -743,5 +744,9 @@ nav .sidebar-right .content-mid::after {
 
   nav.nav-link .btn-params {
     display: flex;
+  }
+
+  nav .sidebar-left ul li:not(:last-child) {
+    margin-bottom: 50px;
   }
 }
