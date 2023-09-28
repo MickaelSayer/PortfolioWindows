@@ -35,3 +35,12 @@ body {
   z-index: -1;
   font-size: var(--fz-base);
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 6px;
+}
