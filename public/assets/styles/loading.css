@@ -173,10 +173,11 @@
   letter-spacing: 1px;
   text-align: center;
   font-size: clamp(var(--fz-xs), 2vw, var(--fz-md));
+  line-height: 20px;
 }
 
 .container-loading .mid.login .loader {
-  text-align: end;
+  text-align: center;
 }
 
 .container-loading .mid .loader .dots {

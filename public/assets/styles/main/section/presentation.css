@@ -68,6 +68,17 @@ section.windows.presentation .container-folder.steam .container-game {
   transition: 0.5s ease;
 }
 
+section.windows.presentation .container-folder.steam .container-game::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--green-ligth);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+}
+
 section.windows.presentation .container-folder.steam .container-game:hover {
   transform: scale(0.95);
 }
@@ -148,6 +159,7 @@ section.windows.presentation .container-folder.youtube {
 }
 
 section.windows.presentation .container-folder.youtube .content-profil {
+  position: relative;
   width: 272px;
   height: 272px;
   display: flex;
@@ -160,6 +172,17 @@ section.windows.presentation .container-folder.youtube .content-profil {
   justify-content: center;
   color: var(--clr-black);
   text-decoration: none;
+}
+
+section.windows.presentation .container-folder.youtube .content-profil::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--green-ligth);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
 }
 
 section.windows.presentation .container-folder.youtube .container-profil {
@@ -371,6 +394,19 @@ section.windows.presentation
   text-decoration: none;
   color: var(--clr-black);
   transition: 0.5s ease;
+}
+
+section.windows.presentation
+  .container-folder.netflix-loisirs
+  .detail-netflix-loisirs::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: var(--green-ligth);
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    border-radius: 50%;
 }
 
 section.windows.presentation
