@@ -6,6 +6,7 @@ section.windows.presentation .container-icon .icon-img.mickael {
   background-image: url("/assets/pictures/icon/Freaks.jpg");
   background-size: cover;
   background-position-y: -5px;
+  width: 60%;
 }
 
 section.windows.presentation .container-icon.curriculum {
