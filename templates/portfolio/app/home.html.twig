@@ -15,9 +15,9 @@
 {% endblock %}
 
 {% block javascripts %}
-<script src="{{ asset(get_path_file_js('main')) }}" defer></script>
-<script src="{{ asset(get_path_file_js('nav')) }}" defer></script>
-<script src="{{ asset(get_path_file_js('windows')) }}" defer></script>
+<script src="{{ asset(get_path_file_js('main', env)) }}" defer></script>
+<script src="{{ asset(get_path_file_js('nav', env)) }}" defer></script>
+<script src="{{ asset(get_path_file_js('windows', env)) }}" defer></script>
 {% endblock %}
 
 {% block header %}
