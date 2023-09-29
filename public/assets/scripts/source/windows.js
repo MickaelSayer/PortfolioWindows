@@ -103,7 +103,7 @@ $(document).ready(function () {
         const dataLink = windowsElement.data('link');
         windowsElement.data('full-size', 'min');
         windowsElement.removeClass('active full-size');
-        $(`.navbar #${dataLink}`).removeClass('active selected');
+        $('.navbar #' + dataLink).removeClass('active selected');
 
         if (parseInt(windowsElement.css('z-index'), 10) === 2) {
             windowsElement.css('z-index', '1');
@@ -145,7 +145,7 @@ $(document).ready(function () {
         const dataLink = windowsElement.data('link');
 
         windowsElement.removeClass('active full-size');
-        $(`.navbar #${dataLink}`).removeClass('selected');
+        $('.navbar #' + dataLink).removeClass('selected');
     });
 
     $('section.windows .size').on('click', function () {
@@ -179,7 +179,7 @@ $(document).ready(function () {
 
     $('section.windows .extends-sidebar').on('click', function () {
         const dataLink = $(this).parents('section.windows').data('link');
-        $(`section.windows.${dataLink} .container-content`).toggleClass('active');
+        $('section.windows.' + dataLink + ' .container-content').toggleClass('active');
         $('section.windows .tools').toggleClass('inactive');
     });
 

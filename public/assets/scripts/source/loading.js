@@ -18,13 +18,7 @@ $(document).ready(function () {
 
     setTimeout(() => {
         $('.container-loading .mid').addClass('login');
-        $('.container-loading .mid .loader').html(
-            `<i class="fa-solid fa-circle-info fa-lg"></i>
-            <br> 
-            Seuls les endroits où il y a du vert sont cliquables
-            <br> 
-            Pour commencer, cliquez sur ma session`
-        );
+        $('.container-loading .mid .loader').html('<i class="fa-solid fa-circle-info fa-lg"></i><br>Seuls les endroits où il y a du vert sont cliquables<br>Pour commencer, cliquez sur ma session');
 
         clearInterval(intervalId);
     }, 5000);

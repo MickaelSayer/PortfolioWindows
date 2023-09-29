@@ -25,8 +25,8 @@
     {% block stylesheets %}{% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="{{ asset('assets/scripts/loading.js') }}" defer></script>
-    <script src="{{ asset('assets/scripts/base.js') }}" defer></script>
+    <script src="{{ asset(get_path_file_js('loading')) }}" defer></script>
+    <script src="{{ asset(get_path_file_js('base')) }}" defer></script>
     {% block javascripts %}{% endblock %}
 
     <link rel="icon" type="image/x-icon" href="favicon.ico" />

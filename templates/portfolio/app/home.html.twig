@@ -15,9 +15,9 @@
 {% endblock %}
 
 {% block javascripts %}
-<script src="{{ asset('assets/scripts/main.js') }}" defer></script>
-<script src="{{ asset('assets/scripts/nav.js') }}" defer></script>
-<script src="{{ asset('assets/scripts/windows.js') }}" defer></script>
+<script src="{{ asset(get_path_file_js('main')) }}" defer></script>
+<script src="{{ asset(get_path_file_js('nav')) }}" defer></script>
+<script src="{{ asset(get_path_file_js('windows')) }}" defer></script>
 {% endblock %}
 
 {% block header %}
