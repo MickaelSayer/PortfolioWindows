@@ -20,7 +20,7 @@ class CustomTwigExtension extends AbstractExtension
     }
 
     /**
-     * Renvoie le chemin du fichier JavaScript en fonction du nom du fichier et de l environnement d'exécution.
+     * Renvoie le chemin du fichier JavaScript en fonction du nom du fichier et de l environnement d exécution.
      *
      * @param string $file_name Le nom du fichier JavaScript
      * @param string $env La variable d environnement
