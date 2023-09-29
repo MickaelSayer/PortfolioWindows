@@ -29,7 +29,7 @@ class CustomTwigExtension extends AbstractExtension
     {
         $pathFileJs = 'assets/scripts/source/'.$file_name.'.js';
 
-        if ($_ENV['APP_ENV'] === 'prod') {
+        if (!empty($_ENV['APP_ENV']) && $_ENV['APP_ENV'] === 'prod') {
             $pathFileJs = 'assets/scripts/min/'.$file_name.'.min.js';
         }
 
