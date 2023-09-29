@@ -21,7 +21,6 @@ class HomeController extends AbstractController
             $env = 'dev';
         }
 
-
         return $this->render('/portfolio/app/home.html.twig', ['env' => $env]);
     }
 }
