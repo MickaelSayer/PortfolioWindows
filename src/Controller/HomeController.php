@@ -11,12 +11,16 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="app_home")
+     *
      * @return Response
      */
     public function homeAction(): Response
     {
         $env = $this->getParameter('kernel.environment');
-        $env = empty($env) ? 'dev' : $env;
+        if (empty($env)) {
+            $env = 'dev';
+        }
+
 
         return $this->render('/portfolio/app/home.html.twig', ['env' => $env]);
     }
