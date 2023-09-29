@@ -24,6 +24,7 @@ class CustomTwigExtension extends AbstractExtension
      *
      * @param string $file_name Le nom du fichier JavaScript
      * @param string $env Variables d'environnement
+     *
      * @return string Le chemin du fichier JavaScript
      */
     public function getPathFileJs(string $file_name, string $env)
