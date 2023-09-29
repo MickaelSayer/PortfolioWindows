@@ -7,6 +7,11 @@ use Twig\TwigFunction;
 
 class CustomTwigExtension extends AbstractExtension
 {
+    /**
+     * Renvoie un tableau de fonctions personnalisées à rendre disponibles dans les templates Twig.
+     *
+     * @return array Un tableau d'instances de TwigFunction
+     */
     public function getFunctions()
     {
         return [
@@ -14,12 +19,18 @@ class CustomTwigExtension extends AbstractExtension
         ];
     }
 
+    /**
+     * Renvoie le chemin du fichier JavaScript en fonction du nom du fichier et de l'environnement d'exécution.
+     *
+     * @param string $file_name Le nom du fichier JavaScript
+     * @return string Le chemin du fichier JavaScript
+     */
     public function getPathFileJs(string $file_name)
     {
-        $pathFileJs = 'assets/scripts/source/' . $file_name . '.js';
+        $pathFileJs = 'assets/scripts/source/'.$file_name.'.js';
 
         if ($_ENV['APP_ENV'] === 'prod') {
-            $pathFileJs = 'assets/scripts/min/' . $file_name . '.min.js';
+            $pathFileJs = 'assets/scripts/min/'.$file_name.'.min.js';
         }
 
         return $pathFileJs;
